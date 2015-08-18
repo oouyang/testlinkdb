@@ -2616,6 +2616,11 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 760	314	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439892874	PHP	0	\N
 761	315	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439893032	PHP	0	\N
 762	315	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439893032	PHP	0	\N
+763	316	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:11:"owen.ouyang";i:1;s:14:"175.180.135.40";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439907740	LOGIN	2	users
+764	317	32	GUI	string 'system_config' is not localized for locale 'zh_CN'  - using en_GB	1439907740	LOCALIZATION	0	\N
+765	317	32	GUI	string 'link_report_test_cases_created_per_user' is not localized for locale 'zh_CN'  - using en_GB	1439907740	LOCALIZATION	0	\N
+766	317	32	GUI	string 'href_issuetracker_management' is not localized for locale 'zh_CN'  - using en_GB	1439907740	LOCALIZATION	0	\N
+767	317	32	GUI	string 'href_reqmgrsystem_management' is not localized for locale 'zh_CN'  - using en_GB	1439907740	LOCALIZATION	0	\N
 \.
 
 
@@ -2623,7 +2628,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 -- Name: h5tl_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_events_id_seq', 762, true);
+SELECT pg_catalog.setval('h5tl_events_id_seq', 767, true);
 
 
 --
@@ -5963,6 +5968,8 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 313	/lib/keywords/keywordsAssign.php	1439892862	1439892862	7	bgrnv8tgg4mlsjtg9pdca7t6u1
 314	/lib/keywords/keywordsAssign.php	1439892874	1439892874	7	bgrnv8tgg4mlsjtg9pdca7t6u1
 315	/lib/keywords/keywordsAssign.php	1439893032	1439893032	7	bgrnv8tgg4mlsjtg9pdca7t6u1
+316	/login.php	1439907740	1439907740	2	7g6q17am6j4ord5kpvn1u3m8j0
+317	/lib/general/mainPage.php	1439907740	1439907740	2	7g6q17am6j4ord5kpvn1u3m8j0
 \.
 
 
@@ -5970,7 +5977,7 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 -- Name: h5tl_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_transactions_id_seq', 315, true);
+SELECT pg_catalog.setval('h5tl_transactions_id_seq', 317, true);
 
 
 --
