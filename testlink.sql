@@ -2559,6 +2559,20 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 703	279	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:6:"peipei";i:1;s:14:"111.203.161.50";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439793307	LOGIN	7	users
 704	280	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:5:"enpei";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439799702	LOGIN	4	users
 705	281	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:6:"peipei";i:1;s:14:"111.203.161.50";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439802868	LOGIN	7	users
+706	282	2	GUI	No project found: Assume a new installation and redirect to create it	1439883465	\N	0	\N
+707	283	32	GUI	string 'api_key' is not localized for locale 'zh_CN'  - using en_GB	1439883465	LOCALIZATION	0	\N
+708	283	32	GUI	string 'testproject_issue_tracker_integration' is not localized for locale 'zh_CN'  - using en_GB	1439883465	LOCALIZATION	0	\N
+709	283	32	GUI	string 'issue_tracker' is not localized for locale 'zh_CN'  - using en_GB	1439883465	LOCALIZATION	0	\N
+710	283	32	GUI	string 'testproject_reqmgr_integration' is not localized for locale 'zh_CN'  - using en_GB	1439883465	LOCALIZATION	0	\N
+711	283	32	GUI	string 'reqmgrsystem' is not localized for locale 'zh_CN'  - using en_GB	1439883465	LOCALIZATION	0	\N
+712	283	32	GUI	string 'no_rms_defined' is not localized for locale 'zh_CN'  - using en_GB	1439883465	LOCALIZATION	0	\N
+713	283	32	GUI	string 'no_issuetracker_defined' is not localized for locale 'zh_CN'  - using en_GB	1439883465	LOCALIZATION	0	\N
+714	284	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:17:"audit_user_logout";s:6:"params";a:1:{i:0;s:11:"owen.ouyang";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439883468	LOGOUT	2	users
+715	285	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:11:"owen.ouyang";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439883472	LOGIN	2	users
+716	286	32	GUI	string 'system_config' is not localized for locale 'zh_CN'  - using en_GB	1439883473	LOCALIZATION	0	\N
+717	286	32	GUI	string 'link_report_test_cases_created_per_user' is not localized for locale 'zh_CN'  - using en_GB	1439883473	LOCALIZATION	0	\N
+718	286	32	GUI	string 'href_issuetracker_management' is not localized for locale 'zh_CN'  - using en_GB	1439883473	LOCALIZATION	0	\N
+719	286	32	GUI	string 'href_reqmgrsystem_management' is not localized for locale 'zh_CN'  - using en_GB	1439883473	LOCALIZATION	0	\N
 \.
 
 
@@ -2566,7 +2580,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 -- Name: h5tl_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_events_id_seq', 705, true);
+SELECT pg_catalog.setval('h5tl_events_id_seq', 719, true);
 
 
 --
@@ -3638,6 +3652,11 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 279	/login.php	1439793307	1439793307	7	bgrnv8tgg4mlsjtg9pdca7t6u1
 280	/login.php	1439799702	1439799702	4	cbpbb7aaeaefqiqakg4gtelun7
 281	/login.php	1439802868	1439802868	7	kecnasq9h0qvn5ghel70umdt62
+282	/lib/general/mainPage.php	1439883465	1439883465	2	7g6q17am6j4ord5kpvn1u3m8j0
+283	/lib/project/projectEdit.php	1439883465	1439883465	2	7g6q17am6j4ord5kpvn1u3m8j0
+284	/logout.php	1439883468	1439883468	2	7g6q17am6j4ord5kpvn1u3m8j0
+285	/login.php	1439883472	1439883472	2	7g6q17am6j4ord5kpvn1u3m8j0
+286	/lib/general/mainPage.php	1439883473	1439883473	2	7g6q17am6j4ord5kpvn1u3m8j0
 \.
 
 
@@ -3645,7 +3664,7 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 -- Name: h5tl_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_transactions_id_seq', 281, true);
+SELECT pg_catalog.setval('h5tl_transactions_id_seq', 286, true);
 
 
 --
