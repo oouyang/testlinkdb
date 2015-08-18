@@ -2573,6 +2573,14 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 717	286	32	GUI	string 'link_report_test_cases_created_per_user' is not localized for locale 'zh_CN'  - using en_GB	1439883473	LOCALIZATION	0	\N
 718	286	32	GUI	string 'href_issuetracker_management' is not localized for locale 'zh_CN'  - using en_GB	1439883473	LOCALIZATION	0	\N
 719	286	32	GUI	string 'href_reqmgrsystem_management' is not localized for locale 'zh_CN'  - using en_GB	1439883473	LOCALIZATION	0	\N
+720	287	32	GUI	string 'context_design' is not localized for locale 'zh_CN'  - using en_GB	1439883679	LOCALIZATION	0	\N
+721	287	32	GUI	string 'context_exec' is not localized for locale 'zh_CN'  - using en_GB	1439883679	LOCALIZATION	0	\N
+722	287	32	GUI	string 'context_testplan_design' is not localized for locale 'zh_CN'  - using en_GB	1439883679	LOCALIZATION	0	\N
+723	287	32	GUI	string 'enabled_on_context' is not localized for locale 'zh_CN'  - using en_GB	1439883679	LOCALIZATION	0	\N
+724	287	32	GUI	string 'display_on_exec' is not localized for locale 'zh_CN'  - using en_GB	1439883679	LOCALIZATION	0	\N
+725	288	32	GUI	string 'btn_manage_user' is not localized for locale 'zh_CN'  - using en_GB	1439883686	LOCALIZATION	0	\N
+726	288	32	GUI	string 'demo_special_user' is not localized for locale 'zh_CN'  - using en_GB	1439883686	LOCALIZATION	0	\N
+727	289	32	GUI	string 'demo_update_user_disabled' is not localized for locale 'zh_CN'  - using en_GB	1439883687	LOCALIZATION	0	\N
 \.
 
 
@@ -2580,7 +2588,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 -- Name: h5tl_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_events_id_seq', 719, true);
+SELECT pg_catalog.setval('h5tl_events_id_seq', 727, true);
 
 
 --
@@ -3657,6 +3665,9 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 284	/logout.php	1439883468	1439883468	2	7g6q17am6j4ord5kpvn1u3m8j0
 285	/login.php	1439883472	1439883472	2	7g6q17am6j4ord5kpvn1u3m8j0
 286	/lib/general/mainPage.php	1439883473	1439883473	2	7g6q17am6j4ord5kpvn1u3m8j0
+287	/lib/cfields/cfieldsView.php	1439883679	1439883679	2	7g6q17am6j4ord5kpvn1u3m8j0
+288	/lib/usermanagement/usersView.php	1439883686	1439883686	2	7g6q17am6j4ord5kpvn1u3m8j0
+289	/lib/usermanagement/userInfo.php	1439883687	1439883687	2	7g6q17am6j4ord5kpvn1u3m8j0
 \.
 
 
@@ -3664,7 +3675,7 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 -- Name: h5tl_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_transactions_id_seq', 286, true);
+SELECT pg_catalog.setval('h5tl_transactions_id_seq', 289, true);
 
 
 --
