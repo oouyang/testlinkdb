@@ -2581,6 +2581,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 725	288	32	GUI	string 'btn_manage_user' is not localized for locale 'zh_CN'  - using en_GB	1439883686	LOCALIZATION	0	\N
 726	288	32	GUI	string 'demo_special_user' is not localized for locale 'zh_CN'  - using en_GB	1439883686	LOCALIZATION	0	\N
 727	289	32	GUI	string 'demo_update_user_disabled' is not localized for locale 'zh_CN'  - using en_GB	1439883687	LOCALIZATION	0	\N
+728	290	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:16:"audit_user_saved";s:6:"params";a:1:{i:0;s:11:"owen.ouyang";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439883936	SAVE	2	users
 \.
 
 
@@ -2588,7 +2589,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 -- Name: h5tl_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_events_id_seq', 727, true);
+SELECT pg_catalog.setval('h5tl_events_id_seq', 728, true);
 
 
 --
@@ -3668,6 +3669,7 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 287	/lib/cfields/cfieldsView.php	1439883679	1439883679	2	7g6q17am6j4ord5kpvn1u3m8j0
 288	/lib/usermanagement/usersView.php	1439883686	1439883686	2	7g6q17am6j4ord5kpvn1u3m8j0
 289	/lib/usermanagement/userInfo.php	1439883687	1439883687	2	7g6q17am6j4ord5kpvn1u3m8j0
+290	/lib/usermanagement/userInfo.php	1439883936	1439883937	2	7g6q17am6j4ord5kpvn1u3m8j0
 \.
 
 
@@ -3675,7 +3677,7 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 -- Name: h5tl_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_transactions_id_seq', 289, true);
+SELECT pg_catalog.setval('h5tl_transactions_id_seq', 290, true);
 
 
 --
@@ -3741,7 +3743,6 @@ COPY h5tl_user_testproject_roles (user_id, testproject_id, role_id) FROM stdin;
 
 COPY h5tl_users (id, login, password, role_id, email, first, last, locale, default_testproject_id, active, script_key, cookie_string, auth_method) FROM stdin;
 1	admin	819a07afa4abc8660ec9042038a8c597	8	tladmin@acadine.com	Testlink	Administrator	en_GB	\N	1	6ffca592bfd48b0f46e1594b3498121a	b94536fe7ccb81780ff60ea65c1f6c546b34ab467c506a127d6eb1e0f6a62a94	
-2	owen.ouyang	819a07afa4abc8660ec9042038a8c597	8	o@oo.oo	o	o	zh_CN	\N	1	10fb2560683dc141258dbce4c21a37cf	b3e17ae30c84f8be0dccaccb6fa4593f0a14c13d3818f050a554f9bc77a4b904	DB
 3	brian.huang	819a07afa4abc8660ec9042038a8c597	8	brian.huang@acadine.com	brian	huang	en_GB	\N	1	\N	0f13bca76f6cbb7e7c30a4f5c35b8706664bb328b1bfb5cd70bbb9a2c03b875b	
 5	hubert.lu	819a07afa4abc8660ec9042038a8c597	8	hubert.lu@acadine.com	hubert	lu	en_GB	\N	1	\N	6812fbcd7e15e0a28e99c56b3590e0af67986091484b23b81456349e8980efab	
 7	peipei.cheng	34317be00312038ff242a10887eed9d1	8	peipei.cheng@acadine.com	peipei	cheng	en_GB	\N	1	\N	0d6c5343fa3dc9f91ba3f6839ac6c995fa02e175c44ccda0972291d9524b2fdc	
@@ -3749,6 +3750,7 @@ COPY h5tl_users (id, login, password, role_id, email, first, last, locale, defau
 6	eric.chang	819a07afa4abc8660ec9042038a8c597	8	eric.chang@acadine.com	eric	chang	en_US	\N	1	\N	3ea31295359b6c97f8f30ea981c3968bcb8b2a0205ae0cb4c8eb5de309f45f52	
 9	hermes.cheng	819a07afa4abc8660ec9042038a8c597	8	hermes.cheng@acadine.com	hermes	cheng	en_GB	\N	1	\N	99e2c1d4d52c5684f63329579877ca90eecaf1ea62c2b50c4507e5fb27d50ab9	
 4	enpei.chu	6292677c8a2acac465c5c28b1da7ff75	8	enpei.chu@acadine.com	enpei	chu	en_GB	\N	1	\N	cbb3c0bc9e1a12ea461a72c3c4be69b713da0a504bcd788e1d7c69c93436fff2	
+2	owen.ouyang	819a07afa4abc8660ec9042038a8c597	8	oo@oo.oo	oo	ooo	zh_CN	\N	1	10fb2560683dc141258dbce4c21a37cf	b3e17ae30c84f8be0dccaccb6fa4593f0a14c13d3818f050a554f9bc77a4b904	DB
 \.
 
 
