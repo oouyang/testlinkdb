@@ -1835,6 +1835,7 @@ COPY h5tl_builds (id, testplan_id, name, notes, active, is_open, author_id, crea
 1	43	29301aa03	<p>\r\n\tfor 1.0</p>\r\n	1	1	\N	2015-08-03 03:29:52	2015-07-31	\N
 2	42	ef302022	<p>\r\n\tfor 1.0</p>\r\n	1	1	\N	2015-08-03 03:30:39	2015-07-29	\N
 3	42	2849201		1	1	\N	2015-08-03 03:42:08	2015-08-04	\N
+4	2083	1.0		1	1	\N	2015-08-19 08:39:36	\N	\N
 \.
 
 
@@ -1842,7 +1843,7 @@ COPY h5tl_builds (id, testplan_id, name, notes, active, is_open, author_id, crea
 -- Name: h5tl_builds_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_builds_id_seq', 3, true);
+SELECT pg_catalog.setval('h5tl_builds_id_seq', 4, true);
 
 
 --
@@ -2704,6 +2705,104 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 847	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439965972	PHP	0	\N
 848	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439965972	PHP	0	\N
 849	351	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:72:"[Gallery] User should be able to switch to Camera on First Time Use page";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439967729	ASSIGN	1331	nodes_hierarchy
+850	352	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1439969615	PHP	0	\N
+851	352	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439969615	PHP	0	\N
+852	352	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439969615	PHP	0	\N
+853	352	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439969615	PHP	0	\N
+854	352	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439969615	PHP	0	\N
+855	352	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439969615	PHP	0	\N
+856	353	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1439969671	PHP	0	\N
+857	353	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439969671	PHP	0	\N
+858	353	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439969671	PHP	0	\N
+859	353	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439969671	PHP	0	\N
+860	353	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439969671	PHP	0	\N
+861	353	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439969671	PHP	0	\N
+862	354	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1439969699	PHP	0	\N
+863	354	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439969699	PHP	0	\N
+864	354	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439969699	PHP	0	\N
+865	354	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439969699	PHP	0	\N
+866	354	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439969699	PHP	0	\N
+867	354	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439969699	PHP	0	\N
+868	355	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1439969734	PHP	0	\N
+869	355	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439969734	PHP	0	\N
+870	355	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439969734	PHP	0	\N
+871	355	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439969734	PHP	0	\N
+872	355	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439969734	PHP	0	\N
+873	355	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439969734	PHP	0	\N
+874	356	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1439969986	PHP	0	\N
+875	356	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439969986	PHP	0	\N
+876	356	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439969986	PHP	0	\N
+877	356	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439969986	PHP	0	\N
+878	356	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439969986	PHP	0	\N
+879	356	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439969986	PHP	0	\N
+880	357	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:89:"[Gallery][All Photos] Confirm gallery shows pictures from a range of months within a year";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439970143	ASSIGN	921	nodes_hierarchy
+881	357	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:89:"[Gallery][All Photos] Confirm gallery shows pictures from a range of months within a year";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439970143	ASSIGN	921	nodes_hierarchy
+882	358	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:18:"Main setting pages";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439970155	ASSIGN	1337	nodes_hierarchy
+883	358	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:18:"Main setting pages";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439970155	ASSIGN	1337	nodes_hierarchy
+884	359	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:60:"[Gallery] Confirm gallery shows pictures from a single month";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439970291	ASSIGN	916	nodes_hierarchy
+885	359	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:60:"[Gallery] Confirm gallery shows pictures from a single month";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439970291	ASSIGN	916	nodes_hierarchy
+886	360	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1439970357	PHP	0	\N
+887	360	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439970357	PHP	0	\N
+888	360	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439970357	PHP	0	\N
+889	360	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439970357	PHP	0	\N
+890	360	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439970357	PHP	0	\N
+891	360	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439970357	PHP	0	\N
+892	361	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1439970392	PHP	0	\N
+893	361	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439970392	PHP	0	\N
+894	361	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439970392	PHP	0	\N
+895	361	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439970392	PHP	0	\N
+896	361	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439970392	PHP	0	\N
+897	361	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439970392	PHP	0	\N
+898	362	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:37:"Gallery displays contents of SD card.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439970422	ASSIGN	1211	nodes_hierarchy
+926	376	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1439976541	PHP	0	\N
+899	362	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:37:"Gallery displays contents of SD card.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439970422	ASSIGN	1211	nodes_hierarchy
+900	363	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:35:"audit_keyword_assignment_removed_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:59:"[Gallery][All Photos] Gallery displays contents of SD card.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439970458	ASSIGN	1211	nodes_hierarchy
+901	363	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:35:"audit_keyword_assignment_removed_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:59:"[Gallery][All Photos] Gallery displays contents of SD card.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439970458	ASSIGN	1211	nodes_hierarchy
+902	364	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1439970646	PHP	0	\N
+903	364	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439970646	PHP	0	\N
+904	364	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439970646	PHP	0	\N
+905	364	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439970646	PHP	0	\N
+906	364	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439970646	PHP	0	\N
+907	364	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439970646	PHP	0	\N
+908	365	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:20:"Toggle functionality";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439970765	ASSIGN	1340	nodes_hierarchy
+909	365	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:20:"Toggle functionality";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439970765	ASSIGN	1340	nodes_hierarchy
+910	366	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:22:"Access main page items";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439971521	ASSIGN	1343	nodes_hierarchy
+911	366	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:22:"Access main page items";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439971521	ASSIGN	1343	nodes_hierarchy
+912	367	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:9:"hubert.lu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439972354	LOGIN	5	users
+913	368	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:24:"Exit and Access Settings";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439972769	ASSIGN	1491	nodes_hierarchy
+914	369	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:22:"audit_testplan_created";s:6:"params";a:2:{i:0;s:13:"testforimport";i:1;s:9:"Full test";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439973514	CREATED	2083	testplans
+915	370	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:26:"audit_tc_added_to_testplan";s:6:"params";a:3:{i:0;s:68:"ti-1 : Operator name is shown correctly for USIM throughout settings";i:1;s:1:"2";i:2;s:9:"Full test";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439973555	ASSIGN	2083	testplans
+916	370	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:26:"audit_tc_added_to_testplan";s:6:"params";a:3:{i:0;s:80:"ti-3 : All items on the Call Settings screen display properly after enabling FDN";i:1;s:1:"2";i:2;s:9:"Full test";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439973555	ASSIGN	2083	testplans
+917	370	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:26:"audit_tc_added_to_testplan";s:6:"params";a:3:{i:0;s:97:"ti-4 : Last used SIM will call last contact dialed when double clicking bluetooth headset to dial";i:1;s:1:"2";i:2;s:9:"Full test";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439973555	ASSIGN	2083	testplans
+918	371	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:19:"audit_build_created";s:6:"params";a:3:{i:0;s:13:"testforimport";i:1;s:9:"Full test";i:2;s:3:"1.0";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439973576	CREATE	4	builds
+919	372	2	GUI	E_WARNING\nIllegal string offset 'node_type_id' - in /usr/share/nginx/html/testlink/lib/functions/print.inc.php - Line 788	1439973747	PHP	0	\N
+920	372	2	GUI	E_NOTICE\nUndefined offset: 0 - in /usr/share/nginx/html/testlink/lib/functions/print.inc.php - Line 788	1439973747	PHP	0	\N
+921	373	2	GUI	E_WARNING\nIllegal string offset 'node_type_id' - in /usr/share/nginx/html/testlink/lib/functions/print.inc.php - Line 788	1439974107	PHP	0	\N
+922	373	2	GUI	E_NOTICE\nUndefined offset: 0 - in /usr/share/nginx/html/testlink/lib/functions/print.inc.php - Line 788	1439974107	PHP	0	\N
+923	374	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:12:"peipei.cheng";i:1;s:14:"111.203.161.50";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439976047	LOGIN	7	users
+924	375	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:51:"Contacts should be launched by press Contacts icon.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439976397	ASSIGN	2085	nodes_hierarchy
+925	375	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:51:"Contacts should be launched by press Contacts icon.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439976397	ASSIGN	2085	nodes_hierarchy
+927	376	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439976541	PHP	0	\N
+928	376	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439976541	PHP	0	\N
+929	376	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439976541	PHP	0	\N
+930	376	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439976541	PHP	0	\N
+931	376	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439976541	PHP	0	\N
+932	377	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:55:"Contacts should be exited by press LSK or End Call key.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439976602	ASSIGN	2088	nodes_hierarchy
+933	377	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:55:"Contacts should be exited by press LSK or End Call key.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439976602	ASSIGN	2088	nodes_hierarchy
+934	378	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:53:"Name is displayed as phone number in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439977140	ASSIGN	2093	nodes_hierarchy
+935	378	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:53:"Name is displayed as phone number in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439977140	ASSIGN	2093	nodes_hierarchy
+936	379	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:23:"Focus on Settings items";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439977343	ASSIGN	2097	nodes_hierarchy
+937	379	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:23:"Focus on Settings items";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439977343	ASSIGN	2097	nodes_hierarchy
+938	380	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:63:"Name is displayed as the first phone number in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439977435	ASSIGN	2099	nodes_hierarchy
+939	380	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:63:"Name is displayed as the first phone number in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439977435	ASSIGN	2099	nodes_hierarchy
+940	381	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:46:"Name is displayed as email in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439977601	ASSIGN	2102	nodes_hierarchy
+941	381	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:46:"Name is displayed as email in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439977601	ASSIGN	2102	nodes_hierarchy
+942	382	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:56:"Name is displayed as the first email in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439977717	ASSIGN	2105	nodes_hierarchy
+943	382	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:56:"Name is displayed as the first email in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439977717	ASSIGN	2105	nodes_hierarchy
+944	383	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:48:"Name is displayed as No name in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439977926	ASSIGN	2108	nodes_hierarchy
+945	383	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:48:"Name is displayed as No name in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439977926	ASSIGN	2108	nodes_hierarchy
+946	384	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:48:"Make a call when press Call key in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439978255	ASSIGN	2114	nodes_hierarchy
+947	384	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:48:"Make a call when press Call key in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439978255	ASSIGN	2114	nodes_hierarchy
 \.
 
 
@@ -2711,7 +2810,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 -- Name: h5tl_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_events_id_seq', 849, true);
+SELECT pg_catalog.setval('h5tl_events_id_seq', 947, true);
 
 
 --
@@ -2742,6 +2841,9 @@ SELECT pg_catalog.setval('h5tl_execution_tcsteps_id_seq', 1, false);
 --
 
 COPY h5tl_executions (id, build_id, tester_id, execution_ts, status, testplan_id, tcversion_id, tcversion_number, platform_id, execution_type, execution_duration, notes) FROM stdin;
+1	4	4	2015-08-19 08:40:44	p	2083	1288	2	0	1	13.00	
+2	4	4	2015-08-19 08:40:56	f	2083	1304	2	0	1	2.00	
+3	4	4	2015-08-19 08:41:06	b	2083	1311	2	0	1	5.00	
 \.
 
 
@@ -2749,7 +2851,7 @@ COPY h5tl_executions (id, build_id, tester_id, execution_ts, status, testplan_id
 -- Name: h5tl_executions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_executions_id_seq', 1, false);
+SELECT pg_catalog.setval('h5tl_executions_id_seq', 3, true);
 
 
 --
@@ -2928,7 +3030,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 65	Contacts	58	2	3
 66	Clock	58	2	4
 67	Camera	58	2	5
-68	Gallery	58	2	6
 69	Music	58	2	7
 70	Keypad	59	2	1
 71	HW key routing	70	2	1
@@ -2965,22 +3066,29 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 101		100	9	0
 102		100	9	0
 103		100	9	0
+1495	Navigate Settings	63	2	2
+1708	[Clock] Date format should align selected language	66	3	33
 106		105	4	0
 107		106	9	0
 108		106	9	0
 109		106	9	0
 110		106	9	0
+68	Gallery	58	2	6
+1709		1708	4	0
 111		106	9	0
+1496	[Clock] Alarm icon should be left aligned with the date on it"s right	66	3	1
 113		112	4	0
 114		113	9	0
 115		113	9	0
 116		113	9	0
+1497		1496	4	0
 118		117	4	0
 119		118	9	0
 120		118	9	0
 121		118	9	0
 122		118	9	0
 123		118	9	0
+1498		1497	9	0
 125		124	4	0
 126		125	9	0
 127		125	9	0
@@ -3575,8 +3683,10 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 715		713	9	0
 716		713	9	0
 717		713	9	0
+1499		1497	9	0
 719		718	4	0
 720		719	9	0
+1500	[Clock] RTL text should be properly displayed	66	3	2
 722		721	4	0
 723		722	9	0
 724		722	9	0
@@ -3601,6 +3711,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 739	[Single Item View] The user can share all supported image files without issue	1322	3	6
 727	[Gallery] A warning is displayed informing the user that an SD card is required for the app to work	1330	3	3
 736	[Gallery] Helpful message displays in Gallery when no photos are present.	1330	3	4
+1501		1500	4	0
 747		746	4	0
 748		747	9	0
 749		747	9	0
@@ -3609,9 +3720,11 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 752		747	9	0
 753		747	9	0
 754		747	9	0
+1502		1501	9	0
 756		755	4	0
 757		756	9	0
 758		756	9	0
+1503		1501	9	0
 760		759	4	0
 761		760	9	0
 762		760	9	0
@@ -3699,8 +3812,8 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 785	There is a smooth transition animation when swiping through photos	1326	3	13
 794	Gallery functions properly without issue when there is high memory usage on 1st launch	1326	3	14
 823	Camera viewfinder displays properly after editing a photo in the gallery	1323	3	0
-778	Thumbnails and previews should always match captured photo	1321	3	1
-818	Imported videos are shown correctly without issue when switching between portrai	1321	3	6
+818	Imported videos are shown correctly without issue when switching between portrai	1321	3	4
+778	Thumbnails and previews should always match captured photo	1321	3	13
 848		847	9	0
 849		847	9	0
 850		847	9	0
@@ -3708,6 +3821,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 852		847	9	0
 853		847	9	0
 854		847	9	0
+1710		1709	9	0
 856		855	4	0
 857		856	9	0
 858		856	9	0
@@ -3715,6 +3829,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 860		856	9	0
 861		856	9	0
 862		856	9	0
+1711		1709	9	0
 864		863	4	0
 865		864	9	0
 866		864	9	0
@@ -3799,17 +3914,19 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 881	[OTA] Data Migration of Gallery app	1326	3	27
 942	[Gallery] Using the pick activity through a website does not cause the gallery to hang	1325	3	36
 909	[Gallery] Photo Editor - Automatic Image Enhancement	1323	3	1
-927	[Gallery] Confirm gallery shows pictures from a range of months over years	1321	3	7
-921	[Gallery] Confirm gallery shows pictures from a range of months within a year	1321	3	2
-916	[Gallery] Confirm gallery shows pictures from a single month	1321	3	5
-933	Basic  - Photo/Video Browsing & Slideshow	1321	3	8
-949	Basic  - Photo Selection, Sharing & Deletion	1321	3	9
+927	[Gallery] Confirm gallery shows pictures from a range of months over years	1321	3	5
+933	Basic  - Photo/Video Browsing & Slideshow	1321	3	6
+949	Basic  - Photo Selection, Sharing & Deletion	1321	3	7
+921	[Gallery][All Photos] Confirm gallery shows pictures from a range of months within a year	1321	3	1
+916	[Gallery][All Photos] Confirm gallery shows pictures from a single month	1321	3	2
 953		950	9	0
 954		950	9	0
 955		950	9	0
+1504	[Clock] Everything under the Alarm options should display correctly in RTL	66	3	3
 957		956	4	0
 958		957	9	0
 959		957	9	0
+1505		1504	4	0
 961		960	4	0
 962		961	9	0
 963		961	9	0
@@ -3819,6 +3936,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 967		961	9	0
 968		961	9	0
 969		961	9	0
+1506		1505	9	0
 971		970	4	0
 972		971	9	0
 973		971	9	0
@@ -3897,10 +4015,9 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1051	[Gallery] Ability to return from the Camera App to the Gallery app without taking a new picture	1325	3	57
 1001	Photo editor - Landscape mode while in edit mode	1323	3	2
 1038	[Gallery] Multiple Selection Mode - Share a single photo	1329	3	54
-970	[Gallery] Thumbnail Photo View should not be affected by blank or empty image file	1321	3	11
-980	[Gallery] Confirm gallery shows pictures in chronological order in the user interface	1321	3	12
-1028	[Gallery] Access Multiple Selection Mode from Thumbnail Photo View	1321	3	13
-1032	[Gallery] Single tap on a photo thumbnail in Muliple Selection Mode toggles the photo selection	1321	3	14
+970	[Gallery] Thumbnail Photo View should not be affected by blank or empty image file	1321	3	9
+1028	[Gallery] Access Multiple Selection Mode from Thumbnail Photo View	1321	3	11
+1032	[Gallery] Single tap on a photo thumbnail in Muliple Selection Mode toggles the photo selection	1321	3	12
 1052		1051	4	0
 1053		1052	9	0
 1054		1052	9	0
@@ -3908,16 +4025,19 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1056		1052	9	0
 1057		1052	9	0
 1058		1052	9	0
+1507		1505	9	0
 1060		1059	4	0
 1061		1060	9	0
 1062		1060	9	0
 1063		1060	9	0
 1064		1060	9	0
 1065		1060	9	0
+1508		1505	9	0
 1067		1066	4	0
 1068		1067	9	0
 1069		1067	9	0
 1070		1067	9	0
+1509		1505	9	0
 1072		1071	4	0
 1073		1072	9	0
 1075		1074	4	0
@@ -4008,11 +4128,13 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1158		1155	9	0
 1159		1155	9	0
 1160		1155	9	0
+1510		1505	9	0
 1162		1161	4	0
 1163		1162	9	0
 1164		1162	9	0
 1165		1162	9	0
 1166		1162	9	0
+1511		1505	9	0
 1168		1167	4	0
 1169		1168	9	0
 1170		1168	9	0
@@ -4107,10 +4229,10 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1203	Verify the user is able to Export photos from device to desktop machine	1325	3	84
 1206	Accessing camera from gallery (single photo view)	1325	3	85
 1198	[Gallery] Multiple Selection Mode - Share multiple photos	1329	3	83
-1225	[GALLERY] Delete multiple photos from select image mode	1321	3	10
-1211	Gallery displays contents of SD card.	1321	3	15
+1211	[Gallery][All Photos] Gallery displays contents of SD card.	1321	3	3
 1264		1258	9	0
 1265		1258	9	0
+1512		1505	9	0
 1267		1266	4	0
 1268		1267	9	0
 1269		1267	9	0
@@ -4163,6 +4285,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1316		1315	4	0
 1317		1316	9	0
 1318	Localization	57	2	7
+1712		1709	9	0
 1320	test2	1255	2	2
 1266	Network operator settings show correctly for both SIMs in a DSDS scenario	1320	3	2
 117	[Camera] The position of recording indicator and counter should be mirrored in RTL	1319	3	1
@@ -4179,11 +4302,11 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 835	All strings on the "No photos or videos" page are translated properly without truncation	1328	3	0
 863	The strings "Select" and "Number Selected" are translated properly without truncation	1328	3	24
 956	[Gallery] Removing the SD card while vieing the gallery list removes all pics stored externally	1326	3	38
-1321	Grid View	68	2	1
+1322	Single Item View	68	2	2
 1059	[Gallery] Ability to return from the Camera App to the Gallery app after taking a photo	1325	3	58
 1125	Ability to launch the Camera app from inside the Gallery app (from the thumbnail view)	1325	3	70
 1161	[Gallery] Photo Editor - Effects - B&W & Sepia	1323	3	9
-718	[Gallery] Thumbnail Photo grid View	1321	3	0
+718	[Gallery][All Photos] Thumbnail Photo grid View	1321	3	0
 1325	Cross Function Test Cases	68	2	5
 1326	Stability&Performance	68	2	6
 1331	[Gallery] User should be able to switch to Camera on First Time Use page	1330	3	5
@@ -4191,10 +4314,625 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1333		1332	9	0
 1334		1332	9	0
 1330	First Time Use	68	2	0
-1322	Single Item View	68	2	2
 1323	Photo editor	68	2	3
 1329	Share	68	2	4
 1335		1332	9	0
+1321	Grid View	68	2	1
+1225	[GALLERY] Delete multiple photos from select image mode	1321	3	8
+980	[Gallery] Confirm gallery shows pictures in chronological order in the user interface	1321	3	10
+1338		1337	4	0
+1339		1338	9	0
+1336	Key screens	63	2	1
+1513	[Clock] Clock should display correctly in RTL	66	3	4
+1514		1513	4	0
+1341		1340	4	0
+1342		1341	9	0
+1343	Access main page items	1336	3	3
+1515		1514	9	0
+1344		1343	4	0
+1345		1344	9	0
+1516		1514	9	0
+1517		1514	9	0
+1518	[CopyPaste][Keyboard][TextSelection] Clock general  text selection	66	3	5
+1519		1518	4	0
+1520		1519	9	0
+1521		1519	9	0
+1522		1519	9	0
+1523		1519	9	0
+1524		1519	9	0
+1525		1519	9	0
+1526		1519	9	0
+1527		1519	9	0
+1528		1519	9	0
+1529		1519	9	0
+1530		1519	9	0
+1531		1519	9	0
+1532		1519	9	0
+1533		1519	9	0
+1534		1519	9	0
+1535		1519	9	0
+1536		1519	9	0
+1537		1519	9	0
+1538		1519	9	0
+1539		1519	9	0
+1540		1519	9	0
+1541		1519	9	0
+1542		1519	9	0
+1543	The time is always displayed correctly after day light savings time	66	3	6
+1544		1543	4	0
+1545		1544	9	0
+1546		1544	9	0
+1547		1544	9	0
+1548		1544	9	0
+1549		1544	9	0
+1550	Verify Clock Data is Preserved after OTA	66	3	7
+1551		1550	4	0
+1552		1551	9	0
+1553	[CopyPaste][Keyboard][TextSelection] Clock new/edit alarm selection	66	3	8
+1554		1553	4	0
+1555		1554	9	0
+1556		1554	9	0
+1557		1554	9	0
+1558		1554	9	0
+1559		1554	9	0
+1560		1554	9	0
+1561		1554	9	0
+1562		1554	9	0
+1563		1554	9	0
+1564		1554	9	0
+1565	[Clock] Make sure alarm screen is shown on time	66	3	9
+1566		1565	4	0
+1567		1566	9	0
+1568		1566	9	0
+1569		1566	9	0
+1570		1566	9	0
+1571	2.0 Visual Refresh : Clock	66	3	10
+1572		1571	4	0
+1573		1572	9	0
+1574		1572	9	0
+1575		1572	9	0
+1576		1572	9	0
+1577		1572	9	0
+1578		1572	9	0
+1579		1572	9	0
+1580		1572	9	0
+1581		1572	9	0
+1582		1572	9	0
+1583		1572	9	0
+1584		1572	9	0
+1585		1572	9	0
+1586	Create a new alarm page displays normally after locking and unlocking the screen	66	3	11
+1587		1586	4	0
+1588		1587	9	0
+1589		1587	9	0
+1590		1587	9	0
+1591		1587	9	0
+1592		1587	9	0
+1593		1587	9	0
+1594		1587	9	0
+1595	All strings on the "Clock -Alarm" screen are translated properly without truncation	66	3	12
+1596		1595	4	0
+1597		1596	9	0
+1598		1596	9	0
+1599		1596	9	0
+1600		1596	9	0
+1601	All strings on the "Clock -Stopwatch paused" screen are translated properly without truncation	66	3	13
+1602		1601	4	0
+1603		1602	9	0
+1604		1602	9	0
+1605		1602	9	0
+1606		1602	9	0
+1607	All strings on the "Clock -Stopwatch running" screen are translated properly without truncation	66	3	14
+1608		1607	4	0
+1609		1608	9	0
+1610		1608	9	0
+1611		1608	9	0
+1612		1608	9	0
+1613	All strings on the "Clock - Alarm Repeat" screen are translated properly without truncation	66	3	15
+1614		1613	4	0
+1615		1614	9	0
+1616		1614	9	0
+1617		1614	9	0
+1618	All strings on the "Clock -Timer" screen are translated properly without truncation	66	3	16
+1619		1618	4	0
+1620		1619	9	0
+1621		1619	9	0
+1622	All strings on the "Clock - Alarm Snooze" screen are translated properly without truncation	66	3	17
+1623		1622	4	0
+1624		1623	9	0
+1625		1623	9	0
+1626		1623	9	0
+1627	All strings on the "Clock -Timer Sound" screen are translated properly without truncation	66	3	18
+1628		1627	4	0
+1629		1628	9	0
+1630		1628	9	0
+1631		1628	9	0
+1632	All strings on the "Clock - Alarm Sound" screen are translated properly without truncation	66	3	19
+1633		1632	4	0
+1634		1633	9	0
+1635		1633	9	0
+1636		1633	9	0
+1637	All strings on the "Clock (digital)" screen are translated properly without truncation	66	3	20
+1638		1637	4	0
+1639		1638	9	0
+1492		1491	4	0
+1493		1492	9	0
+1494		1492	9	0
+1491	Exit and Access Settings	1336	3	0
+1337	Main setting pages	1336	3	1
+1340	Toggle switch functionality	1336	3	2
+1640		1638	9	0
+1641	All strings on the "Clock -Stopwatch" screen are translated properly without truncation	66	3	21
+1642		1641	4	0
+1643		1642	9	0
+1644		1642	9	0
+1645	All strings on the "Clock -Timer running" screen are translated properly without truncation	66	3	22
+1646		1645	4	0
+1647		1646	9	0
+1648		1646	9	0
+1649		1646	9	0
+1650		1646	9	0
+1651		1646	9	0
+1652	All strings on the "Clock - New Alarm" screen are translated properly without truncation	66	3	23
+1653		1652	4	0
+1654		1653	9	0
+1655		1653	9	0
+1656	All strings on the "Clock -Edit alarm" screen are translated properly without truncation	66	3	24
+1657		1656	4	0
+1658		1657	9	0
+1659		1657	9	0
+1660		1657	9	0
+1661		1657	9	0
+1662	All strings on the "Clock -Edit alarm Snooze" screen are translated properly without truncation	66	3	25
+1663		1662	4	0
+1664		1663	9	0
+1665		1663	9	0
+1666		1663	9	0
+1667		1663	9	0
+1668		1663	9	0
+1669	All strings on the "Clock -Edit alarm Repeat" screen are translated properly without truncation	66	3	26
+1670		1669	4	0
+1671		1670	9	0
+1672		1670	9	0
+1673		1670	9	0
+1674		1670	9	0
+1675		1670	9	0
+1676	All strings on the "Clock -Edit alarm Sound" screen are translated properly without truncation	66	3	27
+1677		1676	4	0
+1678		1677	9	0
+1679		1677	9	0
+1680		1677	9	0
+1681		1677	9	0
+1682		1677	9	0
+1683	All strings on the "Clock (analog)" screen are translated properly without truncation	66	3	28
+1684		1683	4	0
+1685		1684	9	0
+1686	The time when setting a new alarm appears in the correct format according to the	66	3	29
+1687		1686	4	0
+1688		1687	9	0
+1689		1687	9	0
+1690		1687	9	0
+1691		1687	9	0
+1692	The Date and Time in the clock app appears in the correct format according to th	66	3	30
+1693		1692	4	0
+1694		1693	9	0
+1695		1693	9	0
+1696		1693	9	0
+1697	[OTA] Data Migration of Clock app	66	3	31
+1698		1697	4	0
+1699		1698	9	0
+1700		1698	9	0
+1701		1698	9	0
+1702		1698	9	0
+1703		1698	9	0
+1704	[Next alarm info] View alarm time when my phone is locked	66	3	32
+1705		1704	4	0
+1706		1705	9	0
+1707		1705	9	0
+1713		1709	9	0
+1714		1709	9	0
+1715		1709	9	0
+1716	[Clock] Alarm screen should still function and look correct after minimizing and maximizing alarm	66	3	34
+1717		1716	4	0
+1718		1717	9	0
+1719		1717	9	0
+1720		1717	9	0
+1721	[Clock][Alarm] Test that when the alarm triggers, the phone vibrates and an audi	66	3	35
+1722		1721	4	0
+1723		1722	9	0
+1724	[Clock]  Verify the Alarm triggers properly while Charging	66	3	36
+1725		1724	4	0
+1726		1725	9	0
+1727		1725	9	0
+1728		1725	9	0
+1729		1725	9	0
+1730	[Clock] Users can set alarms with selected audible tone and/or vibration	66	3	37
+1731		1730	4	0
+1732		1731	9	0
+1733		1731	9	0
+1734		1731	9	0
+1735		1731	9	0
+1736		1731	9	0
+1737		1731	9	0
+1738		1731	9	0
+1739		1731	9	0
+1740		1731	9	0
+1741		1731	9	0
+1742	[Clock][Alarm] Test that when the alarm triggers, the audible alarm is triggered without vibration	66	3	38
+1743		1742	4	0
+1744		1743	9	0
+1745		1743	9	0
+1746		1743	9	0
+1747		1743	9	0
+1748		1743	9	0
+1749		1743	9	0
+1750		1743	9	0
+1751		1743	9	0
+1752		1743	9	0
+1753		1743	9	0
+1754	[Clock]  Verify the Alarm triggers properly while connected via USB	66	3	39
+1755		1754	4	0
+1756		1755	9	0
+1757		1755	9	0
+1758		1755	9	0
+1759		1755	9	0
+1760	[Clock][Alarm] Test that  Alarm will mute video when alarm fires on device	66	3	40
+1761		1760	4	0
+1762		1761	9	0
+1763		1761	9	0
+1764	Verify that for each contact the user see photo	66	3	41
+1765		1764	4	0
+1766		1765	9	0
+1767	[Clock][Alarm] Test that Alarm will mute music when it goes off	66	3	42
+1768		1767	4	0
+1769		1768	9	0
+1770		1768	9	0
+1771		1768	9	0
+1772		1768	9	0
+1773		1768	9	0
+1774	[Clock][Alarm] Alarm will mute radio when it goes off	66	3	43
+1775		1774	4	0
+1776		1775	9	0
+1777		1775	9	0
+1778		1775	9	0
+1779		1775	9	0
+1780		1775	9	0
+1781	Test that [Clock][Alarm] Alarm will goes off without sound/vibration/page showin	66	3	44
+1782		1781	4	0
+1783		1782	9	0
+1784		1782	9	0
+1785		1782	9	0
+1786		1782	9	0
+1787		1782	9	0
+1788		1782	9	0
+1789	Test that [Clock][Alarm] Alarm will go off with sound,vibration/page showing during the active call	66	3	45
+1790		1789	4	0
+1791		1790	9	0
+1792		1790	9	0
+1793		1790	9	0
+1794		1790	9	0
+1795		1790	9	0
+1796		1790	9	0
+1797	Test that [Clock][Alarm] The alarm icon will disappear in the status bar when tu	66	3	46
+1798		1797	4	0
+1799		1798	9	0
+1800		1798	9	0
+1801		1798	9	0
+1802		1798	9	0
+1803	[Clock][Alarm] The alarm icon shows in the status bar when turning on an alarm.	66	3	47
+1804		1803	4	0
+1805		1804	9	0
+1806		1804	9	0
+1807		1804	9	0
+1808		1804	9	0
+1809		1804	9	0
+1810	Test that [Clock][Alarm] The alarm icon will show up in the status bar after sno	66	3	48
+1811		1810	4	0
+1812		1811	9	0
+1813		1811	9	0
+1814		1811	9	0
+1815		1811	9	0
+1816		1811	9	0
+1817	Test that [Clock][Alarm] The alarm icon will not show in the status bar when all	66	3	49
+1818		1817	4	0
+1819		1818	9	0
+1820		1818	9	0
+1821		1818	9	0
+1822		1818	9	0
+1823		1818	9	0
+1824	Test that [Clock][Alarm] See the alarm icon shows in the status bar after add an alarm	66	3	50
+1825		1824	4	0
+1826		1825	9	0
+1827		1825	9	0
+1828		1825	9	0
+1829	Test that [Clock][Alarm] The alarm icon shows in the status bar when there is at	66	3	51
+1830		1829	4	0
+1831		1830	9	0
+1832		1830	9	0
+1833		1830	9	0
+1834		1830	9	0
+1835		1830	9	0
+1836	[Clock][Alarm] Test that the alarm goes off with sound and vibration	66	3	52
+1837		1836	4	0
+1838		1837	9	0
+1839		1837	9	0
+1840		1837	9	0
+1841		1837	9	0
+1842	Test that [Clock][Alarm] The alarm icon will disappear in the status bar when th	66	3	53
+1843		1842	4	0
+1844		1843	9	0
+1845		1843	9	0
+1846		1843	9	0
+1847		1843	9	0
+1848	Test that [Clock][Alarm] The alarm icon will not disappear in the status bar whe	66	3	54
+1849		1848	4	0
+1850		1849	9	0
+1851		1849	9	0
+1852		1849	9	0
+1853		1849	9	0
+1854		1849	9	0
+1855	[Clock][Alarm] Test that the alarm keeps playing for approx. 10 minutes	66	3	55
+1856		1855	4	0
+1857		1856	9	0
+1858		1856	9	0
+1859		1856	9	0
+1860		1856	9	0
+1861		1856	9	0
+1862	[Clock][Alarm] The alarm time on a currently triggering alarm does not change ev	66	3	56
+1863		1862	4	0
+1864		1863	9	0
+1865		1863	9	0
+1866		1863	9	0
+1867		1863	9	0
+1868		1863	9	0
+1869	Test that [Clock][Alarm] Hear the sound play back in sound selection page	66	3	57
+1870		1869	4	0
+1871		1870	9	0
+1872		1870	9	0
+1873		1870	9	0
+1874		1870	9	0
+1875	Test that [Clock][Alarm] Cancel the changes when edit an existing alarm	66	3	58
+1876		1875	4	0
+1877		1876	9	0
+1878		1876	9	0
+1879		1876	9	0
+1880		1876	9	0
+1881		1876	9	0
+1882		1876	9	0
+1883	[Clock][Alarm] See the countdown indicator shows "The alarm is set for hh HOURS	66	3	59
+1884		1883	4	0
+1885		1884	9	0
+1886		1884	9	0
+1887		1884	9	0
+1888	[Clock][Alarm] Cancel the alarm setting page	66	3	60
+1889		1888	4	0
+1890		1889	9	0
+1891		1889	9	0
+1892		1889	9	0
+1893	Test that [Clock][Alarm] The alarm will be turned off when receiving a phone call	66	3	61
+1894		1893	4	0
+1895		1894	9	0
+1896		1894	9	0
+1897		1894	9	0
+1898		1894	9	0
+1899		1894	9	0
+1900		1894	9	0
+1901	[Clock][Alarm] See the tick display on the selected time field in snooze time selection page	66	3	62
+1902		1901	4	0
+1903		1902	9	0
+1904		1902	9	0
+1905		1902	9	0
+1906		1902	9	0
+1907	[Clock][Alarm] See the tick display on the selected day field in repeat status selection page	66	3	63
+1908		1907	4	0
+1909		1908	9	0
+1910		1908	9	0
+1911		1908	9	0
+1912		1908	9	0
+1913	[Clock][Alarm] See the tick display on the selected sound field in sound selection page	66	3	64
+1914		1913	4	0
+1915		1914	9	0
+1916		1914	9	0
+1917		1914	9	0
+1918		1914	9	0
+1919	[Clock][Alarm] Enter the alarm setting page	66	3	65
+1920		1919	4	0
+1921		1920	9	0
+1922		1920	9	0
+1923		1920	9	0
+1924		1920	9	0
+1925	[Clock][Alarm] Entering the clock settings page to add a new alarm	66	3	66
+1926		1925	4	0
+1927		1926	9	0
+1928		1926	9	0
+1929	[Clock][Alarm] See the alarm time, label, Close and Snooze buttons on alarm page	66	3	67
+1930		1929	4	0
+1931		1930	9	0
+1932		1930	9	0
+1933		1930	9	0
+1934		1930	9	0
+1935	Test that [Clock][Alarm] Snooze the alarm	66	3	68
+1936		1935	4	0
+1937		1936	9	0
+1938		1936	9	0
+1939		1936	9	0
+1940		1936	9	0
+1941		1936	9	0
+1942		1936	9	0
+1943	Test that [Clock][Alarm] Close the alarm	66	3	69
+1944		1943	4	0
+1945		1944	9	0
+1946		1944	9	0
+1947		1944	9	0
+1948		1944	9	0
+1949		1944	9	0
+1950	Test that [Clock][Alarm] Change the alarm sound	66	3	70
+1951		1950	4	0
+1952		1951	9	0
+1953		1951	9	0
+1954		1951	9	0
+1955		1951	9	0
+1956		1951	9	0
+1957		1951	9	0
+1958	Test that [Clock][Alarm] Change the repeat state	66	3	71
+1959		1958	4	0
+1960		1959	9	0
+1961		1959	9	0
+1962		1959	9	0
+1963		1959	9	0
+1964		1959	9	0
+1965	Test that [Clock][Alarm] Change the snooze time	66	3	72
+1966		1965	4	0
+1967		1966	9	0
+1968		1966	9	0
+1969		1966	9	0
+1970		1966	9	0
+1971		1966	9	0
+1972		1966	9	0
+1973	Test that [Clock][Alarm] When the alarm goes off, the alarm page will show up	66	3	73
+1974		1973	4	0
+1975		1974	9	0
+1976		1974	9	0
+1977		1974	9	0
+1978		1974	9	0
+1979	[Clock][Alarm] Set an alarm sound while creating a new alarm	66	3	74
+1980		1979	4	0
+1981		1980	9	0
+1982		1980	9	0
+1983		1980	9	0
+1984		1980	9	0
+1985		1980	9	0
+1986	[Clock] Able to set snooze duration when creating a new alarm	66	3	75
+1987		1986	4	0
+1988		1987	9	0
+1989		1987	9	0
+1990		1987	9	0
+1991		1987	9	0
+1992	[Clock][Alarm] Alarm page displays alarm time, repeat state, label, on/off state	66	3	76
+1993		1992	4	0
+1994		1993	9	0
+1995		1993	9	0
+1996		1993	9	0
+1997		1993	9	0
+1998		1993	9	0
+1999	Test that [Clock][Alarm] Turn on/off the alarm	66	3	77
+2000		1999	4	0
+2001		2000	9	0
+2002		2000	9	0
+2003		2000	9	0
+2004		2000	9	0
+2005	Test that [Clock][Alarm] The default on/off state is on	66	3	78
+2006		2005	4	0
+2007		2006	9	0
+2008		2006	9	0
+2009		2006	9	0
+2010		2006	9	0
+2011	Test that [Clock][Alarm] The default label is "Alarm"	66	3	79
+2012		2011	4	0
+2013		2012	9	0
+2014		2012	9	0
+2015		2012	9	0
+2016		2012	9	0
+2017	Test that [Clock][Alarm] Delete an alarm	66	3	80
+2018		2017	4	0
+2019		2018	9	0
+2020		2018	9	0
+2021		2018	9	0
+2022		2018	9	0
+2023		2018	9	0
+2024		1721	4	0
+2025		2024	9	0
+2026		2024	9	0
+2027		2024	9	0
+2028		2024	9	0
+2029	[Clock] Adding multiple alarms to the Clock app	66	3	82
+2030		2029	4	0
+2031		2030	9	0
+2032		2030	9	0
+2033		2030	9	0
+2034		2030	9	0
+2035		2030	9	0
+2036		2030	9	0
+2037		2030	9	0
+2038	Test that [Clock] Launch the application	66	3	83
+2039		2038	4	0
+2040		2039	9	0
+2041	[Clock][Alarm] User can select Repeat state when creating a new alarm	66	3	84
+2042		2041	4	0
+2043		2042	9	0
+2044		2042	9	0
+2045		2042	9	0
+2046		2042	9	0
+2047		2042	9	0
+2048		2042	9	0
+2049	Test that [Clock][Alarm] Edit the label	66	3	85
+2050		2049	4	0
+2051		2050	9	0
+2052		2050	9	0
+2053		2050	9	0
+2054		2050	9	0
+2055		2050	9	0
+2056	[Clock][Alarm] Set alarm label displays when creating a new alarm	66	3	86
+2057		2056	4	0
+2058		2057	9	0
+2059		2057	9	0
+2060		2057	9	0
+2061		2057	9	0
+2062	Test that [Clock][Alarm] Set alarm time(hour, minute, AM/PM) using time picker w	66	3	87
+2063		2062	4	0
+2064		2063	9	0
+2065		2063	9	0
+2066		2063	9	0
+2067		2063	9	0
+2068	Test that [Clock] Show the time, day, date	66	3	88
+2069		2068	4	0
+2070		2069	9	0
+2071		2069	9	0
+2072	Test that [Clock] Switch the clock type (analog/digital)	66	3	89
+2073		2072	4	0
+2074		2073	9	0
+2075		2073	9	0
+2076	Test that [Clock][Alarm] Edit the alarm time	66	3	90
+2077		2076	4	0
+2078		2077	9	0
+2079		2077	9	0
+2080		2077	9	0
+2081		2077	9	0
+2082		2077	9	0
+2083	Full test	1255	5	0
+2086		2085	4	0
+2087		2086	9	0
+2084	Contacts	65	2	1
+2089		2088	4	0
+2090		2089	9	0
+2091		2089	9	0
+2092		2089	9	0
+2094		2093	4	0
+2095		2094	9	0
+2085	Contacts should be launched by press Contacts icon.	2084	3	0
+2088	Contacts should be exited by press LSK or End Call key.	2084	3	1
+2093	Name is displayed as phone number in Contact Details.	2084	3	2
+2097	Focus on Settings items	1495	3	1000
+2098		2097	4	0
+2099	Name is displayed as the first phone number in Contact Details.	2084	3	3
+2100		2099	4	0
+2101		2100	9	0
+2103		2102	4	0
+2104		2103	9	0
+2106		2105	4	0
+2107		2106	9	0
+2105	Name is displayed as the first email in Contact Details.	2084	3	5
+2102	Name is displayed as email in Contact Details.	2084	3	4
+2108	Name is displayed as No name in Contact Details.	2084	3	6
+2109		2108	4	0
+2110		2109	9	0
+2111		2109	9	0
+2112		2109	9	0
+2113		2098	9	0
+2115		2114	4	0
+2114	Make a call when press Call key in Contact List.	2084	3	7
+2116		2098	9	0
+2117		2098	9	0
 \.
 
 
@@ -4202,7 +4940,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 -- Name: h5tl_nodes_hierarchy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_nodes_hierarchy_id_seq', 1335, true);
+SELECT pg_catalog.setval('h5tl_nodes_hierarchy_id_seq', 2117, true);
 
 
 --
@@ -4222,6 +4960,8 @@ COPY h5tl_object_keywords (id, fk_id, fk_table, keyword_id) FROM stdin;
 18	86	nodes_hierarchy	10
 20	1318	nodes_hierarchy	16
 22	1319	nodes_hierarchy	16
+25	2084	nodes_hierarchy	10
+26	2084	nodes_hierarchy	11
 \.
 
 
@@ -4229,7 +4969,7 @@ COPY h5tl_object_keywords (id, fk_id, fk_table, keyword_id) FROM stdin;
 -- Name: h5tl_object_keywords_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_object_keywords_id_seq', 22, true);
+SELECT pg_catalog.setval('h5tl_object_keywords_id_seq', 26, true);
 
 
 --
@@ -5114,7 +5854,6 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 920	3	 Open the gallery app.\n 	 Since you have taken six or more pictures within a single month, the month will create its own section. For example, if you are taking the pictures in December 2013, that label will be shown in the UI and the six pictures will be shown in grid format below the label.\n 	1	1
 923	1	 It is recommended for this testing to start with a clean SD card and to have pictures taken from different months available to be imported to the SD card.\n 	  	1	1
 924	2	 Take three pictures with the camera at the same time.\n 	 Photos are taken and are available to be seen in the gallery.\n 	1	1
-925	3	 Turn on the USB Mass Storage option and import 2-3 pictures from different months within the same year.\n 	 Photos are imported and are available to be seen in the gallery.\n 	1	1
 926	4	 Open the gallery app.\n 	 Since the user has not taken at least six pictures within a single month but within a range of months, the pictures will be lumped within a single section and the title will reflect the span of time. An example label might be: June - July 2013.\n 	1	1
 929	1	 It is recommended for this testing to start with a clean SD card and to have pictures taken from different months and different years available to be imported to the SD card.\n 	  	1	1
 930	2	 Take at least 3 pictures with the camera at the same time.\n 	 Photos are taken and are available to be seen in the gallery.\n 	1	1
@@ -5140,6 +5879,7 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 958	1	 Open the Gallery App\n 	 Photos that are stored on both the SD card and the phone's internal memory are displayed\n 	1	1
 959	2	 Remove the SD card from the device\n 	 Gallery's picture list updates to removed all photos stored on the SD card \n 	1	1
 962	1	 On the phone home screen, tap on the Gallery icon.\n 	 The Gallery app launches, scans the SD Card for images and rearranges the thumbnails in portrait mode (normal mode)\n 	1	1
+925	3	<p>\r\n\tTurn on the USB Mass Storage option and import 2-3 pictures from different months within the same year.</p>\r\n	<p>\r\n\tPhotos are imported and are available to be seen in the gallery.</p>\r\n	1	1
 963	2	 In Portrait mode, tap on the high-resolution image.\n 	 Full screen  high-resolution image is seen.\n 	1	1
 964	3	 Tap on the share icon.\n 	 The Share feature  opens with options such as E-Mail, Wallpaper, Messages and Bluetooth Transfer.\n 	1	1
 965	4	 Select Wallpaper option.\n 	 User is prompted with "Cancel" and "Set as wallpaper" buttons at the bottom of the screen.\n 	1	1
@@ -5377,6 +6117,433 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 1333	1	<p>\r\n\tWith no photos on the device open the Gallery app</p>\r\n	<p>\r\n\tA help information page appears and tell user that they can use Camera to take photo.</p>\r\n	1	1
 1334	2	<p>\r\n\tTap on &quot;Camera&quot; to launch Camera app</p>\r\n	<p>\r\n\tCamera can be launched successfully</p>\r\n	1	1
 1335	3	<p>\r\n\tTake a picture use camera</p>\r\n	<p>\r\n\tphoto can be taken successfully.</p>\r\n	1	1
+1339	1	<p>\r\n\tCompare all settings page with UX spec.</p>\r\n	<p>\r\n\tAll main pages(first level) of settings can be seen on device.</p>\r\n	1	1
+1342	1	<p>\r\n\tGo through each main page on Settings. Verify all items with toggle screen.</p>\r\n	<p>\r\n\tFunctionality of those items with toggle switch should work correclty. e.g. Airplane mode.</p>\r\n	1	1
+1345	1	<p>\r\n\tGo through each main page on Settings. Try to enter each item which has sub-page.</p>\r\n	<p>\r\n\tAll should be accessible.</p>\r\n	1	1
+1493	1	<p>\r\n\tLocate Setting and enter it.</p>\r\n	<p>\r\n\tSettings can be accessed.</p>\r\n	1	1
+1494	2	<p>\r\n\tExit it with back function.</p>\r\n	<p>\r\n\tUser can back to previous page.</p>\r\n	1	1
+1498	1	 Go to Clock app\n 	  	1	1
+1499	2	 Observe the Alarm icon\n 	 The Alarm icon should be on the top left corner of the screen. It should not overlap with the date on the right. The UI should not appear broken in any way\n 	1	1
+1502	1	 Go to Clock app\n 	  	1	1
+1503	2	 Observe the text on the clock UI\n 	 Text should read right-to-left and is right aligned, except  for the bottom 3 options where it is center-justified. It should not  overlap with other UI elements. The UI should not appear broken in any  way\n 	1	1
+1506	1	 Go to Clock app\n 	  	1	1
+1507	2	 Click on the Alarm icon\n 	  	1	1
+1508	3	 Observe all text present\n 	 Text should display correctly in RTL, following the RTL  guidelines. Text should read right-to-left and should be aligned to the  right of screen. It should not overlap with other UI  elements. The UI  should not appear broken in any way\n 	1	1
+1509	4	 Observe Header\n 	 Header should NOT be mirrored: the Cancel button should be on the  left side of the screen. The blue Done button should be right aligned. The  text is now right aligned. Nothing should overlap with other UI   elements. The UI should not appear  broken in any way\n 	1	1
+1510	5	 Observe the drop-down menus\n 	 Drop-down menus should be mirrored: The little blue carat is  on the left of each drop-down menu. The  text is now right aligned. Text reads right to left except with numerical figures. Nothing should  overlap with other UI   elements. The UI should not appear  broken in  any way\n 	1	1
+1511	6	 Observe the System alarm volume indicator\n 	 Volume indicator is mirrored: increasing sound now goes from  right to left. Nothing should  overlap with other UI   elements. The UI  should not appear  broken in  any way\n 	1	1
+1512	7	 Observe the Vibrate toggle button\n 	 According to RTL guidelines, toggle button should be  mirrored: it should now be left-aligned, and the "on" position is now  activated when the blue check-mark is on the right side of the toggle  switch. Nothing should  overlap with other UI   elements. The UI should  not appear  broken in  any way\n 	1	1
+1515	1	 Go to Clock app\n 	  	1	1
+1516	2	 Observe the Clock image\n 	 The clock should not be mirrored - time should elapse like it  does with non-RTL locales. It should not overlap with other UI  elements. The UI should not appear broken in any way\n 	1	1
+1517	3	 Click on the Clock image, so as to have the digital clock view\n 	 Time should be right aligned but not mirrored - the digital  numbers should appear in the same order as with non-RTL locales. It  should not overlap with other UI  elements. The UI should not appear  broken in any way\n 	1	1
+1520	1	 https://moztrap.mozilla.org/manage/case/15222/\n 	  	1	1
+1521	2	 https://moztrap.mozilla.org/manage/case/15215/\n 	  	1	1
+1522	3	 https://moztrap.mozilla.org/manage/case/12069/\n 	  	1	1
+1523	4	 https://moztrap.mozilla.org/manage/case/12086/\n 	  	1	1
+1524	5	 https://moztrap.mozilla.org/manage/case/12085/\n 	  	1	1
+1525	6	 https://moztrap.mozilla.org/manage/case/12084/\n 	  	1	1
+1526	7	 https://moztrap.mozilla.org/manage/case/12080/\n 	  	1	1
+1527	8	 https://moztrap.mozilla.org/manage/case/12154/\n 	  	1	1
+1528	9	 https://moztrap.mozilla.org/manage/case/12160/\n 	  	1	1
+1529	10	 https://moztrap.mozilla.org/manage/case/12158/\n 	  	1	1
+1530	11	 https://moztrap.mozilla.org/manage/case/15173/\n 	  	1	1
+1531	12	 https://moztrap.mozilla.org/manage/case/15174/\n 	  	1	1
+1532	13	 https://moztrap.mozilla.org/manage/case/15175/\n 	  	1	1
+1533	14	 https://moztrap.mozilla.org/manage/case/15176/\nFailed\n 	  	1	1
+1534	15	 https://moztrap.mozilla.org/manage/case/15177/\n 	  	1	1
+1535	16	 https://moztrap.mozilla.org/manage/case/15178/\n 	  	1	1
+1536	17	 https://moztrap.mozilla.org/manage/case/15179/\n 	  	1	1
+1537	18	 https://moztrap.mozilla.org/manage/case/15180/\n 	  	1	1
+1538	19	 https://moztrap.mozilla.org/manage/case/15204/\n 	  	1	1
+1539	20	 https://moztrap.mozilla.org/manage/case/15215/\nFailed\n 	  	1	1
+1540	21	 https://moztrap.mozilla.org/manage/case/15222/\n 	  	1	1
+1541	22	 https://moztrap.mozilla.org/manage/case/15231/\nFailed\n 	  	1	1
+1542	23	 https://moztrap.mozilla.org/manage/case/15245/\n 	  	1	1
+1545	1	 Be in a timezone where daylight savings (Cest to Cet for Europe)  is about to take place. \n 	  	1	1
+1546	2	 Set an alarm  that will go off after the time change takes place.\n 	  	1	1
+1547	3	 Once the time change takes place, observe the status bar. \n 	 The time automatically was set to the correct time.\n 	1	1
+1548	4	 Go to Settings>Date and Time\n 	 The Timezone, Date and Time are all correct.\n 	1	1
+1549	5	 Wait for the alarm to go off. \n 	 The alarm is triggered at the correct time.\n 	1	1
+1552	1	 Launch Clock app\n 	 Verify 2 alarms are active, non-repeating for 10:30pm and one repeating weekdays for 5:20 am.\n 	1	1
+1555	1	 Click on clock app\n 	  	1	1
+1556	2	 Click new alarm icon on top right corner\n 	  	1	1
+1557	3	 Tap time drop down menu\n 	 no cursor appear on menu\n 	1	1
+1558	4	 Click cancel\n 	  	1	1
+1559	5	 Tap repeat\n 	 no cursor appear on menu\n 	1	1
+1560	6	 Click OK\n 	  	1	1
+1561	7	 Tap sound \n 	 no cursor appear on menu\n 	1	1
+1562	8	 Tap OK\n 	  	1	1
+1563	9	 Tap snooze\n 	 no cursor appear on menu\n 	1	1
+1564	10	 Click ok\n 	  	1	1
+1567	1	 Launch clock app\n 	  	1	1
+1568	2	 Set an alarm which will expire in next minute\n 	  	1	1
+1569	3	 kill clock app and wait for alarm to trigger.\n 	  	1	1
+1570	4	 Observe the current time in some other device/PC\n 	 Make sure the alarm and alarm screen are shown on time\n 	1	1
+1573	1	 launch clock\n 	 clock launches\n 	1	1
+1574	2	 look at the create alarm button\n 	 verify that the create alarm button has no drop shadow\n 	1	1
+1575	3	 click on the create alarm button\n 	 New Alarm page should open.  Vibrate should be a toggle switch\n 	1	1
+1576	4	 select done\n 	 new alarm is down at the bottom; verify that the checkmark for the alarm has no dropshadow\n 	1	1
+1577	5	 Create another alarm and hit done.\n 	 the alarm should be aligned\n 	1	1
+1578	6	 turn the first alarm off by clicking on the checkmark icon\n 	 verify that the empty check circle has no drop shadow\n 	1	1
+1579	7	 look at the header\n 	 verify that the header is dark and matches the background with today's date.\n 	1	1
+1580	8	 tap on the alarm\n 	 verify that the alarm edit header is a grey color\n 	1	1
+1581	9	 Cancel out of the alarm\n 	  	1	1
+1582	10	 tap on the timer menu item\n 	 timer should highlight when tapped and there should be a blue underline still on alarm.   When let go the timer should have the lettering should be in a blue color and the blue underline should be under Timer; currently not pushed in v1.3 : see https://bugzilla.mozilla.org/show_bug.cgi?id=947097 ; please update this test result when fixed; vibrate should be a toggle button\n 	1	1
+1583	11	 set the time for 1 minute and hit start.\n 	 The font should be larger.  see spec : https://bug951087.bugzilla.mozilla.org/attachment.cgi?id=8356035\nThe buttons should be oval \n 	1	1
+1584	12	 cancel the timer\n 	 timer should cancel\n 	1	1
+1585	13	 hit stopwatch\n 	 should switch to the stop watch, the font should be large and the buttons should be oval in the same style as the timer.  Example : \nhttps://bug951095.bugzilla.mozilla.org/attachment.cgi?id=8359092\n(except the buttons)\n 	1	1
+1588	1	 Open the "Clock" app\n 	  	1	1
+1589	2	 Tap on the "Create a new Alarm" icon. \n 	  	1	1
+1590	3	 Tap on the 'Alarm Name' text field to bring up the keyboard. \n 	 The keyboard is displayed properly on the screen. \n 	1	1
+1591	4	 Press the "power button" to lock the screen. \n 	  	1	1
+1592	5	 Press the "power button" again to unlock the screen. \n 	  	1	1
+1593	6	 Unlock the phone. \n 	  	1	1
+1594	7	 Scroll to the bottom of the "Create new alarm" page. \n 	 The page displays properly and is not cut off at the bottom.\n 	1	1
+1597	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1598	2	 Tap on the 'Alarm' icon in the top right corner of the screen \n 	  	1	1
+1599	3	 Set the alarm for 2 minute from the current time on the phone\n 	 All strings on the "Clock -Alarm" screen are translated properly without truncation\n 	1	1
+1600	4	 Wait 2 minutes\n 	  	1	1
+1603	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1604	2	 Tap 'Stopwatch' in the bottom right\n 	  	1	1
+1605	3	 Tap 'Start'\n 	  	1	1
+1606	4	 Tap 'Pause'\n 	 All strings on the "Clock -Stopwatch paused" screen are translated properly without truncation\n 	1	1
+1609	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1610	2	 Tap 'Stopwatch' in the bottom right\n 	  	1	1
+1611	3	 Tap 'Start'\n 	  	1	1
+1612	4	 Tap 'Lap' a few times\n 	 All strings on the "Clock -Stopwatch running" screen are translated properly without truncation\n 	1	1
+1615	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1616	2	 Tap on the 'Alarm' icon in the top right corner of the screen \n 	  	1	1
+1617	3	 Tap on the box/bar below 'Repeat'\n 	 All strings on the "Clock - Alarm Repeat" screen are translated properly without truncation\n 	1	1
+1620	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1621	2	 Tap 'Timer' in the bottom middle of the screen\n 	 All strings on the "Clock -Timer" screen are translated properly without truncation\n 	1	1
+1624	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1625	2	 Tap on the 'Alarm' icon in the top right corner of the screen \n 	  	1	1
+1626	3	 Tap on the box/bar below 'Snooze'\n 	 All strings on the "Clock - Alarm Snooze" screen are translated properly without truncation\n 	1	1
+1629	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1630	2	 Tap 'Timer' in the bottom/middle of the screen\n 	  	1	1
+1631	3	 Tap the box/bar below 'Sound'\n 	 All strings on the "Clock -Timer" screen are translated properly without truncation\n 	1	1
+1634	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1635	2	 Tap on the 'Alarm' icon in the top right corner of the screen \n 	  	1	1
+1636	3	 Tap on the box/bar below 'Sound'\n 	 All strings on the "Clock - Alarm Sound" screen are translated properly without truncation\n 	1	1
+1639	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1640	2	 Tap the middle of the 'Clock', it will change to a digital clock\n 	 All strings on the "Clock (digital)" screen are translated properly without truncation\n 	1	1
+1643	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1644	2	 Tap 'Stopwatch' in the bottom right\n 	 All strings on the "Clock -Stopwatch" screen are translated properly without truncation\n 	1	1
+1647	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1648	2	 Tap 'Timer' in the bottom/middle of the screen\n 	  	1	1
+1649	3	 Tap the box/bar below 'Sound'\n 	  	1	1
+1650	4	 Set the timer to 1:00 Hours\n 	  	1	1
+1739	8	 Scroll through the available options\n 	 The following options are On and Off\n 	1	1
+1651	5	 Tap "Start'\n 	 All strings on the "Clock -Timer running" screen are translated properly without truncation\n 	1	1
+1654	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1655	2	 Tap on the 'Alarm' icon in the top right corner of the screen to create a new alarm.\n 	 All strings on the "Clock - New Alarm" screen are translated properly without truncation\n 	1	1
+1658	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1659	2	 Tap on the 'Alarm' icon in the top right corner of the screen \n 	  	1	1
+1660	3	 Tap 'Done'\n 	  	1	1
+1661	4	 Tap on the newly created alarm\n 	 All strings on the "Clock -Edit alarm" screen are translated properly without truncation\n 	1	1
+1664	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1665	2	 Tap on the 'Alarm' icon in the top right corner of the screen \n 	  	1	1
+1666	3	 Tap 'Done'\n 	  	1	1
+1667	4	 Tap on the newly created alarm\n 	  	1	1
+1668	5	 Tap on box/bar below 'Snooze'\n 	 All strings on the "Clock -Edit alarm Snooze" screen are translated properly without truncation\n 	1	1
+1671	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1672	2	 Tap on the 'Alarm' icon in the top right corner of the screen \n 	  	1	1
+1673	3	 Tap 'Done'\n 	  	1	1
+1674	4	 Tap on the newly created alarm\n 	  	1	1
+1675	5	 Tap on box/bar below 'Repeat'\n 	 All strings on the "Clock -Edit alarm Repeat" screen are translated properly without truncation\n 	1	1
+1678	1	 Tap 'Clock' on the home screen\n 	  	1	1
+1679	2	 Tap on the 'Alarm' icon in the top right corner of the screen \n 	  	1	1
+1680	3	 Tap 'Done'\n 	  	1	1
+1681	4	 Tap on the newly created alarm\n 	  	1	1
+1682	5	 Tap on box/bar below 'Sound'\n 	 All strings on the "Clock -Edit alarm Sound" screen are translated properly without truncation\n 	1	1
+1685	1	 Tap 'Clock' on the home screen\n 	 All strings on the "Clock (analog)" screen are translated properly without truncation\n 	1	1
+1688	1	 Tap on the "Clock" icon to open the Clock app. \n 	  	1	1
+1689	2	 Tap on the "Add New Alarm" icon. \n 	  	1	1
+1690	3	 Check the format of the time. \n 	 The time appears in the correct format according to the phone's set language. \n 	1	1
+1691	4	 Tap on the time drop down and check the format of the time reels. \n 	 The time reels appears in the correct format according to the phone's set language. \n 	1	1
+1694	1	 Tap on the "Clock" icon to open the Clock app. \n 	  	1	1
+1695	2	 Tap on the clock to change the time to display digitally. \n 	  	1	1
+1696	3	 Check the format of the Date and Time. \n 	 The Date and Time appears in the correct format according to the phone's set language. \n 	1	1
+1699	1	 Open Clock app.\n 	 Clock app can be launched.\n 	1	1
+1700	2	 Add 5 alarms.\n\n(1) Alarm name:  Alarm 1, Time: 06:00 AM, Repeat: Never, Sound:Classic Buzz, Vibrate: ON, Snooze: 5 minutes, Enable: ON\n\n(2) Alarm name:  Alarm 2, Time: 10:30 AM, Repeat: Weekdays, Sound:Gem Echoes, Vibrate: OFF, Snooze: 10 minutes, Enable: OFF\n\n(3) Alarm name:  Alarm 3, Time: 12:00 AM, Repeat: Weekend, Sound:Into the void, Vibrate: OFF, Snooze: 15 minutes, Enable: ON\n\n(4) Alarm name:  Alarm 4, Time: 01:14 AM, Repeat: Wed. & Sat., Sound:Classic Buzz, Vibrate: ON, Snooze: 20 minutes, Enable: OFF\n\n(5) Alarm name:  Alarm 5, Time: 06:57 AM, Repeat: Fri., Sound:Classic Buzz, Vibrate: OFF, Snooze: 5 minutes, Enable: ON\n 	 Can add the alarms.\n 	1	1
+1701	3	 Run #8952 - [OTA] Install OTA update package.\n 	 Pass #8952.\n 	1	1
+1702	4	 Open Clock app.\n 	 Clock app can be launched.\n 	1	1
+1703	5	 Check the alarms.\n 	 The original alarm configuration still existed.\n 	1	1
+1706	1	 Set up an alarm after 10 min\n 	  	1	1
+1707	2	 Let your phone to lock\n 	 Show next alarm information.\n 	1	1
+1710	1	 Enter settings app -> Language -> Espanol -> Accepted\n 	 Language changes to spanish\n 	1	1
+1711	2	 Click home button to back to home\n 	  	1	1
+1712	3	 Select "Reloj" to enter clock app\n 	  	1	1
+1713	4	 View the date format in the upper left corner\n 	 The date format shown as DD/MM\n 	1	1
+1714	5	 Tap on the '+' to create a new alarm\n 	  	1	1
+1715	6	 Tap on time below 'Hora' \n 	 Military time should be shown appropriately in the carousels\n 	1	1
+1718	1	 Launch the Clock app and create an alarm that goes off in 2 minutes.\n 	 Verify the alarm is now set to go off within 2 minutes.\n 	1	1
+1719	2	 When the alarm triggers, tap the home button.\n 	 Verify the alarm now appears as a mini attention screen at the top of the screen and that the alarm is still functioning properly.\n 	1	1
+1720	3	 Tap on the mini attention screen for the alarm.\n 	 Verify the alarm alert screen goes back into full screen view and that the alarm is still working correctly and looks correct.\n 	1	1
+1723	1	 Set an alarm for the future - for the notification set a tone + vibration as the alert\n 	 The alarm should trigger - an on screen notification should be present, the phone should vibrate, and an audible alarm should trigger\n 	1	1
+1726	1	 From the Homescreen, navigate to the Clock App\n 	  	1	1
+1727	2	 Set an Alarm for 5 Minutes from now\n 	  	1	1
+1728	3	 Plug the Phone in to Charge (Plugging into device with USB Mass Storage and Remote Debugging turned off works)\n 	 The device begins charging and the battery icon indicates the charging state\n 	1	1
+1729	4	 Wait 5 Minutes for the Alarm to go off\n 	 At the set time, the Alarm is triggered and goes off correctly\n 	1	1
+1732	1	 Open the Clock App\n 	 Clock App is opened\n 	1	1
+1733	2	 Press the New Alarm button (bell and plus sign)\n 	 New Alarm setting page is opened\n 	1	1
+1734	3	 Select the Sound field\n 	 Alarm Sound selection screen is opened\n 	1	1
+1735	4	 Scroll through the available options\n 	 The following options are available: No Sound\nClassic Buzz\nClassic Pulse Progressive\nClassic Pulse\nGem Echoes\nRinging Strings\nShimmering Waves\nInto the Void\nSmooth Strings\n 	1	1
+1736	5	 Select one of the available options\n 	 Selected option is highlighted and is checkmarked\n 	1	1
+1737	6	 Tap OK\n 	 New Alarm setting page is opened with selected sound option displayed beneath Sound\n 	1	1
+1738	7	 Select the Vibrate field\n 	 Vibrate selection screen is opened\n 	1	1
+1740	9	 Select one of the available options\n 	 Selected option is highlighted and is checkmarked\n 	1	1
+1741	10	 Tap OK\n 	 New Alarm setting page is opened with selected vibrate option displayed beneath Vibrate\n 	1	1
+1744	1	 Tap Clock App\n 	 Clock App opens to page with current time with alarm icon in upper right\n 	1	1
+1745	2	 Tap alarm icon in upper right\n 	 New alarm page appears with fields for selection including Time, Repeat, Sound, Vibrate, Snooze\n 	1	1
+1746	3	 Tap field beneath time\n 	 Select time screen appears\n 	1	1
+1747	4	 Swipe hour, minutes, and a.m./p.m. options to desired alarm time\n 	 Desired alarm time displays\n 	1	1
+1748	5	 Tap OK\n 	 Alarm time updated on New Alarm page\n 	1	1
+1749	6	 Tap On beneath Vibrate\n 	 Select screen displays with options On and Off - with On highlighted and with a blue checkmark\n 	1	1
+1750	7	 Tap Off \n 	 Off is highlighted with a blue checkmark\n 	1	1
+1751	8	 Tap OK\n 	 New alarm page displays with Off as default selection beneath Vibrate\n 	1	1
+1752	9	 Tap Done in upper right\n 	 Current time with alarm icon in upper right with alarm set time below at the bottom of page\n 	1	1
+1753	10	 Observe device when alarm time is reached \n 	 The alarm should trigger - an on screen notification should be present and an audible alarm should trigger without vibrating.\n 	1	1
+1756	1	 From the Homescreen, navigate to the Clock App\n 	  	1	1
+1757	2	 Set an Alarm for 5 Minutes from now\n 	  	1	1
+1758	3	 Connect the Phone to a desktop or laptop device via USB (With Remote Debugging and USB Mass Storage turned ON)\n 	 The device both recognizes and is recognized as being connected to the desktop or laptop via USB\n 	1	1
+1759	4	 Wait 5 Minutes for the Alarm to go off\n 	 At the set time, the Alarm is triggered and goes off correctly\n 	1	1
+1762	1	 When launch the video app and the play a video\n 	 Then will hear the video playing with sound\n 	1	1
+1763	2	 Observe video while alarm fires on device \n 	 Alarm is heard and video mutes/pauses\n 	1	1
+1766	1	 1- Open Address Book\n2- Select a contact\n3- Open contact details\n 	 the user can see contact photo\n 	1	1
+1769	1	 When launch the music app and then play a song\n 	 Then will hear the music playing\n 	1	1
+1770	2	 When back to home screen and launch the clock app\n 	 Then main page of the clock app will show up\n 	1	1
+1771	3	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1772	4	 When set the alarm time and press "Done" button\n 	 Then will go back to main page\n 	1	1
+1773	5	 When reach the alarm time\n 	 Then hear the alarm and the music will be mute\n 	1	1
+1776	1	 When launch the FM radio app and with headphone plugged-in\n 	 Then will hear the radio playing\n 	1	1
+1777	2	 When back to home screen and launch the clock app\n 	 Then main page of the clock app will show up\n 	1	1
+1778	3	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1779	4	 When set the alarm time and press "Done" button\n 	 Then will go back to main page\n 	1	1
+1780	5	 When reach the alarm time\n 	 Then hear the alarm and the radio will be mute\n 	1	1
+1783	1	 When launch the clock app from the homescreen\n 	 Then main page of the clock app will show up\n 	1	1
+1784	2	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1785	3	 When set the alarm time and press "Done" button\n 	 Then will go back to main page\n 	1	1
+1786	4	 When make a call to the test device (before the alarm time) and wait for the alarm time\n 	 Then the test device will keep ringing\n 	1	1
+1787	5	 When reach the alarm time\n 	 Then see the alarm won't goes off with sound/vibration and even the alarm page won't show on the screen\n 	1	1
+1788	6	 When cancel the incoming call\n 	 Then will see the alarm page shows on the screen\n 	1	1
+1791	1	 Launch the clock app from the homescreen.\n 	 Then main page of the clock app will show up.\n 	1	1
+1792	2	 Press the add alarm icon on the top-right corner.\n 	 The alarm setting page will show up\n 	1	1
+1793	3	 Set the alarm time and press "Done" button.\n 	 The user will go back to main page.\n 	1	1
+1794	4	 Accept a phone call from another device (before the alarm time) and wait for the alarm to go off.\n 	 Test device is in an active call.\n 	1	1
+1795	5	 When the alarm goes off.\n 	 Then the user will see the alarm go off with sound, vibration and the alarm page is shown on the screen.  Vibration will only happen if vibration is enabled in settings. The sound should be a low sound. \n 	1	1
+1796	6	 When the user closes the active call. \n 	 Then the user will see the alarm page on the screen.\n 	1	1
+1799	1	 When launch clock app from homescreen\n 	 Then main page will show up\n 	1	1
+1800	2	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1801	3	 When press "Done" button\n 	 Then will go back to main page and the alarm will show in the main page, and the alarm icon will show on the status bar\n 	1	1
+1802	4	 When turning off the alarm\n 	 Then the alarm icon in the status bar will disappear\n 	1	1
+1805	1	 Launch the Clock app from home screen.\n 	 Verify the main page appears.\n 	1	1
+1806	2	 Tap the add alarm icon on the top-right corner.\n 	 Verify the alarm setting page appears.\n 	1	1
+1807	3	 Tap the "Done" button.\n 	 Verify the user is taken back to the main page and the alarm will appear in the main page.\n 	1	1
+1808	4	 Turn off the alarm.\n 	 Verify the alarm icon in the status bar disappears.\n 	1	1
+1809	5	 Turn on the alarm.\n 	 Verify the alarm icon shows up again in the status bar.\n 	1	1
+1812	1	 When launch clock app from homescreen\n 	 Then main page will show up\n 	1	1
+1813	2	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1814	3	 When set the alarm time and press "Done" button\n 	 Then will go back to main page and the alarm will show in the main page, and the alarm icon will show on the status bar\n 	1	1
+1815	4	 When wait for the alarm time\n 	 Then the alarm will go off, the alarm page will show up, and the alarm icon will disappear in the status bar\n 	1	1
+1816	5	 When press the snooze button in the alarm page\n 	 Then the alarm icon will show up in the status bar again\n 	1	1
+1819	1	 When launch clock app from homescreen\n 	 Then main page will show up\n 	1	1
+1820	2	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1821	3	 When press "Done" button\n 	 Then will go back to main page and the alarm will show in the main page, and the alarm icon will show on the status bar\n 	1	1
+1822	4	 When repeat step 2. and 3. for two times\n 	 Then there will be three alarms shows in the alarm list with on state\n 	1	1
+1823	5	 When turning off all three alarms\n 	 Then see there is no alarm icon in the status bar\n 	1	1
+1826	1	 When launch clock app from homescreen\n 	 Then main page will show up\n 	1	1
+1827	2	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1828	3	 When press "Done" button\n 	 Then will go back to main page and the alarm will show in the main page, and the alarm icon will show in the status bar\n 	1	1
+1831	1	 When launch clock app from homescreen\n 	 Then main page will show up\n 	1	1
+1832	2	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1833	3	 When press "Done" button\n 	 Then will go back to main page and the alarm will show in the main page, and the alarm icon will show on the status bar\n 	1	1
+1834	4	 When repeat step 2. and 3. for two times\n 	 Then there will be three alarms shows in the alarm list with on state\n 	1	1
+1835	5	 When turning off two of three the alarms\n 	 Then the alarm icon still shows in the status bar\n 	1	1
+1838	1	 Launch the clock app from the home screen.\n 	 Verify the user is taken to the main clock screen.\n 	1	1
+1839	2	 Press the add alarm icon at the top-right corner of the screen.\n 	 Verify the alarm setting page appears.\n 	1	1
+1840	3	 Set the alarm time with the time picker and press the "Done" button.\n 	 Verify the user is taken back to the main clock page and the new alarm appears at the bottom of the screen.\n 	1	1
+1841	4	 Wait for the timer to reach the alarm time.\n 	 Verify the alarm triggers and both sound and vibration are present.\n 	1	1
+1844	1	 When launch clock app from homescreen\n 	 Then main page will show up\n 	1	1
+1845	2	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1846	3	 When set the alarm time and press "Done" button\n 	 Then will go back to main page and the alarm will show in the main page, and the alarm icon will show on the status bar\n 	1	1
+1847	4	 When wait for the alarm time\n 	 Then the alarm will go off, the alarm page will show up, and the alarm icon will disappear in the status bar\n 	1	1
+1850	1	 When launch clock app from homescreen\n 	 Then main page will show up\n 	1	1
+1851	2	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1852	3	 When set the alarm time and press "Done" button\n 	 Then will go back to main page and the alarm will show in the main page, and the alarm icon will show on the status bar\n 	1	1
+1853	4	 When repeat the step 2. and 3. (set different alarm time)\n 	 Then there will be two alarms in the alarm list\n 	1	1
+1854	5	 When wait for the alarm time of one of two alarms\n 	 Then the alarm will go off, the alarm page will show up, and the alarm icon will not disappear in the status bar\n 	1	1
+1857	1	 Launch the Clock app from the home screen.\n 	 Verify that the Clock app launches.\n 	1	1
+1858	2	 Press the add alarm icon in the top-right corner.\n 	 Verify that the alarm settings page appears.\n 	1	1
+1859	3	 Set the alarm time with the time picker and press "Done" button.\n 	 Verify that the new alarm appears at the bottom of the clock screen.\n 	1	1
+1860	4	 Wait for the timer to reach the alarm time.\n 	 Verify the alarm triggers with both sound and vibration.\n 	1	1
+1861	5	 Let the alarm continue to play.\n 	 Verify the alarm keeps playing with both sound and vibration for approx. 10 minutes.\n 	1	1
+1864	1	 Launch the clock app from the home screen.\n 	 Verify the main clock page appears.\n 	1	1
+1865	2	 Press the add alarm icon at the top-right corner of the screen.\n 	 Verify the alarm setting page appears.\n 	1	1
+1866	3	 Set the alarm time with time picker and press the "Done" button.\n 	 Verify the new alarm appears in the main Clock screen.\n 	1	1
+1867	4	 Wait for the timer to reach the alarm time.\n 	 Verify that the alarm triggers and that the alarm page shows up with the alarm time displayed on it\n 	1	1
+1868	5	 With the alarm still triggering, wait for a minute or two.\n 	 Verify that the as the actual time changes in the upper right hand corner, that the alarm time still remains at what was set for the alarm.\n 	1	1
+1871	1	 Launch the Clock app from the home screen.\n 	  	1	1
+1872	2	 Tap the add alarm icon on the top-right corner.\n 	 Verify the new alarm settings page will show up.\n 	1	1
+1873	3	 Tap on the Sound field.\n 	 Verify the sound selection screen appears.\n 	1	1
+1874	4	 Select a sound in the selection page.\n 	 Verify the corresponding sound will play.\n 	1	1
+1877	1	 Launch the Clock app from homescreen\n 	 Then main Clock page is displayed\n 	1	1
+1878	2	 Press the add alarm icon on the top-right corner\n 	 The alarm setting page is displayed\n 	1	1
+1879	3	 Set the alarm and press "Done" button\n 	 When the user is returned to the Clock page, the alarm is added and all the settings are saved\n 	1	1
+1880	4	 Press on the new alarm\n 	 Then will enter the alarm setting page\n 	1	1
+1881	5	 Make any changes to the alarm and press the "X" button in the top-left corner\n 	 User is returned to the Clock page, but the settings of alarm are not saved\n 	1	1
+1882	6	 Press on the alarm again\n 	 When the user views the alarm page, the info is the same as when it was first set\n 	1	1
+1885	1	 Launch clock app from home screen.\n 	 The main page will show up.\n 	1	1
+1886	2	 Press the add alarm icon on the top-right corner.\n 	 The alarm setting page will show up.\n 	1	1
+1887	3	 Set the alarm time and press "Done" button.\n 	 The main page displays, and see the  countdown indicator shows "The alarm is set for hh HOURS and mm MINUTES from now."\n 	1	1
+1890	1	 Launch clock app from home screen.\n 	 The main page will show up.\n 	1	1
+1891	2	 Press the add alarm icon on the top-right corner.\n 	 The alarm setting page will show up.\n 	1	1
+1892	3	 Press the "x" button on the top-left corner.\n 	 The main page displays, no alarm will be added.\n 	1	1
+1895	1	 When launch clock app from homescreen\n 	 Then main page will show up\n 	1	1
+1896	2	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1897	3	 When set the alarm time with time picker and press "Done" button\n 	 Then will go back to main page and the alarm will show in the main page\n 	1	1
+1898	4	 When wait to the timer reach the alarm time\n 	 Then the alarm will goes off with the alarm page, sound, and vibration\n 	1	1
+1899	5	 When make a phone call from another device to the testing device\n 	 Then the testing device will receive the phone call with alarm be turned off\n 	1	1
+1900	6	 When finish the call and close the dialer page\n 	 The alarm will continue to goes off\n 	1	1
+1903	1	 Launch the clock app from the home screen.\n 	 The main page of the clock app will show up.\n 	1	1
+1904	2	 Press the add alarm icon on the top-right corner.\n 	 The alarm setting page will show up.\n 	1	1
+1905	3	 Press the Snooze field.\n 	 The snooze time selection page will show up.\n 	1	1
+1906	4	 Select an arbitrary time in the selection page.\n 	 The tick will show up in the selected time field. (The text of selected time will turn into blue from white as well)\n 	1	1
+1909	1	 Launch the clock app from the home screen.\n 	 The main page of the clock app will show up.\n 	1	1
+1910	2	 Press the add alarm icon on the top-right corner.\n 	 The alarm setting page will show up.\n 	1	1
+1911	3	 Press the Repeat field.\n 	 The repeat status selection page will show up.\n 	1	1
+1912	4	 Select an arbitrary day in the selection page.\n 	 The tick will show up in the selected day field. (The text of selected day will turn into blue from white as well)\n 	1	1
+1915	1	 Launch the clock app from the home screen.\n 	 The main page of the clock app will show up. \n 	1	1
+1916	2	 Press the add alarm icon on the top-right corner.\n 	 The alarm setting page will show up.\n 	1	1
+1917	3	 Press the Sound field.\n 	 The music selection page will show up.\n 	1	1
+1918	4	 Select an arbitrary sound in the selection page. \n 	 The tick will show up in the selected sound field. (The text of selected sound will turn into blue from white as well)\n 	1	1
+1921	1	 Launch the clock app from the home screen.\n 	 Then main page of the clock app will show up.\n 	1	1
+1922	2	 Press the add alarm icon on the top-right corner. \n 	 The alarm setting page will show up.\n 	1	1
+1923	3	 Press "Done" button on the top-right corner. \n 	 On the main page, the alarm will be added. (shown as a column in the bottom of page)\n 	1	1
+1924	4	 Press the alarm column.\n 	 Alarm setting page displays. \n 	1	1
+1927	1	 Launch the Clock app from the home screen.\n 	 Verify the main page of the clock app appears.\n 	1	1
+1928	2	 Tap the add alarm icon in the top-right corner of the screen.\n 	 Verify the alarm settings page appears showing the alarm time, label, repeat status, sound, snooze time setting fields on the page.\n 	1	1
+1931	1	 Launch clock app from home screen.\n 	 Then main page will show up.\n 	1	1
+1932	2	 Press the add alarm icon on the top-right corner.\n 	 The alarm setting page will show up.\n 	1	1
+1933	3	 Set the alarm time with the time picker and press "Done" button.\n 	 The main page displays and the alarm will show in the main page.\n 	1	1
+1934	4	 Wait until the timer reaches the alarm time.\n 	 Alarms will ring and the alarm page shows up and see the alarm time, label, Close and Snooze buttons on it.\n 	1	1
+1937	1	 When launch clock app from homescreen\n 	 Then main page will show up\n 	1	1
+1938	2	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1939	3	 When set the alarm time with time picker and press "Done" button\n 	 Then will go back to main page and the alarm will show in the main page\n 	1	1
+1940	4	 When wait to the time reach the alarm time\n 	 Then alarms will ring and the alarm page shows up\n 	1	1
+1941	5	 When press the "Snooze" button\n 	 Then the alarm page will gone and the rings will gone as well\n 	1	1
+1942	6	 When wait for the time reach the snooze time\n 	 Then the alarm will ring again and the alarm page will show up as well\n 	1	1
+1945	1	 When launch clock app from homescreen\n 	 Then main page will show up\n 	1	1
+1946	2	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1947	3	 When set the alarm time with time picker and press "Done" button\n 	 Then will go back to main page and the alarm will show in the main page\n 	1	1
+1948	4	 When wait to the time reach the alarm time\n 	 Then alarms will ring and the alarm page shows up\n 	1	1
+1949	5	 When press the "Close" button\n 	 Then the alarm page will be closed and the rings will gone as well\n 	1	1
+1952	1	 Launch the clock app from the home screen.\n 	 Then main page will show up.\n 	1	1
+1953	2	 Tap the add alarm icon in the top-right corner.\n 	 Then the alarm edit page will show up.\n 	1	1
+1954	3	 Tap the "Done" button.\n 	 Then will go back to main page and the alarm will show in the main page.\n 	1	1
+1955	4	 Tap the newly created alarm.\n 	 Then will enter to alarm edit page.\n 	1	1
+1956	5	 Tap the Sound that is being currently used for the alarm and change it to something else then tap done.\n 	 Verify that on the alarm set up page, that the new alarm sound is displayed.\n 	1	1
+1957	6	 Set the alarm to ring in a minute or two and tap Done.\n 	 Verify the new sound for the alarm plays.\n 	1	1
+1960	1	 Launch the clock app from the home screen.\n 	 Verify the main page appears.\n 	1	1
+1961	2	 Tap the add alarm icon in the top-right corner.\n 	 Verify the the alarm edit page appears.\n 	1	1
+1962	3	 Tap the "Done" button.\n 	 Verify the user is taken back to the main page and the alarm appears in the main page.\n 	1	1
+1963	4	 Tap the new alarm at the bottom of the screen.\n 	 Verify the user is taken to the alarm edit page.\n 	1	1
+1964	5	 Change the repeat state and tap the "Done" button.\n 	 Verify that the user is taken back to the main page and the repeat state will change in the alarm display.\n 	1	1
+1967	1	 Launch the clock app from the home screen.\n 	 Verify the main page appears.\n 	1	1
+1968	2	 Tap the add alarm icon in the top-right corner.\n 	 Verify that the alarm edit page appears.\n 	1	1
+1969	3	 Tap the "Done" button.\n 	 Verify that the user is taken back to the main page and the alarm appears in the main page.\n 	1	1
+1970	4	 Tap the new alarm that was just created.\n 	 Verify that the alarm edit page appears.\n 	1	1
+1971	5	 Change the repeat state and tap the "Done" button.\n 	 Verify that the user is taken back to the main page.\n 	1	1
+1972	6	 When the alarm rings, tap the "Snooze" button.\n 	 Verify at the end of the snooze time, the alarm will ring again.\n 	1	1
+1975	1	 When launch clock app from homescreen\n 	 Then main page will show up\n 	1	1
+1976	2	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+1977	3	 When set the alarm time with time picker and press "Done" button\n 	 Then will go back to main page and the alarm will show in the main page\n 	1	1
+1978	4	 When wait to the timer reach the alarm time\n 	 The alarm page shows up\n 	1	1
+1981	1	 Launch the clock app from the home screen.\n 	 The main page of the clock app will show up.\n 	1	1
+1982	2	 Press the add alarm icon on the top-right corner.\n 	 The alarm setting page will show up.\n 	1	1
+1983	3	 Press the "Sound" column.\n 	 The page with a list of optional sound will show up.\n 	1	1
+1984	4	 Select the sound you want. \n 	 The sound you select will have a tick next to them.\n 	1	1
+1985	5	 Press "OK" Button.\n 	 Go back to alarm edit page and the name of sound you select will show on the "Sound" column.\n 	1	1
+1988	1	 Launch the Clock app from the home screen.\n 	 Verify the main page of the Clock app will show up.\n 	1	1
+1989	2	 Tap the add alarm icon at the top-right corner.\n 	 Verify the alarm settings page appears.\n 	1	1
+1990	3	 Tap the "Snooze" section.\n 	 Verify a list of optional snooze durations will appear.\n 	1	1
+1991	4	 Tap on a snooze duration you want (e.g. 10 minutes) then tap OK.\n 	 Verify the user is taken back to the New Alarm page and the snooze section reflects the snooze duration that was chosen.\n 	1	1
+1994	1	 Launch clock app from home screen.\n 	 Then main page will show up.\n 	1	1
+1995	2	 Press the add alarm icon on the top-right corner.\n 	 The alarm setting page will show up.\n 	1	1
+1996	3	 Set the alarm such as set alarm time, change label, select repeat days.\n 	 The information you edit will change.\n 	1	1
+1997	4	 Press the "Done" button.\n 	 The alarm will show in the main page\n 	1	1
+1998	5	 See the alarm column. \n 	 Alarm time, repeat state, label, on/ff state within it displays.(if the repeat state is "Never", it won't show)\n 	1	1
+2001	1	 When launch clock app from homescreen\n 	 Then main page will show up\n 	1	1
+2002	2	 When press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+2003	3	 When press "Done" button\n 	 Then will go back to main page and the alarm will show in the main page\n 	1	1
+2004	4	 When press the on/off button of alarm\n 	 Then the alarm will change the state between on and off (if turn on, there will be a alarm icon on the statusbar, if turn off the alarm icon on the statusbar will be gone)\n 	1	1
+2007	1	 Launch the clock app from the home screen.\n 	 Then main page will show up.\n 	1	1
+2008	2	 Tap the add alarm icon in the top-right corner.\n 	 Verify the alarm edit page will show appears.\n 	1	1
+2009	3	 Tap the "Done" button.\n 	 Verify the user is taken back to main page and the alarm appears in the main page.\n 	1	1
+2010	4	 Observe the new alarm created.\n 	 Verify the alarm's on/off state is on.\n 	1	1
+2013	1	 Launch the clock app from the home screen.\n 	 Verify then main page will show up.\n 	1	1
+2014	2	 Tap the add alarm icon in the top-right corner.\n 	 Verify the alarm settings page appears.\n 	1	1
+2015	3	 Tap the "Done" button.\n 	 Verify the user will be taken back to the main page and the alarm shows up in the main page.\n 	1	1
+2016	4	 Observe the name of the new alarm.\n 	 Verify the new alarm is labeled "Alarm". \n 	1	1
+2019	1	 Launch the clock app from home screen.\n 	 Verify the main page appears.\n 	1	1
+2020	2	 Tap the add alarm icon in the top-right corner.\n 	 Verify the alarm edit page appears.\n 	1	1
+2021	3	 Tap the "Done" button.\n 	 Verify the user is taken back to main page and the alarm appears in the main page.\n 	1	1
+2022	4	 Tap the new alarm that was created.\n 	 Verify the user is taken to the alarm edit page.\n 	1	1
+2023	5	 Tap the "Delete" button.\n 	 Verify the user is taken back to the main page and the alarm has been deleted.\n 	1	1
+2025	1	 Launch the clock app from the homescreen\n 	 The main page of the clock app will open\n 	1	1
+2026	2	 Press the add alarm icon on the top-right corner\n 	 The alarm setting page will open\n 	1	1
+2027	3	 Set an alarm for the future - for the notification set an audible alarm as the alert.\n 	  	1	1
+2028	4	 Press "Done" button on the top-right corner\n 	 Go back to the main page, and an alarm will be added (shown in the bottom of page).\nThe alarm should trigger - an on screen notification should be present and an audible alarm should trigger\n 	1	1
+2031	1	 Launch the Clock app from the home screen.\n 	 Verify the main page of the Clock app appears.\n 	1	1
+2032	2	 Tap the add alarm icon on the top-right corner.\n 	 Verify the alarm setting page appears.\n 	1	1
+2033	3	 Tap field beneath Time to set the alarm time\n 	 Sliders screen for select time appear\n 	1	1
+2034	4	 Adjust sliders to desired alarm time\n 	 Alarm time displayed\n 	1	1
+2035	5	 Tap OK\n 	 Alarm time displayed beneath Time field on Alarm Setting Page\n 	1	1
+2036	6	 Tap the "Done" button at the top-right corner.\n 	 Verify when the user goes back to the main page, an alarm will be added. (shown in the bottom of page)\n 	1	1
+2037	7	 Repeat steps 2 through 6 multiple times\n 	 The corresponding alarms will be added (shown as a list in the main page).\n 	1	1
+2040	1	 When press the Clock app's icon on the homescreen\n 	 Then the main page of clock app will show up\n 	1	1
+2043	1	 Launch the clock app from the home screen.\n 	 Main page of the clock app will show up. \n 	1	1
+2044	2	 Press the add alarm icon on the top-right corner.\n 	 The alarm setting page will show up. \n 	1	1
+2045	3	 Press the "Repeat" column\n 	 The page with a list of "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday" will show up. \n 	1	1
+2046	4	 Select the days you want\n 	 The days you select will have a tick next to them. \n 	1	1
+2047	5	 When Press "OK" Button\n 	 Go back to alarm setting page and the days you select will show on the "Repeat" column (e.g. If you select Thursday and Saturday, it will show Thu, Sat) \n 	1	1
+2048	6	 Press "Done" Button\n 	 Go back to the main page, and the days you select will show on the alarm column. \n 	1	1
+2051	1	 Launch the clock app from the home screen.\n 	 Verify that the main page appears.\n 	1	1
+2052	2	 Tap the add alarm icon in the top-right corner.\n 	 Verify the alarm settings page appears.\n 	1	1
+2053	3	 Tap the "Done" button.\n 	 Verify the user goes back to the main page and the alarm appears in the main page.\n 	1	1
+2054	4	 Tap on the new alarm.\n 	 Verify the user is taken to the alarm settings page.\n 	1	1
+2055	5	 Change the label for the alarm and tap "Done" button.\n 	 Verify the user is taken back to the main page and the label for the new alarm has changed.\n 	1	1
+2058	1	 Launch the clock app from the homescreen\n 	 The main page of the clock app will show up\n 	1	1
+2059	2	 Press the add alarm icon on the top-right corner\n 	 The alarm setting page will show up\n 	1	1
+2060	3	 Edit the label that is currently listed as default Alarm Name\n 	  	1	1
+2061	4	 Press the "Done" Button\n 	 The main page displays, and the label you edit will show on the alarm column\n 	1	1
+2064	1	 When Launch the clock app from the homescreen\n 	 Then main page of the clock app will show up\n 	1	1
+2065	2	 When Press the add alarm icon on the top-right corner\n 	 Then the alarm setting page will show up\n 	1	1
+2066	3	 Set time(hour, minute, AM/PM) using time picker\n 	 The numbers/options display on picker will change as you slide it vertically\n 	1	1
+2067	4	 When Press "Done" Button\n 	 Then Go back to the main page, and the time you set will show on the alarm column\n 	1	1
+2070	1	 When launch the clock app from the homescreen\n 	 Then the main page of the clock app will show up \n 	1	1
+2071	2	 When check the screen\n 	 Then see the time, day, date displayed on the screen\n 	1	1
+2074	1	 When launch the clock app from homescreen\n 	 Then main page of clock app will show up\n 	1	1
+2075	2	 When touch the clock part in the main page\n 	 Then the clock type will change between analog and digital\n 	1	1
+2078	1	 Launch the clock app from the home screen.\n 	 Verify the main page appears.\n 	1	1
+2079	2	 Tap the add alarm icon in the top-right corner.\n 	 Verify that the alarm edit page appears.\n 	1	1
+2080	3	 Tap the "Done" button.\n 	 Verify the user goes back to the main page and the alarm appears in the main page.\n 	1	1
+2081	4	 Tap the new alarm.\n 	 Verify the user is taken to the alarm edit page.\n 	1	1
+2082	5	 Change the time with time picker and tap the "Done" button.\n 	 Verify the user is taken back to the main page and the alarm time changed in the alarm at the bottom of the screen.\n 	1	1
+2087	1	<p>\r\n\tClick on Contacts icon.</p>\r\n	<p>\r\n\tContacts is launched and check the UI per spec.</p>\r\n	1	1
+2090	1	<p>\r\n\tPress Contact icon in homescreen.</p>\r\n	<p>\r\n\tContacts app is launched.</p>\r\n	1	1
+2091	2	<p>\r\n\tPress LSK.</p>\r\n	<p>\r\n\tExit Contacts app.</p>\r\n	1	1
+2092	3	<p>\r\n\tRepeat step 1 and press End call key.</p>\r\n	<p>\r\n\tExit Contacts app.</p>\r\n	1	1
+2095	1	<p>\r\n\tAdd a new contact, only fill phone number field.</p>\r\n	<p>\r\n\tCheck the contact name is phone number.</p>\r\n	1	1
+2101	1	<p>\r\n\tAdd a new contact with no name filled, but 2 phone numbers.</p>\r\n	<p>\r\n\tContact name is displayed as the first phone numbers.</p>\r\n	1	1
+2104	1	<p>\r\n\tAdd a new contact with no name filled, but 1 email address.</p>\r\n	<p>\r\n\tContact name is displayed as email address.</p>\r\n	1	1
+2107	1	<p>\r\n\tAdd a contact with no name filled,no phone numbers, 2 email addresses.</p>\r\n	<p>\r\n\tContact name is displayed as the first email address.</p>\r\n	1	1
+2110	1	<p>\r\n\tAdd a new contact with no name, no phone numbers, no email addresses, but a company name.</p>\r\n	<p>\r\n\tContact name = No name.</p>\r\n	1	1
+2111	2	<p>\r\n\tAdd a new contact with no name, no phone numbers, no email addresses, but a date.</p>\r\n	<p>\r\n\tContact name = No name.</p>\r\n	1	1
+2112	3	<p>\r\n\tAdd a new contact with no name, no phone numbers, no email addresses, but a comment.</p>\r\n	<p>\r\n\tContact name = No name.</p>\r\n	1	1
+2113	1	<p>\r\n\tEnter Settings</p>\r\n	<p>\r\n\tWill see focus on first item</p>\r\n	1	1
+2116	2	<p>\r\n\tNavigate items of each page with direction pad.</p>\r\n	<p>\r\n\tFocus will also be on selected items.</p>\r\n	1	1
+2117	3	<p>\r\n\tAccess items with sub-pages</p>\r\n	<p>\r\n\tFocus will still be seen on both main page or sub-pages during page switching</p>\r\n	1	1
 \.
 
 
@@ -5525,8 +6692,7 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 891	128	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (108 chars) > 100 => has been truncated<br />\nOriginal name<br />\nAll strings on the "More Information" pages for Photos and Videos are translated properly without truncation<br />\n---- *** ----<br />\n <p class="description">\n        <p>All strings on the "More Information" pages for Photos and Videos are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 905	130	1	1	1	 <p class="description">\n        <p>All dates for gallery content are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 910	131	1	1	1	 <p class="description">\n        <p>Implementation Bug: https://bugzilla.mozilla.org/show_bug.cgi?id=917445</p>\n\n<h1>Pre-Requisites:</h1>\n\n<h1>Gallery is launched and photo is in edit mode.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
-917	132	1	1	1	 <p class="description">\n        <p>User Story:\nAs a user, I want the gallery app to automatically arrange content by the month </p>\n\n<p>If the user has taken six or more pictures within a single month, the month will create its own section.</p>\n\n<p>Acceptance Criteria:\n- When the gallery app is opened the user can see that all the content (images, videos) are arranged by month</p>\n\n<p>Implementation bug: https://bugzilla.mozilla.org/show_bug.cgi?id=925179</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
-922	133	1	1	1	 <p class="description">\n        <p>User Story:\nAs a user, I want the gallery app to automatically arrange content by the month </p>\n\n<p>If a user has not taken at least six pictures within a single month but within a range of months, the pictures will be lumped within a single section and the title will reflect the span of time.</p>\n\n<p>Acceptance Criteria:\n- When the gallery app is opened the user can see that all the content (images, videos) are arranged by month</p>\n\n<p>Implementation bug: https://bugzilla.mozilla.org/show_bug.cgi?id=925179</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+917	132	1	1	1	<p>\r\n\tUser Story: As a user, I want the gallery app to automatically arrange content by the month. If the user has taken six or more pictures within a single month, the month will create its own section.</p>\r\n<p>\r\n\tAcceptance Criteria: - When the gallery app is opened the user can see that all the content (images, videos) are arranged by month.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:31:06	7	2015-08-19 07:45:52	1	1	1	\N
 928	134	1	1	1	 <p class="description">\n        <p>User Story:\nAs a user, I want the gallery app to automatically arrange content by the month </p>\n\n<p>If the user has taken at least six pictures spanning more than one year, first and last month and relevant years will be displayed.</p>\n\n<p>Acceptance Criteria:\n- When the gallery app is opened the user can see that all the content (images, videos) are arranged by month</p>\n\n<p>Implementation bug: https://bugzilla.mozilla.org/show_bug.cgi?id=925179</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 934	135	1	1	1	 <p class="description">\n        <p>Prerequisite: \n1. Having more than 1 photos stored on device. </p>\n\n<p>As a user, I should be able to browse through photos and play slideshow.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 943	136	1	1	1	 <p class="description">\n        <p>Using the pick activity and confirming an image for the gallery - app should not get hung with no perceived performance. </p>\n\n<h1>Prerequistes: At least 1 image is in the gallery</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
@@ -5579,7 +6745,6 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 1199	183	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW "Select Mode", I should be able to share one or more selected photos by single-tapping the share button in the toolbar. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from</p>\n\n<p>Prerequisites:  Have multiple photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1204	184	1	1	1	 <p class="description">\n        <p>It should be possible to export photos from device to desktop machine.</p>\n\n<p>Prerequisite: Have mass storage turned on in the device settings and also have some photos on the storage device.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1207	185	1	1	1	 <p class="description">\n        <p>It should be possible to access the camera from the gallery, from a Single Photo View.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
-1212	186	1	1	1	 <p class="description">\n        <p>User should be able to view any photos added to the devices SD card.</p>\n\n<p>Prerequisites:  Phone with SD card that has photos, which is already inserted into the device.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1215	187	1	1	1	 <p class="description">\n        <p>As a user, in Gallery when viewing a photo in full screen view, I should be able to swipe across the current photo to view the next photo (left swipe) or last photo (right swipe) in the photo set.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Must have several photos on your device.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1221	188	1	1	1	 <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, I should be able to delete the photo currently displayed by single-tapping the delete icon in the toolbar</p>\n\n<p>Prerequisites: Have a few pictures in on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1226	189	1	1	1	 <p class="description">\n        <p>As a user, within the LIST VIEW "Select Mode", I should be able to delete multiple photos simultaneously by selecting the desired photos and single-tapping the delete button in the toolbar</p>\n\n<p>Automated. See Bug 1112227</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
@@ -5591,16 +6756,121 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 1267	2	1	1	1	 <p class="description">\n        <p>Network operator settings show correctly for both SIMs in a DSDS scenario.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1010394</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:36	\N	\N	1	1	1	\N
 1276	3	1	1	1	 <p class="description">\n        <p>Verify that all items are displayed properly on the 'Call Settings' screen after FDN is enabled.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1039957</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:36	\N	\N	1	1	1	\N
 1284	4	1	1	1	 <p class="description">\n        <p>If outgoing call SIM is set to "always ask", the last used SIM will make the call and the last contact that SIM called will be dialed when double clicking the bluetooth headset to dial</p>\n\n<p>Prerequisites: Have two SIM cards in device, and a bluetooth headset available. </p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1021478</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:36	\N	\N	1	1	1	\N
-1288	1	2	1	1	 <p class="description">\n        <p>Operator name is shown correctly for USIM throughout settings. </p>\n\n<p>Please see this issue: </p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1046649</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	\N	\N	1	1	1	\N
-1296	2	2	1	1	 <p class="description">\n        <p>Network operator settings show correctly for both SIMs in a DSDS scenario.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1010394</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	\N	\N	1	1	1	\N
-1304	3	2	1	1	 <p class="description">\n        <p>Verify that all items are displayed properly on the 'Call Settings' screen after FDN is enabled.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1039957</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	\N	\N	1	1	1	\N
-1311	4	2	1	1	 <p class="description">\n        <p>If outgoing call SIM is set to "always ask", the last used SIM will make the call and the last contact that SIM called will be dialed when double clicking the bluetooth headset to dial</p>\n\n<p>Prerequisites: Have two SIM cards in device, and a bluetooth headset available. </p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1021478</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	\N	\N	1	1	1	\N
 1316	194	1	1	1	<p>\r\n\tThe test case is for testing one entry of search result when input 2 digits.</p>\r\n	<p>\r\n\t1. Feature phone with SIM card.</p>\r\n<p>\r\n\t2. Prepare a contact with name and phone number starting with 2 digits you input.(e.g user input 72, it stands for all the combination. 7 stands for pqrs, 2 stands for abc.)</p>\r\n<p>\r\n\t&nbsp;</p>\r\n	3	8	2015-08-18 09:56:18	8	2015-08-18 09:58:49	1	1	1	5.00
-719	101	1	1	2	<p>\r\n\tAs a user, I want to view my gallery content (photos and captured videos) in a scrollable grid, so I can access everything quickly</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave some captured videos and photos on the device</p>\r\n	3	7	2015-08-18 08:31:06	7	2015-08-19 05:33:10	1	1	1	\N
 106	5	1	1	2	<p>\r\n\tVerify that all strings are translated into the locale you are testing. If you find an untranslated string, look at the same string in a pseudolocale (preferably Accented English).</p>\r\n<p>\r\n\tIf the string appears in normal English, it is hard-coded and not localizable. File a bug for H5OS.</p>\r\n<p>\r\n\tIf the string appears in a pseudolocale, then the localizer hasn&#39;t got to it yet. Please don&#39;t file a bug.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:29:50	7	2015-08-19 05:39:08	1	1	1	\N
 737	105	1	1	2	<p>\r\n\tAs a user, when I open the gallery app when there is no content on my device to display, I should see a blank view with actions/text in the center that point me at various mechanism for adding new content.</p>\r\n	<p>\r\n\tMake sure there are no photos on the device</p>\r\n	2	7	2015-08-18 08:31:06	7	2015-08-19 06:57:48	1	1	1	\N
 900	129	1	1	2	<p>\r\n\tUser story: As a user, I want to see the file type, size, resolution and date of creation of the content displayed in the gallery app</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:31:06	7	2015-08-19 06:18:43	1	1	1	\N
 1332	195	1	1	2	<p>\r\n\tAs a user, I should be able to enter Camera to take a picture if Gallery is currently empty.</p>\r\n	<p>\r\n\tNo pictures in device.</p>\r\n	2	7	2015-08-19 07:02:09	7	2015-08-19 07:04:58	1	1	1	\N
+1304	3	2	1	1	 <p class="description">\n        <p>Verify that all items are displayed properly on the 'Call Settings' screen after FDN is enabled.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1039957</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	4	2015-08-19 08:37:46	1	1	1	3.00
+1311	4	2	1	1	 <p class="description">\n        <p>If outgoing call SIM is set to "always ask", the last used SIM will make the call and the last contact that SIM called will be dialed when double clicking the bluetooth headset to dial</p>\n\n<p>Prerequisites: Have two SIM cards in device, and a bluetooth headset available. </p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1021478</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	4	2015-08-19 08:37:51	1	1	1	20.00
+1288	1	2	1	1	 <p class="description">\n        <p>Operator name is shown correctly for USIM throughout settings. </p>\n\n<p>Please see this issue: </p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1046649</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	4	2015-08-19 08:37:58	1	1	1	10.00
+1296	2	2	1	1	 <p class="description">\n        <p>Network operator settings show correctly for both SIMs in a DSDS scenario.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1010394</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	4	2015-08-19 08:38:10	1	1	1	12.00
+719	101	1	1	2	<p>\r\n\tAs a user, I want to view my gallery content (photos and captured videos) in a scrollable grid, so I can access everything quickly.</p>\r\n<p>\r\n\tUpon entering Gallery, show all photos (total # of photos). The first photo will be highlighted, use D-Pad to navigate between photos. Photos are arranged from most recent (top left) toleast recent (bottom right).</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave some captured videos and photos on the device</p>\r\n	3	7	2015-08-18 08:31:06	7	2015-08-19 07:40:20	1	1	1	\N
+922	133	1	1	1	<p>\r\n\tUser Story: As a user, I want the gallery app to automatically arrange content by the month. If a user has not taken at least six pictures within a single month but within a range of months, the pictures will be lumped within a single section and the title will reflect the span of time.</p>\r\n<p>\r\n\tUpon entering Gallery, show all photos (total # of photos). The first photo will be highlighted, use D-Pad to navigate between photos. Photos are arranged from most recent (top left) toleast recent (bottom right).</p>\r\n<p>\r\n\tAcceptance Criteria: - When the gallery app is opened the user can see that all the content (images, videos) are arranged by month.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:31:06	7	2015-08-19 07:43:11	1	1	1	\N
+1338	196	1	1	1	<p>\r\n\tMake sure all settings main pages can be seen.</p>\r\n	<p>\r\n\tRefer to latest UX spec:&nbsp;<a class="external-link" href="https://acadine.sharepoint.com/sites/ux-design/Shared%20Documents/H5OS%20UX/Feature%20Phone/Settings" rel="nofollow" style="color: rgb(59, 115, 175); text-decoration: none; cursor: pointer; font-family: Arial, sans-serif; font-size: 14px; line-height: 20px;">https://acadine.sharepoint.com/sites/ux-design/Shared%20Documents/H5OS%20UX/Feature%20Phone/Settings</a></p>\r\n<p>\r\n\t&nbsp;</p>\r\n	3	4	2015-08-19 07:42:35	4	2015-08-19 08:09:18	1	1	1	2.00
+1212	186	1	1	1	<p>\r\n\tUser should be able to view any photos added to the devices SD card.</p>\r\n\r\n		2	7	2015-08-18 08:31:07	7	2015-08-19 07:47:38	1	1	1	\N
+1341	197	1	1	1	<p>\r\n\tMake sure all items on Settings main page with toggle switch works correctly.</p>\r\n		3	4	2015-08-19 07:52:45	4	2015-08-19 08:08:04	1	1	1	5.00
+1344	198	1	1	1	<p>\r\n\tUser can access items that have sub-page on main page of Settings.</p>\r\n		3	4	2015-08-19 08:05:21	4	2015-08-19 08:09:07	1	1	1	5.00
+1602	232	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Stopwatch paused" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1492	219	1	1	1	<p>\r\n\tUser can access settings and exit it.</p>\r\n		2	4	2015-08-19 08:26:09	4	2015-08-19 08:29:45	1	1	1	1.00
+1497	220	1	1	1	 <p class="description">\n        <p>Prerequisites:  Have your device set to an RTL locale, such as Arabic</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1501	221	1	1	1	 <p class="description">\n        <p>Prerequisites:  Have your device set to an RTL locale, such as Arabic</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1505	222	1	1	1	 <p class="description">\n        <p>Prerequisites:  Have your device set to an RTL locale, such as Arabic</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1514	223	1	1	1	 <p class="description">\n        <p>Prerequisites:  Have your device set to an RTL locale, such as Arabic</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1519	224	1	1	1	 <p class="description">\n        <p>Refer to</p>\n\n<p>https://moztrap.mozilla.org/manage/cases/?&amp;pagenumber=1&amp;pagesize=100&amp;sortfield=created_on&amp;sortdirection=desc&amp;filter-tag=3073</p>\n\n<p>Use clock app as replacement.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1544	225	1	1	1	 <p class="description">\n        <p>When time moves back or forward due to day light savings time, the time on the phone will automatically adjust to the correct time.</p>\n\n<p>Prerequisite:\nThe Date and Time should be set to "Set automatically" in settings. The user should be using an active SIM that is connected to a network. WiFi should be turned off.</p>\n\n<p>Please see this issue:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1089494</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1551	226	1	1	1	 <p class="description">\n        <p>Pre-requisites: Refer to document https://etherpad.mozilla.org/YMt5ON7KNd for setup instructions and checklist.</p>\n\n<p>Verify the Clock app data is preserved after user OTAs</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1554	227	1	1	1	 <p class="description">\n        <p>No cursor should exist in any drop down menu.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1566	228	1	1	1			2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1572	229	1	1	1	 <p class="description">\n        <p>bug 950212\nbug 918400</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1587	230	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (106 chars) > 100 => has been truncated<br />\nOriginal name<br />\nCreate a new alarm page displays normally after locking and unlocking the screen with the keyboard present<br />\n---- *** ----<br />\n <p class="description">\n        <p>Create a new alarm page displays normally after locking and unlocking the screen with the keyboard present.</p>\n\n<p>Prerequisite: Lockscreen is enabled in settings. </p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=981255</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1596	231	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Edit alarm Sound" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1608	233	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Stopwatch running" screen are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1614	234	1	1	1	 <p class="description">\n        <p>All strings on the "Clock - Alarm Repeat" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1619	235	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Timer" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1623	236	1	1	1	 <p class="description">\n        <p>All strings on the "Clock - Alarm Snooze" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1628	237	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Timer Sound" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1633	238	1	1	1	 <p class="description">\n        <p>All strings on the "Clock - Alarm Sound" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1638	239	1	1	1	 <p class="description">\n        <p>All strings on the "Clock (digital)" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n<p>Pre-Requisites: an SD card with music on it, headphones/earphones</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1642	240	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Stopwatch" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1646	241	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Timer running" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1653	242	1	1	1	 <p class="description">\n        <p>All strings on the "Clock - New Alarm" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1657	243	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Edit alarm" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1663	244	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Edit alarm Snooze" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1670	245	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Edit alarm Repeat" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1677	246	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Edit alarm Sound" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1684	247	1	1	1	 <p class="description">\n        <p>All strings on the "Clock (analog)" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n<p>Pre-Requisites: an SD card with music on it, headphones/earphones</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1687	248	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (101 chars) > 100 => has been truncated<br />\nOriginal name<br />\nThe time when setting a new alarm appears in the correct format according to the phone"s set language<br />\n---- *** ----<br />\n <p class="description">\n        <p>The time when setting a new alarm appears in the correct format according to the phone's set language. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1693	249	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (102 chars) > 100 => has been truncated<br />\nOriginal name<br />\nThe Date and Time in the clock app appears in the correct format according to the phone"s set language<br />\n---- *** ----<br />\n <p class="description">\n        <p>The "Date and Time"(Digital) in the clock app appears in the correct format according to the phone's set language. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1698	250	1	1	1	 <p class="description">\n        <p>Prerequisite: 1. Replace the Update URL to workable URL (optional)</p>\n\n<p>Reference: https://moztrap.mozilla.org/manage/case/8952/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1705	251	1	1	1	 <p class="description">\n        <p>As a user I want to view the time of my next alarm while my phone is locked - this enables me to verify that it is set without needing to unlock my phone and navigate to the clock app.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1709	252	1	1	1	 <p class="description">\n        <p>Change to Spanish language and the date format in clock app should align Spanish common date format</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1717	253	1	1	1	 <p class="description">\n        <p>As a user I should be able to tap the HOME button when an alarm is triggering in the Clock app to put the alarm into a minimized state. I can then tap the minimized state for the alarm to put it back into full screen view.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1722	254	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (102 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[Clock][Alarm] Test that when the alarm triggers, the phone vibrates and an audible alarm is triggered<br />\n---- *** ----<br />\n <p class="description">\n        <p>As a user, I want to be able to set an alarm using a selected audible tone with vibration.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1725	255	1	1	1	 <p class="description">\n        <p>Verify that when the phone is plugged in and charging, the Alarm goes off correctly at the set time.</p>\n\n<h1>Prerequisites:</h1>\n\n<h1>-USB Mass Storage turned OFF</h1>\n\n<h1>-Remote Debugging turned OFF</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1731	256	1	1	1	 <p class="description">\n        <p>The device gives the user multiple selectable options for the sound/vibration settings of alarms. </p>\n\n<p>The Sound options are:</p>\n\n<p>No Sound\nClassic Buzz\nClassic Pulse Progressive\nClassic Pulse\nGem Echoes\nRinging Strings\nShimmering Waves\nInto the Void\nSmooth Strings</p>\n\n<p>The vibrate options are: \nOn\nOff</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1743	257	1	1	1	 <p class="description">\n        <p>As a user, I want to be able to set an alarm using a selected audible tone without vibration.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1755	258	1	1	1	 <p class="description">\n        <p>[Clock]  Verify the Alarm triggers properly while connected to a desktop or laptop via USB</p>\n\n<h1>Prerequisites:</h1>\n\n<h1>-Have Remote Debugging turned ON</h1>\n\n<h1>-Have USB Mass Storage turned ON</h1>\n\n<h1>-A Desktop or Laptop device to connect to via USB</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1761	259	1	1	1	 <p class="description">\n        <p>User should be able to see that alarm will mute video when it goes off</p>\n\n<h1>Prerequisites: Tap Clock App-Tap Alarm icon-Set alarm time-Set Done</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1765	260	1	1	1	 <p class="description">\n        <p>Verify that for each contact the user see photo</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1768	261	1	1	1	 <p class="description">\n        <p>User should be able to see that alarm will mute music when it goes off</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1775	262	1	1	1	 <p class="description">\n        <p>User should be able to see that alarm will mute radio when it goes off</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1782	263	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (106 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] Alarm will goes off without sound/vibration/page showing during the incoming call<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm goes off without sound/vibration/page showing during the incoming call</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1790	264	1	1	1	 <p class="description">\n        <p>User should be able to see that the alarm goes off with sound,vibration/page showing during the active call. </p>\n\n<p>Please see these issues:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1026167</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1038691</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1038693</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1798	265	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (120 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon will disappear in the status bar when turning off an alarm (only one alarm case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon will disappear in the status bar when turning off an alarm  (when there is only one alarm)</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1804	266	1	1	1	 <p class="description">\n        <p>User should be able to see that the alarm icon shows in the status bar when turning on an alarm  (when there is only one alarm).</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1811	267	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (115 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon will show up in the status bar after snooze the alarm (only one alarm case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon will show up in the status bar after snooze the alarm (when there is only one alarm)</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1818	268	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (118 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon will not show in the status bar when all alarms are off (multiple alarms case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon will not show in the status bar when all alarms are off</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1825	269	1	1	1	 <p class="description">\n        <p>User should be able to see that the alarm icon shows on the status bar after add an alarm</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1830	270	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (125 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon shows in the status bar when there is at least one alarm is on (multiple alarms case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon shows in the status bar when there is at least one alarm is on</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1837	271	1	1	1	 <p class="description">\n        <p>User should be able to hear the sound and feel vibration when the alarm goes off.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1843	272	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (118 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon will disappear in the status bar when the alarm goes off (only one alarm case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon will disappear in the status bar when the alarm goes off (when there is only one alarm)</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1849	273	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (156 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon will not disappear in the status bar when the alarm goes off but there is another alarm is on (multiple alarms case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon will not disappear in the status bar when the alarm goes off but there is another alarm is on</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1856	274	1	1	1	 <p class="description">\n        <p>User should be able to hear that when the alarm goes off, it will keep playing.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1863	275	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (111 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[Clock][Alarm] The alarm time on a currently triggering alarm does not change even after alarm time has passed.<br />\n---- *** ----<br />\n <p class="description">\n        <p>Test that the time displayed for the alarm that is actively triggering, shows the actual alarm time (won't update to the current time).</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1870	276	1	1	1	 <p class="description">\n        <p>As a user, I want to be able to preview and select the sound that plays with each alarm, so that I can confirm it's one that I like.</p>\n\n<h1>Prerequisites:</h1>\n\n<h1>a. Alarm audio must be turned up in the Sound Settings.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1876	277	1	1	1	 <p class="description">\n        <p>User should be able to cancel the changes when edit an existing alarm</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1884	278	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (123 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[Clock][Alarm] See the countdown indicator shows "The alarm is set for hh HOURS and mm MINUTES from now" after add an alarm<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see the countdown indicator shows "The alarm is set for hh HOURS and mm MINUTES from now" after add an alarm. </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1889	279	1	1	1	 <p class="description">\n        <p>User should be able to cancel the alarm setting page.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1894	280	1	1	1	 <p class="description">\n        <p>User should be able to see the alarm will be turned off when receiving a phone call</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1902	281	1	1	1	 <p class="description">\n        <p>User should be able to see the tick shows up on the time field when select it in snooze time selection page.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1908	282	1	1	1	 <p class="description">\n        <p>User should be able to see the tick shows up on the day field when select it in repeat status selection page.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1914	283	1	1	1	 <p class="description">\n        <p>User should be able to see the tick shows up on the sound field when select it in sound selection page.  </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1920	284	1	1	1	 <p class="description">\n        <p>User should be able to enter the alarm setting page for the existing alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1926	285	1	1	1	 <p class="description">\n        <p>User should be able to enter the clock setting page and see the alarm time, label, repeat status, sound, snooze time setting fields on the page when add a new alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1930	286	1	1	1	 <p class="description">\n        <p>User should be able to see the alarm time, label, Close and Snooze buttons on alarm page. </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1936	287	1	1	1	 <p class="description">\n        <p>User should be able to snooze the alarm when it rings</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1944	288	1	1	1	 <p class="description">\n        <p>User should be able to close the alarm when it rings</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1951	289	1	1	1	 <p class="description">\n        <p>User should be able to change the alarm sound of the existing alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1959	290	1	1	1	 <p class="description">\n        <p>User should be able to change the repeat state of the existing alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1966	291	1	1	1	 <p class="description">\n        <p>User should be able to change the snooze time of the existing alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1974	292	1	1	1	 <p class="description">\n        <p>User should be able to see that when the alarm goes off, the alarm page will show up</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1980	293	1	1	1	 <p class="description">\n        <p>User should be able to set an alarm sound when creating a new alarm. </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1987	294	1	1	1	 <p class="description">\n        <p>As a user, I want to be able to select the "snooze" duration of an alarm, so that I can customize how long I want to snooze.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1993	295	1	1	1	 <p class="description">\n        <p>User should be able to see the information of each alarm such as alarm time, repeat state, label, of/off state in the main page.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2000	296	1	1	1	 <p class="description">\n        <p>User should be able to turn on/off the alarm</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2006	297	1	1	1	 <p class="description">\n        <p>User should be able to see the default on/off state is on.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2012	298	1	1	1	 <p class="description">\n        <p>User should be able to see the default label is "Alarm" when he doesn't edit it.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2018	299	1	1	1	 <p class="description">\n        <p>User should be able to delete an alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2024	254	2	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (102 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[Clock][Alarm] Test that when the alarm triggers, the phone vibrates and an audible alarm is triggered<br />\n---- *** ----<br />\n <p class="description">\n        <p>As a user, I want to be able to set an alarm using a selected audible tone with no vibration or a vibration with no audible tone so that I can configure how I want to be alerted in different scenarios.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2030	300	1	1	1	 <p class="description">\n        <p>As a user, I want to see a list of the alarms I have created, with their names, alarm times, and On/Off toggles, so that I can quickly review and arm them as needed.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2039	301	1	1	1	 <p class="description">\n        <p>User should be able to launch the clock app</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2042	302	1	1	1	 <p class="description">\n        <p>User should be able to set repeat state while creating a new alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2050	303	1	1	1	 <p class="description">\n        <p>User should be able to edit the label of the existing alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2057	304	1	1	1	 <p class="description">\n        <p>User should be able to set an alarm label when creating a new alarm</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2063	305	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (102 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] Set alarm time(hour, minute, AM/PM) using time picker when create a new alarm<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to set the alarm time(hour, minute, AM/PM) when create a new alarm</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2069	306	1	1	1	 <p class="description">\n        <p>User should be able to see the time, day and date in the clock app</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2073	307	1	1	1	 <p class="description">\n        <p>User should be able to switch the clock type between analog/digital</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2077	308	1	1	1	 <p class="description">\n        <p>User should be able to edit the alarm time of the existing alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2103	314	1	1	1	<p>\r\n\tThe case is for testing contact name = email address when no name, no phone numbers filled.</p>\r\n		3	8	2015-08-19 09:46:41	8	2015-08-19 09:50:36	1	1	1	5.00
+2086	309	1	1	1	<p>\r\n\tThis test case is for testing Contacts app launch.</p>\r\n		3	8	2015-08-19 09:26:37	8	2015-08-19 09:28:32	1	1	1	1.00
+2089	310	1	1	1	<p>\r\n\tThis test case is for testing contacts app exit.</p>\r\n		3	8	2015-08-19 09:30:02	8	2015-08-19 09:36:10	1	1	1	1.00
+2109	316	1	1	1	<p>\r\n\tThe case is for testing contact name = No Name when no name, no phone numbers, no email addresses.</p>\r\n		3	8	2015-08-19 09:52:06	8	2015-08-19 09:54:18	1	1	1	5.00
+2094	311	1	1	1	<p>\r\n\tThis test case is for testing contact name display when no name, but existing a phone number.</p>\r\n		3	8	2015-08-19 09:39:00	8	2015-08-19 09:41:30	1	1	1	5.00
+2100	313	1	1	1	<p>\r\n\tThe case is for testing contant name = the first phone number when no name filled and multiple phone numbers.</p>\r\n		3	8	2015-08-19 09:43:55	8	2015-08-19 09:44:59	1	1	1	5.00
+2115	317	1	1	1	<p>\r\n\tThe case is for testing make a call in contact list when only 1 phone number.</p>\r\n	<p>\r\n\t1. one contact with 1 phone number ready.</p>\r\n	3	8	2015-08-19 09:57:35	8	2015-08-19 09:58:32	1	1	1	5.00
+2106	315	1	1	1	<p>\r\n\tThe case is for testing contact name = first email address with no name,no phone numbers filled, but multiple email addresses.</p>\r\n		3	8	2015-08-19 09:48:37	8	2015-08-19 09:50:12	1	1	1	5.00
+2098	312	1	1	1	<p>\r\n\tWhen user navigates through items of Settings, there will be a focus on selected item for user to know.</p>\r\n		3	4	2015-08-19 09:42:23	4	2015-08-19 10:17:04	1	1	1	2.00
 \.
 
 
@@ -5638,6 +6908,35 @@ COPY h5tl_testcase_keywords (testcase_id, keyword_id) FROM stdin;
 739	11
 899	11
 1331	11
+921	10
+921	11
+1337	10
+1337	11
+916	10
+916	11
+1340	10
+1340	11
+1343	10
+1343	11
+1491	11
+2085	10
+2085	11
+2088	10
+2088	11
+2093	10
+2093	11
+2097	10
+2097	11
+2099	10
+2099	11
+2102	10
+2102	11
+2105	10
+2105	11
+2108	10
+2108	11
+2114	10
+2114	11
 \.
 
 
@@ -5681,6 +6980,9 @@ SELECT pg_catalog.setval('h5tl_testplan_platforms_id_seq', 3, true);
 COPY h5tl_testplan_tcversions (id, testplan_id, tcversion_id, platform_id, node_order, urgency, author_id, creation_ts) FROM stdin;
 1	42	17	1	10000	2	4	2015-08-03 03:14:07
 2	42	22	1	10000	2	4	2015-08-03 03:15:21
+3	2083	1288	0	10	2	4	2015-08-19 08:39:15
+4	2083	1304	0	30	2	4	2015-08-19 08:39:15
+5	2083	1311	0	40	2	4	2015-08-19 08:39:15
 \.
 
 
@@ -5688,7 +6990,7 @@ COPY h5tl_testplan_tcversions (id, testplan_id, tcversion_id, platform_id, node_
 -- Name: h5tl_testplan_tcversions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_testplan_tcversions_id_seq', 2, true);
+SELECT pg_catalog.setval('h5tl_testplan_tcversions_id_seq', 5, true);
 
 
 --
@@ -5698,6 +7000,7 @@ SELECT pg_catalog.setval('h5tl_testplan_tcversions_id_seq', 2, true);
 COPY h5tl_testplans (id, testproject_id, notes, active, is_open, is_public, api_key) FROM stdin;
 42	2	<p>\r\n\tSmoke test for v1.0</p>	1	1	1	740176dbd3919fa2a1802a730a7dd98a8d0112812dac77858dc29c08a424fc35
 43	2	<p>\r\n\t1.0 regression test</p>	1	1	1	1a8beffae2772f6197db03a4f8e98778f88711666ce98c7169d3ea5e872616e1
+2083	1255		1	1	1	94ac0fd89c12b7fb5806203eab1435a3d82c2ec75577b6834f9f580f066180c1
 \.
 
 
@@ -5726,8 +7029,8 @@ COPY h5tl_testprojects (id, notes, color, active, option_reqs, option_priority, 
 2	<p>\r\n\tTest cases collection and management for smartphone products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	SP	13	1	0	0	787306fb55e51b4fd1f067137eafad53f69769aa7e9419557f1e0538c030f64e
 4	<p>\r\n\tTest cases collection and management for smart TV products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	TV	0	1	0	0	56856143dd77f623d80582d9b46c068b5cf634b4bba4f6d9903ea072222c8475
 5	<p>\r\n\tTest cases collection and management for smart watch products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	SW	0	1	0	0	30cfe9d109e5e6d990bd88e0ddd678c739f5abfa65c902668af2199a06164d8d
+3	<p>\r\n\tTest cases collection and management for feature phone products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	FP	317	1	0	0	3f2780a5a534437d566b96e1d94e04d1609f756671d6008d8bdd6579d8656f5c
 1255	<p>\r\n\ttest</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	ti	4	1	0	0	9b32bc023c75d33fe98cbc28a8268fd561a88c02c76a7bcea8405415a4f886a6
-3	<p>\r\n\tTest cases collection and management for feature phone products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	FP	195	1	0	0	3f2780a5a534437d566b96e1d94e04d1609f756671d6008d8bdd6579d8656f5c
 \.
 
 
@@ -5758,7 +7061,6 @@ COPY h5tl_testsuites (id, details) FROM stdin;
 65	<p>\r\n\tFor contacts test cases</p>\r\n
 66	<p>\r\n\tFor clock test cases</p>\r\n
 67	<p>\r\n\tFor camera test cases</p>\r\n
-68	<p>\r\n\tFor Gallery test cases</p>\r\n
 69	<p>\r\n\tFor Music test cases</p>\r\n
 70	<p>\r\n\tFor keypad test cases</p>\r\n
 71	<p>\r\n\tFor related test cases</p>\r\n
@@ -5771,14 +7073,18 @@ COPY h5tl_testsuites (id, details) FROM stdin;
 1318	<p>\r\n\tFor localization related test cases storage.</p>\r\n
 1320	
 1319	<p>\r\n\tFor all RTL related test cases</p>\r\n
-1321	Test suite for Grid view
-1322	<p>\r\n\tTest suite for Single Item view</p>\r\n
-1323	<p>\r\n\tTest suite for Photo editor</p>\r\n
 1325	<p>\r\n\tTest case for Cross function test</p>\r\n
 1328	
 1326	
 1329	
 1330	
+68	<p>\r\n\tFor Gallery test cases</p>\r\n<p>\r\n\thttps://jira.acadine.com/browse/CORE-14</p>\r\n
+1321	<p>\r\n\tTest suite for Grid view: https://jira.acadine.com/browse/CORE-77</p>\r\n
+1322	<p>\r\n\tTest suite for Single Item view: https://jira.acadine.com/browse/CORE-78</p>\r\n
+1323	<p>\r\n\tTest suite for Photo editor: https://jira.acadine.com/browse/CORE-79</p>\r\n
+2084	<p>\r\n\tThis test suite is for testing UX spec.</p>\r\n<p>\r\n\tRrefer to latest UX Spec:</p>\r\n<p>\r\n\thttps://acadine.sharepoint.com/sites/ux-design/_layouts/15/GroupsDocuments.aspx/?RootFolder=%2fsites%2fux-design%2fShared%20Documents%2fH5OS%20UX%2fFeature%20Phone%2fSettings&amp;FolderCTID=0x012000D5E34C64243F3040A271ABF4C4DBEE0B</p>\r\n
+1336	<p>\r\n\tFor user story&nbsp;<a href="http://jira.acadine.com/browse/CORE-53">CORE&nbsp;53</a></p>\r\n
+1495	<p>\r\n\tFor user story <a href="https://jira.acadine.com/browse/CORE-54">CORE-54</a>.</p>\r\n
 \.
 
 
@@ -6129,6 +7435,39 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 349	/lib/testcases/tcEdit.php	1439965761	1439965761	7	o001au1n7jmtvp0vnaj31q12k1
 350	/lib/testcases/containerEdit.php	1439965972	1439965972	7	o001au1n7jmtvp0vnaj31q12k1
 351	/lib/testcases/tcEdit.php	1439967729	1439967729	7	o001au1n7jmtvp0vnaj31q12k1
+352	/lib/testcases/containerEdit.php	1439969615	1439969615	7	o001au1n7jmtvp0vnaj31q12k1
+353	/lib/testcases/containerEdit.php	1439969671	1439969671	7	o001au1n7jmtvp0vnaj31q12k1
+354	/lib/testcases/containerEdit.php	1439969699	1439969699	7	o001au1n7jmtvp0vnaj31q12k1
+355	/lib/testcases/containerEdit.php	1439969734	1439969734	7	o001au1n7jmtvp0vnaj31q12k1
+356	/lib/testcases/containerEdit.php	1439969986	1439969986	4	1cm2u99dfenhuod173pmcbhgj6
+357	/lib/testcases/tcEdit.php	1439970143	1439970143	7	o001au1n7jmtvp0vnaj31q12k1
+358	/lib/testcases/tcEdit.php	1439970155	1439970155	4	1cm2u99dfenhuod173pmcbhgj6
+359	/lib/testcases/tcEdit.php	1439970291	1439970291	7	o001au1n7jmtvp0vnaj31q12k1
+360	/lib/testcases/containerEdit.php	1439970357	1439970357	4	1cm2u99dfenhuod173pmcbhgj6
+361	/lib/testcases/containerEdit.php	1439970392	1439970392	4	1cm2u99dfenhuod173pmcbhgj6
+362	/lib/testcases/tcEdit.php	1439970422	1439970422	7	o001au1n7jmtvp0vnaj31q12k1
+363	/lib/testcases/tcEdit.php	1439970458	1439970458	7	o001au1n7jmtvp0vnaj31q12k1
+364	/lib/testcases/containerEdit.php	1439970646	1439970646	4	1cm2u99dfenhuod173pmcbhgj6
+365	/lib/testcases/tcEdit.php	1439970765	1439970765	4	1cm2u99dfenhuod173pmcbhgj6
+366	/lib/testcases/tcEdit.php	1439971521	1439971521	4	1cm2u99dfenhuod173pmcbhgj6
+367	/login.php	1439972354	1439972354	5	hl70t2mo7523kqcvc7dal6ud12
+368	/lib/testcases/tcEdit.php	1439972769	1439972769	4	1cm2u99dfenhuod173pmcbhgj6
+369	/lib/plan/planEdit.php	1439973514	1439973514	4	1cm2u99dfenhuod173pmcbhgj6
+370	/lib/plan/planAddTC.php	1439973555	1439973555	4	1cm2u99dfenhuod173pmcbhgj6
+371	/lib/plan/buildEdit.php	1439973576	1439973576	4	1cm2u99dfenhuod173pmcbhgj6
+372	/lib/results/printDocument.php	1439973747	1439973747	4	1cm2u99dfenhuod173pmcbhgj6
+373	/lib/results/printDocument.php	1439974107	1439974107	4	1cm2u99dfenhuod173pmcbhgj6
+374	/login.php	1439976047	1439976047	7	jg9u99van9gumd43i15bi0vom3
+375	/lib/testcases/tcEdit.php	1439976397	1439976397	8	bnoioaerqtts97geqhhi1uugo6
+376	/lib/testcases/containerEdit.php	1439976541	1439976541	8	bnoioaerqtts97geqhhi1uugo6
+377	/lib/testcases/tcEdit.php	1439976602	1439976602	8	bnoioaerqtts97geqhhi1uugo6
+378	/lib/testcases/tcEdit.php	1439977140	1439977140	8	bnoioaerqtts97geqhhi1uugo6
+379	/lib/testcases/tcEdit.php	1439977343	1439977343	4	1cm2u99dfenhuod173pmcbhgj6
+380	/lib/testcases/tcEdit.php	1439977435	1439977435	8	bnoioaerqtts97geqhhi1uugo6
+381	/lib/testcases/tcEdit.php	1439977601	1439977601	8	bnoioaerqtts97geqhhi1uugo6
+382	/lib/testcases/tcEdit.php	1439977717	1439977717	8	bnoioaerqtts97geqhhi1uugo6
+383	/lib/testcases/tcEdit.php	1439977926	1439977926	8	bnoioaerqtts97geqhhi1uugo6
+384	/lib/testcases/tcEdit.php	1439978255	1439978255	8	bnoioaerqtts97geqhhi1uugo6
 \.
 
 
@@ -6136,7 +7475,7 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 -- Name: h5tl_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_transactions_id_seq', 351, true);
+SELECT pg_catalog.setval('h5tl_transactions_id_seq', 384, true);
 
 
 --
