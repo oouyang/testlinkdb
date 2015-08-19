@@ -2803,6 +2803,11 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 945	383	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:48:"Name is displayed as No name in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439977926	ASSIGN	2108	nodes_hierarchy
 946	384	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:48:"Make a call when press Call key in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439978255	ASSIGN	2114	nodes_hierarchy
 947	384	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:48:"Make a call when press Call key in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439978255	ASSIGN	2114	nodes_hierarchy
+948	385	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:11:"owen.ouyang";i:1;s:14:"175.180.135.40";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439993576	LOGIN	2	users
+949	386	32	GUI	string 'system_config' is not localized for locale 'zh_CN'  - using en_GB	1439993576	LOCALIZATION	0	\N
+950	386	32	GUI	string 'link_report_test_cases_created_per_user' is not localized for locale 'zh_CN'  - using en_GB	1439993576	LOCALIZATION	0	\N
+951	386	32	GUI	string 'href_issuetracker_management' is not localized for locale 'zh_CN'  - using en_GB	1439993576	LOCALIZATION	0	\N
+952	386	32	GUI	string 'href_reqmgrsystem_management' is not localized for locale 'zh_CN'  - using en_GB	1439993576	LOCALIZATION	0	\N
 \.
 
 
@@ -2810,7 +2815,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 -- Name: h5tl_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_events_id_seq', 947, true);
+SELECT pg_catalog.setval('h5tl_events_id_seq', 952, true);
 
 
 --
@@ -7468,6 +7473,8 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 382	/lib/testcases/tcEdit.php	1439977717	1439977717	8	bnoioaerqtts97geqhhi1uugo6
 383	/lib/testcases/tcEdit.php	1439977926	1439977926	8	bnoioaerqtts97geqhhi1uugo6
 384	/lib/testcases/tcEdit.php	1439978255	1439978255	8	bnoioaerqtts97geqhhi1uugo6
+385	/login.php	1439993576	1439993576	2	7g6q17am6j4ord5kpvn1u3m8j0
+386	/lib/general/mainPage.php	1439993576	1439993576	2	7g6q17am6j4ord5kpvn1u3m8j0
 \.
 
 
@@ -7475,7 +7482,7 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 -- Name: h5tl_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_transactions_id_seq', 384, true);
+SELECT pg_catalog.setval('h5tl_transactions_id_seq', 386, true);
 
 
 --
