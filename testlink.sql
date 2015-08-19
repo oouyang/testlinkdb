@@ -1816,6 +1816,7 @@ SELECT pg_catalog.setval('h5tl_assignment_types_id_seq', 2, true);
 --
 
 COPY h5tl_attachments (id, fk_id, fk_table, title, description, file_name, file_path, file_size, file_type, date_added, content, compression_type) FROM stdin;
+1	739	nodes_hierarchy	Portrait_6.jpg		Portrait_6_ddnuhn2.jpg	nodes_hierarchy/739/06a430b9d521338a82398b8e12e08b17.jpg	136257	image/jpeg	2015-08-19 05:58:07	\N	1
 \.
 
 
@@ -1823,7 +1824,7 @@ COPY h5tl_attachments (id, fk_id, fk_table, title, description, file_name, file_
 -- Name: h5tl_attachments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_attachments_id_seq', 1, false);
+SELECT pg_catalog.setval('h5tl_attachments_id_seq', 1, true);
 
 
 --
@@ -2611,6 +2612,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 755	312	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439892860	PHP	0	\N
 756	313	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439892862	PHP	0	\N
 757	313	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439892862	PHP	0	\N
+790	331	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954821	PHP	0	\N
 758	314	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:17:"Localization Test";i:1;s:91:"All strings on the "Camera permission" screens are translated correctly without truncation.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439892874	ASSIGN	105	nodes_hierarchy
 759	314	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439892874	PHP	0	\N
 760	314	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439892874	PHP	0	\N
@@ -2621,6 +2623,87 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 765	317	32	GUI	string 'link_report_test_cases_created_per_user' is not localized for locale 'zh_CN'  - using en_GB	1439907740	LOCALIZATION	0	\N
 766	317	32	GUI	string 'href_issuetracker_management' is not localized for locale 'zh_CN'  - using en_GB	1439907740	LOCALIZATION	0	\N
 767	317	32	GUI	string 'href_reqmgrsystem_management' is not localized for locale 'zh_CN'  - using en_GB	1439907740	LOCALIZATION	0	\N
+768	318	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:11:"xueqin.shen";i:1;s:14:"111.203.161.50";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439946304	LOGIN	8	users
+769	319	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:12:"peipei.cheng";i:1;s:14:"111.203.161.50";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439952129	LOGIN	7	users
+770	320	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:9:"hubert.lu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439952263	LOGIN	5	users
+771	321	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:17:"audit_user_logout";s:6:"params";a:1:{i:0;s:9:"hubert.lu";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439952375	LOGOUT	5	users
+772	322	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:9:"hubert.lu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439952380	LOGIN	5	users
+773	323	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:9:"enpei.chu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439952473	LOGIN	4	users
+774	324	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439953941	PHP	0	\N
+775	324	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439953941	PHP	0	\N
+776	325	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439953947	PHP	0	\N
+777	325	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439953947	PHP	0	\N
+778	326	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439953965	PHP	0	\N
+779	326	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439953965	PHP	0	\N
+780	327	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954100	PHP	0	\N
+781	327	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954100	PHP	0	\N
+782	328	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954182	PHP	0	\N
+783	328	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954182	PHP	0	\N
+784	329	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954719	PHP	0	\N
+785	329	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954719	PHP	0	\N
+786	330	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:21:"[Camera] Tap to Focus";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439954731	ASSIGN	132	nodes_hierarchy
+787	330	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:21:"[Camera] Tap to Focus";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439954731	ASSIGN	132	nodes_hierarchy
+788	330	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954731	PHP	0	\N
+789	330	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954731	PHP	0	\N
+791	331	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954821	PHP	0	\N
+792	332	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954970	PHP	0	\N
+793	332	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954970	PHP	0	\N
+794	333	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954978	PHP	0	\N
+795	333	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954978	PHP	0	\N
+796	334	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954980	PHP	0	\N
+797	334	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954980	PHP	0	\N
+798	335	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954987	PHP	0	\N
+799	335	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1439954987	PHP	0	\N
+800	336	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1439955574	PHP	0	\N
+801	336	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439955574	PHP	0	\N
+802	336	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439955574	PHP	0	\N
+803	336	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439955574	PHP	0	\N
+804	336	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439955574	PHP	0	\N
+805	336	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439955574	PHP	0	\N
+806	337	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:35:"[Gallery] Thumbnail Photo grid View";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439962229	ASSIGN	718	nodes_hierarchy
+807	337	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:35:"[Gallery] Thumbnail Photo grid View";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439962229	ASSIGN	718	nodes_hierarchy
+808	338	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439962504	PHP	0	\N
+809	338	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439962504	PHP	0	\N
+810	338	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439962504	PHP	0	\N
+811	338	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439962504	PHP	0	\N
+812	339	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439962518	PHP	0	\N
+813	339	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439962518	PHP	0	\N
+814	339	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439962518	PHP	0	\N
+815	339	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439962518	PHP	0	\N
+816	340	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439962530	PHP	0	\N
+817	340	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439962530	PHP	0	\N
+818	340	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439962530	PHP	0	\N
+819	340	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439962530	PHP	0	\N
+820	341	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439962547	PHP	0	\N
+821	341	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439962547	PHP	0	\N
+822	341	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439962547	PHP	0	\N
+823	341	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439962547	PHP	0	\N
+824	342	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:89:"[Gallery] Helpful message displays in Gallery when no photos are present to be displayed.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439963132	ASSIGN	736	nodes_hierarchy
+825	342	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:89:"[Gallery] Helpful message displays in Gallery when no photos are present to be displayed.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439963132	ASSIGN	736	nodes_hierarchy
+826	343	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:11:"xueqin.shen";i:1;s:14:"111.203.161.50";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439963377	LOGIN	8	users
+827	344	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:77:"[Single Item View] The user can share all supported image files without issue";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439963842	ASSIGN	739	nodes_hierarchy
+828	344	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:77:"[Single Item View] The user can share all supported image files without issue";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439963842	ASSIGN	739	nodes_hierarchy
+829	345	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:24:"audit_attachment_created";s:6:"params";a:2:{i:0;s:14:"Portrait_6.jpg";i:1;s:22:"Portrait_6_ddnuhn2.jpg";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439963887	CREATE	739	attachments
+830	346	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:92:"[Single Item View] Verify file information displays for content displayed in the gallery app";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439965011	ASSIGN	899	nodes_hierarchy
+831	347	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439965224	PHP	0	\N
+832	347	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439965224	PHP	0	\N
+833	347	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439965224	PHP	0	\N
+834	347	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439965224	PHP	0	\N
+835	348	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439965384	PHP	0	\N
+836	348	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439965384	PHP	0	\N
+837	348	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439965384	PHP	0	\N
+838	348	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439965384	PHP	0	\N
+839	349	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439965761	PHP	0	\N
+840	349	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439965761	PHP	0	\N
+841	349	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439965761	PHP	0	\N
+842	349	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439965761	PHP	0	\N
+843	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1439965972	PHP	0	\N
+844	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439965972	PHP	0	\N
+845	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439965972	PHP	0	\N
+846	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439965972	PHP	0	\N
+847	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439965972	PHP	0	\N
+848	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439965972	PHP	0	\N
+849	351	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:72:"[Gallery] User should be able to switch to Camera on First Time Use page";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439967729	ASSIGN	1331	nodes_hierarchy
 \.
 
 
@@ -2628,7 +2711,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 -- Name: h5tl_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_events_id_seq', 767, true);
+SELECT pg_catalog.setval('h5tl_events_id_seq', 849, true);
 
 
 --
@@ -2882,27 +2965,22 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 101		100	9	0
 102		100	9	0
 103		100	9	0
-104	Smoke test	57	2	6
-105	All strings on the "Camera permission" screens are translated correctly without truncation.	67	3	1
 106		105	4	0
 107		106	9	0
 108		106	9	0
 109		106	9	0
 110		106	9	0
 111		106	9	0
-112	[Camera] APP Permission view should display correctly in RTL	67	3	2
 113		112	4	0
 114		113	9	0
 115		113	9	0
 116		113	9	0
-117	[Camera] The position of recording indicator and counter should be mirrored in RTL	67	3	3
 118		117	4	0
 119		118	9	0
 120		118	9	0
 121		118	9	0
 122		118	9	0
 123		118	9	0
-124	[Camera] Menu list view and sub-menu list view should display correctly in RTL	67	3	4
 125		124	4	0
 126		125	9	0
 127		125	9	0
@@ -2995,6 +3073,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 214		212	9	0
 215		212	9	0
 216		212	9	0
+124	[Camera] Menu list view and sub-menu list view should display correctly in RTL	1319	3	0
 217		212	9	0
 218		212	9	0
 219		212	9	0
@@ -3496,35 +3575,32 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 715		713	9	0
 716		713	9	0
 717		713	9	0
-718	[Gallery] Thumbnail Photo View	68	3	1
 719		718	4	0
 720		719	9	0
-721	[Gallery] Share information and share icon should display correctly in RTL	68	3	2
 722		721	4	0
 723		722	9	0
 724		722	9	0
 725		722	9	0
 726		722	9	0
-727	[Gallery] A warning is displayed informing the user that an SD card is required for the app to work	68	3	3
 728		727	4	0
 729		728	9	0
-730	[Gallery] Edit mode view should be right aligned in RTL	68	3	4
 731		730	4	0
 732		731	9	0
 733		731	9	0
 734		731	9	0
 735		731	9	0
-736	[Gallery] Helpful message displays in Gallery when no photos are present to be displayed.	68	3	5
 737		736	4	0
 738		737	9	0
-739	The user can share all supported image files without issue	68	3	6
 740		739	4	0
 741		740	9	0
 742		740	9	0
 743		740	9	0
 744		740	9	0
 745		740	9	0
-746	Zooming in on a photo and panning the photo does perform a gesture to view the next photo	68	3	7
+730	[Gallery] Edit mode view should be right aligned in RTL	1319	3	4
+739	[Single Item View] The user can share all supported image files without issue	1322	3	6
+727	[Gallery] A warning is displayed informing the user that an SD card is required for the app to work	1330	3	3
+736	[Gallery] Helpful message displays in Gallery when no photos are present.	1330	3	4
 747		746	4	0
 748		747	9	0
 749		747	9	0
@@ -3533,37 +3609,31 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 752		747	9	0
 753		747	9	0
 754		747	9	0
-755	Verify Gallery Data is Preserved after OTA	68	3	8
 756		755	4	0
 757		756	9	0
 758		756	9	0
-759	Gallery app should be killed if the user presses the home button while the app i	68	3	9
 760		759	4	0
 761		760	9	0
 762		760	9	0
 763		760	9	0
 764		760	9	0
-765	[Gallery] Test you can view a thumbnail in large mode	68	3	10
 766		765	4	0
 767		766	9	0
 768		766	9	0
 769		766	9	0
 770		766	9	0
 771		766	9	0
-772	After saving a file from a MMS, the user can re-enter the MMS without issue	68	3	11
 773		772	4	0
 774		773	9	0
 775		773	9	0
 776		773	9	0
 777		773	9	0
-778	Thumbnails and previews should always match captured photo	68	3	12
 779		778	4	0
 780		779	9	0
 781		779	9	0
 782		779	9	0
 783		779	9	0
 784		779	9	0
-785	There is a smooth transition animation when swiping through photos	68	3	13
 786		785	4	0
 787		786	9	0
 788		786	9	0
@@ -3572,14 +3642,12 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 791		786	9	0
 792		786	9	0
 793		786	9	0
-794	Gallery functions properly without issue when there is high memory usage on 1st launch	68	3	14
 795		794	4	0
 796		795	9	0
 797		795	9	0
 798		795	9	0
 799		795	9	0
 800		795	9	0
-801	Verify the user can send files to a paired device while receiving files from ano	68	3	15
 802		801	4	0
 803		802	9	0
 804		802	9	0
@@ -3588,7 +3656,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 807		802	9	0
 808		802	9	0
 809		802	9	0
-810	When adding Contacts with pictures, the contact app functions as expected withou	68	3	16
 811		810	4	0
 812		811	9	0
 813		811	9	0
@@ -3596,36 +3663,44 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 815		811	9	0
 816		811	9	0
 817		811	9	0
-818	Imported videos are shown correctly without issue when switching between portrai	68	3	17
 819		818	4	0
 820		819	9	0
 821		819	9	0
 822		819	9	0
-823	Camera viewfinder displays properly after editing a photo in the gallery	68	3	18
 824		823	4	0
 825		824	9	0
 826		824	9	0
 827		824	9	0
 828		824	9	0
-829	All strings on the "Memory card in use" page are translated properly without truncation	68	3	19
 830		829	4	0
 831		830	9	0
 832		830	9	0
 833		830	9	0
 834		830	9	0
-835	All strings on the "No photos or videos" page are translated properly without truncation	68	3	20
 836		835	4	0
 837		836	9	0
 838		836	9	0
 839		836	9	0
-840	The string "Can not edit photos. Memory card is full." is translated properly without truncation	68	3	21
 841		840	4	0
 842		841	9	0
 843		841	9	0
 844		841	9	0
 845		841	9	0
-846	All strings on the  "Delete selected item?" and "Delete 3 items? pages are trans	68	3	22
 847		846	4	0
+755	Verify Gallery Data is Preserved after OTA	1325	3	8
+772	After saving a file from a MMS, the user can re-enter the MMS without issue	1325	3	11
+801	Verify the user can send files to a paired device while receiving files from ano	1325	3	15
+746	Zooming in on a photo and panning the photo does perform a gesture to view the next photo	1325	3	7
+765	[Gallery] Test you can view a thumbnail in large mode	1322	3	10
+810	When adding Contacts with pictures, the contact app functions as expected withou	1325	3	16
+759	Gallery app should be killed if the user presses the home button while the app i	1326	3	9
+840	The string "Can not edit photos. Memory card is full." is translated properly without truncation	1328	3	21
+846	All strings on the  "Delete selected item?" and "Delete 3 items? pages are trans	1328	3	22
+785	There is a smooth transition animation when swiping through photos	1326	3	13
+794	Gallery functions properly without issue when there is high memory usage on 1st launch	1326	3	14
+823	Camera viewfinder displays properly after editing a photo in the gallery	1323	3	0
+778	Thumbnails and previews should always match captured photo	1321	3	1
+818	Imported videos are shown correctly without issue when switching between portrai	1321	3	6
 848		847	9	0
 849		847	9	0
 850		847	9	0
@@ -3633,7 +3708,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 852		847	9	0
 853		847	9	0
 854		847	9	0
-855	All strings on the "Single item" and "Multiple items" share pages are translated	68	3	23
 856		855	4	0
 857		856	9	0
 858		856	9	0
@@ -3641,25 +3715,21 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 860		856	9	0
 861		856	9	0
 862		856	9	0
-863	The strings "Select" and "Number Selected" are translated properly without truncation	68	3	24
 864		863	4	0
 865		864	9	0
 866		864	9	0
 867		864	9	0
 868		864	9	0
-869	All strings on the "Edit" page are translated properly without truncation	68	3	25
 870		869	4	0
 871		870	9	0
 872		870	9	0
 873		870	9	0
 874		870	9	0
-875	All strings on the "Delete photo?" page are translated properly without truncation	68	3	26
 876		875	4	0
 877		876	9	0
 878		876	9	0
 879		876	9	0
 880		876	9	0
-881	[OTA] Data Migration of Gallery app	68	3	27
 882		881	4	0
 883		882	9	0
 884		882	9	0
@@ -3668,7 +3738,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 887		882	9	0
 888		882	9	0
 889		882	9	0
-890	All strings on the "More Information" pages for Photos and Videos are translated	68	3	28
 891		890	4	0
 892		891	9	0
 893		891	9	0
@@ -3677,41 +3746,34 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 896		891	9	0
 897		891	9	0
 898		891	9	0
-899	[Gallery] Verify file information displays for content displayed in the gallery app	68	3	29
 900		899	4	0
 901		900	9	0
 902		900	9	0
 903		900	9	0
-904	All dates for gallery content are translated properly without truncation	68	3	30
 905		904	4	0
 906		905	9	0
 907		905	9	0
 908		905	9	0
-909	[Gallery] Photo Editor - Automatic Image Enhancement	68	3	31
 910		909	4	0
 911		910	9	0
 912		910	9	0
 913		910	9	0
 914		910	9	0
 915		910	9	0
-916	[Gallery] Confirm gallery shows pictures from a single month	68	3	32
 917		916	4	0
 918		917	9	0
 919		917	9	0
 920		917	9	0
-921	[Gallery] Confirm gallery shows pictures from a range of months within a year	68	3	33
 922		921	4	0
 923		922	9	0
 924		922	9	0
 925		922	9	0
 926		922	9	0
-927	[Gallery] Confirm gallery shows pictures from a range of months over years	68	3	34
 928		927	4	0
 929		928	9	0
 930		928	9	0
 931		928	9	0
 932		928	9	0
-933	Basic  - Photo/Video Browsing & Slideshow	68	3	35
 934		933	4	0
 935		934	9	0
 936		934	9	0
@@ -3720,25 +3782,34 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 939		934	9	0
 940		934	9	0
 941		934	9	0
-942	[Gallery] Using the pick activity through a website does not cause the gallery to hang	68	3	36
 943		942	4	0
 944		943	9	0
 945		943	9	0
 946		943	9	0
 947		943	9	0
 948		943	9	0
-949	Basic  - Photo Selection, Sharing & Deletion	68	3	37
 950		949	4	0
 951		950	9	0
 952		950	9	0
+855	All strings on the "Single item" and "Multiple items" share pages are translated	1328	3	4
+869	All strings on the "Edit" page are translated properly without truncation	1328	3	25
+890	All strings on the "More Information" pages for Photos and Videos are translated	1328	3	28
+875	All strings on the "Delete photo?" page are translated properly without truncation	1328	3	26
+904	All dates for gallery content are translated properly without truncation	1328	3	30
+881	[OTA] Data Migration of Gallery app	1326	3	27
+942	[Gallery] Using the pick activity through a website does not cause the gallery to hang	1325	3	36
+909	[Gallery] Photo Editor - Automatic Image Enhancement	1323	3	1
+927	[Gallery] Confirm gallery shows pictures from a range of months over years	1321	3	7
+921	[Gallery] Confirm gallery shows pictures from a range of months within a year	1321	3	2
+916	[Gallery] Confirm gallery shows pictures from a single month	1321	3	5
+933	Basic  - Photo/Video Browsing & Slideshow	1321	3	8
+949	Basic  - Photo Selection, Sharing & Deletion	1321	3	9
 953		950	9	0
 954		950	9	0
 955		950	9	0
-956	[Gallery] Removing the SD card while vieing the gallery list removes all pics stored externally	68	3	38
 957		956	4	0
 958		957	9	0
 959		957	9	0
-960	[Gallery] Setting HD wallpaper in portrait and landscape mode	68	3	39
 961		960	4	0
 962		961	9	0
 963		961	9	0
@@ -3748,88 +3819,88 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 967		961	9	0
 968		961	9	0
 969		961	9	0
-970	[Gallery] Thumbnail Photo View should not be affected by blank or empty image file	68	3	40
 971		970	4	0
 972		971	9	0
 973		971	9	0
-974	[Apps][Media][Gallery] The apps should be ussable with an empy SD card when USB is connected	68	3	41
 975		974	4	0
 976		975	9	0
 977		975	9	0
 978		975	9	0
 979		975	9	0
-980	[Gallery] Confirm gallery shows pictures in chronological order in the user interface	68	3	42
 981		980	4	0
 982		981	9	0
 983		981	9	0
 984		981	9	0
 985		981	9	0
-986	[Gallery] Open the Gallery App with no SD card inserted in the device	68	3	43
 987		986	4	0
 988		987	9	0
 989		987	9	0
-990	[GALLERY] The last received file is not deleted if the user denies the incoming	68	3	44
 991		990	4	0
 992		991	9	0
 993		991	9	0
 994		991	9	0
 995		991	9	0
 996		991	9	0
-997	[Gallery] Verify the gallery app only sees pictures up to 5 megapixels.	68	3	45
 998		997	4	0
 999		998	9	0
 1000		998	9	0
-1001	Photo editor - Landscape mode while in edit mode	68	3	46
 1002		1001	4	0
 1003		1002	9	0
 1004		1002	9	0
 1005		1002	9	0
 1006		1002	9	0
-1007	[Gallery] Verify an alert is displayed if there isn"t enough free space available to enter Edit Mode	68	3	47
 1008		1007	4	0
 1009		1008	9	0
 1010		1008	9	0
-1011	[Gallery] Fullscreen Photo View - Switch to Thumbnail Photo View	68	3	48
 1012		1011	4	0
 1013		1012	9	0
 1014		1012	9	0
-1015	[Gallery] Single Photo View - Return to default zoom on double tap	68	3	49
 1016		1015	4	0
 1017		1016	9	0
 1018		1016	9	0
-1019	[Gallery] Single Photo View - Pan the zoomed image	68	3	50
 1020		1019	4	0
 1021		1020	9	0
 1022		1020	9	0
 1023		1020	9	0
-1024	[Gallery] Single Photo View - Captured videos are played when tapped	68	3	51
 1025		1024	4	0
 1026		1025	9	0
 1027		1025	9	0
-1028	[Gallery] Access Multiple Selection Mode from Thumbnail Photo View	68	3	52
 1029		1028	4	0
 1030		1029	9	0
 1031		1029	9	0
-1032	[Gallery] Single tap on a photo thumbnail in Muliple Selection Mode toggles the photo selection	68	3	53
 1033		1032	4	0
 1034		1033	9	0
 1035		1033	9	0
 1036		1033	9	0
 1037		1033	9	0
-1038	[Gallery] Multiple Selection Mode - Share a single photo	68	3	54
 1039		1038	4	0
 1040		1039	9	0
 1041		1039	9	0
 1042		1039	9	0
-1043	[Gallery] Single Photo View - The photo and toolbars adjust to fit the screen wh	68	3	55
 1044		1043	4	0
 1045		1044	9	0
 1046		1044	9	0
-1047	[Gallery] Single Photo View - Set the photo as wallpaper	68	3	56
 1048		1047	4	0
 1049		1048	9	0
 1050		1048	9	0
-1051	[Gallery] Ability to return from the Camera App to the Gallery app without taking a new picture	68	3	57
+1019	[Gallery] Single Photo View - Pan the zoomed image	1322	3	50
+1024	[Gallery] Single Photo View - Captured videos are played when tapped	1322	3	51
+1011	[Gallery] Fullscreen Photo View - Switch to Thumbnail Photo View	1322	3	48
+960	[Gallery] Setting HD wallpaper in portrait and landscape mode	1322	3	39
+974	[Apps][Media][Gallery] The apps should be ussable with an empy SD card when USB is connected	1326	3	41
+986	[Gallery] Open the Gallery App with no SD card inserted in the device	1326	3	43
+990	[GALLERY] The last received file is not deleted if the user denies the incoming	1325	3	44
+997	[Gallery] Verify the gallery app only sees pictures up to 5 megapixels.	1326	3	45
+1007	[Gallery] Verify an alert is displayed if there isn"t enough free space available to enter Edit Mode	1326	3	47
+1043	[Gallery] Single Photo View - The photo and toolbars adjust to fit the screen wh	1322	3	55
+1047	[Gallery] Single Photo View - Set the photo as wallpaper	1322	3	56
+1051	[Gallery] Ability to return from the Camera App to the Gallery app without taking a new picture	1325	3	57
+1001	Photo editor - Landscape mode while in edit mode	1323	3	2
+1038	[Gallery] Multiple Selection Mode - Share a single photo	1329	3	54
+970	[Gallery] Thumbnail Photo View should not be affected by blank or empty image file	1321	3	11
+980	[Gallery] Confirm gallery shows pictures in chronological order in the user interface	1321	3	12
+1028	[Gallery] Access Multiple Selection Mode from Thumbnail Photo View	1321	3	13
+1032	[Gallery] Single tap on a photo thumbnail in Muliple Selection Mode toggles the photo selection	1321	3	14
 1052		1051	4	0
 1053		1052	9	0
 1054		1052	9	0
@@ -3837,183 +3908,165 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1056		1052	9	0
 1057		1052	9	0
 1058		1052	9	0
-1059	[Gallery] Ability to return from the Camera App to the Gallery app after taking a photo	68	3	58
 1060		1059	4	0
 1061		1060	9	0
 1062		1060	9	0
 1063		1060	9	0
 1064		1060	9	0
 1065		1060	9	0
-1066	[Gallery] Ability to edit a single photo in Gallery by tapping on the Edit button	68	3	59
 1067		1066	4	0
 1068		1067	9	0
 1069		1067	9	0
 1070		1067	9	0
-1071	Verify the user cannot use and a prompt is displayed while in the gallery app wh	68	3	60
 1072		1071	4	0
 1073		1072	9	0
-1074	Verify the gallery rescans for recently removed content after disengaging USB Mass Storage.	68	3	61
 1075		1074	4	0
 1076		1075	9	0
 1077		1075	9	0
-1078	Verify the gallery rescans for new added content after disengaging USB Mass Storage mode.	68	3	62
 1079		1078	4	0
 1080		1079	9	0
 1081		1079	9	0
-1082	[GALLERY] View photo in fullscreen mode & check orientation	68	3	63
 1083		1082	4	0
 1084		1083	9	0
 1085		1083	9	0
 1086		1083	9	0
 1087		1083	9	0
 1088		1083	9	0
-1089	[Video] Play the video you recorded.  Check for video and sound.	68	3	64
 1090		1089	4	0
 1091		1090	9	0
 1092		1090	9	0
-1093	[Gallery] Ensuring edited photo is saved	68	3	65
 1094		1093	4	0
 1095		1094	9	0
 1096		1094	9	0
 1097		1094	9	0
 1098		1094	9	0
-1099	[GALLERY] - Share a picture over email	68	3	66
 1100		1099	4	0
 1101		1100	9	0
 1102		1100	9	0
 1103		1100	9	0
 1104		1100	9	0
-1105	[GALLERY] Verify the user is able share multiple photos to email.	68	3	67
 1106		1105	4	0
 1107		1106	9	0
 1108		1106	9	0
 1109		1106	9	0
 1110		1106	9	0
 1111		1106	9	0
-1112	[GALLERY] - Share single photo on Twitter	68	3	68
 1113		1112	4	0
 1114		1113	9	0
 1115		1113	9	0
 1116		1113	9	0
 1117		1113	9	0
 1118		1113	9	0
-1119	[GALLERY] While editing a photo user can exit edit mode.	68	3	69
 1120		1119	4	0
 1121		1120	9	0
 1122		1120	9	0
 1123		1120	9	0
 1124		1120	9	0
-1125	Ability to launch the Camera app from inside the Gallery app (from the thumbnail view)	68	3	70
 1126		1125	4	0
 1127		1126	9	0
 1128		1126	9	0
 1129		1126	9	0
-1130	[Gallery]  Zooming in or out by pinch gesture in single photo view	68	3	71
 1131		1130	4	0
 1132		1131	9	0
 1133		1131	9	0
 1134		1131	9	0
 1135		1131	9	0
 1136		1131	9	0
-1137	Selecting wallpaper from the wallpaper gallery	68	3	72
 1138		1137	4	0
 1139		1138	9	0
 1140		1138	9	0
 1141		1138	9	0
 1142		1138	9	0
-1143	[Home Screen] Able to adjust wallpaper	68	3	73
 1144		1143	4	0
 1145		1144	9	0
 1146		1144	9	0
 1147		1144	9	0
 1148		1144	9	0
 1149		1144	9	0
-1150	[Home Screen] Able to select wallpaper from camera photos gallery	68	3	74
 1151		1150	4	0
 1152		1151	9	0
 1153		1151	9	0
-1154	Photo Editor - Effects - Sepia	68	3	75
 1155		1154	4	0
+1071	Verify the user cannot use and a prompt is displayed while in the gallery app wh	1326	3	60
+1074	Verify the gallery rescans for recently removed content after disengaging USB Mass Storage.	1326	3	61
+1078	Verify the gallery rescans for new added content after disengaging USB Mass Storage mode.	1326	3	62
+1082	[GALLERY] View photo in fullscreen mode & check orientation	1322	3	63
+1137	Selecting wallpaper from the wallpaper gallery	1325	3	72
+1143	[Home Screen] Able to adjust wallpaper	1325	3	73
+1066	[Gallery] Ability to edit a single photo in Gallery by tapping on the Edit button	1323	3	4
+1154	Photo Editor - Effects - Sepia	1323	3	8
+1093	[Gallery] Ensuring edited photo is saved	1323	3	10
+1119	[GALLERY] While editing a photo user can exit edit mode.	1323	3	13
+1130	[Gallery]  Zooming in or out by pinch gesture in single photo view	1322	3	71
+1150	[Home Screen] Able to select wallpaper from camera photos gallery	1325	3	74
+1089	[Video] Play the video you recorded.  Check for video and sound.	1325	3	64
+1105	[GALLERY] Verify the user is able share multiple photos to email.	1329	3	67
+1112	[GALLERY] - Share single photo on Twitter	1329	3	68
+1099	[GALLERY] - Share a picture over email	1329	3	66
 1156		1155	9	0
 1157		1155	9	0
 1158		1155	9	0
 1159		1155	9	0
 1160		1155	9	0
-1161	[Gallery] Photo Editor - Effects - B&W & Sepia	68	3	76
 1162		1161	4	0
 1163		1162	9	0
 1164		1162	9	0
 1165		1162	9	0
 1166		1162	9	0
-1167	Photo Editor - Adjusting exposure settings	68	3	77
 1168		1167	4	0
 1169		1168	9	0
 1170		1168	9	0
 1171		1168	9	0
-1172	Photo Editor - Crop - Freeform	68	3	78
 1173		1172	4	0
 1174		1173	9	0
 1175		1173	9	0
 1176		1173	9	0
 1177		1173	9	0
-1178	Photo Editor - Crop - Portrait	68	3	79
 1179		1178	4	0
 1180		1179	9	0
 1181		1179	9	0
 1182		1179	9	0
-1183	Photo Editor - Crop - Landscape	68	3	80
 1184		1183	4	0
 1185		1184	9	0
 1186		1184	9	0
 1187		1184	9	0
 1188		1184	9	0
 1189		1184	9	0
-1190	[Gallery] Photo Editor - Crop - Square	68	3	81
 1191		1190	4	0
 1192		1191	9	0
 1193		1191	9	0
-1194	[Gallery] Photo Editor - Effects - Original	68	3	82
 1195		1194	4	0
 1196		1195	9	0
 1197		1195	9	0
-1198	[Gallery] Multiple Selection Mode - Share multiple photos	68	3	83
 1199		1198	4	0
 1200		1199	9	0
 1201		1199	9	0
 1202		1199	9	0
-1203	Verify the user is able to Export photos from device to desktop machine	68	3	84
 1204		1203	4	0
 1205		1204	9	0
-1206	Accessing camera from gallery (single photo view)	68	3	85
 1207		1206	4	0
 1208		1207	9	0
 1209		1207	9	0
 1210		1207	9	0
-1211	Gallery displays contents of SD card.	68	3	86
 1212		1211	4	0
 1213		1212	9	0
-1214	[Gallery] Ability to pan through photos in full screen view	68	3	87
 1215		1214	4	0
 1216		1215	9	0
 1217		1215	9	0
 1218		1215	9	0
 1219		1215	9	0
-1220	[Gallery] Single Photo View - Delete a single photo	68	3	88
 1221		1220	4	0
 1222		1221	9	0
 1223		1221	9	0
 1224		1221	9	0
-1225	[GALLERY] Delete multiple photos from select image mode	68	3	89
 1226		1225	4	0
 1227		1226	9	0
 1228		1226	9	0
 1229		1226	9	0
 1230		1226	9	0
-1231	[Gallery] Access Full Screen Photo View from Thumbnail Photo View	68	3	90
 1232		1231	4	0
 1233		1232	9	0
 1234		1232	9	0
-1235	Verify that a photo can be set for a contact	68	3	91
 1236		1235	4	0
 1237		1236	9	0
 1238		1236	9	0
@@ -4024,10 +4077,8 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1243		1236	9	0
 1244		1236	9	0
 1245		1236	9	0
-1246	Accessing camera from preview mode	68	3	92
 1247		1246	4	0
 1248		1247	9	0
-1249	[CAMERA] Verify the user can take several pictures with camera.	68	3	93
 1250		1249	4	0
 1251		1250	9	0
 1252		1250	9	0
@@ -4042,9 +4093,24 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1261		1258	9	0
 1262		1258	9	0
 1263		1258	9	0
+1178	Photo Editor - Crop - Portrait	1323	3	3
+1167	Photo Editor - Adjusting exposure settings	1323	3	5
+1172	Photo Editor - Crop - Freeform	1323	3	6
+1183	Photo Editor - Crop - Landscape	1323	3	7
+1194	[Gallery] Photo Editor - Effects - Original	1323	3	11
+1190	[Gallery] Photo Editor - Crop - Square	1323	3	12
+1246	Accessing camera from preview mode	1325	3	92
+1235	Verify that a photo can be set for a contact	1325	3	91
+1231	[Gallery] Access Full Screen Photo View from Thumbnail Photo View	1322	3	90
+1220	[Gallery] Single Photo View - Delete a single photo	1322	3	88
+1214	[Gallery] Ability to pan through photos in full screen view	1322	3	87
+1203	Verify the user is able to Export photos from device to desktop machine	1325	3	84
+1206	Accessing camera from gallery (single photo view)	1325	3	85
+1198	[Gallery] Multiple Selection Mode - Share multiple photos	1329	3	83
+1225	[GALLERY] Delete multiple photos from select image mode	1321	3	10
+1211	Gallery displays contents of SD card.	1321	3	15
 1264		1258	9	0
 1265		1258	9	0
-1266	Network operator settings show correctly for both SIMs in a DSDS scenario	1256	3	2
 1267		1266	4	0
 1268		1267	9	0
 1269		1267	9	0
@@ -4096,6 +4162,39 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1315	One entry of search result is displayed when input 2 digits.	84	3	1004
 1316		1315	4	0
 1317		1316	9	0
+1318	Localization	57	2	7
+1320	test2	1255	2	2
+1266	Network operator settings show correctly for both SIMs in a DSDS scenario	1320	3	2
+117	[Camera] The position of recording indicator and counter should be mirrored in RTL	1319	3	1
+112	[Camera] APP Permission view should display correctly in RTL	1319	3	2
+721	[Gallery] Share information and share icon should display correctly in RTL	1319	3	3
+105	All strings on the "Camera permission" screens are translated correctly without truncation.	1328	3	2
+829	All strings on the "Memory card in use" page are translated properly without truncation	1328	3	1
+1324		740	9	0
+899	[Single Item View] Verify file information displays for content displayed in the gallery app	1322	3	29
+1015	[Gallery] Single Photo View - Return to default zoom on double tap	1322	3	49
+1249	[CAMERA] Verify the user can take several pictures with camera.	67	3	93
+1319	Right to Left	1318	2	3
+1328	Gallery	1318	2	4
+835	All strings on the "No photos or videos" page are translated properly without truncation	1328	3	0
+863	The strings "Select" and "Number Selected" are translated properly without truncation	1328	3	24
+956	[Gallery] Removing the SD card while vieing the gallery list removes all pics stored externally	1326	3	38
+1321	Grid View	68	2	1
+1059	[Gallery] Ability to return from the Camera App to the Gallery app after taking a photo	1325	3	58
+1125	Ability to launch the Camera app from inside the Gallery app (from the thumbnail view)	1325	3	70
+1161	[Gallery] Photo Editor - Effects - B&W & Sepia	1323	3	9
+718	[Gallery] Thumbnail Photo grid View	1321	3	0
+1325	Cross Function Test Cases	68	2	5
+1326	Stability&Performance	68	2	6
+1331	[Gallery] User should be able to switch to Camera on First Time Use page	1330	3	5
+1332		1331	4	0
+1333		1332	9	0
+1334		1332	9	0
+1330	First Time Use	68	2	0
+1322	Single Item View	68	2	2
+1323	Photo editor	68	2	3
+1329	Share	68	2	4
+1335		1332	9	0
 \.
 
 
@@ -4103,7 +4202,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 -- Name: h5tl_nodes_hierarchy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_nodes_hierarchy_id_seq', 1317, true);
+SELECT pg_catalog.setval('h5tl_nodes_hierarchy_id_seq', 1335, true);
 
 
 --
@@ -4121,7 +4220,8 @@ COPY h5tl_object_keywords (id, fk_id, fk_table, keyword_id) FROM stdin;
 16	84	nodes_hierarchy	10
 17	85	nodes_hierarchy	10
 18	86	nodes_hierarchy	10
-19	104	nodes_hierarchy	9
+20	1318	nodes_hierarchy	16
+22	1319	nodes_hierarchy	16
 \.
 
 
@@ -4129,7 +4229,7 @@ COPY h5tl_object_keywords (id, fk_id, fk_table, keyword_id) FROM stdin;
 -- Name: h5tl_object_keywords_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_object_keywords_id_seq', 19, true);
+SELECT pg_catalog.setval('h5tl_object_keywords_id_seq', 22, true);
 
 
 --
@@ -4875,7 +4975,6 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 715	2	 Click the camera "shutter" button.\n 	 Picture is taken.  Picture is saved to gallery.  Camera returns control to "preview" view.\n 	1	1
 716	3	 Click the thumbnail for the photo just taken.\n 	 Photo is restored to large (full screen) view.\n 	1	1
 717	4	 Repeat step 1, taking a series of pictures in both portrait and landscape mode.\n 	 Pictures should be saved to gallery, and after each picture is taken camera should return to preview mode.\n 	1	1
-720	1	 Open the Gallery app to the Thumbnail Photo View\n 	 All the photos and captured videos are displayed in a thumbnail grid view. If the grid is larger then the screen it can be scrolled to view all the thumbnails\n 	1	1
 723	1	 Set your phone to Arabic  \n 	  	1	1
 724	2	 Click on the Gallery app with a few pictures inside  \n 	  	1	1
 725	3	 Select one photo, and click the share icon  \n 	  	1	1
@@ -4886,12 +4985,7 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 733	2	 Click on the Gallery app with a few pictures inside  \n 	  	1	1
 734	3	 Select one photo, and click the edit icon  \n 	  	1	1
 735	4	 Observe the edit mode view\n 	 These controls should remain the same position with that in LTR languages, and text should be read right to left. Nothing should overlap. The UI should not appear broken in any way.\n 	1	1
-738	1	 With no photos on the device open the Gallery app\n 	 Information about how to add content is displayed when there is no content to be displayed\n 	1	1
 741	1	 Open the gallery app.\n 	  	1	1
-742	2	 Tap on the attached photo to view it full screen.\n 	 The image is shown correctly when viewed in full screen mode.\n 	1	1
-743	3	 Tap on the "Share" icon.\n 	 The user is presented with the options E-mail, Wallpaper, Messages and Bluetooth transfer.\n 	1	1
-744	4	 Share the attached .jpg image to another device using all the available options.\n 	 The image is shared properly without issue.\n 	1	1
-745	5	 Repeat steps 1 through 4 covering all the supported image files.\n 	 All supported image types can be shared through Email, Wallpaper, Messages and Bluetooth without issue. \n 	1	1
 748	1	 Open the Camera app.\n 	  	1	1
 749	2	 Take multiple photos. \n 	  	1	1
 750	3	 Select the Preview icon.\n 	  	1	1
@@ -4941,6 +5035,10 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 812	1	 Flash a new build on device. \n 	  	1	1
 813	2	 Open contact app.\n 	  	1	1
 814	3	 Click on "+" icon to add a new contact.\n 	  	1	1
+743	3	<p>\r\n\tOpen &quot;Options&quot; menu</p>\r\n	<p>\r\n\tOption menu opens correctly.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n	1	1
+742	2	<p>\r\n\tSelect the attached photo to view it</p>\r\n	<p>\r\n\tThe image is shown correctly when viewed in full screen mode.</p>\r\n	1	1
+744	5	 Share the attached .jpg image to another device using all the available options.\n 	 The image is shared properly without issue.\n 	1	1
+745	6	<p>\r\n\tRepeat steps 1 through 5 covering all the supported image files.</p>\r\n	<p>\r\n\tAll supported image types can be shared through Email, Messages and Bluetooth without issue.</p>\r\n	1	1
 815	4	 Take pic from camera and save this new contact. You will see list of contacts after saving contact with pic.\n 	  	1	1
 816	5	 Repeat step (2) and (3) quickly. \n 	 The contact app does not OOM forced closed. \n 	1	1
 817	6	 Repeat step (2), (3) and (4) for 2-3 times.\n 	 Contact app functions as expected without a memory leak occurring. \n 	1	1
@@ -5003,7 +5101,6 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 898	7	 Check all strings on the "Video Information" page. \n 	 All strings are translated properly without truncation. \n 	1	1
 901	1	 Open the camera app and take a photo.\n 	 The Camera app opens and you are able to successfully take a photo.\n 	1	1
 902	2	 Open the gallery app and find the photo that you took in Step 1.\n 	 The photo you took in Step 1 is displayed in the Gallery app.\n 	1	1
-903	3	 Select the icon at the bottom of the screen that is next to the trash can icon.\n 	 A screen opens showing the image name, size, image type, date taken and resolution.\n 	1	1
 906	1	 Make sure the phone has several photos and videos saved on the SD card. The user should have content that covers all the months of the year.  \n 	  	1	1
 907	2	 Tap on the "Gallery" icon to open the gallery app. \n 	  	1	1
 908	3	 Check all the dates above the gallery content. \n 	 All dates are translated properly without truncation. \n 	1	1
@@ -5273,6 +5370,13 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 1313	2	 Dial a phone number using any SIM card.\n 	  	1	1
 1314	3	 Connect bluetooth headset, and double click button of bluetooth headset to dial\n 	 The last used SIM card will make a call to the last contact that was dialed on the phone. \n\nPlease note:\nIf the outgoing call SIM is set to anything else, we use that SIM and call the last-called contact with it.\n 	1	1
 1317	1	<p>\r\n\tinput 2 digits (like 72) from keypad.</p>\r\n	<p>\r\n\tDialer app is launched.</p>\r\n<p>\r\n\tCheck the search result( contact name starts with 72, p2,q2,r2,s2 .... is highlighted. phone number starts with 72 is highlighted).</p>\r\n	1	1
+720	1	<p>\r\n\tOpen the Gallery app to the Thumbnail Photo grid View</p>\r\n	<p>\r\n\tAll the photos and captured videos are displayed in a thumbnail grid view. If the grid is larger then the screen it can be scrolled to view all the thumbnails</p>\r\n	1	1
+738	1	<p>\r\n\tWith no photos on the device open the Gallery app</p>\r\n	<p>\r\n\tInformation about how to add content is displayed when there is no content to be displayed.</p>\r\n	1	1
+1324	4	<p>\r\n\tSelect Share</p>\r\n	<p>\r\n\tThe user is presented with the options Mail, Messages, and Bluetooth.</p>\r\n	1	1
+903	3	<p>\r\n\tOpen &quot;Option&quot; menu and Select to view the photo&#39;s infomation.</p>\r\n	<p>\r\n\tInfo Page appears showing the image name, size, image type, date taken and resolution.</p>\r\n	1	1
+1333	1	<p>\r\n\tWith no photos on the device open the Gallery app</p>\r\n	<p>\r\n\tA help information page appears and tell user that they can use Camera to take photo.</p>\r\n	1	1
+1334	2	<p>\r\n\tTap on &quot;Camera&quot; to launch Camera app</p>\r\n	<p>\r\n\tCamera can be launched successfully</p>\r\n	1	1
+1335	3	<p>\r\n\tTake a picture use camera</p>\r\n	<p>\r\n\tphoto can be taken successfully.</p>\r\n	1	1
 \.
 
 
@@ -5298,10 +5402,8 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 35	4	1	1	1	<p>\r\n\tThis case is in order to measure the power consumption of Firefox OS while the sleep mode on/off.</p>\r\n	<p>\r\n\tYou need a power meter to run this case.</p>\r\n	1	4	2015-08-03 02:48:01	4	2015-08-03 02:49:40	1	1	1	30.00
 100	4	1	1	1	<p>\r\n\tThe case is for testing the way to exit Dialer app - by clearing +#* and back to the homescreen.</p>\r\n	<p>\r\n\t1. The feature phone is ready with SIM card.</p>\r\n<p>\r\n\t2. Press + or # or * from the keypad.</p>\r\n	3	8	2015-08-17 03:06:07	8	2015-08-17 03:10:37	1	1	1	5.00
 92	2	1	1	1	<p>\r\n\tThe case is testing for the second way to launch Dialer app by inputting +, #, * from keypad.</p>\r\n	<p>\r\n\t1. The feature phone is ready with SIM card.</p>\r\n	3	8	2015-08-17 02:50:58	8	2015-08-17 04:13:22	1	1	1	5.00
-106	5	1	1	1	 <p class="description">\n        <p>Verify that all strings are translated into the locale you are testing. If you find an untranslated string, look at the same string in a pseudolocale (preferably Accented English). If the string appears in normal English, it is hard-coded and not\nlocalizable. File a bug under the "Firefox OS" component and add the keyword "l12y". If the string appears in a pseudolocale, then the localizer hasn't got to it yet. Please don't file a bug.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
 113	6	1	1	1	 <p class="description">\n        <ul>\n<li>Media Specs: https://drive.google.com/file/d/0B6fkEC1pmwTid1d4R0JfZ2ZpQW8/view?usp=sharing  </li>\n<li>General UX Specs: https://mozilla.app.box.com/s/bcm3s5i2v6js5uk0ws3tsywse8bgncgo</li>\n</ul>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
 118	7	1	1	1	 <p class="description">\n        <ul>\n<li>Media Specs: https://drive.google.com/file/d/0B6fkEC1pmwTid1d4R0JfZ2ZpQW8/view?usp=sharing  </li>\n<li>General UX Specs: https://mozilla.app.box.com/s/bcm3s5i2v6js5uk0ws3tsywse8bgncgo</li>\n</ul>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
-125	8	1	1	1	 <p class="description">\n        <ul>\n<li>Media Specs: https://drive.google.com/file/d/0B6fkEC1pmwTid1d4R0JfZ2ZpQW8/view?usp=sharing  </li>\n<li>General UX Specs: https://mozilla.app.box.com/s/bcm3s5i2v6js5uk0ws3tsywse8bgncgo</li>\n</ul>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
 133	9	1	1	1	 <p class="description">\n        <p>This test verifies the feature where the user can tap an area on the viewfinder to change focus to the tapped region.  (when using the back facing camera only)</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
 143	10	1	1	1	 <p class="description">\n        <p>Verify the phone can detect presence of single or multiple faces and focus correctly</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
 155	11	1	1	1	 <p class="description">\n        <p>Video recording should stop immediately when the user returns to the homescreen.</p>\n\n<p>Please see this issue:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1051172</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
@@ -5310,6 +5412,7 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 174	14	1	1	1	 <p class="description">\n        <p>Verify that the user can return to the Home screen after recording a video file. </p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1050751</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
 181	15	1	1	1	 <p class="description">\n        <p>The user can select the same camera resolution without issue. </p>\n\n<p>Prerequisite:\nCreate a custom build using these steps:</p>\n\n<ol>\n<li><p>Uncommenting out the commented-out sections of the following file will enable the picture-size and video-resolution menu options:\nhttps://github.com/mozilla-b2g/gaia/blob/master/apps/camera/js/config/config.js#L361</p></li>\n<li><p>Once you make the change locally, you'll need to re- |make install-gaia| to push the changes to your test device</p></li>\n</ol>\n\n<p>Please see this issue:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1043705</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
 186	16	1	1	1	 <p class="description">\n        <p>The flash does not go off until the shutter button is pressed when the flash mode is set to Auto and the camera is detecting a face.</p>\n\n<p>Pre-requisite: The testing is done in a low light environment, so the flash goes off when the picture is taken with the flash Auto mode.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1046115</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+125	8	1	1	1	<ul>\r\n\t<li>\r\n\t\tMedia Specs: https://drive.google.com/file/d/0B6fkEC1pmwTid1d4R0JfZ2ZpQW8/view?usp=sharing</li>\r\n\t<li>\r\n\t\tGeneral UX Specs: https://mozilla.app.box.com/s/bcm3s5i2v6js5uk0ws3tsywse8bgncgo</li>\r\n</ul>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:29:50	7	2015-08-19 05:40:31	1	1	1	\N
 192	17	1	1	1	 <p class="description">\n        <p>Camera viewfinder preview should be smooth when moving the phone around. </p>\n\n<p>Prerequisite: </p>\n\n<p>So in order to change the resolution to 480p, we need to build custom gaia.  The steps are following:</p>\n\n<p>clone the gaia repo, and change the following file:\ngo into gaia/master/apps/camera/js/config/config.js, open it with text editor</p>\n\n<p>Go to ‘exclude’ property where it lists ‘1080p'.  add ‘720p’ in the list, save.</p>\n\n<p>build gaia with make reset-gaia command while the device is connected.  the newly built gaia will be pushed to the device.  Upon reboot, the camera will be defaulted to 480p.</p>\n\n<p>Please see this issue:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=988704</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
 199	18	1	1	1	 <p class="description">\n        <p>The user should always be returned to the camera viewfinder. If the user is in the camera app previewing a picture, goes home and then reopens the app, they should be taken to the viewfinder so they can quickly take a picture.</p>\n\n<p>Please see this issue:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=988670</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
 206	19	1	1	1	 <p class="description">\n        <p>Camera viewfinder displays properly after editing a photo in the gallery.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=989113</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
@@ -5394,12 +5497,9 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 707	98	1	1	1	 <p class="description">\n        <p>User should be able to zoom out by pinch gesture.</p>\n\n<p>Prerequisites: Camera App launched.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
 710	99	1	1	1	 <p class="description">\n        <p>User should be able to zoom in or out by pinch gesture.</p>\n\n<p>Prerequisites:  Camera app is launched</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
 713	100	1	1	1	 <p class="description">\n        <p>It should be possible to take a picture using the device camera. The first time you use the camera you should receive a geolocation prompt.</p>\n\n<p>Prerequisites: <br />\nPhone has micro SD card with space to save pictures.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
-719	101	1	1	1	 <p class="description">\n        <p>As a user, I want to view my gallery content (photos and captured videos) in a scrollable grid, so I can access everything quickly</p>\n\n<p>Prerequisites: Have some captured videos and photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 722	102	1	1	1	 <p class="description">\n        <ul>\n<li>Media Specs: https://drive.google.com/file/d/0B6fkEC1pmwTid1d4R0JfZ2ZpQW8/view?usp=sharing  </li>\n<li>General UX Specs: https://mozilla.app.box.com/s/bcm3s5i2v6js5uk0ws3tsywse8bgncgo</li>\n</ul>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 728	103	1	1	1	 <p class="description">\n        <p>As a user, if I try to open the Gallery app without an SD Card in my device, a prompt should inform me that the Gallery app is not available without an SD Card present</p>\n\n<p>Prerequisites: Make sure there is no SD card in the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 731	104	1	1	1	 <p class="description">\n        <ul>\n<li>Media Specs: https://drive.google.com/file/d/0B6fkEC1pmwTid1d4R0JfZ2ZpQW8/view?usp=sharing  </li>\n<li>General UX Specs: https://mozilla.app.box.com/s/bcm3s5i2v6js5uk0ws3tsywse8bgncgo</li>\n</ul>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
-737	105	1	1	1	 <p class="description">\n        <p>As a user, when I open the gallery app when there is no content on my device to display, I should see a blank view with actions/text in the center that point me at various mechanism for adding new content</p>\n\n<p>Prerequisites: Make sure there are no photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
-740	106	1	1	1	 <p class="description">\n        <p>The user can share all supported image files no matter what their source using E-mail, Wallpaper, Messages and Bluetooth.</p>\n\n<p>Prerequisite:\nAttached .jpg is imported to the device as well as all supported image files. Have a good mix of pictures taken from the camera, downloaded from the web and images that were moved over from the desktop onto the SD card. \n(jpeg, png, gif, bmp) and subtypes (progressive jpeg, animated gif, etc.) and a variety of sizes.  A full set of EXIF orientations for jpeg images. </p>\n\n<p>Please see these issue: </p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1039988</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1070207</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 747	107	1	1	1	 <p class="description">\n        <p>When the user pans around the screen after zooming in on a photo in the Gallery app or in the preview mode in the Camera app, the screen is not swiped to the next photo.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=989361</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 756	108	1	1	1	 <p class="description">\n        <p>Pre-requisites: Refer to document https://etherpad.mozilla.org/YMt5ON7KNd for setup instructions and checklist.</p>\n\n<p>Verify Gallery data is Preserved after user OTA</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 760	109	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (103 chars) > 100 => has been truncated<br />\nOriginal name<br />\nGallery app should be killed if the user presses the home button while the app is scanning for pictures<br />\n---- *** ----<br />\n <p class="description">\n        <p>Gallery app should be killed if the user presses the home button while the app is scanning for pictures.</p>\n\n<p>Prerequisite: A large number of photos and videos are saved on the SD card.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1039943</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
@@ -5413,6 +5513,7 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 819	117	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (101 chars) > 100 => has been truncated<br />\nOriginal name<br />\nImported videos are shown correctly without issue when switching between portrait and landscape modes<br />\n---- *** ----<br />\n <p class="description">\n        <p>Verify an imported 720p video is shown correctly without issue when switching between portrait and landscape modes.</p>\n\n<p>Prerequisite: ""Lock orientation"" is disabled in Settings.</p>\n\n<p>Please see these issues: </p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=963624</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1020003</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 824	118	1	1	1	 <p class="description">\n        <p>Camera viewfinder displays properly after editing a photo in the gallery.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=989113</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 830	119	1	1	1	 <p class="description">\n        <p>All strings on the "Memory card in use" page are translated properly without truncation. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+740	106	1	1	2	<p>\r\n\tThe user can share all supported image files no matter what their source using E-mail, Messages and Bluetooth.</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tAttached .jpg is imported to the device as well as all supported image files.</p>\r\n<p>\r\n\tHave a good mix of pictures taken from the camera, downloaded from the web and images that were moved over from the desktop onto the SD card. (jpeg, png, gif, bmp) and subtypes (progressive jpeg, animated gif, etc.) and a variety of sizes. A full set of EXIF orientations for jpeg images.</p>\r\n	3	7	2015-08-18 08:31:06	7	2015-08-19 06:02:47	1	1	1	\N
 836	120	1	1	1	 <p class="description">\n        <p>All strings on the "No photos or videos" page are translated properly without truncation. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 841	121	1	1	1	 <p class="description">\n        <p>The string "Can not edit photos. Memory card is full." is translated properly without truncation. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 847	122	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (113 chars) > 100 => has been truncated<br />\nOriginal name<br />\nAll strings on the  "Delete selected item?" and "Delete 3 items? pages are translated properly without truncation<br />\n---- *** ----<br />\n <p class="description">\n        <p>All strings on the  "Delete selected item?" and "Delete 3 items? pages are translated properly without truncation. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
@@ -5422,7 +5523,6 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 876	126	1	1	1	 <p class="description">\n        <p>All strings on the "Delete photo?" page are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 882	127	1	1	1	 <p class="description">\n        <p>Prerequisite: 1. Replace the Update URL to workable URL (optional) 2. Take 10 photos and 5 videos before this test.</p>\n\n<p>Reference: https://moztrap.mozilla.org/manage/case/8952/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 891	128	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (108 chars) > 100 => has been truncated<br />\nOriginal name<br />\nAll strings on the "More Information" pages for Photos and Videos are translated properly without truncation<br />\n---- *** ----<br />\n <p class="description">\n        <p>All strings on the "More Information" pages for Photos and Videos are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
-900	129	1	1	1	 <p class="description">\n        <p>User story:\nAs a user, I want to see the file type, size, resolution and date of creation of the content displayed in the gallery app</p>\n\n<p>Bug 925216</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 905	130	1	1	1	 <p class="description">\n        <p>All dates for gallery content are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 910	131	1	1	1	 <p class="description">\n        <p>Implementation Bug: https://bugzilla.mozilla.org/show_bug.cgi?id=917445</p>\n\n<h1>Pre-Requisites:</h1>\n\n<h1>Gallery is launched and photo is in edit mode.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 917	132	1	1	1	 <p class="description">\n        <p>User Story:\nAs a user, I want the gallery app to automatically arrange content by the month </p>\n\n<p>If the user has taken six or more pictures within a single month, the month will create its own section.</p>\n\n<p>Acceptance Criteria:\n- When the gallery app is opened the user can see that all the content (images, videos) are arranged by month</p>\n\n<p>Implementation bug: https://bugzilla.mozilla.org/show_bug.cgi?id=925179</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
@@ -5496,6 +5596,11 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 1304	3	2	1	1	 <p class="description">\n        <p>Verify that all items are displayed properly on the 'Call Settings' screen after FDN is enabled.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1039957</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	\N	\N	1	1	1	\N
 1311	4	2	1	1	 <p class="description">\n        <p>If outgoing call SIM is set to "always ask", the last used SIM will make the call and the last contact that SIM called will be dialed when double clicking the bluetooth headset to dial</p>\n\n<p>Prerequisites: Have two SIM cards in device, and a bluetooth headset available. </p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1021478</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	\N	\N	1	1	1	\N
 1316	194	1	1	1	<p>\r\n\tThe test case is for testing one entry of search result when input 2 digits.</p>\r\n	<p>\r\n\t1. Feature phone with SIM card.</p>\r\n<p>\r\n\t2. Prepare a contact with name and phone number starting with 2 digits you input.(e.g user input 72, it stands for all the combination. 7 stands for pqrs, 2 stands for abc.)</p>\r\n<p>\r\n\t&nbsp;</p>\r\n	3	8	2015-08-18 09:56:18	8	2015-08-18 09:58:49	1	1	1	5.00
+719	101	1	1	2	<p>\r\n\tAs a user, I want to view my gallery content (photos and captured videos) in a scrollable grid, so I can access everything quickly</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave some captured videos and photos on the device</p>\r\n	3	7	2015-08-18 08:31:06	7	2015-08-19 05:33:10	1	1	1	\N
+106	5	1	1	2	<p>\r\n\tVerify that all strings are translated into the locale you are testing. If you find an untranslated string, look at the same string in a pseudolocale (preferably Accented English).</p>\r\n<p>\r\n\tIf the string appears in normal English, it is hard-coded and not localizable. File a bug for H5OS.</p>\r\n<p>\r\n\tIf the string appears in a pseudolocale, then the localizer hasn&#39;t got to it yet. Please don&#39;t file a bug.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:29:50	7	2015-08-19 05:39:08	1	1	1	\N
+737	105	1	1	2	<p>\r\n\tAs a user, when I open the gallery app when there is no content on my device to display, I should see a blank view with actions/text in the center that point me at various mechanism for adding new content.</p>\r\n	<p>\r\n\tMake sure there are no photos on the device</p>\r\n	2	7	2015-08-18 08:31:06	7	2015-08-19 06:57:48	1	1	1	\N
+900	129	1	1	2	<p>\r\n\tUser story: As a user, I want to see the file type, size, resolution and date of creation of the content displayed in the gallery app</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:31:06	7	2015-08-19 06:18:43	1	1	1	\N
+1332	195	1	1	2	<p>\r\n\tAs a user, I should be able to enter Camera to take a picture if Gallery is currently empty.</p>\r\n	<p>\r\n\tNo pictures in device.</p>\r\n	2	7	2015-08-19 07:02:09	7	2015-08-19 07:04:58	1	1	1	\N
 \.
 
 
@@ -5523,6 +5628,16 @@ COPY h5tl_testcase_keywords (testcase_id, keyword_id) FROM stdin;
 99	10
 1315	10
 105	16
+132	10
+132	11
+718	10
+718	11
+736	10
+736	11
+739	10
+739	11
+899	11
+1331	11
 \.
 
 
@@ -5612,7 +5727,7 @@ COPY h5tl_testprojects (id, notes, color, active, option_reqs, option_priority, 
 4	<p>\r\n\tTest cases collection and management for smart TV products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	TV	0	1	0	0	56856143dd77f623d80582d9b46c068b5cf634b4bba4f6d9903ea072222c8475
 5	<p>\r\n\tTest cases collection and management for smart watch products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	SW	0	1	0	0	30cfe9d109e5e6d990bd88e0ddd678c739f5abfa65c902668af2199a06164d8d
 1255	<p>\r\n\ttest</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	ti	4	1	0	0	9b32bc023c75d33fe98cbc28a8268fd561a88c02c76a7bcea8405415a4f886a6
-3	<p>\r\n\tTest cases collection and management for feature phone products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	FP	194	1	0	0	3f2780a5a534437d566b96e1d94e04d1609f756671d6008d8bdd6579d8656f5c
+3	<p>\r\n\tTest cases collection and management for feature phone products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	FP	195	1	0	0	3f2780a5a534437d566b96e1d94e04d1609f756671d6008d8bdd6579d8656f5c
 \.
 
 
@@ -5652,8 +5767,18 @@ COPY h5tl_testsuites (id, details) FROM stdin;
 84	<p>\r\n\tThis test suite is for testing dialer launch, exit, menu, UI,etc.</p>\r\n
 85	<p>\r\n\tThis test suite is for testing call UI, e.g outgoing call, incoming call, call waiting, conference call,etc.</p>\r\n
 86	<p>\r\n\tThis test suite is for testing Call log related UI, menu, etc.</p>\r\n
-104	<p>\r\n\tSuite for smoke test</p>\r\n
 1256	
+1318	<p>\r\n\tFor localization related test cases storage.</p>\r\n
+1320	
+1319	<p>\r\n\tFor all RTL related test cases</p>\r\n
+1321	Test suite for Grid view
+1322	<p>\r\n\tTest suite for Single Item view</p>\r\n
+1323	<p>\r\n\tTest suite for Photo editor</p>\r\n
+1325	<p>\r\n\tTest case for Cross function test</p>\r\n
+1328	
+1326	
+1329	
+1330	
 \.
 
 
@@ -5970,6 +6095,40 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 315	/lib/keywords/keywordsAssign.php	1439893032	1439893032	7	bgrnv8tgg4mlsjtg9pdca7t6u1
 316	/login.php	1439907740	1439907740	2	7g6q17am6j4ord5kpvn1u3m8j0
 317	/lib/general/mainPage.php	1439907740	1439907740	2	7g6q17am6j4ord5kpvn1u3m8j0
+318	/login.php	1439946304	1439946304	8	bnoioaerqtts97geqhhi1uugo6
+319	/login.php	1439952129	1439952129	7	o001au1n7jmtvp0vnaj31q12k1
+320	/login.php	1439952263	1439952263	5	hl70t2mo7523kqcvc7dal6ud12
+321	/logout.php	1439952375	1439952375	5	hl70t2mo7523kqcvc7dal6ud12
+322	/login.php	1439952380	1439952380	5	hl70t2mo7523kqcvc7dal6ud12
+323	/login.php	1439952473	1439952473	4	1cm2u99dfenhuod173pmcbhgj6
+324	/lib/keywords/keywordsAssign.php	1439953941	1439953941	7	o001au1n7jmtvp0vnaj31q12k1
+325	/lib/keywords/keywordsAssign.php	1439953947	1439953947	7	o001au1n7jmtvp0vnaj31q12k1
+326	/lib/keywords/keywordsAssign.php	1439953965	1439953965	7	o001au1n7jmtvp0vnaj31q12k1
+327	/lib/keywords/keywordsAssign.php	1439954100	1439954100	7	o001au1n7jmtvp0vnaj31q12k1
+328	/lib/keywords/keywordsAssign.php	1439954182	1439954182	7	o001au1n7jmtvp0vnaj31q12k1
+329	/lib/keywords/keywordsAssign.php	1439954719	1439954719	7	o001au1n7jmtvp0vnaj31q12k1
+330	/lib/keywords/keywordsAssign.php	1439954731	1439954731	7	o001au1n7jmtvp0vnaj31q12k1
+331	/lib/keywords/keywordsAssign.php	1439954821	1439954821	7	o001au1n7jmtvp0vnaj31q12k1
+332	/lib/keywords/keywordsAssign.php	1439954970	1439954970	7	o001au1n7jmtvp0vnaj31q12k1
+333	/lib/keywords/keywordsAssign.php	1439954978	1439954978	7	o001au1n7jmtvp0vnaj31q12k1
+334	/lib/keywords/keywordsAssign.php	1439954980	1439954980	7	o001au1n7jmtvp0vnaj31q12k1
+335	/lib/keywords/keywordsAssign.php	1439954987	1439954987	7	o001au1n7jmtvp0vnaj31q12k1
+336	/lib/testcases/containerEdit.php	1439955574	1439955574	4	1cm2u99dfenhuod173pmcbhgj6
+337	/lib/testcases/tcEdit.php	1439962229	1439962229	7	o001au1n7jmtvp0vnaj31q12k1
+338	/lib/testcases/tcEdit.php	1439962504	1439962504	7	o001au1n7jmtvp0vnaj31q12k1
+339	/lib/testcases/tcEdit.php	1439962518	1439962518	7	o001au1n7jmtvp0vnaj31q12k1
+340	/lib/testcases/tcEdit.php	1439962530	1439962530	7	o001au1n7jmtvp0vnaj31q12k1
+341	/lib/testcases/tcEdit.php	1439962547	1439962547	7	o001au1n7jmtvp0vnaj31q12k1
+342	/lib/testcases/tcEdit.php	1439963132	1439963132	7	o001au1n7jmtvp0vnaj31q12k1
+343	/login.php	1439963377	1439963377	8	bnoioaerqtts97geqhhi1uugo6
+344	/lib/testcases/tcEdit.php	1439963842	1439963842	7	o001au1n7jmtvp0vnaj31q12k1
+345	/lib/testcases/tcEdit.php	1439963887	1439963887	7	o001au1n7jmtvp0vnaj31q12k1
+346	/lib/testcases/tcEdit.php	1439965011	1439965011	7	o001au1n7jmtvp0vnaj31q12k1
+347	/lib/testcases/tcEdit.php	1439965224	1439965224	7	o001au1n7jmtvp0vnaj31q12k1
+348	/lib/testcases/tcEdit.php	1439965384	1439965384	7	o001au1n7jmtvp0vnaj31q12k1
+349	/lib/testcases/tcEdit.php	1439965761	1439965761	7	o001au1n7jmtvp0vnaj31q12k1
+350	/lib/testcases/containerEdit.php	1439965972	1439965972	7	o001au1n7jmtvp0vnaj31q12k1
+351	/lib/testcases/tcEdit.php	1439967729	1439967729	7	o001au1n7jmtvp0vnaj31q12k1
 \.
 
 
@@ -5977,7 +6136,7 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 -- Name: h5tl_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_transactions_id_seq', 317, true);
+SELECT pg_catalog.setval('h5tl_transactions_id_seq', 351, true);
 
 
 --
