@@ -1881,6 +1881,7 @@ COPY h5tl_cfield_execution_values (field_id, execution_id, testplan_id, tcversio
 
 COPY h5tl_cfield_node_types (field_id, node_type_id) FROM stdin;
 1	3
+4	3
 \.
 
 
@@ -1898,6 +1899,7 @@ COPY h5tl_cfield_testplan_design_values (field_id, link_id, value) FROM stdin;
 
 COPY h5tl_cfield_testprojects (field_id, testproject_id, display_order, active, location, required, required_on_design, required_on_execution) FROM stdin;
 1	2	1	1	1	0	0	0
+4	3	1	1	1	0	0	0
 \.
 
 
@@ -1907,6 +1909,7 @@ COPY h5tl_cfield_testprojects (field_id, testproject_id, display_order, active, 
 
 COPY h5tl_custom_fields (id, name, label, type, possible_values, default_value, valid_regexp, length_min, length_max, show_on_design, enable_on_design, show_on_execution, enable_on_execution, show_on_testplan_design, enable_on_testplan_design) FROM stdin;
 1	Feature	Feature	6	Telephony|CMAS|Mail|BT|WIFI|NFC|Media			0	0	1	1	1	0	0	0
+4	Review Comment	Review Comment	20				0	0	1	1	0	0	0	0
 \.
 
 
@@ -1914,7 +1917,7 @@ COPY h5tl_custom_fields (id, name, label, type, possible_values, default_value, 
 -- Name: h5tl_custom_fields_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_custom_fields_id_seq', 3, true);
+SELECT pg_catalog.setval('h5tl_custom_fields_id_seq', 4, true);
 
 
 --
@@ -2782,6 +2785,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 923	374	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:12:"peipei.cheng";i:1;s:14:"111.203.161.50";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439976047	LOGIN	7	users
 924	375	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:51:"Contacts should be launched by press Contacts icon.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439976397	ASSIGN	2085	nodes_hierarchy
 925	375	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:51:"Contacts should be launched by press Contacts icon.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1439976397	ASSIGN	2085	nodes_hierarchy
+1028	425	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440061155	PHP	0	\N
 927	376	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439976541	PHP	0	\N
 928	376	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439976541	PHP	0	\N
 929	376	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439976541	PHP	0	\N
@@ -2808,6 +2812,155 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 950	386	32	GUI	string 'link_report_test_cases_created_per_user' is not localized for locale 'zh_CN'  - using en_GB	1439993576	LOCALIZATION	0	\N
 951	386	32	GUI	string 'href_issuetracker_management' is not localized for locale 'zh_CN'  - using en_GB	1439993576	LOCALIZATION	0	\N
 952	386	32	GUI	string 'href_reqmgrsystem_management' is not localized for locale 'zh_CN'  - using en_GB	1439993576	LOCALIZATION	0	\N
+953	387	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:11:"xueqin.shen";i:1;s:11:"103.50.11.4";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440032654	LOGIN	8	users
+954	388	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:75:"Make a call when press Call key for the first phone number in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440033028	ASSIGN	2118	nodes_hierarchy
+955	388	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:75:"Make a call when press Call key for the first phone number in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440033028	ASSIGN	2118	nodes_hierarchy
+956	389	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:64:"Send message when press CSK for phone number in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440033766	ASSIGN	2121	nodes_hierarchy
+957	389	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:64:"Send message when press CSK for phone number in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440033766	ASSIGN	2121	nodes_hierarchy
+958	390	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:68:"Make a call when press Call key for phone number in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440033949	ASSIGN	2124	nodes_hierarchy
+959	390	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:68:"Make a call when press Call key for phone number in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440033949	ASSIGN	2124	nodes_hierarchy
+960	391	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:63:"Send Email when press CSK for email account in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440034047	ASSIGN	2127	nodes_hierarchy
+961	391	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:63:"Send Email when press CSK for email account in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440034047	ASSIGN	2127	nodes_hierarchy
+962	392	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:57:"Do nothing when press CSK for address in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440034642	ASSIGN	2130	nodes_hierarchy
+963	392	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:57:"Do nothing when press CSK for address in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440034642	ASSIGN	2130	nodes_hierarchy
+964	393	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:54:"Do nothing when press CSK for date in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440034778	ASSIGN	2133	nodes_hierarchy
+965	393	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:54:"Do nothing when press CSK for date in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440034778	ASSIGN	2133	nodes_hierarchy
+966	394	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:57:"Do nothing when press CSK for comment in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440034891	ASSIGN	2136	nodes_hierarchy
+967	394	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:57:"Do nothing when press CSK for comment in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440034891	ASSIGN	2136	nodes_hierarchy
+968	395	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:47:"New contact when press Options in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440035027	ASSIGN	2139	nodes_hierarchy
+969	395	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:47:"New contact when press Options in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440035027	ASSIGN	2139	nodes_hierarchy
+970	396	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:46:"Be able to cancel New contact in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440035279	ASSIGN	2142	nodes_hierarchy
+971	396	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:46:"Be able to cancel New contact in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440035279	ASSIGN	2142	nodes_hierarchy
+972	397	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:48:"Edit contact when press Options in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440036168	ASSIGN	2146	nodes_hierarchy
+973	397	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:48:"Edit contact when press Options in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440036168	ASSIGN	2146	nodes_hierarchy
+974	398	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:66:"Be able to cancel Edit contact when press Options in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440036407	ASSIGN	2149	nodes_hierarchy
+975	398	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:66:"Be able to cancel Edit contact when press Options in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440036407	ASSIGN	2149	nodes_hierarchy
+976	399	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:70:"Remove as favorite/Add as favorite when press Options in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440036711	ASSIGN	2152	nodes_hierarchy
+977	399	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:70:"Remove as favorite/Add as favorite when press Options in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440036711	ASSIGN	2152	nodes_hierarchy
+978	400	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:49:"New contact when press Options in Contact Details";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440036884	ASSIGN	2156	nodes_hierarchy
+979	400	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:49:"New contact when press Options in Contact Details";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440036884	ASSIGN	2156	nodes_hierarchy
+980	401	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:68:"Be able to cancel Edit contact when press Options in Contact Details";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440037097	ASSIGN	2159	nodes_hierarchy
+981	401	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:68:"Be able to cancel Edit contact when press Options in Contact Details";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440037097	ASSIGN	2159	nodes_hierarchy
+982	402	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:73:"Remove as favorite/Add as favorite when press Options in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440037276	ASSIGN	2162	nodes_hierarchy
+983	402	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:73:"Remove as favorite/Add as favorite when press Options in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440037276	ASSIGN	2162	nodes_hierarchy
+984	403	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:56:"Add item for Phone when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440040223	ASSIGN	2166	nodes_hierarchy
+985	403	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:56:"Add item for Phone when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440040223	ASSIGN	2166	nodes_hierarchy
+986	404	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:56:"Add item for Email when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440040739	ASSIGN	2170	nodes_hierarchy
+987	404	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:56:"Add item for Email when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440040739	ASSIGN	2170	nodes_hierarchy
+988	405	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:58:"Add item for Company when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440040984	ASSIGN	2174	nodes_hierarchy
+989	405	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:58:"Add item for Company when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440040984	ASSIGN	2174	nodes_hierarchy
+990	406	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:9:"enpei.chu";i:1;s:14:"60.251.178.163";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440049404	LOGIN	4	users
+991	407	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:32:"Navigate through pages and items";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440050677	ASSIGN	2178	nodes_hierarchy
+992	407	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:32:"Navigate through pages and items";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440050677	ASSIGN	2178	nodes_hierarchy
+993	408	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:37:"Press non-functional keys on Settings";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440051637	ASSIGN	2183	nodes_hierarchy
+994	409	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1440052428	PHP	0	\N
+995	409	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1440052428	PHP	0	\N
+996	409	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1440052428	PHP	0	\N
+997	409	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1440052428	PHP	0	\N
+998	409	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1440052428	PHP	0	\N
+999	409	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1440052428	PHP	0	\N
+1000	410	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:12:"peipei.cheng";i:1;s:11:"103.50.11.4";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440053357	LOGIN	7	users
+1001	411	32	GUI	string 'testsuite_not_found' is not localized for locale 'en_GB' 	1440053358	LOCALIZATION	0	\N
+1002	412	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:12:"peipei.cheng";i:1;s:11:"103.50.11.4";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440054053	LOGIN	7	users
+1003	413	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:20:"audit_cfield_created";s:6:"params";a:1:{i:0;s:14:"Review Comment";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440055355	CREATE	4	custom_fields
+1004	413	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_cfield_assigned";s:6:"params";a:2:{i:0;s:14:"Review Comment";i:1;s:13:"Feature phone";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440055355	ASSIGN	3	testprojects
+1005	414	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:54:"[Gallery][Grid View] User can navigate between  photos";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440055498	ASSIGN	2187	nodes_hierarchy
+1006	414	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:54:"[Gallery][Grid View] User can navigate between  photos";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440055498	ASSIGN	2187	nodes_hierarchy
+1007	415	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:66:"Cancel to add item for Phone when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440055639	ASSIGN	2191	nodes_hierarchy
+1008	415	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:66:"Cancel to add item for Phone when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440055639	ASSIGN	2191	nodes_hierarchy
+1009	416	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:66:"Cancel to add item for Email when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440055890	ASSIGN	2201	nodes_hierarchy
+1010	416	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:66:"Cancel to add item for Email when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440055890	ASSIGN	2201	nodes_hierarchy
+1011	417	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:71:"[Gallery][All Photos] Use back key to exit Gallery  and go back to Home";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440056031	ASSIGN	2205	nodes_hierarchy
+1012	418	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:64:"[Gallery][Favorites] Favorites should show all favorite pictures";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440056705	ASSIGN	2210	nodes_hierarchy
+1013	418	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:64:"[Gallery][Favorites] Favorites should show all favorite pictures";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440056705	ASSIGN	2210	nodes_hierarchy
+1014	419	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:44:"[GALLERY][Grid View] Delete multiple photos ";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440057142	ASSIGN	1225	nodes_hierarchy
+1015	419	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:44:"[GALLERY][Grid View] Delete multiple photos ";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440057142	ASSIGN	1225	nodes_hierarchy
+1016	420	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:68:"Cancel to add item for Company when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440057672	ASSIGN	2222	nodes_hierarchy
+1017	420	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:68:"Cancel to add item for Company when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440057672	ASSIGN	2222	nodes_hierarchy
+1018	421	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:54:" [GALLERY][Grid View] Delete single photo on grid view";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440057989	ASSIGN	2227	nodes_hierarchy
+1019	421	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:54:" [GALLERY][Grid View] Delete single photo on grid view";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440057989	ASSIGN	2227	nodes_hierarchy
+1020	422	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:58:"Add item for Address when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440060455	ASSIGN	2237	nodes_hierarchy
+1021	422	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:58:"Add item for Address when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440060455	ASSIGN	2237	nodes_hierarchy
+1022	423	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:68:"Cancel to add item for Address when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440060825	ASSIGN	2241	nodes_hierarchy
+1023	423	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:68:"Cancel to add item for Address when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440060825	ASSIGN	2241	nodes_hierarchy
+1024	424	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:55:"Add item for Date when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440061032	ASSIGN	2245	nodes_hierarchy
+1025	424	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:55:"Add item for Date when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440061032	ASSIGN	2245	nodes_hierarchy
+1026	425	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:65:"Cancel to add item for Date when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440061155	ASSIGN	2249	nodes_hierarchy
+1027	425	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:65:"Cancel to add item for Date when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440061155	ASSIGN	2249	nodes_hierarchy
+1029	426	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:54:"[Gallery][Grid View] Share a single photo via Messages";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440061313	ASSIGN	1038	nodes_hierarchy
+1030	426	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:54:"[Gallery][Grid View] Share a single photo via Messages";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440061313	ASSIGN	1038	nodes_hierarchy
+1031	427	32	GUI	string 'testsuite_not_found' is not localized for locale 'en_GB' 	1440062081	LOCALIZATION	0	\N
+1032	428	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:12:"hermes.cheng";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440062088	LOGIN	9	users
+1033	429	32	GUI	string 'testsuite_not_found' is not localized for locale 'en_GB' 	1440062089	LOCALIZATION	0	\N
+1034	430	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:18:"audit_login_failed";s:6:"params";a:2:{i:0;s:9:"hubert.lu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440062153	LOGIN_FAILED	5	users
+1035	431	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:18:"audit_login_failed";s:6:"params";a:2:{i:0;s:9:"hubert.lu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440062166	LOGIN_FAILED	5	users
+1036	432	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:18:"audit_login_failed";s:6:"params";a:2:{i:0;s:9:"hubert.lu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440062176	LOGIN_FAILED	5	users
+1037	433	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:18:"audit_login_failed";s:6:"params";a:2:{i:0;s:9:"hubert.lu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440062201	LOGIN_FAILED	5	users
+1038	434	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:18:"audit_login_failed";s:6:"params";a:2:{i:0;s:9:"hubert.lu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440062209	LOGIN_FAILED	5	users
+1039	435	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:9:"hubert.lu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440062218	LOGIN	5	users
+1040	436	32	GUI	string 'testsuite_not_found' is not localized for locale 'en_GB' 	1440062218	LOCALIZATION	0	\N
+1041	437	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440063506	PHP	0	\N
+1042	438	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440063909	PHP	0	\N
+1043	439	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:68:"Cancel to add item for Comment when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440063956	ASSIGN	2257	nodes_hierarchy
+1044	439	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:68:"Cancel to add item for Comment when press Options in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440063956	ASSIGN	2257	nodes_hierarchy
+1045	440	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:52:"Add item for Phone multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064134	ASSIGN	2262	nodes_hierarchy
+1046	440	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:52:"Add item for Phone multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064134	ASSIGN	2262	nodes_hierarchy
+1047	441	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:51:"[Gallery][Grid View] Share a single photo via Email";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064315	ASSIGN	2267	nodes_hierarchy
+1048	441	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:51:"[Gallery][Grid View] Share a single photo via Email";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064315	ASSIGN	2267	nodes_hierarchy
+1049	442	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:52:"Add item for Email multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064372	ASSIGN	2275	nodes_hierarchy
+1050	442	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:52:"Add item for Email multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064372	ASSIGN	2275	nodes_hierarchy
+1051	442	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440064372	PHP	0	\N
+1052	443	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:54:"Add item for Company multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064466	ASSIGN	2280	nodes_hierarchy
+1053	443	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:54:"Add item for Company multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064466	ASSIGN	2280	nodes_hierarchy
+1054	443	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440064466	PHP	0	\N
+1055	444	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:46:"[Gallery][Grid View] Share single photo via BT";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064525	ASSIGN	2285	nodes_hierarchy
+1056	444	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:46:"[Gallery][Grid View] Share single photo via BT";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064525	ASSIGN	2285	nodes_hierarchy
+1057	445	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:54:"Add item for Address multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064579	ASSIGN	2293	nodes_hierarchy
+1058	445	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:54:"Add item for Address multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064579	ASSIGN	2293	nodes_hierarchy
+1059	445	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440064579	PHP	0	\N
+1060	446	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:51:"Add item for Date multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064667	ASSIGN	2299	nodes_hierarchy
+1061	446	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:51:"Add item for Date multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064667	ASSIGN	2299	nodes_hierarchy
+1062	446	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440064667	PHP	0	\N
+1063	447	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:54:"Add item for Comment multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064735	ASSIGN	2304	nodes_hierarchy
+1064	447	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:54:"Add item for Comment multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064735	ASSIGN	2304	nodes_hierarchy
+1065	447	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440064735	PHP	0	\N
+1066	448	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:53:"[GALLERY][Grid View]  Share multiple photos via Email";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064811	ASSIGN	2308	nodes_hierarchy
+1067	448	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:53:"[GALLERY][Grid View]  Share multiple photos via Email";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064811	ASSIGN	2308	nodes_hierarchy
+1068	449	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440064915	PHP	0	\N
+1069	450	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:51:"[Gallery][Grid View] Share multiple photo via Email";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064952	ASSIGN	2315	nodes_hierarchy
+1070	450	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:51:"[Gallery][Grid View] Share multiple photo via Email";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064952	ASSIGN	2315	nodes_hierarchy
+1071	451	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:49:"[Gallery][Grid View] Share multiple photos via BT";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440065010	ASSIGN	2322	nodes_hierarchy
+1072	451	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:49:"[Gallery][Grid View] Share multiple photos via BT";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440065010	ASSIGN	2322	nodes_hierarchy
+1073	451	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440065010	PHP	0	\N
+1074	452	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:51:"[Gallery][Grid View][Select Mode] Select All photos";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440065281	ASSIGN	1198	nodes_hierarchy
+1075	452	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:51:"[Gallery][Grid View][Select Mode] Select All photos";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440065281	ASSIGN	1198	nodes_hierarchy
+1076	453	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1440065407	PHP	0	\N
+1077	453	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1440065407	PHP	0	\N
+1078	453	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1440065407	PHP	0	\N
+1079	453	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1440065407	PHP	0	\N
+1080	453	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1440065407	PHP	0	\N
+1081	453	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1440065407	PHP	0	\N
+1082	454	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:9:"enpei.chu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440065712	LOGIN	4	users
+1083	455	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:60:"[Gallery][Grid View][Select Mode] Select All photos to Share";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440065825	ASSIGN	2333	nodes_hierarchy
+1084	455	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:60:"[Gallery][Grid View][Select Mode] Select All photos to Share";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440065825	ASSIGN	2333	nodes_hierarchy
+1085	455	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440065825	PHP	0	\N
+1086	456	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:18:"audit_role_created";s:6:"params";a:1:{i:0;s:8:"reviewer";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440066110	CREATE	10	roles
+1087	457	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:18:"audit_user_created";s:6:"params";a:1:{i:0;s:8:"reviewer";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440066175	CREATE	10	users
+1088	458	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:48:"[Gallery][Grid View]Set a photo as Contact photo";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440066220	ASSIGN	1235	nodes_hierarchy
+1089	458	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:48:"[Gallery][Grid View]Set a photo as Contact photo";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440066220	ASSIGN	1235	nodes_hierarchy
+1090	459	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:17:"audit_user_logout";s:6:"params";a:1:{i:0;s:9:"enpei.chu";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440066274	LOGOUT	4	users
+1091	460	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:8:"reviewer";i:1;s:11:"110.26.7.34";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440066278	LOGIN	10	users
+1092	461	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:17:"audit_user_logout";s:6:"params";a:1:{i:0;s:8:"reviewer";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440066296	LOGOUT	10	users
+1093	462	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:9:"enpei.chu";i:1;s:11:"110.26.7.34";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440066300	LOGIN	4	users
+1094	463	2	GUI	E_NOTICE\nUndefined index: level - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1440066413	PHP	0	\N
+1095	463	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink/gui/templates_c/87caa864822b61c3140b2ff5b72e45b63cd188b6.file.keywordsAssign.tpl.php - Line 77	1440066413	PHP	0	\N
+1096	464	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:49:"[Gallery][Grid View] Set a photo as Contact photo";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440066575	ASSIGN	2345	nodes_hierarchy
+1097	464	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:49:"[Gallery][Grid View] Set a photo as Contact photo";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440066575	ASSIGN	2345	nodes_hierarchy
+1098	464	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440066575	PHP	0	\N
+1099	465	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:18:"audit_login_failed";s:6:"params";a:2:{i:0;s:12:"peipei.cheng";i:1;s:11:"103.50.11.4";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440066861	LOGIN_FAILED	7	users
+1100	466	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:12:"peipei.cheng";i:1;s:11:"103.50.11.4";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440066873	LOGIN	7	users
+1101	467	32	GUI	string 'testsuite_not_found' is not localized for locale 'en_GB' 	1440068088	LOCALIZATION	0	\N
+1102	468	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:12:"peipei.cheng";i:1;s:11:"103.50.11.4";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440068253	LOGIN	7	users
 \.
 
 
@@ -2815,7 +2968,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 -- Name: h5tl_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_events_id_seq', 952, true);
+SELECT pg_catalog.setval('h5tl_events_id_seq', 1102, true);
 
 
 --
@@ -3071,7 +3224,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 101		100	9	0
 102		100	9	0
 103		100	9	0
-1495	Navigate Settings	63	2	2
 1708	[Clock] Date format should align selected language	66	3	33
 106		105	4	0
 107		106	9	0
@@ -3746,6 +3898,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 775		773	9	0
 776		773	9	0
 777		773	9	0
+778	Thumbnails and previews should always match captured photo	1321	3	16
 779		778	4	0
 780		779	9	0
 781		779	9	0
@@ -3781,10 +3934,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 815		811	9	0
 816		811	9	0
 817		811	9	0
-819		818	4	0
-820		819	9	0
-821		819	9	0
-822		819	9	0
 824		823	4	0
 825		824	9	0
 826		824	9	0
@@ -3817,8 +3966,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 785	There is a smooth transition animation when swiping through photos	1326	3	13
 794	Gallery functions properly without issue when there is high memory usage on 1st launch	1326	3	14
 823	Camera viewfinder displays properly after editing a photo in the gallery	1323	3	0
-818	Imported videos are shown correctly without issue when switching between portrai	1321	3	4
-778	Thumbnails and previews should always match captured photo	1321	3	13
 848		847	9	0
 849		847	9	0
 850		847	9	0
@@ -3894,14 +4041,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 930		928	9	0
 931		928	9	0
 932		928	9	0
-934		933	4	0
-935		934	9	0
-936		934	9	0
-937		934	9	0
-938		934	9	0
-939		934	9	0
-940		934	9	0
-941		934	9	0
 943		942	4	0
 944		943	9	0
 945		943	9	0
@@ -3911,19 +4050,17 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 950		949	4	0
 951		950	9	0
 952		950	9	0
+927	[Gallery][All Photos] Confirm gallery shows pictures from a range of months over years	2216	3	3
+949	Basic  - Photo Selection, Sharing & Deletion	1321	3	14
 855	All strings on the "Single item" and "Multiple items" share pages are translated	1328	3	4
 869	All strings on the "Edit" page are translated properly without truncation	1328	3	25
 890	All strings on the "More Information" pages for Photos and Videos are translated	1328	3	28
 875	All strings on the "Delete photo?" page are translated properly without truncation	1328	3	26
 904	All dates for gallery content are translated properly without truncation	1328	3	30
 881	[OTA] Data Migration of Gallery app	1326	3	27
+916	[Gallery][All Photos] Confirm gallery shows pictures from a single month	2216	3	2
 942	[Gallery] Using the pick activity through a website does not cause the gallery to hang	1325	3	36
 909	[Gallery] Photo Editor - Automatic Image Enhancement	1323	3	1
-927	[Gallery] Confirm gallery shows pictures from a range of months over years	1321	3	5
-933	Basic  - Photo/Video Browsing & Slideshow	1321	3	6
-949	Basic  - Photo Selection, Sharing & Deletion	1321	3	7
-921	[Gallery][All Photos] Confirm gallery shows pictures from a range of months within a year	1321	3	1
-916	[Gallery][All Photos] Confirm gallery shows pictures from a single month	1321	3	2
 953		950	9	0
 954		950	9	0
 955		950	9	0
@@ -3978,6 +4115,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1012		1011	4	0
 1013		1012	9	0
 1014		1012	9	0
+1028	[Gallery] Access Multiple Selection Mode from Thumbnail Photo View	1321	3	10
 1016		1015	4	0
 1017		1016	9	0
 1018		1016	9	0
@@ -3991,11 +4129,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1029		1028	4	0
 1030		1029	9	0
 1031		1029	9	0
-1033		1032	4	0
-1034		1033	9	0
-1035		1033	9	0
-1036		1033	9	0
-1037		1033	9	0
 1039		1038	4	0
 1040		1039	9	0
 1041		1039	9	0
@@ -4008,6 +4141,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1050		1048	9	0
 1019	[Gallery] Single Photo View - Pan the zoomed image	1322	3	50
 1024	[Gallery] Single Photo View - Captured videos are played when tapped	1322	3	51
+1038	[Gallery][Grid View] Share single photo via Message	2218	3	2
 1011	[Gallery] Fullscreen Photo View - Switch to Thumbnail Photo View	1322	3	48
 960	[Gallery] Setting HD wallpaper in portrait and landscape mode	1322	3	39
 974	[Apps][Media][Gallery] The apps should be ussable with an empy SD card when USB is connected	1326	3	41
@@ -4019,10 +4153,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1047	[Gallery] Single Photo View - Set the photo as wallpaper	1322	3	56
 1051	[Gallery] Ability to return from the Camera App to the Gallery app without taking a new picture	1325	3	57
 1001	Photo editor - Landscape mode while in edit mode	1323	3	2
-1038	[Gallery] Multiple Selection Mode - Share a single photo	1329	3	54
-970	[Gallery] Thumbnail Photo View should not be affected by blank or empty image file	1321	3	9
-1028	[Gallery] Access Multiple Selection Mode from Thumbnail Photo View	1321	3	11
-1032	[Gallery] Single tap on a photo thumbnail in Muliple Selection Mode toggles the photo selection	1321	3	12
 1052		1051	4	0
 1053		1052	9	0
 1054		1052	9	0
@@ -4065,23 +4195,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1096		1094	9	0
 1097		1094	9	0
 1098		1094	9	0
-1100		1099	4	0
-1101		1100	9	0
-1102		1100	9	0
-1103		1100	9	0
-1104		1100	9	0
-1106		1105	4	0
-1107		1106	9	0
-1108		1106	9	0
-1109		1106	9	0
-1110		1106	9	0
-1111		1106	9	0
-1113		1112	4	0
-1114		1113	9	0
-1115		1113	9	0
-1116		1113	9	0
-1117		1113	9	0
-1118		1113	9	0
 1120		1119	4	0
 1121		1120	9	0
 1122		1120	9	0
@@ -4125,9 +4238,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1130	[Gallery]  Zooming in or out by pinch gesture in single photo view	1322	3	71
 1150	[Home Screen] Able to select wallpaper from camera photos gallery	1325	3	74
 1089	[Video] Play the video you recorded.  Check for video and sound.	1325	3	64
-1105	[GALLERY] Verify the user is able share multiple photos to email.	1329	3	67
-1112	[GALLERY] - Share single photo on Twitter	1329	3	68
-1099	[GALLERY] - Share a picture over email	1329	3	66
 1156		1155	9	0
 1157		1155	9	0
 1158		1155	9	0
@@ -4169,6 +4279,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1200		1199	9	0
 1201		1199	9	0
 1202		1199	9	0
+1198	[Gallery][Grid View][Select Mode] Select All photos to delete	2218	3	8
 1204		1203	4	0
 1205		1204	9	0
 1207		1206	4	0
@@ -4182,6 +4293,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1217		1215	9	0
 1218		1215	9	0
 1219		1215	9	0
+1235	[Gallery][Grid View] Set a photo as Wallpaper	2218	3	91
 1221		1220	4	0
 1222		1221	9	0
 1223		1221	9	0
@@ -4197,13 +4309,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1236		1235	4	0
 1237		1236	9	0
 1238		1236	9	0
-1239		1236	9	0
-1240		1236	9	0
-1241		1236	9	0
-1242		1236	9	0
-1243		1236	9	0
-1244		1236	9	0
-1245		1236	9	0
 1247		1246	4	0
 1248		1247	9	0
 1250		1249	4	0
@@ -4227,14 +4332,11 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1194	[Gallery] Photo Editor - Effects - Original	1323	3	11
 1190	[Gallery] Photo Editor - Crop - Square	1323	3	12
 1246	Accessing camera from preview mode	1325	3	92
-1235	Verify that a photo can be set for a contact	1325	3	91
 1231	[Gallery] Access Full Screen Photo View from Thumbnail Photo View	1322	3	90
 1220	[Gallery] Single Photo View - Delete a single photo	1322	3	88
 1214	[Gallery] Ability to pan through photos in full screen view	1322	3	87
 1203	Verify the user is able to Export photos from device to desktop machine	1325	3	84
 1206	Accessing camera from gallery (single photo view)	1325	3	85
-1198	[Gallery] Multiple Selection Mode - Share multiple photos	1329	3	83
-1211	[Gallery][All Photos] Gallery displays contents of SD card.	1321	3	3
 1264		1258	9	0
 1265		1258	9	0
 1512		1505	9	0
@@ -4302,6 +4404,8 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 899	[Single Item View] Verify file information displays for content displayed in the gallery app	1322	3	29
 1015	[Gallery] Single Photo View - Return to default zoom on double tap	1322	3	49
 1249	[CAMERA] Verify the user can take several pictures with camera.	67	3	93
+980	[Gallery] Confirm gallery shows pictures in chronological order in the user interface	2218	3	8
+1225	[Gallery][Grid View] Delete multiple photos 	2218	3	0
 1319	Right to Left	1318	2	3
 1328	Gallery	1318	2	4
 835	All strings on the "No photos or videos" page are translated properly without truncation	1328	3	0
@@ -4311,7 +4415,6 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1059	[Gallery] Ability to return from the Camera App to the Gallery app after taking a photo	1325	3	58
 1125	Ability to launch the Camera app from inside the Gallery app (from the thumbnail view)	1325	3	70
 1161	[Gallery] Photo Editor - Effects - B&W & Sepia	1323	3	9
-718	[Gallery][All Photos] Thumbnail Photo grid View	1321	3	0
 1325	Cross Function Test Cases	68	2	5
 1326	Stability&Performance	68	2	6
 1331	[Gallery] User should be able to switch to Camera on First Time Use page	1330	3	5
@@ -4320,14 +4423,10 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 1334		1332	9	0
 1330	First Time Use	68	2	0
 1323	Photo editor	68	2	3
-1329	Share	68	2	4
 1335		1332	9	0
 1321	Grid View	68	2	1
-1225	[GALLERY] Delete multiple photos from select image mode	1321	3	8
-980	[Gallery] Confirm gallery shows pictures in chronological order in the user interface	1321	3	10
 1338		1337	4	0
 1339		1338	9	0
-1336	Key screens	63	2	1
 1513	[Clock] Clock should display correctly in RTL	66	3	4
 1514		1513	4	0
 1341		1340	4	0
@@ -4938,6 +5037,241 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 2114	Make a call when press Call key in Contact List.	2084	3	7
 2116		2098	9	0
 2117		2098	9	0
+2118	Make a call when press Call key for the first phone number in Contact List.	2084	3	8
+2119		2118	4	0
+2120		2119	9	0
+2121	Send message when press CSK for phone number in Contact Details.	2084	3	9
+2122		2121	4	0
+2123		2122	9	0
+2124	Make a call when press Call key for phone number in Contact Details.	2084	3	10
+2125		2124	4	0
+2126		2125	9	0
+2127	Send Email when press CSK for email account in Contact Details.	2084	3	11
+2128		2127	4	0
+2129		2128	9	0
+2130	Do nothing when press CSK for address in Contact Details.	2084	3	12
+2131		2130	4	0
+2132		2131	9	0
+2133	Do nothing when press CSK for date in Contact Details.	2084	3	13
+2134		2133	4	0
+2135		2134	9	0
+2136	Do nothing when press CSK for comment in Contact Details.	2084	3	14
+2137		2136	4	0
+2138		2137	9	0
+2140		2139	4	0
+2141		2140	9	0
+2143		2142	4	0
+2144		2143	9	0
+2145		2143	9	0
+2192		2191	4	0
+2147		2146	4	0
+2148		2147	9	0
+2193		2188	9	0
+2150		2149	4	0
+2151		2150	9	0
+2152	Remove as favorite/Add as favorite when press Options in Contact List.	2084	3	19
+2153		2152	4	0
+2154		2153	9	0
+2155		2153	9	0
+2157		2156	4	0
+2158		2157	9	0
+2160		2159	4	0
+2161		2160	9	0
+2162	Remove as favorite/Add as favorite when press Options in Contact Details.	2084	3	22
+2163		2162	4	0
+2164		2163	9	0
+2165		2163	9	0
+2167		2166	4	0
+2168		2167	9	0
+2169		2167	9	0
+2171		2170	4	0
+2172		2171	9	0
+2173		2171	9	0
+2175		2174	4	0
+2176		2175	9	0
+2177		2175	9	0
+1336	Key screens	63	2	1
+2178	Navigate through pages and items	1495	3	1001
+2179		2178	4	0
+2180		2179	9	0
+2181		2179	9	0
+2183	Press non-functional keys on Settings	1495	3	1002
+2184		2183	4	0
+2185		2184	9	0
+1495	Navigate Settings	63	2	0
+2186	Contact Editor	65	2	2
+2188		2187	4	0
+2189		2188	9	0
+2190		2188	9	0
+2202		2201	4	0
+2194		2188	9	0
+2195		2192	9	0
+2196		2188	9	0
+2197		2192	9	0
+2198		2188	9	0
+2199		2188	9	0
+2200		2188	9	0
+2203		2202	9	0
+2204		2202	9	0
+2206		2205	4	0
+2207		2206	9	0
+2208		2206	9	0
+2209		2206	9	0
+2210	[Gallery][Favorites] Favorites should show all favorite pictures	2217	3	11
+2187	[Gallery][All Photos] User can navigate between  photos	2216	3	6
+2205	[Gallery][All Photos] Use back key to exit Gallery  and go back to Home	2216	3	5
+1211	[Gallery][All Photos] Gallery displays contents of SD card.	2216	3	4
+2211		2210	4	0
+2212		2211	9	0
+2213		2211	9	0
+2214		2211	9	0
+2215		2211	9	0
+2139	New contact when press Options in Contact List.	2186	3	0
+2142	Be able to cancel New contact when press Options in Contact List.	2186	3	1
+2146	Edit contact when press Options in Contact List.	2186	3	2
+2149	Be able to cancel Edit contact when press Options in Contact List.	2186	3	3
+2156	Edit contact when press Options in Contact Details	2186	3	4
+2159	Be able to cancel Edit contact when press Options in Contact Details	2186	3	5
+2166	Add item for Phone when press Options in Contact Editor.	2186	3	6
+2191	Cancel to add item for Phone when press Options in Contact Editor.	2186	3	7
+2170	Add item for Email when press Options in Contact Editor.	2186	3	8
+2201	Cancel to add item for Email when press Options in Contact Editor.	2186	3	9
+2174	Add item for Company when press Options in Contact Editor.	2186	3	10
+970	[Gallery] Thumbnail Photo View should not be affected by blank or empty image file	1326	3	7
+2216	All Photos	1321	2	1
+718	[Gallery][All Photos] Thumbnail Photo grid View	2216	3	0
+921	[Gallery][All Photos] Confirm gallery shows pictures from a range of months within a year	2216	3	1
+2217	Favorites	1321	2	2
+2219		1226	9	0
+2220		1226	9	0
+2223		2222	4	0
+2224		2223	9	0
+2225		1226	9	0
+2226		2223	9	0
+2228		2227	4	0
+2229		2228	9	0
+2230		2228	9	0
+2231		2228	9	0
+2232		2228	9	0
+2233		2228	9	0
+2234		2228	9	0
+2235		2228	9	0
+2253	Add item for Comment when press Options in Contact Editor.	2186	3	16
+2282		2281	9	0
+2283		2281	9	0
+2236	Network & Connectivity	63	2	2
+2238		2237	4	0
+2239		2238	9	0
+2240		2238	9	0
+2242		2241	4	0
+2243		2242	9	0
+2244		2242	9	0
+2246		2245	4	0
+2247		2246	9	0
+2248		2246	9	0
+2222	Cancel to add item for Company when press Options in Contact Editor.	2186	3	11
+2237	Add item for Address when press Options in Contact Editor.	2186	3	12
+2250		2249	4	0
+2251		2250	9	0
+2252		2250	9	0
+2258		2257	4	0
+2259		2258	9	0
+2249	Cancel to add item for Date when press Options in Contact Editor.	2186	3	15
+2254		2253	4	0
+2255		2254	9	0
+2256		2254	9	0
+2260		2258	9	0
+2245	Add item for Date when press Options in Contact Editor.	2186	3	14
+2241	Cancel to add item for Address when press Options in Contact Editor.	2186	3	13
+2257	Cancel to add item for Comment when press Options in Contact Editor.	2186	3	17
+2261		1039	9	0
+2262	Add item for Phone multiple times in Contact Editor.	2186	3	18
+2263		2262	4	0
+2264		2263	9	0
+2265		1039	9	0
+2266		2263	9	0
+2268		2267	4	0
+2269		2268	9	0
+2270		2268	9	0
+2271		2268	9	0
+2272		2268	9	0
+2273		2268	9	0
+2274		2263	9	0
+2276		2275	4	0
+2277		2276	9	0
+2278		2276	9	0
+2279		2276	9	0
+2275	Add item for Email multiple times in Contact Editor.	2186	3	19
+2281		2280	4	0
+2280	Add item for Company multiple times in Contact Editor.	2186	3	20
+2286		2285	4	0
+2287		2286	9	0
+2288		2286	9	0
+2289		2286	9	0
+2290		2286	9	0
+2292		2286	9	0
+2294		2293	4	0
+2295		2294	9	0
+2296		2294	9	0
+2297		2294	9	0
+2293	Add item for Address multiple times in Contact Editor.	2186	3	21
+2298		2286	9	0
+2300		2299	4	0
+2301		2300	9	0
+2302		2300	9	0
+2303		2300	9	0
+2299	Add item for Date multiple times in Contact Editor.	2186	3	22
+2305		2304	4	0
+2306		2305	9	0
+2307		2305	9	0
+2304	Add item for Comment multiple times in Contact Editor.	2186	3	23
+2309		2308	4	0
+2310		2309	9	0
+2311		2309	9	0
+2312		2309	9	0
+2313		2309	9	0
+2314		2309	9	0
+2285	[Gallery][Grid View] Share single photo via BT	2218	3	4
+2227	[Gallery][Grid View] Delete single photo on grid view	2218	3	1
+2267	[Gallery][Grid View] Share single photo via Email	2218	3	3
+2308	[Gallery][Grid View]  Share multiple photos via Message	2218	3	5
+2218	Common - valid for both "All Photo" and "Favorites"	1321	2	3
+2316		2315	4	0
+2317		2316	9	0
+2318		2316	9	0
+2319		2316	9	0
+2320		2316	9	0
+2321		2316	9	0
+2323		2322	4	0
+2324		2323	9	0
+2325		2323	9	0
+2326		2323	9	0
+2327		2323	9	0
+2328		2323	9	0
+2329		2323	9	0
+2315	[Gallery][Grid View] Share multiple photo via Email	2218	3	6
+2322	[Gallery][Grid View] Share multiple photos via BT	2218	3	7
+2330		1199	9	0
+2332		1199	9	0
+2334		2333	4	0
+2335		2334	9	0
+2336		2334	9	0
+2337		2334	9	0
+2338		2334	9	0
+2339		2334	9	0
+2333	[Gallery][Grid View][Select Mode] Select All photos to Share	2218	3	9
+2340		1199	9	0
+2341		2334	9	0
+2342		2334	9	0
+2343		1236	9	0
+2344		1236	9	0
+2346		2345	4	0
+2347		2346	9	0
+2348		2346	9	0
+2349		2346	9	0
+2345	[Gallery][Grid View] Set a photo as Contact photo	2218	3	92
+2351		2346	9	0
+2352		2346	9	0
 \.
 
 
@@ -4945,7 +5279,7 @@ COPY h5tl_nodes_hierarchy (id, name, parent_id, node_type_id, node_order) FROM s
 -- Name: h5tl_nodes_hierarchy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_nodes_hierarchy_id_seq', 2117, true);
+SELECT pg_catalog.setval('h5tl_nodes_hierarchy_id_seq', 2352, true);
 
 
 --
@@ -4967,6 +5301,10 @@ COPY h5tl_object_keywords (id, fk_id, fk_table, keyword_id) FROM stdin;
 22	1319	nodes_hierarchy	16
 25	2084	nodes_hierarchy	10
 26	2084	nodes_hierarchy	11
+27	2186	nodes_hierarchy	10
+28	2186	nodes_hierarchy	11
+29	2218	nodes_hierarchy	10
+30	2218	nodes_hierarchy	11
 \.
 
 
@@ -4974,7 +5312,7 @@ COPY h5tl_object_keywords (id, fk_id, fk_table, keyword_id) FROM stdin;
 -- Name: h5tl_object_keywords_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_object_keywords_id_seq', 26, true);
+SELECT pg_catalog.setval('h5tl_object_keywords_id_seq', 30, true);
 
 
 --
@@ -5239,6 +5577,7 @@ COPY h5tl_role_rights (role_id, right_id) FROM stdin;
 9	25
 9	26
 9	27
+10	6
 \.
 
 
@@ -5254,6 +5593,7 @@ COPY h5tl_roles (id, description, notes) FROM stdin;
 7	tester	\N
 8	admin	\N
 9	leader	\N
+10	reviewer	
 \.
 
 
@@ -5261,7 +5601,7 @@ COPY h5tl_roles (id, description, notes) FROM stdin;
 -- Name: h5tl_roles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_roles_id_seq', 9, true);
+SELECT pg_catalog.setval('h5tl_roles_id_seq', 10, true);
 
 
 --
@@ -5787,9 +6127,6 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 815	4	 Take pic from camera and save this new contact. You will see list of contacts after saving contact with pic.\n 	  	1	1
 816	5	 Repeat step (2) and (3) quickly. \n 	 The contact app does not OOM forced closed. \n 	1	1
 817	6	 Repeat step (2), (3) and (4) for 2-3 times.\n 	 Contact app functions as expected without a memory leak occurring. \n 	1	1
-820	1	 Import and play a HD resolution(720p) video clip.\n 	  	1	1
-821	2	 Rotate the device between the landscape and portrait view multiple times while the video is playing.\n 	 Verify the video plays correctly in both portrait and landscape without issue. No abnormalities with the video are seen such as flickering.\n 	1	1
-822	3	 Try step 2 using multiple videos with different resolutions. \n 	  	1	1
 825	1	 Enter the Gallery app and select a picture to edit.\n 	  	1	1
 826	2	 Press the edit button and select ""Auto Enhance On"".\n 	  	1	1
 827	3	 Press the done button.\n 	  	1	1
@@ -5864,13 +6201,6 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 930	2	 Take at least 3 pictures with the camera at the same time.\n 	 Photos are taken and are available to be seen in the gallery.\n 	1	1
 931	3	 Turn on the USB Mass Storage option and import 4-6 pictures from different months and different years. \n 	 Photos are imported and are available to be seen in the gallery.\n 	1	1
 932	4	 Open the gallery app.\n 	 Since the user has taken at least six pictures spanning more than one year, first and last month and relevant years will be displayed. A sample label might be: December 2012 - December 2013 if you had taken pictures during the period from December, 2012 up until December, 2013.\n 	1	1
-935	1	 Launch Gallery app in landscape mode.\n 	 Gallery launched with thumbnails on the left pane, the photo on the top-left corner shown in preview pane.\n"Gallery" shown above thumbnails, "camera" & "select" button below it.\n 	1	1
-936	2	 Swipe photo in the preview pane to the left in landscape mode.\n 	 The highlight in thumbnail also changed to the one currently in the preview pane.\n 	1	1
-937	3	 Rotate the tablet for couple times, then rotate back to landscape mode.\n 	 The photo shown in landscape mode should be the same as in portrait mode.\n 	1	1
-938	4	 Tap 1 photo to enter full screen mode.\n 	 With 5 buttons on the tool bar above. Make sure the 2nd to the left ("Play Slideshow") is there.\n 	1	1
-939	5	 Tap the "Slideshow" button.\n 	 Slideshow starts, time to show a photo is ?? sec, transition effect shown as ??.\n 	1	1
-940	6	 Press "Power" button to turn off screen, press it again to bring screen back. Switch to another app, and switch it back to "Gallery".\n 	 Slideshow continues to play.\n 	1	1
-941	7	 While slideshow playing, tap anywhere on the screen to stop. (In landscape mode and in portrait mode)\n 	 Slideshow stops, toolbar shown.\n 	1	1
 944	1	 Open the Browser App. \n 	  	1	1
 945	2	 Tap on the URL bar. Type and go to the address: http://robnyman.github.com/Firefox-OS-Boilerplate-App/\n 	  	1	1
 946	3	 Select "Pick image"\n 	  	1	1
@@ -5928,15 +6258,10 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 1027	2	 Tap on the video thumbnail to start the video playback\n 	 The video playback is started when the user taps on the video thumbnail\n 	1	1
 1030	1	 Open the Gallery app in Thumbnail Photo View\n 	 A grid of thumbnails of the available photos is displayed\n 	1	1
 1031	2	 Tap the "Multiple Selection Mode" button\n 	 The Gallery app is switched to the Multi-select mode and the user can select multiple photos\n 	1	1
-1034	1	 Open the Gallery app in Thumbnail Photo View\n 	 A grid of thumbnails of the available photos is displayed\n 	1	1
-1035	2	 Tap the "Multiple Selection Mode" button\n 	 The Gallery app is switched to the Multi-select mode and the user can select multiple photos\n 	1	1
-1036	3	 Tap on one of the photo thumbnails\n 	 The photo is selected and a blue border is displayed indicating that the photo is selected\n 	1	1
-1037	4	 Tap on the selected photo again\n 	 The photo is deselected and the border is removed\n 	1	1
-1040	1	 Open the Gallery app and go to Thumbnail Photo View\n 	 The photo thumbnails are displayed in a grid view\n 	1	1
-1041	2	 Enter Multiple Selection Mode, select one of the photos and tap on the share button\n 	 A pop-up menu is displayed listing the available share options\n 	1	1
-1042	3	 Select one of the options\n 	 The selected photo can be shared\n 	1	1
 1045	1	 With the device in Portrait open a photo\n 	 The photo is opened in the Single Photo View\n 	1	1
 1046	2	 Rotate the device from Portrait to landscape\n 	 The photo and toolbars resize to fit the screen size\n 	1	1
+1041	2	<p>\r\n\tOpen &quot;Option&quot; -&gt; &quot;Share&quot;</p>\r\n	<p>\r\n\tenter Multiple Selection Mode</p>\r\n	1	1
+1042	4	<p>\r\n\tSelect Message</p>\r\n	<p>\r\n\tNew message page appears and the picture is added to attachment. The attachment shows&nbsp; correct number and size</p>\r\n	1	1
 1050	2	 Tap the "Share" button and choose "Set as Wallpaper" \n 	 The current photo is set as wallpaper\n 	1	1
 1053	1	 Launch the Gallery app.\n 	  	1	1
 1054	2	 Tap on a photo in the Gallery.\n 	 Verify the image is displayed.\n 	1	1
@@ -5968,20 +6293,6 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 1096	2	 Tap on a photo in the gallery.\n 	 Verify the user is taken to a large version of the photo with options available at the bottom of the screen.\n 	1	1
 1097	3	 Tap on the Edit button which appears as a pencil at the bottom of the screen.\n 	 Verify the user is now in Edit mode.\n 	1	1
 1098	4	 Use any of the available edit options e.g. crop, border, exposure settings, etc. then save the photo.\n 	 Verify the original photo still exists and a new one with the changes is created and available in the gallery.\n 	1	1
-1101	1	 Launch the Gallery app.\n 	 Verify that all the photos are shown on the device.\n 	1	1
-1102	2	 Tap on a photo to view a large image  and tap the Share button at the bottom of the screen.\n 	 Verify a list of share options appear for the photo.\n 	1	1
-1103	3	 Tap on the email option.\n 	 Verify the Email app is launched.  \n 	1	1
-1104	4	 Add a recipient, subject and click Send.\n 	 Verify the message with the image is sent successfully.\n 	1	1
-1107	1	 Open the Gallery app.\n 	  	1	1
-1108	2	 Tap on the Outline icon. (the dotted line icon)\n 	  	1	1
-1109	3	 Select more than one photo.\n 	  	1	1
-1110	4	 Click on the Share icon in the bottom right.\n 	  	1	1
-1111	5	 Complete the e-mail and click the send icon.\n 	 The e-mail will be sent and the recipient will get all photos attached.\n 	1	1
-1114	1	 Open Gallery App\n 	  	1	1
-1115	2	 Tap on any photo.\n 	 Photo is opened in full screen mode. \n 	1	1
-1116	3	 Tap "share picture" button icon\n 	 A prompt is shown which requests way of sharing (email in this case) or allows the user the cancel the operation. \n 	1	1
-1117	4	 Select "Twitter".\n 	 Twitter app  is launched. User is prompted for credentials (if so configured) and message text.\n 	1	1
-1118	5	 Enter any text in the message field and select the "Tweet" button\n 	 Tweet is sent w/ image\n 	1	1
 1121	1	 Launch the Gallery app.\n 	  	1	1
 1122	2	 Tap on a photo in the gallery.\n 	 Verify the user is taken to a large version of the photo with options available at the bottom of the screen.\n 	1	1
 1123	3	 Tap on the Edit button which appears as a pencil at the bottom of the screen.\n 	 Verify the user is now in Edit mode.\n 	1	1
@@ -6033,9 +6344,6 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 1193	2	 Click the "save" button (top right checkmark in edit mode). \n 	 Photo is saved and appears in thumbnails immediately. It also appears in gallery e.g. after reboot.\n 	1	1
 1196	1	 Open the gallery from the home screen.\n 	  	1	1
 1197	2	 Select the edit button and click "Effects". Select "original".\n 	 Photo is view-able as original.\n 	1	1
-1200	1	 Open the Gallery app and go to Thumbnail Photo View\n 	 The photo thumbnails are displayed in a grid view\n 	1	1
-1201	2	 Enter Multiple Selection Mode, select multiple photos and tap on the share button\n 	 A pop-up menu is displayed listing the available share options\n 	1	1
-1202	3	 Select one of the options\n 	 Depending on the selected option's limitations the user can share multiple photos\n 	1	1
 1205	1	 Connect phone via USB to desktop machine or laptop.\n 	 Device appears on desktop like a USB thumbnail drive.  It is possible to access the 'Photos' directory.\n 	1	1
 1208	1	 Open Gallery app\n 	  	1	1
 1209	2	 Tap any picture to open it in a Single Photo View\n 	  	1	1
@@ -6048,21 +6356,13 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 1222	1	 Open a photo in Single Photo View\n 	 The photo is opened in the Thumbnail Photo View\n 	1	1
 1223	2	 Tap the "Delete" icon\n 	 User is prompted with a confirmation message\n 	1	1
 1224	3	 Select "OK"\n 	 Photo is deleted\n 	1	1
-1227	1	 Invoke select image mode  (invoke thumbnail view), click the square dotted lasso on the bottom right.\n 	 A screen called "select images" is invoked, with an X in the upper left.\n 	1	1
-1228	2	 Tap three photos in succession.\n 	 Text on top changes to "3 Selected".  The three selected photos are shown as selected (red border around each).\n 	1	1
-1229	3	 Click the trashcan icon.\n 	 System gives a prompt  "Delete 3 photos?"  [OK] [Cancel]\n 	1	1
-1230	4	 Click [OK].\n 	 The three photos are deleted.  Thumbnail review is rearranged without the three photos. \n\nTBD:  If control returns to select mode, then text at top returns to "select images (no items are selected).  Otherwise control returns to thumbnail mode - no text at top of page.\n 	1	1
+1229	6	<p>\r\n\tClick &quot;Delete&quot;</p>\r\n	<p>\r\n\tSystem gives a prompt &quot;Delete 3 photos?&quot; [Cancel][Delete]</p>\r\n	1	1
+1228	5	<p>\r\n\tSelect 3 pictures</p>\r\n	<p>\r\n\tText on top changes to &quot;3 Selected&quot;. The three selected photos will enable the check mark.</p>\r\n	1	1
+1200	1	<p>\r\n\tOpen the Gallery app and go to grid Photo View</p>\r\n	<p>\r\n\tThe photo thumbnails are displayed in a grid view</p>\r\n	1	1
+1201	3	<p>\r\n\tSelect All photos</p>\r\n	<p>\r\n\tAll photos are selected</p>\r\n	1	1
+1202	6	<p>\r\n\tClick &quot;Delete&quot; and Confirm the deletion</p>\r\n	<p>\r\n\tAll photos are deleted.</p>\r\n	1	1
 1233	1	 Open the Gallery app in Thumbnail Photo View\n 	 A grid with thumbnails of all photos on the device is displayed\n 	1	1
 1234	2	 Tap on any photo in the Thumbnail Photo View\n 	 The photo is opened in Full Screen Photo View (Single Photo View)\n 	1	1
-1237	1	 Launch the Contact App\n 	  	1	1
-1238	2	 Select a Contact\n 	 The contact details page appears\n 	1	1
-1239	3	 Click the Edit icon\n 	 Edit Contact page will open\n 	1	1
-1240	4	 Click Add Picture\n 	 Select from menu is opened\n 	1	1
-1241	5	 Select Gallery\n 	 Gallery App will be opened in Grid View\n 	1	1
-1242	6	 Select a Photo\n 	 Crop Page will open to allow the editing of the photo\n 	1	1
-1243	7	 Select Done button in the top right corner\n 	 The user is returned to the Contact's Edit Page with the photo shown in the Add Photo area\n 	1	1
-1244	8	 Press Update to save the changes made to the contact\n 	 The user is returned to the contact details page and a part of the photo is shown just below the header\n 	1	1
-1245	9	 Receive a call from the contact updated in steps 1-7\n 	 The Photo appears onscreen and is associated with the correct phone number\n 	1	1
 1248	1	 Click the camera icon (bottom, leftmost).\n 	 Camera is invoked.  Camera is in state ready to take a picture.\n 	1	1
 1251	1	 Open the Camera App.\n 	 The camera app opens and you receive a geolocation prompt asking you if you want to share your location.\n 	1	1
 1252	2	 Click the camera "shutter" button.\n 	 Picture is taken.  Picture is saved to gallery.  Camera returns control to "preview" view.\n 	1	1
@@ -6549,6 +6849,143 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 2113	1	<p>\r\n\tEnter Settings</p>\r\n	<p>\r\n\tWill see focus on first item</p>\r\n	1	1
 2116	2	<p>\r\n\tNavigate items of each page with direction pad.</p>\r\n	<p>\r\n\tFocus will also be on selected items.</p>\r\n	1	1
 2117	3	<p>\r\n\tAccess items with sub-pages</p>\r\n	<p>\r\n\tFocus will still be seen on both main page or sub-pages during page switching</p>\r\n	1	1
+2120	1	<p>\r\n\tLaunch contact app and focus on a contact with 2 phone numbers. Press Call key.</p>\r\n	<p>\r\n\tMake a call for the first phone number.</p>\r\n	1	1
+2123	1	<p>\r\n\tLaunch contact app and go to a contact details. Press CSK.</p>\r\n	<p>\r\n\tFill in the field and send a message successfully.</p>\r\n	1	1
+2126	1	<p>\r\n\tLaunch contact app and go to a contact details.Focus on a phone number.</p>\r\n	<p>\r\n\tMake a call successfully.</p>\r\n	1	1
+2129	1	<p>\r\n\tLaunch contact app and go to a contact details. Focus on emai address. Press CSK.</p>\r\n	<p>\r\n\tFill in the fields and a email should be sent out successfully.</p>\r\n	1	1
+2132	1	<p>\r\n\tLaunch contact app and go to a contact details. Focus on address. Press CSK.</p>\r\n	<p>\r\n\tNothing happens.</p>\r\n	1	1
+2135	1	<p>\r\n\tLaunch contact app and go to a contact details. Focus on date, press CSK.</p>\r\n	<p>\r\n\tNothing happens.</p>\r\n	1	1
+2138	1	<p>\r\n\tLaunch contact app and go to a contact details. Focus on comment and press CSK.</p>\r\n	<p>\r\n\tNothing happens.</p>\r\n	1	1
+2141	1	<p>\r\n\tLaunch contact app and go to contact list. Press Options and press New contact.</p>\r\n	<p>\r\n\tFill in all the fields and make sure a new contact is added in contact list.</p>\r\n	1	1
+2144	1	<p>\r\n\tLaunch contact app and go to contact list. Press Options and press new contact.</p>\r\n	<p>\r\n\tFill in some fields.</p>\r\n	1	1
+2145	2	<p>\r\n\tPress LSK to exit new contact.</p>\r\n	<p>\r\n\tBe able to cancel new contact.</p>\r\n	1	1
+2148	1	<p>\r\n\tLaunch contact app and go to contact list. Focus on a contact, press Options and press edit contact.</p>\r\n	<p>\r\n\tA contact Editor is poped up and try to modify some fields. Save it and make sure the contact has been changed successfully.</p>\r\n	1	1
+2151	1	<p>\r\n\tLaunch contact app and go to contact list,focus on a contact, press Options-&gt;press Edit contact.</p>\r\n	<p>\r\n\tTry to fill in some fields in contact editor and press LSK to exit contact editor.</p>\r\n<p>\r\n\tBe able to cancel edit contact.</p>\r\n	1	1
+2154	1	<p>\r\n\tA contact is not favorite. Go to Options -&gt; add as favorite, press it.</p>\r\n	<p>\r\n\tThe contact is favorite now.</p>\r\n	1	1
+2155	2	<p>\r\n\tGo to Options-&gt; remove as favorite, press it.</p>\r\n	<p>\r\n\tThe contact is not favorite.</p>\r\n	1	1
+2158	1	<p>\r\n\tGo to a contact details and press Options -&gt; Edit contact.</p>\r\n	<p>\r\n\tTry to modify some fields and make sure the contact has been modified successfully.</p>\r\n	1	1
+2161	1	<p>\r\n\tGo to contact list and press options -&gt; Edit contact.</p>\r\n	<p>\r\n\tTry to modify some fields and press LSK to cancel it.</p>\r\n	1	1
+2164	1	<p>\r\n\tA exsiting contact is not favorite. Go to contact details and press Options -&gt; add as favorite.</p>\r\n	<p>\r\n\tThe contact is favorite now.</p>\r\n	1	1
+2165	2	<p>\r\n\tGo to contact details and press Options -&gt; remove as favorite.</p>\r\n	<p>\r\n\tThe contact is not favorite.</p>\r\n	1	1
+2168	1	<p>\r\n\tGo to contact list or contact details, press Options -&gt; Edit contact.</p>\r\n	<p>\r\n\tContact Editor poped up.</p>\r\n	1	1
+2172	1	<p>\r\n\tGo to contact list or contact details, press Options -&gt; edit contact.</p>\r\n	<p>\r\n\tcontact editor is poped up.</p>\r\n	1	1
+2176	1	<p>\r\n\tGo to contact list or contact details, press Options-&gt;edit contact.</p>\r\n	<p>\r\n\tContact Editor is popped up.</p>\r\n	1	1
+2180	1	<p>\r\n\tSwitch pages within Settings</p>\r\n	<p>\r\n\tAble to switch between pages</p>\r\n	1	1
+2181	2	<p>\r\n\tNavigate items within each page</p>\r\n	<p>\r\n\tAble to navigate with HW keys</p>\r\n	1	1
+2185	1	<p>\r\n\tTry pressing keys other than those can navigate, select or exit Settings.&nbsp;</p>\r\n	<p>\r\n\tNo keys can do unexepcted operation on Settings</p>\r\n	1	1
+2189	1	<p>\r\n\tLaunch Gallery</p>\r\n	<p>\r\n\tGallery is launched. It will show all photos (total # of photos). The first photo will be highlighted.</p>\r\n	1	1
+2190	2	<p>\r\n\tNavigate to the right</p>\r\n	<p>\r\n\tThe second picture will be highted</p>\r\n	1	1
+2193	3	<p>\r\n\tNavigate use down key</p>\r\n	<p>\r\n\tThe second picture in the second row is highlighted.</p>\r\n	1	1
+2194	4	<p>\r\n\tNavigate to the right, twice</p>\r\n	<p>\r\n\tThe first picture on the third row is highlighted.</p>\r\n	1	1
+2195	1	<p>\r\n\tGo to contact list or contact details, press Options -&gt; Edit Contact.</p>\r\n	<p>\r\n\tGo to Contact Editor.</p>\r\n	1	1
+2196	5	<p>\r\n\tNavigate down twice</p>\r\n	<p>\r\n\tGrid view is scrolled down. The fist picture in 5th row is highlighted.</p>\r\n	1	1
+2198	6	<p>\r\n\tNavigate to the left twice</p>\r\n	<p>\r\n\tGrid view is scrolled up. The second picture in the 4 row is highlighted.</p>\r\n	1	1
+2199	7	<p>\r\n\tNavigate up twice</p>\r\n	<p>\r\n\tThe 2nd picture in the 2 row is highlighted.</p>\r\n	1	1
+2200	8			1	1
+2203	1	<p>\r\n\tGo to contact list or contact details and press Options -&gt; Edit contact.</p>\r\n	<p>\r\n\tGo to Contact Editor.</p>\r\n	1	1
+2207	1	<p>\r\n\tLaunch Gallery</p>\r\n	<p>\r\n\tGallery starts and displays all pictures</p>\r\n	1	1
+2208	2	<p>\r\n\tTap on the back key</p>\r\n	<p>\r\n\tGallery exits and Home screen appears</p>\r\n	1	1
+2209	3			1	1
+2212	1	<p>\r\n\tLaunch Gallery</p>\r\n		1	1
+2213	2	<p>\r\n\tView several pictures and mark them as favorite</p>\r\n		1	1
+2214	3	<p>\r\n\tGo to Options-&gt;View Favorites</p>\r\n	<p>\r\n\tFavorites page opens. It will show all photos (total # of photos). The first photo will be highlighted. Photos are arranged from most recent (top left) to least recent (bottom right)</p>\r\n	1	1
+2215	4	<p>\r\n\tuse D-Pad to navigate between photos</p>\r\n	<p>\r\n\tuser can navigate up/down/right/left on Favorites page</p>\r\n	1	1
+2173	2	<p>\r\n\tPress Options -&gt; add item-&gt;Email-&gt; choose any type.</p>\r\n	<p>\r\n\tA new email field is added.</p>\r\n	1	1
+2197	2	<p>\r\n\tPress Options -&gt; Add item-&gt;Email, then press LSK.</p>\r\n	<p>\r\n\tA new item is canceled.</p>\r\n	1	1
+2204	2	<p>\r\n\tPress Options -&gt; add item -&gt; Email, then press LSK.</p>\r\n	<p>\r\n\tA new item for Email is cancelled.</p>\r\n	1	1
+2177	2	<p>\r\n\tPress Options -&gt; add item -&gt; Company.</p>\r\n	<p>\r\n\tA new company field is added.</p>\r\n	1	1
+1227	1	<p>\r\n\tLaunch Gallery</p>\r\n	<p>\r\n\tGallery should be launched and display all pictures</p>\r\n	1	1
+2219	2	<p>\r\n\tSelect &quot;Options&quot; -&gt; &quot;Delete&quot;</p>\r\n	<p>\r\n\tGallery enter Select Mode</p>\r\n	1	1
+2224	1	<p>\r\n\tGo to contact list or contact details. Press Options -&gt; Edit Contact.</p>\r\n	<p>\r\n\tGo to Contact Editor.</p>\r\n	1	1
+2220	3	<p>\r\n\tUse D-Pad to navigate between photos, use CSK to select/deselect photo.</p>\r\n		1	1
+2229	1	<p>\r\n\tLaunch Gallery</p>\r\n	<p>\r\n\tGallery should be launched and display all pictures</p>\r\n	1	1
+1230	7	<p>\r\n\tClick [Delete].</p>\r\n	<p>\r\n\tThe three photos are deleted. Thumbnail review is rearranged without the three photos.&nbsp; Page returns to &quot;All Photos&quot; page</p>\r\n	1	1
+2226	2	<p>\r\n\tPress Options -&gt; Add item -&gt; Company, press LSK.</p>\r\n	<p>\r\n\tA new company field is cannceled.</p>\r\n	1	1
+2225	8	<p>\r\n\tRepeat 2~7 for &quot;Favorites&quot; page to delete three photos from Favorites page.</p>\r\n		1	1
+2230	2	<p>\r\n\tSelect &quot;Options&quot; -&gt; &quot;Delete&quot;</p>\r\n	<p>\r\n\tGallery enter Select Mode</p>\r\n	1	1
+2231	3	<p>\r\n\tUse D-Pad to navigate between photos, use CSK to select/deselect photo.</p>\r\n		1	1
+2233	6	<p>\r\n\tClick &quot;Delete&quot;</p>\r\n	<p>\r\n\tSystem gives a prompt &quot;Delete 1 photos?&quot; [Cancel][Delete]</p>\r\n	1	1
+2235	8	<p>\r\n\tRepeat 2~7 for &quot;Favorites&quot; page to delete 1 photo from Favorites page.</p>\r\n		1	1
+2169	2	<p>\r\n\tpress Options -&gt; add item -&gt; phone -&gt; choose any type.</p>\r\n	<p>\r\n\tA new phone number field is added.</p>\r\n	1	1
+2232	5	<p>\r\n\tSelect 1 pictures</p>\r\n	<p>\r\n\tText on top changes to &quot;1 Selected&quot;. The three selected photos will enable the check mark.</p>\r\n	1	1
+2234	7	<p>\r\n\tClick [Delete].</p>\r\n	<p>\r\n\tThe photo is deleted. Thumbnail review is rearranged without the deleted photo.&nbsp; Page returns to &quot;All Photos&quot; page</p>\r\n	1	1
+2239	1	<p>\r\n\tGo to contact list or contact details, press Options- -&gt; Edit contact.</p>\r\n	<p>\r\n\tGo to contact editor.</p>\r\n	1	1
+2243	1	<p>\r\n\tGo to contact list or contact details, press Options- -&gt; Edit contact.</p>\r\n	<p>\r\n\tGo to contact editor.</p>\r\n	1	1
+2277	1	<p>\r\n\tGo to contact editor, press Options -&gt; Add item -&gt; Email-&gt; choose type.</p>\r\n	<p>\r\n\tFill the email field and save it.</p>\r\n	1	1
+2247	1	<p>\r\n\tGo to contact list or contact details, press Options- -&gt; Edit contact.</p>\r\n	<p>\r\n\tGo to contact editor.</p>\r\n	1	1
+2251	1	<p>\r\n\tGo to contact list or contact details, press Options- -&gt; Edit contact.</p>\r\n	<p>\r\n\tGo to contact editor.</p>\r\n	1	1
+2255	1	<p>\r\n\tGo to contact list or contact details, press Options- -&gt; Edit contact.</p>\r\n	<p>\r\n\tGo to contact editor.</p>\r\n	1	1
+2248	2	<p>\r\n\tPress Options -&gt; Add item -&gt; Date -&gt; choose any type.</p>\r\n	<p>\r\n\tA new date field is cancelled.</p>\r\n	1	1
+2287	1	<p>\r\n\tOpen the Gallery app and go to Gridl Photo View</p>\r\n	<p>\r\n\tThe photo thumbnails are displayed in a grid view</p>\r\n	1	1
+2252	2	<p>\r\n\tPress Options -&gt; Add item -&gt; Date, press LSK to cancel it.</p>\r\n	<p>\r\n\tA new date field is cancelled.</p>\r\n	1	1
+2240	2	<p>\r\n\tPress Options -&gt; Add item -&gt; Address-&gt; choose any type.</p>\r\n	<p>\r\n\tA new address field is added.</p>\r\n	1	1
+2244	2	<p>\r\n\tPress Options -&gt; Add item -&gt; Address, press LSK.</p>\r\n	<p>\r\n\tA new address field is canceled.</p>\r\n	1	1
+2256	2	<p>\r\n\tPress Options -&gt; Add item -&gt; Comment</p>\r\n	<p>\r\n\tA new comment field is added.</p>\r\n	1	1
+2259	1	<p>\r\n\tGo to contact list or contact details, press Options- -&gt; Edit contact.</p>\r\n	<p>\r\n\tGo to contact editor.</p>\r\n	1	1
+2260	2	<p>\r\n\tPress Options -&gt; Add item -&gt; Comment, press LSK.</p>\r\n	<p>\r\n\tA new comment field is canceled.</p>\r\n	1	1
+1040	1	<p>\r\n\tOpen the Gallery app and go to Gridl Photo View</p>\r\n	<p>\r\n\tThe photo thumbnails are displayed in a grid view</p>\r\n	1	1
+2288	2	<p>\r\n\tOpen &quot;Option&quot; -&gt; &quot;Share&quot;</p>\r\n	<p>\r\n\tenter Multiple Selection Mode</p>\r\n	1	1
+2261	3	<p>\r\n\tSelect one picture and click &quot;Share&quot;</p>\r\n	<p>\r\n\tA list of Share options appears</p>\r\n	1	1
+2264	1	<p>\r\n\tGo to contact editor, press Options -&gt; Add item -&gt; Phone -&gt; choose type.</p>\r\n	<p>\r\n\tFill the phone field and save it.</p>\r\n	1	1
+2265	5	<p>\r\n\tCompose the message and send to a reciever.</p>\r\n	<p>\r\n\tMMS can be sent successfully.</p>\r\n	1	1
+2269	1	<p>\r\n\tOpen the Gallery app and go to Gridl Photo View</p>\r\n	<p>\r\n\tThe photo thumbnails are displayed in a grid view</p>\r\n	1	1
+2270	2	<p>\r\n\tOpen &quot;Option&quot; -&gt; &quot;Share&quot;</p>\r\n	<p>\r\n\tenter Multiple Selection Mode</p>\r\n	1	1
+2271	3	<p>\r\n\tSelect one picture and click &quot;Share&quot;</p>\r\n	<p>\r\n\tA list of Share options appears</p>\r\n	1	1
+2274	3	<p>\r\n\tRepeat step 1 for every duplicated type.</p>\r\n	<p>\r\n\tSave it successfully.</p>\r\n	1	1
+2266	2	<p>\r\n\tRepeat step1 for every different type.</p>\r\n	<p>\r\n\tSave it successfully.</p>\r\n	1	1
+2272	4	<p>\r\n\tSelect Mail</p>\r\n	<p>\r\n\tCompose email page appears and the picture is added to attachment. The attachment section shows correct number and size</p>\r\n	1	1
+2278	2	<p>\r\n\tRepeat step1 for every different type.</p>\r\n	<p>\r\n\tSave it successfully.</p>\r\n	1	1
+2279	3	<p>\r\n\tRepeat step 1 for every duplicated type.</p>\r\n	<p>\r\n\tSave it successfully.</p>\r\n	1	1
+2273	5	<p>\r\n\tCompose the email and send to a reciever.</p>\r\n	<p>\r\n\temail can be sent successfully.</p>\r\n	1	1
+2289	3	<p>\r\n\tSelect one picture and click &quot;Share&quot;</p>\r\n	<p>\r\n\tA list of Share options appears</p>\r\n	1	1
+2282	1	<p>\r\n\tGo to contact editor, press Options -&gt; Add item -&gt; Company.</p>\r\n	<p>\r\n\tFill the company field and save it.</p>\r\n	1	1
+2283	2	<p>\r\n\tRepeat step1 for multiple times.</p>\r\n	<p>\r\n\tSave it successfully.</p>\r\n	1	1
+2290	4	<p>\r\n\tSelect Bluetooth</p>\r\n	<p>\r\n\tChoose Device page appears.</p>\r\n	1	1
+2296	2	<p>\r\n\tRepeat step1 for every different type.</p>\r\n	<p>\r\n\tSave it successfully.</p>\r\n	1	1
+2297	3	<p>\r\n\tRepeat step 1 for every duplicated type.</p>\r\n	<p>\r\n\tSave it successfully.</p>\r\n	1	1
+2295	1	<p>\r\n\tGo to contact editor, press Options -&gt; Add item -&gt; Address-&gt; choose type.</p>\r\n	<p>\r\n\tFill the address field and save it.</p>\r\n	1	1
+2307	2	<p>\r\n\tRepeat step1 for multiple times.</p>\r\n	<p>\r\n\tSave it successfully.</p>\r\n	1	1
+2306	1	<p>\r\n\tGo to contact editor, press Options -&gt; Add item -&gt; Comment.</p>\r\n	<p>\r\n\tFill the comment field and save it.</p>\r\n	1	1
+2302	2	<p>\r\n\tRepeat step1 for every different type.</p>\r\n	<p>\r\n\tSave it successfully.</p>\r\n	1	1
+2303	3	<p>\r\n\tRepeat step 1 for every duplicated type.</p>\r\n	<p>\r\n\tSave it successfully.</p>\r\n	1	1
+2298	6	<p>\r\n\tAccept the trasfer on selected device</p>\r\n	<p>\r\n\tFile transfer starts.</p>\r\n	1	1
+2301	1	<p>\r\n\tGo to contact editor, press Options -&gt; Add item -&gt; Date-&gt; choose type.</p>\r\n	<p>\r\n\tFill the date field and save it.</p>\r\n	1	1
+2292	5	<p>\r\n\tSelect a paired device or a device in area</p>\r\n	<p>\r\n\tPage returns to &quot;All Photos&quot;.</p>\r\n<p>\r\n\tA message telling user that File transfer has started appears.</p>\r\n<p>\r\n\tAnd a notification about File trasfer appears in the selected device.</p>\r\n	1	1
+2310	1	<p>\r\n\tOpen the Gallery app and go to Gridl Photo View</p>\r\n	<p>\r\n\tThe photo thumbnails are displayed in a grid view</p>\r\n	1	1
+2311	2	<p>\r\n\tOpen &quot;Option&quot; -&gt; &quot;Share&quot;</p>\r\n	<p>\r\n\tenter Multiple Selection Mode</p>\r\n	1	1
+2314	5	<p>\r\n\tCompose the message and send to a reciever.</p>\r\n	<p>\r\n\tMMS can be sent successfully.</p>\r\n	1	1
+2312	3	<p>\r\n\tSelect 3 pictures and click &quot;Share&quot;</p>\r\n	<p>\r\n\tA list of Share options appears</p>\r\n	1	1
+2313	4	<p>\r\n\tSelect Message</p>\r\n	<p>\r\n\tNew message page appears and the pictures is added to attachment. The attachment shows&nbsp; correct number and size</p>\r\n	1	1
+2317	1	<p>\r\n\tOpen the Gallery app and go to Gridl Photo View</p>\r\n	<p>\r\n\tThe photo thumbnails are displayed in a grid view</p>\r\n	1	1
+2318	2	<p>\r\n\tOpen &quot;Option&quot; -&gt; &quot;Share&quot;</p>\r\n	<p>\r\n\tenter Multiple Selection Mode</p>\r\n	1	1
+2320	4	<p>\r\n\tSelect Mail</p>\r\n	<p>\r\n\tCompose email page appears and the picture is added to attachment. The attachment section shows correct number and size</p>\r\n	1	1
+2321	5	<p>\r\n\tCompose the email and send to a reciever.</p>\r\n	<p>\r\n\temail can be sent successfully.</p>\r\n	1	1
+2319	3	<p>\r\n\tSelect 3 pictures and click &quot;Share&quot;</p>\r\n	<p>\r\n\tA list of Share options appears</p>\r\n	1	1
+2324	1	<p>\r\n\tOpen the Gallery app and go to Gridl Photo View</p>\r\n	<p>\r\n\tThe photo thumbnails are displayed in a grid view</p>\r\n	1	1
+2325	2	<p>\r\n\tOpen &quot;Option&quot; -&gt; &quot;Share&quot;</p>\r\n	<p>\r\n\tenter Multiple Selection Mode</p>\r\n	1	1
+2327	4	<p>\r\n\tSelect Bluetooth</p>\r\n	<p>\r\n\tChoose Device page appears.</p>\r\n	1	1
+2328	5	<p>\r\n\tSelect a paired device or a device in area</p>\r\n	<p>\r\n\tPage returns to &quot;All Photos&quot;.</p>\r\n<p>\r\n\tA message telling user that File transfer has started appears.</p>\r\n<p>\r\n\tAnd a notification about File trasfer appears in the selected device.</p>\r\n	1	1
+2329	6	<p>\r\n\tAccept the trasfer on selected device</p>\r\n	<p>\r\n\tFile transfer starts.</p>\r\n	1	1
+2326	3	<p>\r\n\tSelect 3 picture and click &quot;Share&quot;</p>\r\n	<p>\r\n\tA list of Share options appears</p>\r\n	1	1
+2330	2	<p>\r\n\tGo to &quot;Options&quot; -&gt; &quot;Delete&quot;</p>\r\n	<p>\r\n\tenter Select Mode</p>\r\n	1	1
+2335	1	<p>\r\n\tOpen the Gallery app and go to grid Photo View</p>\r\n	<p>\r\n\tThe photo thumbnails are displayed in a grid view</p>\r\n	1	1
+2337	3	<p>\r\n\tSelect All photos</p>\r\n	<p>\r\n\tAll photos are selected</p>\r\n	1	1
+2332	4	<p>\r\n\tDeselect All</p>\r\n	<p>\r\n\tAll photos are deselected</p>\r\n	1	1
+2340	5	<p>\r\n\tSelect All again</p>\r\n	<p>\r\n\tAll photos are selected</p>\r\n	1	1
+2336	2	<p>\r\n\tGo to &quot;Options&quot; -&gt; &quot;Share&quot;</p>\r\n	<p>\r\n\tenter Select Mode</p>\r\n	1	1
+2338	4	<p>\r\n\tDeselect All</p>\r\n	<p>\r\n\tAll photos are deselected</p>\r\n	1	1
+2352	5	<p>\r\n\tClick &quot;Set&quot;</p>\r\n	<p>\r\n\tContact photo can be set successfully. And a message pops up.</p>\r\n<p>\r\n\tPage stays on grid view and the photo is still highlighted.</p>\r\n	1	1
+2341	5	<p>\r\n\tSelect All again</p>\r\n	<p>\r\n\tAll photos are selected</p>\r\n	1	1
+2339	6	<p>\r\n\tClick &quot;Share&quot;</p>\r\n	<p>\r\n\tA list of share options appears</p>\r\n	1	1
+2342	7	<p>\r\n\tSelect one option to share</p>\r\n	<p>\r\n\tAll photos should be able to be shared</p>\r\n	1	1
+1237	1	<p>\r\n\tLaunch the Gallery</p>\r\n		1	1
+2343	2	<p>\r\n\tNavigate to a picture in grid view</p>\r\n	<p>\r\n\tthe picture should be highlighted</p>\r\n	1	1
+1238	3	<p>\r\n\tSelect &quot;Options&quot;-&gt;&quot;Set as Wallpaper&quot;</p>\r\n	<p>\r\n\tA confirm message appears</p>\r\n	1	1
+2344	4	<p>\r\n\tClick &quot;Set&quot;</p>\r\n	<p>\r\n\tWallpaper is set successfully and there is message telling user.</p>\r\n<p>\r\n\tPage stays on grid view and the photo is still highlighted.</p>\r\n	1	1
+2347	1	<p>\r\n\tLaunch the Gallery</p>\r\n		1	1
+2348	2	<p>\r\n\tNavigate to a picture in grid view</p>\r\n	<p>\r\n\tthe picture should be highlighted</p>\r\n	1	1
+2349	3	<p>\r\n\tSelect &quot;Options&quot;-&gt;&quot;Set as Contact photo&quot;</p>\r\n	<p>\r\n\tContact list appears. User can choose a contact.</p>\r\n<p>\r\n\t# Empty contact? - TBD</p>\r\n	1	1
+2351	4	<p>\r\n\tSelect a contact</p>\r\n	<p>\r\n\tPreview page appears</p>\r\n	1	1
 \.
 
 
@@ -6682,10 +7119,13 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 795	114	1	1	1	 <p class="description">\n        <p>Gallery functions properly without issue when there is high memory usage on 1st launch.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=963917</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 802	115	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (101 chars) > 100 => has been truncated<br />\nOriginal name<br />\nVerify the user can send files to a paired device while receiving files from another bluetooth device<br />\n---- *** ----<br />\n <p class="description">\n        <p>Verify the user can send files to a paired device while receiving files from another bluetooth device. </p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=897782</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 811	116	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (105 chars) > 100 => has been truncated<br />\nOriginal name<br />\nWhen adding Contacts with pictures, the contact app functions as expected without a memory leak occurring<br />\n---- *** ----<br />\n <p class="description">\n        <p>When adding Contacts with pictures, the contact app functions as expected without a memory leak occurring.</p>\n\n<p>Prerequisite:  Able to monitor memory usage of applications, contact list is empty - |adb shell cat /sys/kernel/debug/ion/iommu|</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=983885</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
-819	117	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (101 chars) > 100 => has been truncated<br />\nOriginal name<br />\nImported videos are shown correctly without issue when switching between portrait and landscape modes<br />\n---- *** ----<br />\n <p class="description">\n        <p>Verify an imported 720p video is shown correctly without issue when switching between portrait and landscape modes.</p>\n\n<p>Prerequisite: ""Lock orientation"" is disabled in Settings.</p>\n\n<p>Please see these issues: </p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=963624</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1020003</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 824	118	1	1	1	 <p class="description">\n        <p>Camera viewfinder displays properly after editing a photo in the gallery.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=989113</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 830	119	1	1	1	 <p class="description">\n        <p>All strings on the "Memory card in use" page are translated properly without truncation. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+2160	331	1	1	1	<p>\r\n\tThe case is for testing cancel - Edit contact in contact details.</p>\r\n	<p>\r\n\tA existing contact.</p>\r\n	3	8	2015-08-20 02:18:17	8	2015-08-20 02:19:26	1	1	1	5.00
 740	106	1	1	2	<p>\r\n\tThe user can share all supported image files no matter what their source using E-mail, Messages and Bluetooth.</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tAttached .jpg is imported to the device as well as all supported image files.</p>\r\n<p>\r\n\tHave a good mix of pictures taken from the camera, downloaded from the web and images that were moved over from the desktop onto the SD card. (jpeg, png, gif, bmp) and subtypes (progressive jpeg, animated gif, etc.) and a variety of sizes. A full set of EXIF orientations for jpeg images.</p>\r\n	3	7	2015-08-18 08:31:06	7	2015-08-19 06:02:47	1	1	1	\N
+2098	312	1	1	2	<p>\r\n\tWhen user navigates through items of Settings, there will be a focus on selected item for user to know.</p>\r\n		3	4	2015-08-19 09:42:23	4	2015-08-20 06:53:09	1	1	1	2.00
+2179	336	1	1	2	<p>\r\n\tUser can navigate on Settings via HW key on device.</p>\r\n		3	4	2015-08-20 06:04:37	4	2015-08-20 06:53:15	1	1	1	3.00
+2346	363	1	1	2	<p>\r\n\tIt should be possible to set a specific photo to a specific contact.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\ta previously created contact is available.</p>\r\n	2	7	2015-08-20 10:29:35	7	2015-08-20 10:38:15	1	1	1	\N
 836	120	1	1	1	 <p class="description">\n        <p>All strings on the "No photos or videos" page are translated properly without truncation. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 841	121	1	1	1	 <p class="description">\n        <p>The string "Can not edit photos. Memory card is full." is translated properly without truncation. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 847	122	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (113 chars) > 100 => has been truncated<br />\nOriginal name<br />\nAll strings on the  "Delete selected item?" and "Delete 3 items? pages are translated properly without truncation<br />\n---- *** ----<br />\n <p class="description">\n        <p>All strings on the  "Delete selected item?" and "Delete 3 items? pages are translated properly without truncation. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
@@ -6698,8 +7138,7 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 905	130	1	1	1	 <p class="description">\n        <p>All dates for gallery content are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 910	131	1	1	1	 <p class="description">\n        <p>Implementation Bug: https://bugzilla.mozilla.org/show_bug.cgi?id=917445</p>\n\n<h1>Pre-Requisites:</h1>\n\n<h1>Gallery is launched and photo is in edit mode.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 917	132	1	1	1	<p>\r\n\tUser Story: As a user, I want the gallery app to automatically arrange content by the month. If the user has taken six or more pictures within a single month, the month will create its own section.</p>\r\n<p>\r\n\tAcceptance Criteria: - When the gallery app is opened the user can see that all the content (images, videos) are arranged by month.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:31:06	7	2015-08-19 07:45:52	1	1	1	\N
-928	134	1	1	1	 <p class="description">\n        <p>User Story:\nAs a user, I want the gallery app to automatically arrange content by the month </p>\n\n<p>If the user has taken at least six pictures spanning more than one year, first and last month and relevant years will be displayed.</p>\n\n<p>Acceptance Criteria:\n- When the gallery app is opened the user can see that all the content (images, videos) are arranged by month</p>\n\n<p>Implementation bug: https://bugzilla.mozilla.org/show_bug.cgi?id=925179</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
-934	135	1	1	1	 <p class="description">\n        <p>Prerequisite: \n1. Having more than 1 photos stored on device. </p>\n\n<p>As a user, I should be able to browse through photos and play slideshow.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+2188	338	1	1	2		<p>\r\n\tPut over 20 pictures(taken on the same date) on device</p>\r\n	2	7	2015-08-20 07:24:58	7	2015-08-20 07:40:09	1	1	1	\N
 943	136	1	1	1	 <p class="description">\n        <p>Using the pick activity and confirming an image for the gallery - app should not get hung with no perceived performance. </p>\n\n<h1>Prerequistes: At least 1 image is in the gallery</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 950	137	1	1	1	 <p class="description">\n        <p>Prerequisite: \n1. Having more than 1 photos stored on device. </p>\n\n<p>As a user, I should be able to select photo(s) to share or to delete.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 957	138	1	1	1	 <p class="description">\n        <p>If the Gallery list is open while the user removes the SD card, the list should be reloaded and updated to show only files on the internal memory storage. </p>\n\n<h1>Pre-requisites: Have a SD card inserted. Have photos stored on both the SD card and on the phone's internal memory</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
@@ -6717,8 +7156,6 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 1020	150	1	1	1	 <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, when zoomed in on the photo, I should be able to drag the photo to change the area of the photo show in the viewport</p>\n\n<p>Prerequisites: Have a few photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 1025	151	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW, I should be able to play a video by single tapping on the thumbnail of a capture video</p>\n\n<p>Prerequisites: Have a few captured videos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 1029	152	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW, I should be able to enter a "Select Mode" by single-tapping the "Select" button in the toolbar. In "Select Mode", single-tapping photos should toggle their selected state, as evidenced by a clear visual indicator</p>\n\n<p>Prerequisites: Have some photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
-1033	153	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW, I should be able to enter a "Select Mode" by single-tapping the "Select" button in the toolbar. In "Select Mode", single-tapping photos should toggle their selected state, as evidenced by a clear visual indicator</p>\n\n<p>Prerequisites: Have some photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
-1039	154	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW "Select Mode", I should be able to share one or more selected photos by single-tapping the share button in the toolbar. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from</p>\n\n<p>Prerequisites:  Have multiple photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 1044	155	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (102 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[Gallery] Single Photo View - The photo and toolbars adjust to fit the screen when rotating the device<br />\n---- *** ----<br />\n <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, when I rotate the device to portrait or landscape, the photo and toolbars should adjust to fit the new constraints of the currently active orientation</p>\n\n<p>Prerequisites: Have a few photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 1048	156	1	1	1	 <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, I should be able to single-tap the "Share" button in the toolbar and trigger an action that sets the current photo as my wallpaper background</p>\n\n<p>Prerequisites: Have a few photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 1052	157	1	1	1	 <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, I should be able to open the camera application by single-tapping the camera button in the toolbar. If I choose to return to the Gallery app from the Camera app (via the Gallery button), I should be returned to the grid view at the position I started - if a new picture(s) was taken during my interaction with the Camera app, I should be placed at a position in the grid where my new picture is in view.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. There must be at least 1 photo in the Gallery.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
@@ -6730,9 +7167,6 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 1083	163	1	1	1	 <p class="description">\n        <p>From the gallery, it should be possible to view the photos in the fullscreen mode.</p>\n\n<p>Prerequisites:  the gallery application is launched, in thumbnail view.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 1090	164	1	1	1	 <p class="description">\n        <p>It should be possible, using the video functionality, to play back a video that's been shot with the onboard camera.  Both Video and Sound must work.</p>\n\n<p>Prerequisite:   A video has been recorded with sound, using the onboard camera.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 1094	165	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to save a photo I have edited by single-tapping the OK button in the toolbar. I should then be returned to the BROWSE PHOTO grid view and placed at a location with the newly created, edited version of the photo in view.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Must have at least 1 photo on the SD card.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
-1100	166	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW "Select Mode", I should be able to share one or more selected photos by single-tapping the share button in the toolbar. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from.</p>\n\n<p>Prerequisites:  </p>\n\n<h1>a. An email account is already active on the test device.</h1>\n\n<h1>b. At least 1 photo is present on the test device.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
-1106	167	1	1	1	 <p class="description">\n        <p>When selecting multiple photos in the Gallery, the user will be able to share them   in an e-mail.</p>\n\n<p>Prerequisite: Have at least 2 pictures also have an e-mail account setup.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
-1113	168	1	1	1	 <p class="description">\n        <p>As a user, at the view photo screen I can share a picture (through twitter).</p>\n\n<h1>Prerequisites: Twitter app from the Marketplace is installed. A photo is saved in the Gallery.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
 1120	169	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to exit edit mode at any time by single-tapping the cancel button in the toolbar.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Must have at least 1 photo on the SD card.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1126	170	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW, I should be able to open the camera application by single-tapping the camera button in the toolbar. If I choose to return to the Gallery app from the Camera app (via the Gallery button), I should be returned to the grid view at the position I started - if a new picture(s) was taken during my interaction with the Camera app, I should be placed at a position in the grid where my new picture is in view.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Have at least 1 photo on the SD card.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1131	171	1	1	1	 <p class="description">\n        <p>As a user I can zoom-in and zoom-out on a picture when viewing it in detail by pinching it. When the picture is zoomed-in user can drag the picture to change the visible area.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Have at least 1 photo on the SD card.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
@@ -6747,14 +7181,12 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 1184	180	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to crop a photo by single-tapping the "Crop" tab in the toolbar. I should presented with common crop options in a secondary toolbar. Tapping a crop type will apply the crop option to the photo - if I select "Freedom Mode", drag UI handles shall be overlayed on the edge of the photo I can used to manually adjust the crop area.</p>\n\n<p>Prerequisite: Have some pictures located on the storage media.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1191	181	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to crop a photo by single-tapping the "Crop" tab in the toolbar. I should presented with common crop options in a secondary toolbar. Tapping a crop type will apply the crop option to the photo - if I select "Freedom Mode", drag UI handles shall be overlayed on the edge of the photo I can used to manually adjust the crop area.</p>\n\n<p>Prerequisites: gallery is launched and photo is in edit mode.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1195	182	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to add common effects to a photo by single-tapping the "Effects" tab in the toolbar. I should presented with common effect options in a secondary toolbar. Tapping an effect type will apply the effect option to the photo</p>\n\n<p>Prerequisites: gallery is launched and photo is in edit mode.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
-1199	183	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW "Select Mode", I should be able to share one or more selected photos by single-tapping the share button in the toolbar. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from</p>\n\n<p>Prerequisites:  Have multiple photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1204	184	1	1	1	 <p class="description">\n        <p>It should be possible to export photos from device to desktop machine.</p>\n\n<p>Prerequisite: Have mass storage turned on in the device settings and also have some photos on the storage device.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1207	185	1	1	1	 <p class="description">\n        <p>It should be possible to access the camera from the gallery, from a Single Photo View.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+2163	332	1	1	1	<p>\r\n\tThis case is for testing Options - remove as favorite /add as favorite in contact details.</p>\r\n		3	8	2015-08-20 02:21:16	8	2015-08-20 02:22:31	1	1	1	5.00
 1215	187	1	1	1	 <p class="description">\n        <p>As a user, in Gallery when viewing a photo in full screen view, I should be able to swipe across the current photo to view the next photo (left swipe) or last photo (right swipe) in the photo set.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Must have several photos on your device.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1221	188	1	1	1	 <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, I should be able to delete the photo currently displayed by single-tapping the delete icon in the toolbar</p>\n\n<p>Prerequisites: Have a few pictures in on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
-1226	189	1	1	1	 <p class="description">\n        <p>As a user, within the LIST VIEW "Select Mode", I should be able to delete multiple photos simultaneously by selecting the desired photos and single-tapping the delete button in the toolbar</p>\n\n<p>Automated. See Bug 1112227</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1232	190	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW, I should be able view a larger view of a photo by single-tapping the photo's thumbnail</p>\n\n<p>Prerequisites: Have some photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
-1236	191	1	1	1	 <p class="description">\n        <p>It should be possible to set a specific photo to a specific contact.</p>\n\n<h1>Prerequisites:  a previously created contact is available.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1247	192	1	1	1	 <p class="description">\n        <p>It should be possible to access the camera from the gallery preview mode.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1250	193	1	1	1	 <p class="description">\n        <p>It should be possible to take a picture using the device camera. The first time you use the camera you should receive a geolocation prompt.</p>\n\n<p>Prerequisites: <br />\nPhone has micro SD card with space to save pictures.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
 1258	1	1	1	1	 <p class="description">\n        <p>Operator name is shown correctly for USIM throughout settings. </p>\n\n<p>Please see this issue: </p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1046649</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:36	\N	\N	1	1	1	\N
@@ -6770,14 +7202,20 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 1311	4	2	1	1	 <p class="description">\n        <p>If outgoing call SIM is set to "always ask", the last used SIM will make the call and the last contact that SIM called will be dialed when double clicking the bluetooth headset to dial</p>\n\n<p>Prerequisites: Have two SIM cards in device, and a bluetooth headset available. </p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1021478</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	4	2015-08-19 08:37:51	1	1	1	20.00
 1288	1	2	1	1	 <p class="description">\n        <p>Operator name is shown correctly for USIM throughout settings. </p>\n\n<p>Please see this issue: </p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1046649</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	4	2015-08-19 08:37:58	1	1	1	10.00
 1296	2	2	1	1	 <p class="description">\n        <p>Network operator settings show correctly for both SIMs in a DSDS scenario.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1010394</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	4	2015-08-19 08:38:10	1	1	1	12.00
+1226	189	1	1	2	<p>\r\n\tUser should be able to delete multiple photos</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tPrepare over 20 pictures in device</p>\r\n	2	7	2015-08-18 08:31:07	7	2015-08-20 10:05:20	1	1	1	\N
+1236	191	1	1	2	<p>\r\n\tIt should be possible to set a specific photo as wallpaper.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\ta previously created contact is available.</p>\r\n	2	7	2015-08-18 08:31:07	7	2015-08-20 10:38:39	1	1	1	\N
+2167	333	1	1	1	<p>\r\n\tThe case is for testing add item for Phone in contact editor.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n		3	8	2015-08-20 03:10:23	8	2015-08-20 08:21:26	1	1	1	3.00
 719	101	1	1	2	<p>\r\n\tAs a user, I want to view my gallery content (photos and captured videos) in a scrollable grid, so I can access everything quickly.</p>\r\n<p>\r\n\tUpon entering Gallery, show all photos (total # of photos). The first photo will be highlighted, use D-Pad to navigate between photos. Photos are arranged from most recent (top left) toleast recent (bottom right).</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave some captured videos and photos on the device</p>\r\n	3	7	2015-08-18 08:31:06	7	2015-08-19 07:40:20	1	1	1	\N
 922	133	1	1	1	<p>\r\n\tUser Story: As a user, I want the gallery app to automatically arrange content by the month. If a user has not taken at least six pictures within a single month but within a range of months, the pictures will be lumped within a single section and the title will reflect the span of time.</p>\r\n<p>\r\n\tUpon entering Gallery, show all photos (total # of photos). The first photo will be highlighted, use D-Pad to navigate between photos. Photos are arranged from most recent (top left) toleast recent (bottom right).</p>\r\n<p>\r\n\tAcceptance Criteria: - When the gallery app is opened the user can see that all the content (images, videos) are arranged by month.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:31:06	7	2015-08-19 07:43:11	1	1	1	\N
-1338	196	1	1	1	<p>\r\n\tMake sure all settings main pages can be seen.</p>\r\n	<p>\r\n\tRefer to latest UX spec:&nbsp;<a class="external-link" href="https://acadine.sharepoint.com/sites/ux-design/Shared%20Documents/H5OS%20UX/Feature%20Phone/Settings" rel="nofollow" style="color: rgb(59, 115, 175); text-decoration: none; cursor: pointer; font-family: Arial, sans-serif; font-size: 14px; line-height: 20px;">https://acadine.sharepoint.com/sites/ux-design/Shared%20Documents/H5OS%20UX/Feature%20Phone/Settings</a></p>\r\n<p>\r\n\t&nbsp;</p>\r\n	3	4	2015-08-19 07:42:35	4	2015-08-19 08:09:18	1	1	1	2.00
 1212	186	1	1	1	<p>\r\n\tUser should be able to view any photos added to the devices SD card.</p>\r\n\r\n		2	7	2015-08-18 08:31:07	7	2015-08-19 07:47:38	1	1	1	\N
-1341	197	1	1	1	<p>\r\n\tMake sure all items on Settings main page with toggle switch works correctly.</p>\r\n		3	4	2015-08-19 07:52:45	4	2015-08-19 08:08:04	1	1	1	5.00
-1344	198	1	1	1	<p>\r\n\tUser can access items that have sub-page on main page of Settings.</p>\r\n		3	4	2015-08-19 08:05:21	4	2015-08-19 08:09:07	1	1	1	5.00
+1344	198	1	1	2	<p>\r\n\tUser can access items that have sub-page on main page of Settings.</p>\r\n		3	4	2015-08-19 08:05:21	4	2015-08-20 06:54:10	1	1	1	5.00
+1341	197	1	1	2	<p>\r\n\tMake sure all items on Settings main page with toggle switch works correctly.</p>\r\n		3	4	2015-08-19 07:52:45	4	2015-08-20 06:54:14	1	1	1	5.00
+2184	337	1	1	2	<p>\r\n\tMake sure that except functional keys(Direction keys, LSK, Enter, End), other keys should not be able to navigate Settings or make any selection.&nbsp;</p>\r\n		2	4	2015-08-20 06:20:37	4	2015-08-20 06:53:21	1	1	1	5.00
+1338	196	1	1	2	<p>\r\n\tMake sure all settings main pages can be seen.</p>\r\n	<p>\r\n\tRefer to latest UX spec:&nbsp;<a class="external-link" href="https://acadine.sharepoint.com/sites/ux-design/Shared%20Documents/H5OS%20UX/Feature%20Phone/Settings" rel="nofollow" style="color: rgb(59, 115, 175); text-decoration: none; cursor: pointer; font-family: Arial, sans-serif; font-size: 14px; line-height: 20px;">https://acadine.sharepoint.com/sites/ux-design/Shared%20Documents/H5OS%20UX/Feature%20Phone/Settings</a></p>\r\n<p>\r\n\t&nbsp;</p>\r\n	3	4	2015-08-19 07:42:35	4	2015-08-20 06:54:04	1	1	1	2.00
+2202	340	1	1	1	<p>\r\n\tThe case is for testing cancel to add item for Email.</p>\r\n		3	8	2015-08-20 07:31:30	8	2015-08-20 07:55:22	1	1	1	2.00
+2171	334	1	1	1	<p>\r\n\tThe case is for testing add item for email in contact editor.</p>\r\n		3	8	2015-08-20 03:18:59	8	2015-08-20 08:23:11	1	1	1	3.00
 1602	232	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Stopwatch paused" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
-1492	219	1	1	1	<p>\r\n\tUser can access settings and exit it.</p>\r\n		2	4	2015-08-19 08:26:09	4	2015-08-19 08:29:45	1	1	1	1.00
+1492	219	1	1	2	<p>\r\n\tUser can access settings and exit it.</p>\r\n		2	4	2015-08-19 08:26:09	4	2015-08-20 06:54:01	1	1	1	1.00
 1497	220	1	1	1	 <p class="description">\n        <p>Prerequisites:  Have your device set to an RTL locale, such as Arabic</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
 1501	221	1	1	1	 <p class="description">\n        <p>Prerequisites:  Have your device set to an RTL locale, such as Arabic</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
 1505	222	1	1	1	 <p class="description">\n        <p>Prerequisites:  Have your device set to an RTL locale, such as Arabic</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
@@ -6830,6 +7268,7 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 1830	270	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (125 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon shows in the status bar when there is at least one alarm is on (multiple alarms case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon shows in the status bar when there is at least one alarm is on</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
 1837	271	1	1	1	 <p class="description">\n        <p>User should be able to hear the sound and feel vibration when the alarm goes off.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
 1843	272	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (118 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon will disappear in the status bar when the alarm goes off (only one alarm case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon will disappear in the status bar when the alarm goes off (when there is only one alarm)</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+2206	341	1	1	2			2	7	2015-08-20 07:33:51	7	2015-08-20 07:36:15	1	1	1	\N
 1849	273	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (156 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon will not disappear in the status bar when the alarm goes off but there is another alarm is on (multiple alarms case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon will not disappear in the status bar when the alarm goes off but there is another alarm is on</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
 1856	274	1	1	1	 <p class="description">\n        <p>User should be able to hear that when the alarm goes off, it will keep playing.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
 1863	275	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (111 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[Clock][Alarm] The alarm time on a currently triggering alarm does not change even after alarm time has passed.<br />\n---- *** ----<br />\n <p class="description">\n        <p>Test that the time displayed for the alarm that is actively triggering, shows the actual alarm time (won't update to the current time).</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
@@ -6869,13 +7308,51 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 2077	308	1	1	1	 <p class="description">\n        <p>User should be able to edit the alarm time of the existing alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
 2103	314	1	1	1	<p>\r\n\tThe case is for testing contact name = email address when no name, no phone numbers filled.</p>\r\n		3	8	2015-08-19 09:46:41	8	2015-08-19 09:50:36	1	1	1	5.00
 2086	309	1	1	1	<p>\r\n\tThis test case is for testing Contacts app launch.</p>\r\n		3	8	2015-08-19 09:26:37	8	2015-08-19 09:28:32	1	1	1	1.00
+2122	319	1	1	1	<p>\r\n\tThis case is for testing Options in contact details - send message.</p>\r\n		3	8	2015-08-20 01:22:46	8	2015-08-20 01:24:34	1	1	1	3.00
 2089	310	1	1	1	<p>\r\n\tThis test case is for testing contacts app exit.</p>\r\n		3	8	2015-08-19 09:30:02	8	2015-08-19 09:36:10	1	1	1	1.00
 2109	316	1	1	1	<p>\r\n\tThe case is for testing contact name = No Name when no name, no phone numbers, no email addresses.</p>\r\n		3	8	2015-08-19 09:52:06	8	2015-08-19 09:54:18	1	1	1	5.00
+2125	320	1	1	1	<p>\r\n\tThis case is for testing make a call in contact details.</p>\r\n		3	8	2015-08-20 01:25:49	8	2015-08-20 01:26:41	1	1	1	3.00
 2094	311	1	1	1	<p>\r\n\tThis test case is for testing contact name display when no name, but existing a phone number.</p>\r\n		3	8	2015-08-19 09:39:00	8	2015-08-19 09:41:30	1	1	1	5.00
 2100	313	1	1	1	<p>\r\n\tThe case is for testing contant name = the first phone number when no name filled and multiple phone numbers.</p>\r\n		3	8	2015-08-19 09:43:55	8	2015-08-19 09:44:59	1	1	1	5.00
+2128	321	1	1	1	<p>\r\n\tThis case is for testing send a email in contact details.</p>\r\n		3	8	2015-08-20 01:27:27	8	2015-08-20 01:28:38	1	1	1	3.00
 2115	317	1	1	1	<p>\r\n\tThe case is for testing make a call in contact list when only 1 phone number.</p>\r\n	<p>\r\n\t1. one contact with 1 phone number ready.</p>\r\n	3	8	2015-08-19 09:57:35	8	2015-08-19 09:58:32	1	1	1	5.00
 2106	315	1	1	1	<p>\r\n\tThe case is for testing contact name = first email address with no name,no phone numbers filled, but multiple email addresses.</p>\r\n		3	8	2015-08-19 09:48:37	8	2015-08-19 09:50:12	1	1	1	5.00
-2098	312	1	1	1	<p>\r\n\tWhen user navigates through items of Settings, there will be a focus on selected item for user to know.</p>\r\n		3	4	2015-08-19 09:42:23	4	2015-08-19 10:17:04	1	1	1	2.00
+2119	318	1	1	1	<p>\r\n\tThis case is for testing make a call when press Call key in contact list. The contact has multiple phone numbers.</p>\r\n	<p>\r\n\tA contact has two phone numbers.</p>\r\n	3	8	2015-08-20 01:10:28	8	2015-08-20 01:11:39	1	1	1	5.00
+2131	322	1	1	1	<p>\r\n\tThe case is for testing press CSK for address will do nothing.</p>\r\n		2	8	2015-08-20 01:37:22	8	2015-08-20 01:38:24	1	1	1	1.00
+2134	323	1	1	1	<p>\r\n\tThis case is for testing press CSK for date in contact details, nothing happens.</p>\r\n		2	8	2015-08-20 01:39:38	8	2015-08-20 01:40:36	1	1	1	1.00
+2137	324	1	1	1	<p>\r\n\tThis case is for testing press CSK for comment in contact details, nothing happens.</p>\r\n		2	8	2015-08-20 01:41:31	8	2015-08-20 01:42:14	1	1	1	1.00
+2140	325	1	1	1	<p>\r\n\tThis case is for testing Options in contact list - add a new contact.</p>\r\n		3	8	2015-08-20 01:43:47	8	2015-08-20 01:46:45	1	1	1	5.00
+2147	327	1	1	1	<p>\r\n\tThis case is for testing Options - Edit contact in Contact List.</p>\r\n	<p>\r\n\tA existing contact.</p>\r\n	3	8	2015-08-20 02:02:48	8	2015-08-20 02:04:28	1	1	1	1.00
+2143	326	1	1	1	<p>\r\n\tThe case is for testing - cancel new contact in contact list.</p>\r\n		3	8	2015-08-20 01:47:59	8	2015-08-20 02:05:09	1	1	1	5.00
+2150	328	1	1	1	<p>\r\n\tThe case is for testing - cancel edit contact in contact list.</p>\r\n	<p>\r\n\tA existing contact.</p>\r\n	2	8	2015-08-20 02:06:47	8	2015-08-20 02:08:07	1	1	1	1.00
+2153	329	1	1	1	<p>\r\n\tThe case is for testing Options - remove as favorite/add as favorite in contact list.</p>\r\n<p>\r\n\tWhen the contact is favorite, it displayes remove as favorite.</p>\r\n<p>\r\n\tWhen the contact is not favorite, it displayes add as favorite.</p>\r\n	<p>\r\n\tNo favorite contact.</p>\r\n	3	8	2015-08-20 02:11:51	8	2015-08-20 02:13:10	1	1	1	3.00
+2157	330	1	1	1	<p>\r\n\tThe case is for testing Options - edit contact in Contact Details.</p>\r\n		3	8	2015-08-20 02:14:44	8	2015-08-20 02:16:23	1	1	1	1.00
+2175	335	1	1	1	<p>\r\n\tThe case is for testing add item for company in contact editor.</p>\r\n		3	8	2015-08-20 03:23:04	8	2015-08-20 07:56:16	1	1	1	3.00
+928	134	1	1	1	<p class="description">\r\n\t&nbsp;</p>\r\n<p>\r\n\tUser Story: As a user, I want the gallery app to automatically arrange content by the month</p>\r\n<p>\r\n\tIf the user has taken at least six pictures spanning more than one year, first and last month and relevant years will be displayed.</p>\r\n<p>\r\n\tAcceptance Criteria: - When the gallery app is opened the user can see that all the content (images, videos) are arranged by month</p>\r\n<p>\r\n\tImplementation bug: https://bugzilla.mozilla.org/show_bug.cgi?id=925179</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:31:06	7	2015-08-20 07:42:25	1	1	1	\N
+2286	355	1	1	2	<p>\r\n\tAs a user, in LIST VIEW &quot;Select Mode&quot;, I should be able to share one or more selected photos. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-20 09:55:00	7	2015-08-20 09:58:31	1	1	1	\N
+2246	347	1	1	1	<p>\r\n\tThe case is for testing - add item for Date.</p>\r\n		3	8	2015-08-20 08:57:12	8	2015-08-20 09:40:58	1	1	1	2.00
+2250	348	1	1	1	<p>\r\n\tThe case is for testing - cancel to add item for Date.</p>\r\n		3	8	2015-08-20 08:59:15	8	2015-08-20 09:41:45	1	1	1	2.00
+2211	342	1	1	2	<p>\r\n\tFavorites is a filtered view that shows only the photos that are marked as favorites.</p>\r\n		2	7	2015-08-20 07:45:05	7	2015-08-20 07:48:50	1	1	1	\N
+2192	339	1	1	1	<p>\r\n\tThis case is for testing cancel to add item for Phone.</p>\r\n		3	8	2015-08-20 07:27:19	8	2015-08-20 07:55:09	1	1	1	2.00
+2238	345	1	1	1	<p>\r\n\tThe case is for testing - add item for Address.</p>\r\n		3	8	2015-08-20 08:47:35	8	2015-08-20 09:42:15	1	1	1	2.00
+2223	343	1	1	1	<p>\r\n\tThis case is for testing cancel to add item - company.</p>\r\n		3	8	2015-08-20 08:01:12	8	2015-08-20 08:02:44	1	1	1	2.00
+2263	351	1	1	1	<p>\r\n\tThe case is for testing add multiple phone numbers.</p>\r\n		3	8	2015-08-20 09:48:54	8	2015-08-20 09:52:20	1	1	1	5.00
+2242	346	1	1	1	<p>\r\n\tThe case is for testing - cancel to add item for Address.</p>\r\n		3	8	2015-08-20 08:53:45	8	2015-08-20 09:43:16	1	1	1	2.00
+2276	353	1	1	1	<p>\r\n\tThe case is for testing add multiple Emails.</p>\r\n		3	8	2015-08-20 09:52:52	8	2015-08-20 09:53:43	1	1	1	5.00
+2254	349	1	1	1	<p>\r\n\tThe case is for testing - add item for Comment.</p>\r\n		3	8	2015-08-20 09:38:26	8	2015-08-20 09:44:39	1	1	1	2.00
+2228	344	1	1	2	<p>\r\n\tUser should be able to delete single photo on grid view</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tPrepare over 20 pictures in device</p>\r\n	2	7	2015-08-20 08:04:59	7	2015-08-20 10:06:01	1	1	1	\N
+2258	350	1	1	1	<p>\r\n\tThe case is for testing - cancel to add item for Comment.</p>\r\n		3	8	2015-08-20 09:45:09	8	2015-08-20 09:46:22	1	1	1	2.00
+1039	154	1	1	2	<p>\r\n\tAs a user, in LIST VIEW &quot;Select Mode&quot;, I should be able to share one or more selected photos. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-18 08:31:06	7	2015-08-20 09:54:31	1	1	1	\N
+2268	352	1	1	2	<p>\r\n\tAs a user, in LIST VIEW &quot;Select Mode&quot;, I should be able to share one or more selected photos. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-20 09:51:07	7	2015-08-20 09:54:49	1	1	1	\N
+2294	356	1	1	1	<p>\r\n\tThe case is for testing add multiple Addresses.</p>\r\n		3	8	2015-08-20 09:56:19	8	2015-08-20 09:57:14	1	1	1	5.00
+2300	357	1	1	1	<p>\r\n\tThe case is for testing add multiple Dates.</p>\r\n		3	8	2015-08-20 09:57:47	8	2015-08-20 09:58:23	1	1	1	5.00
+2305	358	1	1	1	<p>\r\n\tThe case is for testing add multiple Comments.</p>\r\n		3	8	2015-08-20 09:58:54	8	2015-08-20 09:59:39	1	1	1	5.00
+2281	354	1	1	1	<p>\r\n\tThe case is for testing add multiple Companys.</p>\r\n		3	8	2015-08-20 09:54:26	8	2015-08-20 09:55:38	1	1	1	5.00
+2309	359	1	1	2	<p>\r\n\tAs a user, in LIST VIEW &quot;Select Mode&quot;, I should be able to share one or more selected photos. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-20 09:59:47	7	2015-08-20 10:01:36	1	1	1	\N
+2323	361	1	1	2	<p>\r\n\tAs a user, in LIST VIEW &quot;Select Mode&quot;, I should be able to share one or more selected photos. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-20 10:03:30	7	2015-08-20 10:05:04	1	1	1	\N
+2316	360	1	1	2	<p>\r\n\tAs a user, in LIST VIEW &quot;Select Mode&quot;, I should be able to share one or more selected photos. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-20 10:01:55	7	2015-08-20 10:03:04	1	1	1	\N
+2334	362	1	1	2	<p>\r\n\t&ldquo;Select all&rdquo; will be available on top as user enters select mode, the first photo will be highlighted, press up key to highlight &ldquo;select all&rdquo;.<br />\r\n\t&ldquo;Select all&rdquo; scrolls away as user navigates away from top.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-20 10:17:05	7	2015-08-20 10:19:17	1	1	1	\N
+1199	183	1	1	2	<p>\r\n\t&ldquo;Select all&rdquo; will be available on top as user enters select mode, the first photo will be highlighted, press up key to highlight &ldquo;select all&rdquo;.<br />\r\n\t&ldquo;Select all&rdquo; scrolls away as user navigates away from top.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-18 08:31:07	7	2015-08-20 10:17:48	1	1	1	\N
 \.
 
 
@@ -6942,6 +7419,102 @@ COPY h5tl_testcase_keywords (testcase_id, keyword_id) FROM stdin;
 2108	11
 2114	10
 2114	11
+2118	10
+2118	11
+2121	10
+2121	11
+2124	10
+2124	11
+2127	10
+2127	11
+2130	10
+2130	11
+2133	10
+2133	11
+2136	10
+2136	11
+2139	10
+2139	11
+2142	10
+2142	11
+2146	10
+2146	11
+2149	10
+2149	11
+2152	10
+2152	11
+2156	10
+2156	11
+2159	10
+2159	11
+2162	10
+2162	11
+2166	10
+2166	11
+2170	10
+2170	11
+2174	10
+2174	11
+2178	10
+2178	11
+2183	11
+2187	10
+2187	11
+2191	10
+2191	11
+2201	10
+2201	11
+2205	11
+2210	10
+2210	11
+1225	10
+1225	11
+2222	10
+2222	11
+2227	10
+2227	11
+2237	10
+2237	11
+2241	10
+2241	11
+2245	10
+2245	11
+2249	10
+2249	11
+1038	10
+1038	11
+2257	10
+2257	11
+2262	10
+2262	11
+2267	10
+2267	11
+2275	10
+2275	11
+2280	10
+2280	11
+2285	10
+2285	11
+2293	10
+2293	11
+2299	10
+2299	11
+2304	10
+2304	11
+2308	10
+2308	11
+2315	10
+2315	11
+2322	10
+2322	11
+1198	10
+1198	11
+2333	10
+2333	11
+1235	10
+1235	11
+2345	10
+2345	11
 \.
 
 
@@ -7034,8 +7607,8 @@ COPY h5tl_testprojects (id, notes, color, active, option_reqs, option_priority, 
 2	<p>\r\n\tTest cases collection and management for smartphone products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	SP	13	1	0	0	787306fb55e51b4fd1f067137eafad53f69769aa7e9419557f1e0538c030f64e
 4	<p>\r\n\tTest cases collection and management for smart TV products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	TV	0	1	0	0	56856143dd77f623d80582d9b46c068b5cf634b4bba4f6d9903ea072222c8475
 5	<p>\r\n\tTest cases collection and management for smart watch products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	SW	0	1	0	0	30cfe9d109e5e6d990bd88e0ddd678c739f5abfa65c902668af2199a06164d8d
-3	<p>\r\n\tTest cases collection and management for feature phone products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	FP	317	1	0	0	3f2780a5a534437d566b96e1d94e04d1609f756671d6008d8bdd6579d8656f5c
 1255	<p>\r\n\ttest</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	ti	4	1	0	0	9b32bc023c75d33fe98cbc28a8268fd561a88c02c76a7bcea8405415a4f886a6
+3	<p>\r\n\tTest cases collection and management for feature phone products.</p>		1	0	0	0	O:8:"stdClass":4:{s:19:"requirementsEnabled";i:1;s:19:"testPriorityEnabled";i:1;s:17:"automationEnabled";i:1;s:16:"inventoryEnabled";i:0;}	FP	363	1	0	0	3f2780a5a534437d566b96e1d94e04d1609f756671d6008d8bdd6579d8656f5c
 \.
 
 
@@ -7081,15 +7654,19 @@ COPY h5tl_testsuites (id, details) FROM stdin;
 1325	<p>\r\n\tTest case for Cross function test</p>\r\n
 1328	
 1326	
-1329	
 1330	
 68	<p>\r\n\tFor Gallery test cases</p>\r\n<p>\r\n\thttps://jira.acadine.com/browse/CORE-14</p>\r\n
 1321	<p>\r\n\tTest suite for Grid view: https://jira.acadine.com/browse/CORE-77</p>\r\n
 1322	<p>\r\n\tTest suite for Single Item view: https://jira.acadine.com/browse/CORE-78</p>\r\n
 1323	<p>\r\n\tTest suite for Photo editor: https://jira.acadine.com/browse/CORE-79</p>\r\n
 2084	<p>\r\n\tThis test suite is for testing UX spec.</p>\r\n<p>\r\n\tRrefer to latest UX Spec:</p>\r\n<p>\r\n\thttps://acadine.sharepoint.com/sites/ux-design/_layouts/15/GroupsDocuments.aspx/?RootFolder=%2fsites%2fux-design%2fShared%20Documents%2fH5OS%20UX%2fFeature%20Phone%2fSettings&amp;FolderCTID=0x012000D5E34C64243F3040A271ABF4C4DBEE0B</p>\r\n
+1495	<p>\r\n\tFor user story <a href="https://jira.acadine.com/browse/CORE-54">CORE-54</a></p>\r\n
+2186	<p>\r\n\tTest cases for user story:</p>\r\n<p>\r\n\thttps://jira.acadine.com/browse/CORE-60</p>\r\n
 1336	<p>\r\n\tFor user story&nbsp;<a href="http://jira.acadine.com/browse/CORE-53">CORE&nbsp;53</a></p>\r\n
-1495	<p>\r\n\tFor user story <a href="https://jira.acadine.com/browse/CORE-54">CORE-54</a>.</p>\r\n
+2216	
+2217	
+2236	<p>\r\n\tCollect test cases for newtork and connectivity topics.</p>\r\n
+2218	<p>\r\n\tTest cases under this suite should be tested on both &quot;All Photo&quot; and &quot;Favorites&quot; Page.</p>\r\n
 \.
 
 
@@ -7475,6 +8052,88 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 384	/lib/testcases/tcEdit.php	1439978255	1439978255	8	bnoioaerqtts97geqhhi1uugo6
 385	/login.php	1439993576	1439993576	2	7g6q17am6j4ord5kpvn1u3m8j0
 386	/lib/general/mainPage.php	1439993576	1439993576	2	7g6q17am6j4ord5kpvn1u3m8j0
+387	/login.php	1440032654	1440032654	8	bnoioaerqtts97geqhhi1uugo6
+388	/lib/testcases/tcEdit.php	1440033028	1440033028	8	bnoioaerqtts97geqhhi1uugo6
+389	/lib/testcases/tcEdit.php	1440033766	1440033766	8	bnoioaerqtts97geqhhi1uugo6
+390	/lib/testcases/tcEdit.php	1440033949	1440033949	8	bnoioaerqtts97geqhhi1uugo6
+391	/lib/testcases/tcEdit.php	1440034047	1440034047	8	bnoioaerqtts97geqhhi1uugo6
+392	/lib/testcases/tcEdit.php	1440034642	1440034642	8	bnoioaerqtts97geqhhi1uugo6
+393	/lib/testcases/tcEdit.php	1440034778	1440034778	8	bnoioaerqtts97geqhhi1uugo6
+394	/lib/testcases/tcEdit.php	1440034891	1440034891	8	bnoioaerqtts97geqhhi1uugo6
+395	/lib/testcases/tcEdit.php	1440035027	1440035027	8	bnoioaerqtts97geqhhi1uugo6
+396	/lib/testcases/tcEdit.php	1440035279	1440035279	8	bnoioaerqtts97geqhhi1uugo6
+397	/lib/testcases/tcEdit.php	1440036168	1440036168	8	bnoioaerqtts97geqhhi1uugo6
+398	/lib/testcases/tcEdit.php	1440036407	1440036407	8	bnoioaerqtts97geqhhi1uugo6
+399	/lib/testcases/tcEdit.php	1440036711	1440036711	8	bnoioaerqtts97geqhhi1uugo6
+400	/lib/testcases/tcEdit.php	1440036884	1440036884	8	bnoioaerqtts97geqhhi1uugo6
+401	/lib/testcases/tcEdit.php	1440037097	1440037097	8	bnoioaerqtts97geqhhi1uugo6
+402	/lib/testcases/tcEdit.php	1440037276	1440037276	8	bnoioaerqtts97geqhhi1uugo6
+403	/lib/testcases/tcEdit.php	1440040223	1440040223	8	bnoioaerqtts97geqhhi1uugo6
+404	/lib/testcases/tcEdit.php	1440040739	1440040739	8	bnoioaerqtts97geqhhi1uugo6
+405	/lib/testcases/tcEdit.php	1440040984	1440040984	8	bnoioaerqtts97geqhhi1uugo6
+406	/login.php	1440049404	1440049404	4	1cm2u99dfenhuod173pmcbhgj6
+407	/lib/testcases/tcEdit.php	1440050677	1440050678	4	1cm2u99dfenhuod173pmcbhgj6
+408	/lib/testcases/tcEdit.php	1440051637	1440051637	4	1cm2u99dfenhuod173pmcbhgj6
+409	/lib/testcases/containerEdit.php	1440052428	1440052428	4	1cm2u99dfenhuod173pmcbhgj6
+410	/login.php	1440053357	1440053357	7	7i9ot4tde7q2pfuhvsg68kuvk1
+411	/linkto.php	1440053358	1440053358	7	7i9ot4tde7q2pfuhvsg68kuvk1
+412	/login.php	1440054053	1440054053	7	ktppmk1ri0dquodmcqcb1phmc3
+413	/lib/cfields/cfieldsEdit.php	1440055355	1440055355	4	1cm2u99dfenhuod173pmcbhgj6
+414	/lib/testcases/tcEdit.php	1440055498	1440055498	7	ktppmk1ri0dquodmcqcb1phmc3
+415	/lib/testcases/tcEdit.php	1440055639	1440055639	8	bnoioaerqtts97geqhhi1uugo6
+416	/lib/testcases/tcEdit.php	1440055890	1440055890	8	bnoioaerqtts97geqhhi1uugo6
+417	/lib/testcases/tcEdit.php	1440056031	1440056031	7	ktppmk1ri0dquodmcqcb1phmc3
+418	/lib/testcases/tcEdit.php	1440056705	1440056705	7	ktppmk1ri0dquodmcqcb1phmc3
+419	/lib/testcases/tcEdit.php	1440057142	1440057142	7	ktppmk1ri0dquodmcqcb1phmc3
+420	/lib/testcases/tcEdit.php	1440057672	1440057672	8	bnoioaerqtts97geqhhi1uugo6
+421	/lib/testcases/tcEdit.php	1440057989	1440057989	7	ktppmk1ri0dquodmcqcb1phmc3
+422	/lib/testcases/tcEdit.php	1440060455	1440060455	8	bnoioaerqtts97geqhhi1uugo6
+423	/lib/testcases/tcEdit.php	1440060825	1440060825	8	bnoioaerqtts97geqhhi1uugo6
+424	/lib/testcases/tcEdit.php	1440061032	1440061032	8	bnoioaerqtts97geqhhi1uugo6
+425	/lib/testcases/tcEdit.php	1440061155	1440061155	8	bnoioaerqtts97geqhhi1uugo6
+426	/lib/testcases/tcEdit.php	1440061313	1440061313	7	ktppmk1ri0dquodmcqcb1phmc3
+427	/linkto.php	1440062081	1440062081	8	bnoioaerqtts97geqhhi1uugo6
+428	/login.php	1440062088	1440062088	9	tml2755j8rv9aa98ln9mrs7bl2
+429	/linkto.php	1440062089	1440062089	9	tml2755j8rv9aa98ln9mrs7bl2
+430	/login.php	1440062153	1440062153	0	\N
+431	/login.php	1440062166	1440062166	0	\N
+432	/login.php	1440062176	1440062176	0	\N
+433	/login.php	1440062201	1440062201	0	\N
+434	/login.php	1440062209	1440062209	0	\N
+435	/login.php	1440062218	1440062218	5	hl70t2mo7523kqcvc7dal6ud12
+436	/linkto.php	1440062218	1440062218	5	hl70t2mo7523kqcvc7dal6ud12
+437	/lib/testcases/tcEdit.php	1440063506	1440063506	8	bnoioaerqtts97geqhhi1uugo6
+438	/lib/testcases/tcEdit.php	1440063909	1440063909	8	bnoioaerqtts97geqhhi1uugo6
+439	/lib/testcases/tcEdit.php	1440063956	1440063956	8	bnoioaerqtts97geqhhi1uugo6
+440	/lib/testcases/tcEdit.php	1440064134	1440064134	8	bnoioaerqtts97geqhhi1uugo6
+441	/lib/testcases/tcEdit.php	1440064315	1440064315	7	ktppmk1ri0dquodmcqcb1phmc3
+442	/lib/testcases/tcEdit.php	1440064372	1440064372	8	bnoioaerqtts97geqhhi1uugo6
+443	/lib/testcases/tcEdit.php	1440064466	1440064466	8	bnoioaerqtts97geqhhi1uugo6
+444	/lib/testcases/tcEdit.php	1440064525	1440064525	7	ktppmk1ri0dquodmcqcb1phmc3
+445	/lib/testcases/tcEdit.php	1440064579	1440064579	8	bnoioaerqtts97geqhhi1uugo6
+446	/lib/testcases/tcEdit.php	1440064667	1440064667	8	bnoioaerqtts97geqhhi1uugo6
+447	/lib/testcases/tcEdit.php	1440064735	1440064735	8	bnoioaerqtts97geqhhi1uugo6
+448	/lib/testcases/tcEdit.php	1440064811	1440064811	7	ktppmk1ri0dquodmcqcb1phmc3
+449	/lib/testcases/tcEdit.php	1440064915	1440064915	7	ktppmk1ri0dquodmcqcb1phmc3
+450	/lib/testcases/tcEdit.php	1440064952	1440064952	7	ktppmk1ri0dquodmcqcb1phmc3
+451	/lib/testcases/tcEdit.php	1440065010	1440065010	7	ktppmk1ri0dquodmcqcb1phmc3
+452	/lib/testcases/tcEdit.php	1440065281	1440065281	7	ktppmk1ri0dquodmcqcb1phmc3
+453	/lib/testcases/containerEdit.php	1440065407	1440065407	7	ktppmk1ri0dquodmcqcb1phmc3
+454	/login.php	1440065712	1440065712	4	1tmh3ieoqk0o3sm7c367he56g5
+455	/lib/testcases/tcEdit.php	1440065825	1440065825	7	ktppmk1ri0dquodmcqcb1phmc3
+456	/lib/usermanagement/rolesEdit.php	1440066110	1440066110	4	1tmh3ieoqk0o3sm7c367he56g5
+457	/lib/usermanagement/usersEdit.php	1440066175	1440066175	4	1tmh3ieoqk0o3sm7c367he56g5
+458	/lib/testcases/tcEdit.php	1440066220	1440066220	7	ktppmk1ri0dquodmcqcb1phmc3
+459	/logout.php	1440066274	1440066274	4	1tmh3ieoqk0o3sm7c367he56g5
+460	/login.php	1440066278	1440066278	10	1tmh3ieoqk0o3sm7c367he56g5
+461	/logout.php	1440066296	1440066296	10	1tmh3ieoqk0o3sm7c367he56g5
+462	/login.php	1440066300	1440066300	4	1tmh3ieoqk0o3sm7c367he56g5
+463	/lib/keywords/keywordsAssign.php	1440066413	1440066413	4	1tmh3ieoqk0o3sm7c367he56g5
+464	/lib/testcases/tcEdit.php	1440066575	1440066575	7	ktppmk1ri0dquodmcqcb1phmc3
+465	/login.php	1440066861	1440066861	0	\N
+466	/login.php	1440066873	1440066873	7	9rcctb4gqkglrimgnj39hk08s3
+467	/linkto.php	1440068088	1440068088	4	1cm2u99dfenhuod173pmcbhgj6
+468	/login.php	1440068253	1440068253	7	84skitp7ibikh0jgqgnfe4oqd4
 \.
 
 
@@ -7482,7 +8141,7 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 -- Name: h5tl_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_transactions_id_seq', 386, true);
+SELECT pg_catalog.setval('h5tl_transactions_id_seq', 468, true);
 
 
 --
@@ -7556,6 +8215,7 @@ COPY h5tl_users (id, login, password, role_id, email, first, last, locale, defau
 8	xueqin.shen	19a339dff19c7da0a8c088e3b7ca420b	6	xueqin.shen@acadine.com	xueqin	shen	en_GB	\N	1	\N	604166c0487dff94de557488336a314a0aacf8951a44b4d3e46c0dba622354d8	
 5	hubert.lu	819a07afa4abc8660ec9042038a8c597	6	hubert.lu@acadine.com	hubert	lu	en_GB	\N	1	\N	6812fbcd7e15e0a28e99c56b3590e0af67986091484b23b81456349e8980efab	
 9	hermes.cheng	c18123554c59020989e49309165493c5	6	hermes.cheng@acadine.com	hermes	cheng	en_GB	\N	1	\N	0f72a35b25babe3536942da6c3fbbff6abc6db19dd12ca237208c78f4336299f	
+10	reviewer	7ba917e4e5158c8a9ed6eda08a6ec572	10	enpei.chu@acadine.com	acadine	reviewer	en_GB	\N	1	\N	8dcfcb0833befc357a276f000fbe725228531a35c810d167d46c9205cda07d51	
 \.
 
 
@@ -7563,7 +8223,7 @@ COPY h5tl_users (id, login, password, role_id, email, first, last, locale, defau
 -- Name: h5tl_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_users_id_seq', 9, true);
+SELECT pg_catalog.setval('h5tl_users_id_seq', 10, true);
 
 
 --
