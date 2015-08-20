@@ -3094,6 +3094,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 1244	508	32	GUI	string 'demo_special_user' is not localized for locale 'zh_CN'  - using en_GB	1440113609	LOCALIZATION	0	\N
 1245	509	32	GUI	string 'demo_update_user_disabled' is not localized for locale 'zh_CN'  - using en_GB	1440113611	LOCALIZATION	0	\N
 1246	510	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:16:"audit_user_saved";s:6:"params";a:1:{i:0;s:11:"owen.ouyang";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440113621	SAVE	2	users
+1247	511	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:16:"audit_user_saved";s:6:"params";a:1:{i:0;s:11:"owen.ouyang";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440114009	SAVE	2	users
 \.
 
 
@@ -3101,7 +3102,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 -- Name: h5tl_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_events_id_seq', 1246, true);
+SELECT pg_catalog.setval('h5tl_events_id_seq', 1247, true);
 
 
 --
@@ -7747,6 +7748,7 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 508	/lib/usermanagement/usersView.php	1440113609	1440113609	2	7g6q17am6j4ord5kpvn1u3m8j0
 509	/lib/usermanagement/userInfo.php	1440113611	1440113611	2	7g6q17am6j4ord5kpvn1u3m8j0
 510	/lib/usermanagement/userInfo.php	1440113621	1440113622	2	7g6q17am6j4ord5kpvn1u3m8j0
+511	/lib/usermanagement/userInfo.php	1440114009	1440114009	2	7g6q17am6j4ord5kpvn1u3m8j0
 \.
 
 
@@ -7754,7 +7756,7 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 -- Name: h5tl_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_transactions_id_seq', 510, true);
+SELECT pg_catalog.setval('h5tl_transactions_id_seq', 511, true);
 
 
 --
@@ -7825,7 +7827,7 @@ COPY h5tl_users (id, login, password, role_id, email, first, last, locale, defau
 9	hermes.cheng	c18123554c59020989e49309165493c5	6	hermes.cheng@acadine.com	hermes	cheng	en_GB	\N	1	\N	0f72a35b25babe3536942da6c3fbbff6abc6db19dd12ca237208c78f4336299f	
 10	reviewer	7ba917e4e5158c8a9ed6eda08a6ec572	10	enpei.chu@acadine.com	acadine	reviewer	en_GB	\N	1	\N	8dcfcb0833befc357a276f000fbe725228531a35c810d167d46c9205cda07d51	
 1	admin	819a07afa4abc8660ec9042038a8c597	8		Testlink	Administrator	en_GB	\N	1	fae8af74a2edb9411f4c6c115492c5cf	a5e68bb69f361d3eabb927b8fd9d4eb80eca7c9c915dc282b48826f1b8880ab8	
-2	owen.ouyang	819a07afa4abc8660ec9042038a8c597	8	owen.ouyang@acadine.com	oo2	oo1	zh_CN	\N	1	10fb2560683dc141258dbce4c21a37cf	b3e17ae30c84f8be0dccaccb6fa4593f0a14c13d3818f050a554f9bc77a4b904	DB
+2	owen.ouyang	819a07afa4abc8660ec9042038a8c597	8	owen.ouyang@acadine.com	oo3	oo1	zh_CN	\N	1	10fb2560683dc141258dbce4c21a37cf	b3e17ae30c84f8be0dccaccb6fa4593f0a14c13d3818f050a554f9bc77a4b904	DB
 \.
 
 
