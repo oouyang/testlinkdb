@@ -102,7 +102,7 @@ ALTER SEQUENCE h5tl_assignment_types_id_seq OWNED BY h5tl_assignment_types.id;
 
 CREATE TABLE h5tl_attachments (
     id bigint NOT NULL,
-    fk_id bigint DEFAULT 0::bigint NOT NULL,
+    fk_id bigint DEFAULT (0)::bigint NOT NULL,
     fk_table character varying(250) DEFAULT ''::character varying,
     title character varying(250) DEFAULT ''::character varying,
     description character varying(250) DEFAULT ''::character varying,
@@ -145,11 +145,11 @@ ALTER SEQUENCE h5tl_attachments_id_seq OWNED BY h5tl_attachments.id;
 
 CREATE TABLE h5tl_builds (
     id bigint NOT NULL,
-    testplan_id bigint DEFAULT 0::bigint NOT NULL,
+    testplan_id bigint DEFAULT (0)::bigint NOT NULL,
     name character varying(100) DEFAULT 'undefined'::character varying NOT NULL,
     notes text,
-    active smallint DEFAULT 1::smallint NOT NULL,
-    is_open smallint DEFAULT 1::smallint NOT NULL,
+    active smallint DEFAULT (1)::smallint NOT NULL,
+    is_open smallint DEFAULT (1)::smallint NOT NULL,
     author_id bigint,
     creation_ts timestamp without time zone DEFAULT now() NOT NULL,
     release_date date,
@@ -251,14 +251,14 @@ ALTER TABLE public.h5tl_cfield_testplan_design_values OWNER TO tladmin;
 --
 
 CREATE TABLE h5tl_cfield_testprojects (
-    field_id bigint DEFAULT 0::bigint NOT NULL,
-    testproject_id bigint DEFAULT 0::bigint NOT NULL,
+    field_id bigint DEFAULT (0)::bigint NOT NULL,
+    testproject_id bigint DEFAULT (0)::bigint NOT NULL,
     display_order integer DEFAULT 1 NOT NULL,
-    active smallint DEFAULT 1::smallint NOT NULL,
-    location smallint DEFAULT 1::smallint NOT NULL,
-    required smallint DEFAULT 0::smallint NOT NULL,
-    required_on_design smallint DEFAULT 0::smallint NOT NULL,
-    required_on_execution smallint DEFAULT 0::smallint NOT NULL
+    active smallint DEFAULT (1)::smallint NOT NULL,
+    location smallint DEFAULT (1)::smallint NOT NULL,
+    required smallint DEFAULT (0)::smallint NOT NULL,
+    required_on_design smallint DEFAULT (0)::smallint NOT NULL,
+    required_on_execution smallint DEFAULT (0)::smallint NOT NULL
 );
 
 
@@ -272,18 +272,18 @@ CREATE TABLE h5tl_custom_fields (
     id integer NOT NULL,
     name character varying(64) DEFAULT ''::character varying NOT NULL,
     label character varying(64) DEFAULT ''::character varying NOT NULL,
-    type smallint DEFAULT 0::smallint NOT NULL,
+    type smallint DEFAULT (0)::smallint NOT NULL,
     possible_values character varying(4000) DEFAULT ''::character varying NOT NULL,
     default_value character varying(4000) DEFAULT ''::character varying NOT NULL,
     valid_regexp character varying(255) DEFAULT ''::character varying NOT NULL,
     length_min integer DEFAULT 0 NOT NULL,
     length_max integer DEFAULT 0 NOT NULL,
-    show_on_design smallint DEFAULT 1::smallint NOT NULL,
-    enable_on_design smallint DEFAULT 1::smallint NOT NULL,
-    show_on_execution smallint DEFAULT 0::smallint NOT NULL,
-    enable_on_execution smallint DEFAULT 0::smallint NOT NULL,
-    show_on_testplan_design smallint DEFAULT 0::smallint NOT NULL,
-    enable_on_testplan_design smallint DEFAULT 0::smallint NOT NULL
+    show_on_design smallint DEFAULT (1)::smallint NOT NULL,
+    enable_on_design smallint DEFAULT (1)::smallint NOT NULL,
+    show_on_execution smallint DEFAULT (0)::smallint NOT NULL,
+    enable_on_execution smallint DEFAULT (0)::smallint NOT NULL,
+    show_on_testplan_design smallint DEFAULT (0)::smallint NOT NULL,
+    enable_on_testplan_design smallint DEFAULT (0)::smallint NOT NULL
 );
 
 
@@ -329,8 +329,8 @@ ALTER TABLE public.h5tl_db_version OWNER TO tladmin;
 
 CREATE TABLE h5tl_events (
     id bigint NOT NULL,
-    transaction_id bigint DEFAULT 0::bigint NOT NULL,
-    log_level smallint DEFAULT 0::smallint NOT NULL,
+    transaction_id bigint DEFAULT (0)::bigint NOT NULL,
+    log_level smallint DEFAULT (0)::smallint NOT NULL,
     source character varying(45),
     description text NOT NULL,
     fired_at integer DEFAULT 0 NOT NULL,
@@ -368,7 +368,7 @@ ALTER SEQUENCE h5tl_events_id_seq OWNED BY h5tl_events.id;
 --
 
 CREATE TABLE h5tl_execution_bugs (
-    execution_id bigint DEFAULT 0::bigint NOT NULL,
+    execution_id bigint DEFAULT (0)::bigint NOT NULL,
     bug_id character varying(64) DEFAULT '0'::character varying NOT NULL
 );
 
@@ -421,11 +421,11 @@ CREATE TABLE h5tl_executions (
     tester_id bigint,
     execution_ts timestamp without time zone,
     status character(1) DEFAULT NULL::bpchar,
-    testplan_id bigint DEFAULT 0::bigint NOT NULL,
-    tcversion_id bigint DEFAULT 0::bigint NOT NULL,
+    testplan_id bigint DEFAULT (0)::bigint NOT NULL,
+    tcversion_id bigint DEFAULT (0)::bigint NOT NULL,
     tcversion_number integer DEFAULT 1 NOT NULL,
-    platform_id bigint DEFAULT 0::bigint NOT NULL,
-    execution_type smallint DEFAULT 1::smallint NOT NULL,
+    platform_id bigint DEFAULT (0)::bigint NOT NULL,
+    execution_type smallint DEFAULT (1)::smallint NOT NULL,
     execution_duration numeric(6,2),
     notes text
 );
@@ -460,7 +460,7 @@ ALTER SEQUENCE h5tl_executions_id_seq OWNED BY h5tl_executions.id;
 
 CREATE TABLE h5tl_inventory (
     id bigint NOT NULL,
-    testproject_id bigint DEFAULT 0::bigint NOT NULL,
+    testproject_id bigint DEFAULT (0)::bigint NOT NULL,
     owner_id bigint NOT NULL,
     name character varying(255) NOT NULL,
     ipaddress character varying(255) NOT NULL,
@@ -535,7 +535,7 @@ ALTER SEQUENCE h5tl_issuetrackers_id_seq OWNED BY h5tl_issuetrackers.id;
 CREATE TABLE h5tl_keywords (
     id bigint NOT NULL,
     keyword character varying(100) DEFAULT ''::character varying NOT NULL,
-    testproject_id bigint DEFAULT 0::bigint NOT NULL,
+    testproject_id bigint DEFAULT (0)::bigint NOT NULL,
     notes text
 );
 
@@ -569,12 +569,12 @@ ALTER SEQUENCE h5tl_keywords_id_seq OWNED BY h5tl_keywords.id;
 
 CREATE TABLE h5tl_milestones (
     id bigint NOT NULL,
-    testplan_id bigint DEFAULT 0::bigint NOT NULL,
+    testplan_id bigint DEFAULT (0)::bigint NOT NULL,
     target_date date NOT NULL,
     start_date date,
-    a smallint DEFAULT 0::smallint NOT NULL,
-    b smallint DEFAULT 0::smallint NOT NULL,
-    c smallint DEFAULT 0::smallint NOT NULL,
+    a smallint DEFAULT (0)::smallint NOT NULL,
+    b smallint DEFAULT (0)::smallint NOT NULL,
+    c smallint DEFAULT (0)::smallint NOT NULL,
     name character varying(100) DEFAULT 'undefined'::character varying NOT NULL
 );
 
@@ -643,7 +643,7 @@ CREATE TABLE h5tl_nodes_hierarchy (
     id bigint NOT NULL,
     name character varying(100) DEFAULT NULL::character varying,
     parent_id bigint,
-    node_type_id bigint DEFAULT 1::bigint NOT NULL,
+    node_type_id bigint DEFAULT (1)::bigint NOT NULL,
     node_order bigint
 );
 
@@ -677,9 +677,9 @@ ALTER SEQUENCE h5tl_nodes_hierarchy_id_seq OWNED BY h5tl_nodes_hierarchy.id;
 
 CREATE TABLE h5tl_object_keywords (
     id bigint NOT NULL,
-    fk_id bigint DEFAULT 0::bigint NOT NULL,
+    fk_id bigint DEFAULT (0)::bigint NOT NULL,
     fk_table character varying(30) DEFAULT ''::character varying,
-    keyword_id bigint DEFAULT 0::bigint NOT NULL
+    keyword_id bigint DEFAULT (0)::bigint NOT NULL
 );
 
 
@@ -713,7 +713,7 @@ ALTER SEQUENCE h5tl_object_keywords_id_seq OWNED BY h5tl_object_keywords.id;
 CREATE TABLE h5tl_platforms (
     id bigint NOT NULL,
     name character varying(100) NOT NULL,
-    testproject_id bigint DEFAULT 0::bigint NOT NULL,
+    testproject_id bigint DEFAULT (0)::bigint NOT NULL,
     notes text NOT NULL
 );
 
@@ -765,7 +765,7 @@ CREATE TABLE h5tl_req_relations (
     id bigint NOT NULL,
     source_id integer DEFAULT 0 NOT NULL,
     destination_id integer DEFAULT 0 NOT NULL,
-    relation_type smallint DEFAULT 1::smallint NOT NULL,
+    relation_type smallint DEFAULT (1)::smallint NOT NULL,
     author_id bigint,
     creation_ts timestamp without time zone DEFAULT now() NOT NULL
 );
@@ -799,16 +799,16 @@ ALTER SEQUENCE h5tl_req_relations_id_seq OWNED BY h5tl_req_relations.id;
 --
 
 CREATE TABLE h5tl_req_revisions (
-    parent_id bigint DEFAULT 0::bigint NOT NULL,
-    id bigint DEFAULT 0::bigint NOT NULL,
+    parent_id bigint DEFAULT (0)::bigint NOT NULL,
+    id bigint DEFAULT (0)::bigint NOT NULL,
     revision integer DEFAULT 1 NOT NULL,
     req_doc_id character varying(64),
     name character varying(100) DEFAULT NULL::character varying,
     scope text,
     status character(1) DEFAULT 'V'::bpchar NOT NULL,
     type character(1) DEFAULT NULL::bpchar,
-    active smallint DEFAULT 1::smallint NOT NULL,
-    is_open smallint DEFAULT 1::smallint NOT NULL,
+    active smallint DEFAULT (1)::smallint NOT NULL,
+    is_open smallint DEFAULT (1)::smallint NOT NULL,
     expected_coverage integer DEFAULT 1 NOT NULL,
     log_message text,
     author_id bigint,
@@ -825,8 +825,8 @@ ALTER TABLE public.h5tl_req_revisions OWNER TO tladmin;
 --
 
 CREATE TABLE h5tl_req_specs (
-    id bigint DEFAULT 0::bigint NOT NULL,
-    testproject_id bigint DEFAULT 0::bigint NOT NULL,
+    id bigint DEFAULT (0)::bigint NOT NULL,
+    testproject_id bigint DEFAULT (0)::bigint NOT NULL,
     doc_id character varying(64) NOT NULL
 );
 
@@ -838,8 +838,8 @@ ALTER TABLE public.h5tl_req_specs OWNER TO tladmin;
 --
 
 CREATE TABLE h5tl_req_specs_revisions (
-    parent_id bigint DEFAULT 0::bigint NOT NULL,
-    id bigint DEFAULT 0::bigint NOT NULL,
+    parent_id bigint DEFAULT (0)::bigint NOT NULL,
+    id bigint DEFAULT (0)::bigint NOT NULL,
     revision integer DEFAULT 1 NOT NULL,
     doc_id character varying(64),
     name character varying(100),
@@ -862,14 +862,14 @@ ALTER TABLE public.h5tl_req_specs_revisions OWNER TO tladmin;
 --
 
 CREATE TABLE h5tl_req_versions (
-    id bigint DEFAULT 0::bigint NOT NULL,
+    id bigint DEFAULT (0)::bigint NOT NULL,
     version integer DEFAULT 1 NOT NULL,
     revision integer DEFAULT 1 NOT NULL,
     scope text,
     status character(1) DEFAULT 'V'::bpchar NOT NULL,
     type character(1) DEFAULT NULL::bpchar,
-    active smallint DEFAULT 1::smallint NOT NULL,
-    is_open smallint DEFAULT 1::smallint NOT NULL,
+    active smallint DEFAULT (1)::smallint NOT NULL,
+    is_open smallint DEFAULT (1)::smallint NOT NULL,
     expected_coverage integer DEFAULT 1 NOT NULL,
     author_id bigint,
     creation_ts timestamp without time zone DEFAULT now() NOT NULL,
@@ -921,8 +921,8 @@ ALTER SEQUENCE h5tl_reqmgrsystems_id_seq OWNED BY h5tl_reqmgrsystems.id;
 --
 
 CREATE TABLE h5tl_requirements (
-    id bigint DEFAULT 0::bigint NOT NULL,
-    srs_id bigint DEFAULT 0::bigint NOT NULL,
+    id bigint DEFAULT (0)::bigint NOT NULL,
+    srs_id bigint DEFAULT (0)::bigint NOT NULL,
     req_doc_id character varying(64) NOT NULL
 );
 
@@ -968,10 +968,10 @@ ALTER SEQUENCE h5tl_rights_id_seq OWNED BY h5tl_rights.id;
 
 CREATE TABLE h5tl_risk_assignments (
     id bigint NOT NULL,
-    testplan_id bigint DEFAULT 0::bigint NOT NULL,
-    node_id bigint DEFAULT 0::bigint NOT NULL,
-    risk smallint DEFAULT 2::smallint NOT NULL,
-    importance smallint DEFAULT 2::smallint NOT NULL
+    testplan_id bigint DEFAULT (0)::bigint NOT NULL,
+    node_id bigint DEFAULT (0)::bigint NOT NULL,
+    risk smallint DEFAULT (2)::smallint NOT NULL,
+    importance smallint DEFAULT (2)::smallint NOT NULL
 );
 
 
@@ -1049,21 +1049,21 @@ ALTER SEQUENCE h5tl_roles_id_seq OWNED BY h5tl_roles.id;
 --
 
 CREATE TABLE h5tl_tcversions (
-    id bigint DEFAULT 0::bigint NOT NULL,
+    id bigint DEFAULT (0)::bigint NOT NULL,
     tc_external_id integer,
     version integer DEFAULT 1 NOT NULL,
     layout integer DEFAULT 1 NOT NULL,
     status integer DEFAULT 1 NOT NULL,
     summary text,
     preconditions text,
-    importance smallint DEFAULT 2::smallint NOT NULL,
+    importance smallint DEFAULT (2)::smallint NOT NULL,
     author_id bigint,
     creation_ts timestamp without time zone DEFAULT now() NOT NULL,
     updater_id bigint,
     modification_ts timestamp without time zone,
-    active smallint DEFAULT 1::smallint NOT NULL,
-    is_open smallint DEFAULT 1::smallint NOT NULL,
-    execution_type smallint DEFAULT 1::smallint NOT NULL,
+    active smallint DEFAULT (1)::smallint NOT NULL,
+    is_open smallint DEFAULT (1)::smallint NOT NULL,
+    execution_type smallint DEFAULT (1)::smallint NOT NULL,
     estimated_exec_duration numeric(6,2)
 );
 
@@ -1089,12 +1089,12 @@ ALTER TABLE public.h5tl_tcases_active OWNER TO tladmin;
 --
 
 CREATE TABLE h5tl_tcsteps (
-    id bigint DEFAULT 0::bigint NOT NULL,
+    id bigint DEFAULT (0)::bigint NOT NULL,
     step_number integer DEFAULT 1 NOT NULL,
     actions text,
     expected_results text,
-    active smallint DEFAULT 1::smallint NOT NULL,
-    execution_type smallint DEFAULT 1::smallint NOT NULL
+    active smallint DEFAULT (1)::smallint NOT NULL,
+    execution_type smallint DEFAULT (1)::smallint NOT NULL
 );
 
 
@@ -1137,8 +1137,8 @@ ALTER TABLE public.h5tl_tcversions_last_active OWNER TO tladmin;
 --
 
 CREATE TABLE h5tl_testcase_keywords (
-    testcase_id bigint DEFAULT 0::bigint NOT NULL,
-    keyword_id bigint DEFAULT 0::bigint NOT NULL
+    testcase_id bigint DEFAULT (0)::bigint NOT NULL,
+    keyword_id bigint DEFAULT (0)::bigint NOT NULL
 );
 
 
@@ -1152,7 +1152,7 @@ CREATE TABLE h5tl_testcase_relations (
     id bigint NOT NULL,
     source_id integer DEFAULT 0 NOT NULL,
     destination_id integer DEFAULT 0 NOT NULL,
-    relation_type smallint DEFAULT 1::smallint NOT NULL,
+    relation_type smallint DEFAULT (1)::smallint NOT NULL,
     author_id bigint,
     creation_ts timestamp without time zone DEFAULT now() NOT NULL
 );
@@ -1187,8 +1187,8 @@ ALTER SEQUENCE h5tl_testcase_relations_id_seq OWNED BY h5tl_testcase_relations.i
 
 CREATE TABLE h5tl_testplan_platforms (
     id bigint NOT NULL,
-    testplan_id bigint DEFAULT 0::bigint NOT NULL,
-    platform_id bigint DEFAULT 0::bigint NOT NULL
+    testplan_id bigint DEFAULT (0)::bigint NOT NULL,
+    platform_id bigint DEFAULT (0)::bigint NOT NULL
 );
 
 
@@ -1221,11 +1221,11 @@ ALTER SEQUENCE h5tl_testplan_platforms_id_seq OWNED BY h5tl_testplan_platforms.i
 
 CREATE TABLE h5tl_testplan_tcversions (
     id bigint NOT NULL,
-    testplan_id bigint DEFAULT 0::bigint NOT NULL,
-    tcversion_id bigint DEFAULT 0::bigint NOT NULL,
-    platform_id bigint DEFAULT 0::bigint NOT NULL,
+    testplan_id bigint DEFAULT (0)::bigint NOT NULL,
+    tcversion_id bigint DEFAULT (0)::bigint NOT NULL,
+    platform_id bigint DEFAULT (0)::bigint NOT NULL,
     node_order bigint DEFAULT 1 NOT NULL,
-    urgency smallint DEFAULT 2::smallint NOT NULL,
+    urgency smallint DEFAULT (2)::smallint NOT NULL,
     author_id bigint,
     creation_ts timestamp without time zone DEFAULT now() NOT NULL
 );
@@ -1259,12 +1259,12 @@ ALTER SEQUENCE h5tl_testplan_tcversions_id_seq OWNED BY h5tl_testplan_tcversions
 --
 
 CREATE TABLE h5tl_testplans (
-    id bigint DEFAULT 0::bigint NOT NULL,
-    testproject_id bigint DEFAULT 0::bigint NOT NULL,
+    id bigint DEFAULT (0)::bigint NOT NULL,
+    testproject_id bigint DEFAULT (0)::bigint NOT NULL,
     notes text,
-    active smallint DEFAULT 1::smallint NOT NULL,
-    is_open smallint DEFAULT 1::smallint NOT NULL,
-    is_public smallint DEFAULT 1::smallint NOT NULL,
+    active smallint DEFAULT (1)::smallint NOT NULL,
+    is_open smallint DEFAULT (1)::smallint NOT NULL,
+    is_public smallint DEFAULT (1)::smallint NOT NULL,
     api_key character varying(64) DEFAULT (md5((random())::text) || md5((random())::text)) NOT NULL
 );
 
@@ -1276,8 +1276,8 @@ ALTER TABLE public.h5tl_testplans OWNER TO tladmin;
 --
 
 CREATE TABLE h5tl_testproject_issuetracker (
-    testproject_id bigint DEFAULT 0::bigint NOT NULL,
-    issuetracker_id bigint DEFAULT 0::bigint NOT NULL
+    testproject_id bigint DEFAULT (0)::bigint NOT NULL,
+    issuetracker_id bigint DEFAULT (0)::bigint NOT NULL
 );
 
 
@@ -1288,8 +1288,8 @@ ALTER TABLE public.h5tl_testproject_issuetracker OWNER TO tladmin;
 --
 
 CREATE TABLE h5tl_testproject_reqmgrsystem (
-    testproject_id bigint DEFAULT 0::bigint NOT NULL,
-    reqmgrsystem_id bigint DEFAULT 0::bigint NOT NULL
+    testproject_id bigint DEFAULT (0)::bigint NOT NULL,
+    reqmgrsystem_id bigint DEFAULT (0)::bigint NOT NULL
 );
 
 
@@ -1300,19 +1300,19 @@ ALTER TABLE public.h5tl_testproject_reqmgrsystem OWNER TO tladmin;
 --
 
 CREATE TABLE h5tl_testprojects (
-    id bigint DEFAULT 0::bigint NOT NULL,
+    id bigint DEFAULT (0)::bigint NOT NULL,
     notes text,
     color character varying(12) DEFAULT '#9BD'::character varying NOT NULL,
-    active smallint DEFAULT 1::smallint NOT NULL,
-    option_reqs smallint DEFAULT 0::smallint NOT NULL,
-    option_priority smallint DEFAULT 0::smallint NOT NULL,
-    option_automation smallint DEFAULT 0::smallint NOT NULL,
+    active smallint DEFAULT (1)::smallint NOT NULL,
+    option_reqs smallint DEFAULT (0)::smallint NOT NULL,
+    option_priority smallint DEFAULT (0)::smallint NOT NULL,
+    option_automation smallint DEFAULT (0)::smallint NOT NULL,
     options text,
     prefix character varying(16) NOT NULL,
     tc_counter integer DEFAULT 0 NOT NULL,
-    is_public smallint DEFAULT 1::smallint NOT NULL,
-    issue_tracker_enabled smallint DEFAULT 0::smallint NOT NULL,
-    reqmgr_integration_enabled smallint DEFAULT 0::smallint NOT NULL,
+    is_public smallint DEFAULT (1)::smallint NOT NULL,
+    issue_tracker_enabled smallint DEFAULT (0)::smallint NOT NULL,
+    reqmgr_integration_enabled smallint DEFAULT (0)::smallint NOT NULL,
     api_key character varying(64) DEFAULT (md5((random())::text) || md5((random())::text)) NOT NULL
 );
 
@@ -1324,7 +1324,7 @@ ALTER TABLE public.h5tl_testprojects OWNER TO tladmin;
 --
 
 CREATE TABLE h5tl_testsuites (
-    id bigint DEFAULT 0::bigint NOT NULL,
+    id bigint DEFAULT (0)::bigint NOT NULL,
     details text
 );
 
@@ -1342,7 +1342,7 @@ CREATE TABLE h5tl_text_templates (
     template_data text,
     author_id bigint,
     creation_ts timestamp without time zone DEFAULT now() NOT NULL,
-    is_public smallint DEFAULT 0::smallint NOT NULL
+    is_public smallint DEFAULT (0)::smallint NOT NULL
 );
 
 
@@ -1419,8 +1419,8 @@ ALTER SEQUENCE h5tl_transactions_id_seq OWNED BY h5tl_transactions.id;
 
 CREATE TABLE h5tl_user_assignments (
     id bigint NOT NULL,
-    type bigint DEFAULT 0::bigint NOT NULL,
-    feature_id bigint DEFAULT 0::bigint NOT NULL,
+    type bigint DEFAULT (0)::bigint NOT NULL,
+    feature_id bigint DEFAULT (0)::bigint NOT NULL,
     user_id bigint,
     build_id bigint,
     deadline_ts timestamp without time zone DEFAULT (now() + '10 days'::interval) NOT NULL,
@@ -1535,13 +1535,13 @@ CREATE TABLE h5tl_users (
     id bigint NOT NULL,
     login character varying(30) DEFAULT ''::character varying NOT NULL,
     password character varying(32) DEFAULT ''::character varying NOT NULL,
-    role_id smallint DEFAULT 0::smallint NOT NULL,
+    role_id smallint DEFAULT (0)::smallint NOT NULL,
     email character varying(100) DEFAULT ''::character varying NOT NULL,
     first character varying(30) DEFAULT ''::character varying NOT NULL,
     last character varying(30) DEFAULT ''::character varying NOT NULL,
     locale character varying(10) DEFAULT 'en_GB'::character varying NOT NULL,
     default_testproject_id integer,
-    active smallint DEFAULT 1::smallint NOT NULL,
+    active smallint DEFAULT (1)::smallint NOT NULL,
     script_key character varying(32),
     cookie_string character varying(64) DEFAULT ''::character varying NOT NULL,
     auth_method character varying(10) DEFAULT ''::character varying
@@ -1832,6 +1832,10 @@ SELECT pg_catalog.setval('h5tl_attachments_id_seq', 1, true);
 --
 
 COPY h5tl_builds (id, testplan_id, name, notes, active, is_open, author_id, creation_ts, release_date, closed_on_date) FROM stdin;
+1	43	29301aa03	<p>\r\n\tfor 1.0</p>\r\n	1	1	\N	2015-08-03 03:29:52	2015-07-31	\N
+2	42	ef302022	<p>\r\n\tfor 1.0</p>\r\n	1	1	\N	2015-08-03 03:30:39	2015-07-29	\N
+3	42	2849201		1	1	\N	2015-08-03 03:42:08	2015-08-04	\N
+4	2083	1.0		1	1	\N	2015-08-19 08:39:36	\N	\N
 \.
 
 
@@ -1855,6 +1859,11 @@ COPY h5tl_cfield_build_design_values (field_id, node_id, value) FROM stdin;
 --
 
 COPY h5tl_cfield_design_values (field_id, node_id, value) FROM stdin;
+1	17	Telephony
+1	35	Media
+1	45	Telephony
+1	22	Telephony
+1	50	Telephony
 \.
 
 
@@ -1871,6 +1880,8 @@ COPY h5tl_cfield_execution_values (field_id, execution_id, testplan_id, tcversio
 --
 
 COPY h5tl_cfield_node_types (field_id, node_type_id) FROM stdin;
+1	3
+4	3
 \.
 
 
@@ -1887,6 +1898,8 @@ COPY h5tl_cfield_testplan_design_values (field_id, link_id, value) FROM stdin;
 --
 
 COPY h5tl_cfield_testprojects (field_id, testproject_id, display_order, active, location, required, required_on_design, required_on_execution) FROM stdin;
+1	2	1	1	1	0	0	0
+4	3	1	1	1	0	0	0
 \.
 
 
@@ -1912,7 +1925,7 @@ SELECT pg_catalog.setval('h5tl_custom_fields_id_seq', 4, true);
 --
 
 COPY h5tl_db_version (version, upgrade_ts, notes) FROM stdin;
-DB 1.9.13	2015-08-20 16:18:11.54923	TestLink 1.9.13
+DB 1.9.13	2015-07-31 15:31:45.296503	TestLink 1.9.13
 \.
 
 
@@ -1921,8 +1934,6 @@ DB 1.9.13	2015-08-20 16:18:11.54923	TestLink 1.9.13
 --
 
 COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, activity, object_id, object_type) FROM stdin;
-1	1	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:5:"admin";i:1;s:14:"175.180.135.40";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440087556	LOGIN	1	users
-2	2	2	GUI	No project found: Assume a new installation and redirect to create it	1440087557	\N	0	\N
 82	27	32	GUI	string 'testcases_created_per_user' is not localized for locale 'zh_CN'  - using en_GB	1438361993	LOCALIZATION	0	\N
 87	29	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:18:"audit_login_failed";s:6:"params";a:2:{i:0;s:5:"admin";i:1;s:15:"122.116.168.126";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1438513408	LOGIN_FAILED	1	users
 89	31	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:5:"admin";i:1;s:15:"122.116.168.126";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1438513425	LOGIN	1	users
@@ -2026,7 +2037,6 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 176	69	2	GUI	E_NOTICE\nUndefined property: stdClass::$modification_date_from - in /usr/share/nginx/html/testlink/gui/templates_c/ede35a624897e7bdfd0ad04663b50df605be653f.file.tcSearchGUI.inc.tpl.php - Line 209	1438569929	PHP	0	\N
 177	69	2	GUI	E_NOTICE\nUndefined property: stdClass::$modification_date_to - in /usr/share/nginx/html/testlink/gui/templates_c/ede35a624897e7bdfd0ad04663b50df605be653f.file.tcSearchGUI.inc.tpl.php - Line 230	1438569929	PHP	0	\N
 178	69	2	GUI	E_NOTICE\nUndefined property: stdClass::$jolly - in /usr/share/nginx/html/testlink/gui/templates_c/ede35a624897e7bdfd0ad04663b50df605be653f.file.tcSearchGUI.inc.tpl.php - Line 254	1438569929	PHP	0	\N
-334	125	32	GUI	string 'system_config' is not localized for locale 'en_US'  - using en_GB	1438665439	LOCALIZATION	0	\N
 179	69	2	GUI	E_NOTICE\nUndefined property: stdClass::$filter_by - in /usr/share/nginx/html/testlink/gui/templates_c/ede35a624897e7bdfd0ad04663b50df605be653f.file.tcSearchGUI.inc.tpl.php - Line 262	1438569929	PHP	0	\N
 415	162	32	GUI	string 'not_linked' is not localized for locale 'zh_CN'  - using en_GB	1438671344	LOCALIZATION	0	\N
 180	69	2	GUI	E_NOTICE\nUndefined property: stdClass::$filter_by - in /usr/share/nginx/html/testlink/gui/templates_c/ede35a624897e7bdfd0ad04663b50df605be653f.file.tcSearchGUI.inc.tpl.php - Line 301	1438569929	PHP	0	\N
@@ -2183,6 +2193,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 331	122	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:5:"enpei";i:1;s:14:"60.251.178.163";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1438665362	LOGIN	4	users
 332	123	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:18:"audit_login_failed";s:6:"params";a:2:{i:0;s:5:"admin";i:1;s:14:"60.251.178.163";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1438665430	LOGIN_FAILED	1	users
 333	124	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:4:"eric";i:1;s:14:"60.251.178.163";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1438665438	LOGIN	6	users
+334	125	32	GUI	string 'system_config' is not localized for locale 'en_US'  - using en_GB	1438665439	LOCALIZATION	0	\N
 335	125	32	GUI	string 'link_report_test_cases_created_per_user' is not localized for locale 'en_US'  - using en_GB	1438665439	LOCALIZATION	0	\N
 336	125	32	GUI	string 'href_issuetracker_management' is not localized for locale 'en_US'  - using en_GB	1438665439	LOCALIZATION	0	\N
 337	125	32	GUI	string 'href_reqmgrsystem_management' is not localized for locale 'en_US'  - using en_GB	1438665439	LOCALIZATION	0	\N
@@ -2693,7 +2704,6 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 843	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1439965972	PHP	0	\N
 844	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439965972	PHP	0	\N
 845	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439965972	PHP	0	\N
-1163	485	32	GUI	string 'testCaseStatus_reviewInProgress' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
 846	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439965972	PHP	0	\N
 847	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439965972	PHP	0	\N
 848	350	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439965972	PHP	0	\N
@@ -2721,7 +2731,6 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 870	355	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 54	1439969734	PHP	0	\N
 871	355	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 124	1439969734	PHP	0	\N
 872	355	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 136	1439969734	PHP	0	\N
-1164	485	32	GUI	string 'testCaseStatus_rework' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
 873	355	2	GUI	E_NOTICE\nUndefined property: stdClass::$form_token - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 161	1439969734	PHP	0	\N
 874	356	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 44	1439969986	PHP	0	\N
 875	356	2	GUI	E_NOTICE\nUndefined property: stdClass::$direct_link - in /usr/share/nginx/html/testlink/gui/templates_c/3b9ec2e7e9cf9a3611b71adf3ee2708c9d148169.file.containerViewTestSuiteTextButtons.inc.tpl.php - Line 45	1439969986	PHP	0	\N
@@ -2804,7 +2813,6 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 951	386	32	GUI	string 'href_issuetracker_management' is not localized for locale 'zh_CN'  - using en_GB	1439993576	LOCALIZATION	0	\N
 952	386	32	GUI	string 'href_reqmgrsystem_management' is not localized for locale 'zh_CN'  - using en_GB	1439993576	LOCALIZATION	0	\N
 953	387	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:11:"xueqin.shen";i:1;s:11:"103.50.11.4";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440032654	LOGIN	8	users
-1165	485	32	GUI	string 'testCaseStatus_obsolete' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
 954	388	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:75:"Make a call when press Call key for the first phone number in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440033028	ASSIGN	2118	nodes_hierarchy
 955	388	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:75:"Make a call when press Call key for the first phone number in Contact List.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440033028	ASSIGN	2118	nodes_hierarchy
 956	389	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:64:"Send message when press CSK for phone number in Contact Details.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440033766	ASSIGN	2121	nodes_hierarchy
@@ -2907,7 +2915,6 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 1054	443	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440064466	PHP	0	\N
 1055	444	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:46:"[Gallery][Grid View] Share single photo via BT";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064525	ASSIGN	2285	nodes_hierarchy
 1056	444	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:46:"[Gallery][Grid View] Share single photo via BT";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064525	ASSIGN	2285	nodes_hierarchy
-1166	485	32	GUI	string 'testCaseStatus_future' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
 1057	445	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Acceptance Test";i:1;s:54:"Add item for Address multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064579	ASSIGN	2293	nodes_hierarchy
 1058	445	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:25:"audit_keyword_assigned_tc";s:6:"params";a:2:{i:0;s:15:"Functional Test";i:1;s:54:"Add item for Address multiple times in Contact Editor.";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440064579	ASSIGN	2293	nodes_hierarchy
 1059	445	2	GUI	E_WARNING\narray_merge(): Argument #2 is not an array - in /usr/share/nginx/html/testlink/lib/functions/tree.class.php - Line 737	1440064579	PHP	0	\N
@@ -2954,254 +2961,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 1100	466	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:12:"peipei.cheng";i:1;s:11:"103.50.11.4";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440066873	LOGIN	7	users
 1101	467	32	GUI	string 'testsuite_not_found' is not localized for locale 'en_GB' 	1440068088	LOCALIZATION	0	\N
 1102	468	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:12:"peipei.cheng";i:1;s:11:"103.50.11.4";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440068253	LOGIN	7	users
-1103	469	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:17:"audit_user_logout";s:6:"params";a:1:{i:0;s:5:"admin";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440088873	LOGOUT	1	users
-1104	470	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:11:"owen.ouyang";i:1;s:14:"175.180.135.40";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440089876	LOGIN	2	users
-1105	471	32	GUI	string 'system_config' is not localized for locale 'zh_CN'  - using en_GB	1440089876	LOCALIZATION	0	\N
-1106	471	32	GUI	string 'link_report_test_cases_created_per_user' is not localized for locale 'zh_CN'  - using en_GB	1440089876	LOCALIZATION	0	\N
-1107	471	32	GUI	string 'href_issuetracker_management' is not localized for locale 'zh_CN'  - using en_GB	1440089876	LOCALIZATION	0	\N
-1108	471	32	GUI	string 'href_reqmgrsystem_management' is not localized for locale 'zh_CN'  - using en_GB	1440089876	LOCALIZATION	0	\N
-1109	472	32	GUI	string 'btn_manage_user' is not localized for locale 'zh_CN'  - using en_GB	1440089900	LOCALIZATION	0	\N
-1110	472	32	GUI	string 'demo_special_user' is not localized for locale 'zh_CN'  - using en_GB	1440089900	LOCALIZATION	0	\N
-1111	473	32	GUI	string 'login' is not localized for locale 'zh_CN'  - using en_GB	1440090599	LOCALIZATION	0	\N
-1112	473	32	GUI	string 'demo_usage' is not localized for locale 'zh_CN'  - using en_GB	1440090599	LOCALIZATION	0	\N
-1113	473	32	GUI	string 'demo_mode_suggested_user' is not localized for locale 'zh_CN'  - using en_GB	1440090599	LOCALIZATION	0	\N
-1114	473	32	GUI	string 'demo_mode_suggested_password' is not localized for locale 'zh_CN'  - using en_GB	1440090599	LOCALIZATION	0	\N
-1115	474	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:17:"audit_user_logout";s:6:"params";a:1:{i:0;s:11:"owen.ouyang";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440090622	LOGOUT	2	users
-1116	475	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:5:"admin";i:1;s:14:"175.180.135.40";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440090627	LOGIN	1	users
-1117	476	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:20:"audit_user_pwd_saved";s:6:"params";a:1:{i:0;s:5:"admin";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440090645	SAVE	1	users
-1118	477	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:5:"admin";i:1;s:14:"175.180.135.40";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440091618	LOGIN	1	users
-1119	478	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:11:"owen.ouyang";i:1;s:14:"175.180.135.40";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440113111	LOGIN	2	users
-1120	479	32	GUI	string 'testsuite_not_found' is not localized for locale 'zh_CN' 	1440113111	LOCALIZATION	0	\N
-1121	480	32	GUI	string 'btn_testcases_table_view' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1122	480	32	GUI	string 'btn_gen_test_spec' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1123	480	32	GUI	string 'btn_gen_test_spec_new_window' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1124	480	32	GUI	string 'btn_gen_test_spec_word' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1125	480	32	GUI	string 'btn_gen_test_suite_spec_word' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1126	480	32	GUI	string 'btn_gen_test_suite_spec' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1127	480	32	GUI	string 'btn_gen_test_suite_spec_new_window' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1128	480	32	GUI	string 'btn_create_from_issue_xml' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1129	480	32	GUI	string 'attachment_title' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1130	480	32	GUI	string 'display_inline' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1131	480	32	GUI	string 'display_inline_string' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1132	481	32	GUI	string 'without_keywords' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1133	481	32	GUI	string 'not_linked' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1134	481	32	GUI	string 'testCaseStatus_draft' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1135	481	32	GUI	string 'testCaseStatus_readyForReview' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1136	481	32	GUI	string 'testCaseStatus_reviewInProgress' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1137	481	32	GUI	string 'testCaseStatus_rework' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1138	481	32	GUI	string 'testCaseStatus_obsolete' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1139	481	32	GUI	string 'testCaseStatus_future' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1140	481	32	GUI	string 'testCaseStatus_final' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1141	481	32	GUI	string 'filter_active_inactive' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1142	481	32	GUI	string 'hint_list_of_bugs' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1143	481	32	GUI	string 'bugs_on_context' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1144	481	32	GUI	string 'btn_export_testplan_tree_for_results' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1145	481	32	GUI	string 'tester_works_with_settings' is not localized for locale 'zh_CN'  - using en_GB	1440113112	LOCALIZATION	0	\N
-1146	482	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:11:"owen.ouyang";i:1;s:14:"175.180.135.40";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440113128	LOGIN	2	users
-1147	483	32	GUI	string 'testsuite_not_found' is not localized for locale 'zh_CN' 	1440113128	LOCALIZATION	0	\N
-1148	484	32	GUI	string 'btn_testcases_table_view' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1149	484	32	GUI	string 'btn_gen_test_spec' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1150	484	32	GUI	string 'btn_gen_test_spec_new_window' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1151	484	32	GUI	string 'btn_gen_test_spec_word' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1152	484	32	GUI	string 'btn_gen_test_suite_spec_word' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1153	484	32	GUI	string 'btn_gen_test_suite_spec' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1154	484	32	GUI	string 'btn_gen_test_suite_spec_new_window' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1155	484	32	GUI	string 'btn_create_from_issue_xml' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1156	484	32	GUI	string 'attachment_title' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1157	484	32	GUI	string 'display_inline' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1158	484	32	GUI	string 'display_inline_string' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1159	485	32	GUI	string 'without_keywords' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1160	485	32	GUI	string 'not_linked' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1161	485	32	GUI	string 'testCaseStatus_draft' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1162	485	32	GUI	string 'testCaseStatus_readyForReview' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1167	485	32	GUI	string 'testCaseStatus_final' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1168	485	32	GUI	string 'filter_active_inactive' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1169	485	32	GUI	string 'hint_list_of_bugs' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1170	485	32	GUI	string 'bugs_on_context' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1171	485	32	GUI	string 'btn_export_testplan_tree_for_results' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1172	485	32	GUI	string 'tester_works_with_settings' is not localized for locale 'zh_CN'  - using en_GB	1440113128	LOCALIZATION	0	\N
-1173	486	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440113254	PHP	0	\N
-1174	486	32	GUI	string 'parent_of' is not localized for locale 'zh_CN'  - using en_GB	1440113254	LOCALIZATION	0	\N
-1175	486	32	GUI	string 'child_of' is not localized for locale 'zh_CN'  - using en_GB	1440113254	LOCALIZATION	0	\N
-1176	486	32	GUI	string 'blocks' is not localized for locale 'zh_CN'  - using en_GB	1440113254	LOCALIZATION	0	\N
-1177	486	32	GUI	string 'depends' is not localized for locale 'zh_CN'  - using en_GB	1440113254	LOCALIZATION	0	\N
-1178	487	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440113257	PHP	0	\N
-1179	488	32	GUI	string 'system_config' is not localized for locale 'zh_CN'  - using en_GB	1440113279	LOCALIZATION	0	\N
-1180	488	32	GUI	string 'link_report_test_cases_created_per_user' is not localized for locale 'zh_CN'  - using en_GB	1440113279	LOCALIZATION	0	\N
-1181	488	32	GUI	string 'href_issuetracker_management' is not localized for locale 'zh_CN'  - using en_GB	1440113279	LOCALIZATION	0	\N
-1182	488	32	GUI	string 'href_reqmgrsystem_management' is not localized for locale 'zh_CN'  - using en_GB	1440113279	LOCALIZATION	0	\N
-1183	489	32	GUI	string 'search_important_notice' is not localized for locale 'zh_CN'  - using en_GB	1440113287	LOCALIZATION	0	\N
-1184	489	32	GUI	string 'edited_by' is not localized for locale 'zh_CN'  - using en_GB	1440113287	LOCALIZATION	0	\N
-1185	489	32	GUI	string 'created_by' is not localized for locale 'zh_CN'  - using en_GB	1440113287	LOCALIZATION	0	\N
-1186	489	32	GUI	string 'jolly_hint' is not localized for locale 'zh_CN'  - using en_GB	1440113287	LOCALIZATION	0	\N
-1187	489	32	GUI	string 'search_prefix_ignored' is not localized for locale 'zh_CN'  - using en_GB	1440113287	LOCALIZATION	0	\N
-1188	489	32	GUI	string 'jolly' is not localized for locale 'zh_CN'  - using en_GB	1440113287	LOCALIZATION	0	\N
-1189	490	32	GUI	string 'context_design' is not localized for locale 'zh_CN'  - using en_GB	1440113295	LOCALIZATION	0	\N
-1190	490	32	GUI	string 'context_exec' is not localized for locale 'zh_CN'  - using en_GB	1440113295	LOCALIZATION	0	\N
-1191	490	32	GUI	string 'context_testplan_design' is not localized for locale 'zh_CN'  - using en_GB	1440113295	LOCALIZATION	0	\N
-1192	490	32	GUI	string 'enabled_on_context' is not localized for locale 'zh_CN'  - using en_GB	1440113295	LOCALIZATION	0	\N
-1193	490	32	GUI	string 'display_on_exec' is not localized for locale 'zh_CN'  - using en_GB	1440113295	LOCALIZATION	0	\N
-1194	491	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440113309	PHP	0	\N
-1195	492	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440113311	PHP	0	\N
-1196	493	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440113313	PHP	0	\N
-1197	494	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440113314	PHP	0	\N
-1198	495	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440113314	PHP	0	\N
-1199	496	32	GUI	string 'th_issuetracker' is not localized for locale 'zh_CN'  - using en_GB	1440113351	LOCALIZATION	0	\N
-1200	496	32	GUI	string 'th_issuetracker_type' is not localized for locale 'zh_CN'  - using en_GB	1440113351	LOCALIZATION	0	\N
-1201	496	32	GUI	string 'alt_delete' is not localized for locale 'zh_CN'  - using en_GB	1440113351	LOCALIZATION	0	\N
-1202	496	32	GUI	string 'th_issuetracker_env' is not localized for locale 'zh_CN'  - using en_GB	1440113351	LOCALIZATION	0	\N
-1203	496	32	GUI	string 'check_bts_connection' is not localized for locale 'zh_CN'  - using en_GB	1440113351	LOCALIZATION	0	\N
-1204	496	32	GUI	string 'bts_check_ok' is not localized for locale 'zh_CN'  - using en_GB	1440113351	LOCALIZATION	0	\N
-1205	496	32	GUI	string 'bts_check_ko' is not localized for locale 'zh_CN'  - using en_GB	1440113351	LOCALIZATION	0	\N
-1206	496	32	GUI	string 'warning_delete' is not localized for locale 'zh_CN'  - using en_GB	1440113351	LOCALIZATION	0	\N
-1207	497	32	GUI	string 'available_test_projects' is not localized for locale 'zh_CN'  - using en_GB	1440113355	LOCALIZATION	0	\N
-1208	497	32	GUI	string 'active_integration' is not localized for locale 'zh_CN'  - using en_GB	1440113355	LOCALIZATION	0	\N
-1209	497	32	GUI	string 'inactive_integration' is not localized for locale 'zh_CN'  - using en_GB	1440113355	LOCALIZATION	0	\N
-1210	497	32	GUI	string 'btn_search_filter' is not localized for locale 'zh_CN'  - using en_GB	1440113355	LOCALIZATION	0	\N
-1211	497	32	GUI	string 'hint_like_search_on_name' is not localized for locale 'zh_CN'  - using en_GB	1440113355	LOCALIZATION	0	\N
-1212	497	32	GUI	string 'btn_reset_filter' is not localized for locale 'zh_CN'  - using en_GB	1440113355	LOCALIZATION	0	\N
-1213	497	32	GUI	string 'th_reqmgrsystem_short' is not localized for locale 'zh_CN'  - using en_GB	1440113355	LOCALIZATION	0	\N
-1214	497	32	GUI	string 'active_click_to_change' is not localized for locale 'zh_CN'  - using en_GB	1440113355	LOCALIZATION	0	\N
-1215	497	32	GUI	string 'inactive_click_to_change' is not localized for locale 'zh_CN'  - using en_GB	1440113355	LOCALIZATION	0	\N
-1216	497	32	GUI	string 'click_to_enable' is not localized for locale 'zh_CN'  - using en_GB	1440113355	LOCALIZATION	0	\N
-1217	497	32	GUI	string 'click_to_disable' is not localized for locale 'zh_CN'  - using en_GB	1440113355	LOCALIZATION	0	\N
-1218	498	32	GUI	string 'api_key' is not localized for locale 'zh_CN'  - using en_GB	1440113371	LOCALIZATION	0	\N
-1219	498	32	GUI	string 'testproject_issue_tracker_integration' is not localized for locale 'zh_CN'  - using en_GB	1440113371	LOCALIZATION	0	\N
-1220	498	32	GUI	string 'issue_tracker' is not localized for locale 'zh_CN'  - using en_GB	1440113371	LOCALIZATION	0	\N
-1221	498	32	GUI	string 'testproject_reqmgr_integration' is not localized for locale 'zh_CN'  - using en_GB	1440113371	LOCALIZATION	0	\N
-1222	498	32	GUI	string 'reqmgrsystem' is not localized for locale 'zh_CN'  - using en_GB	1440113371	LOCALIZATION	0	\N
-1223	498	32	GUI	string 'no_rms_defined' is not localized for locale 'zh_CN'  - using en_GB	1440113371	LOCALIZATION	0	\N
-1224	498	32	GUI	string 'no_issuetracker_defined' is not localized for locale 'zh_CN'  - using en_GB	1440113371	LOCALIZATION	0	\N
-1225	499	32	GUI	string 'access_public' is not localized for locale 'zh_CN'  - using en_GB	1440113381	LOCALIZATION	0	\N
-1226	499	2	GUI	E_NOTICE\nUndefined offset: 10 - in /usr/share/nginx/html/testlink-1.9.13/gui/templates_c/2fcc97f8dcf47efe496b06c4f4a1b76796201e90.file.usersAssign.tpl.php - Line 257	1440113381	PHP	0	\N
-1227	499	2	GUI	E_NOTICE\nTrying to get property of non-object - in /usr/share/nginx/html/testlink-1.9.13/gui/templates_c/2fcc97f8dcf47efe496b06c4f4a1b76796201e90.file.usersAssign.tpl.php - Line 257	1440113381	PHP	0	\N
-1228	500	32	GUI	string 'required' is not localized for locale 'zh_CN'  - using en_GB	1440113388	LOCALIZATION	0	\N
-1229	500	32	GUI	string 'btn_cfields_boolean_mgmt' is not localized for locale 'zh_CN'  - using en_GB	1440113388	LOCALIZATION	0	\N
-1230	501	32	GUI	string 'build_qty' is not localized for locale 'zh_CN'  - using en_GB	1440113439	LOCALIZATION	0	\N
-1231	501	32	GUI	string 'testcase_qty' is not localized for locale 'zh_CN'  - using en_GB	1440113439	LOCALIZATION	0	\N
-1232	501	32	GUI	string 'platform_qty' is not localized for locale 'zh_CN'  - using en_GB	1440113439	LOCALIZATION	0	\N
-1233	501	32	GUI	string 'testcase_number_help' is not localized for locale 'zh_CN'  - using en_GB	1440113439	LOCALIZATION	0	\N
-1234	501	32	GUI	string 'platform_number_help' is not localized for locale 'zh_CN'  - using en_GB	1440113439	LOCALIZATION	0	\N
-1235	501	32	GUI	string 'build_number_help' is not localized for locale 'zh_CN'  - using en_GB	1440113439	LOCALIZATION	0	\N
-1236	501	32	GUI	string 'assign_roles' is not localized for locale 'zh_CN'  - using en_GB	1440113439	LOCALIZATION	0	\N
-1237	502	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440113466	PHP	0	\N
-1238	503	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440113468	PHP	0	\N
-1239	504	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440113469	PHP	0	\N
-1240	505	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440113470	PHP	0	\N
-1241	506	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440113475	PHP	0	\N
-1242	507	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440113484	PHP	0	\N
-1243	508	32	GUI	string 'btn_manage_user' is not localized for locale 'zh_CN'  - using en_GB	1440113609	LOCALIZATION	0	\N
-1244	508	32	GUI	string 'demo_special_user' is not localized for locale 'zh_CN'  - using en_GB	1440113609	LOCALIZATION	0	\N
-1245	509	32	GUI	string 'demo_update_user_disabled' is not localized for locale 'zh_CN'  - using en_GB	1440113611	LOCALIZATION	0	\N
-1246	510	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:16:"audit_user_saved";s:6:"params";a:1:{i:0;s:11:"owen.ouyang";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440113621	SAVE	2	users
-1247	511	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:16:"audit_user_saved";s:6:"params";a:1:{i:0;s:11:"owen.ouyang";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440114009	SAVE	2	users
-1248	512	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:16:"audit_user_saved";s:6:"params";a:1:{i:0;s:11:"owen.ouyang";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440114100	SAVE	2	users
-1249	513	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:16:"audit_user_saved";s:6:"params";a:1:{i:0;s:11:"owen.ouyang";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440114125	SAVE	2	users
-1250	514	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:16:"audit_user_saved";s:6:"params";a:1:{i:0;s:11:"owen.ouyang";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440114162	SAVE	2	users
-1251	515	32	GUI	string 'navigator_add_remove_tcase_to_tplan' is not localized for locale 'zh_CN'  - using en_GB	1440114311	LOCALIZATION	0	\N
-1252	515	32	GUI	string 'format_pseudo_msword' is not localized for locale 'zh_CN'  - using en_GB	1440114311	LOCALIZATION	0	\N
-1253	515	32	GUI	string 'opt_displayVersion' is not localized for locale 'zh_CN'  - using en_GB	1440114311	LOCALIZATION	0	\N
-1254	515	32	GUI	string 'builds' is not localized for locale 'zh_CN'  - using en_GB	1440114311	LOCALIZATION	0	\N
-1330	583	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440124056	PHP	0	\N
-1255	516	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:11:"xueqin.shen";i:1;s:11:"103.50.11.4";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440118922	LOGIN	8	users
-1256	517	32	GUI	string 'testsuite_not_found' is not localized for locale 'en_GB' 	1440118928	LOCALIZATION	0	\N
-1257	518	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440118970	PHP	0	\N
-1258	519	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440118975	PHP	0	\N
-1259	520	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440118976	PHP	0	\N
-1260	521	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440118980	PHP	0	\N
-1261	522	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440118991	PHP	0	\N
-1262	523	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119023	PHP	0	\N
-1263	524	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119039	PHP	0	\N
-1264	525	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119040	PHP	0	\N
-1265	526	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119042	PHP	0	\N
-1266	527	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119102	PHP	0	\N
-1267	528	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119104	PHP	0	\N
-1268	529	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119104	PHP	0	\N
-1269	530	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119263	PHP	0	\N
-1270	531	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119264	PHP	0	\N
-1271	532	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119268	PHP	0	\N
-1272	533	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119277	PHP	0	\N
-1273	534	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119278	PHP	0	\N
-1274	535	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119280	PHP	0	\N
-1275	536	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119281	PHP	0	\N
-1276	537	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119282	PHP	0	\N
-1277	538	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119283	PHP	0	\N
-1278	539	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119284	PHP	0	\N
-1279	540	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119286	PHP	0	\N
-1280	541	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119286	PHP	0	\N
-1281	542	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119286	PHP	0	\N
-1282	543	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119437	PHP	0	\N
-1283	544	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119437	PHP	0	\N
-1284	545	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119439	PHP	0	\N
-1285	546	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119439	PHP	0	\N
-1286	547	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440119439	PHP	0	\N
-1287	548	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440121738	PHP	0	\N
-1288	549	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440121740	PHP	0	\N
-1289	550	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440121743	PHP	0	\N
-1290	551	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440121755	PHP	0	\N
-1291	552	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440121757	PHP	0	\N
-1292	553	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:11:"owen.ouyang";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440121930	LOGIN	2	users
-1293	554	32	GUI	string 'system_config' is not localized for locale 'zh_CN'  - using en_GB	1440121930	LOCALIZATION	0	\N
-1294	554	32	GUI	string 'link_report_test_cases_created_per_user' is not localized for locale 'zh_CN'  - using en_GB	1440121930	LOCALIZATION	0	\N
-1295	554	32	GUI	string 'href_issuetracker_management' is not localized for locale 'zh_CN'  - using en_GB	1440121930	LOCALIZATION	0	\N
-1296	554	32	GUI	string 'href_reqmgrsystem_management' is not localized for locale 'zh_CN'  - using en_GB	1440121930	LOCALIZATION	0	\N
-1297	555	32	GUI	string 'login' is not localized for locale 'zh_CN'  - using en_GB	1440121939	LOCALIZATION	0	\N
-1298	555	32	GUI	string 'demo_usage' is not localized for locale 'zh_CN'  - using en_GB	1440121939	LOCALIZATION	0	\N
-1299	555	32	GUI	string 'demo_mode_suggested_user' is not localized for locale 'zh_CN'  - using en_GB	1440121939	LOCALIZATION	0	\N
-1300	555	32	GUI	string 'demo_mode_suggested_password' is not localized for locale 'zh_CN'  - using en_GB	1440121939	LOCALIZATION	0	\N
-1301	556	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:9:"enpei.chu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440122162	LOGIN	4	users
-1302	557	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440122166	PHP	0	\N
-1303	558	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440122169	PHP	0	\N
-1304	559	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440122170	PHP	0	\N
-1305	560	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440122177	PHP	0	\N
-1306	561	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123001	PHP	0	\N
-1307	562	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123002	PHP	0	\N
-1308	563	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123045	PHP	0	\N
-1309	564	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123045	PHP	0	\N
-1310	565	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123047	PHP	0	\N
-1311	566	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123480	PHP	0	\N
-1312	567	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123481	PHP	0	\N
-1313	568	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123487	PHP	0	\N
-1314	569	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123502	PHP	0	\N
-1315	570	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123505	PHP	0	\N
-1316	571	2	GUI	E_NOTICE\nUndefined index: id - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 3559	1440123521	PHP	0	\N
-1317	571	2	GUI	E_NOTICE\nUndefined index: id - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 3559	1440123521	PHP	0	\N
-1318	571	2	GUI	E_NOTICE\nUndefined index: id - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 3559	1440123521	PHP	0	\N
-1319	572	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123535	PHP	0	\N
-1320	573	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123540	PHP	0	\N
-1321	574	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123602	PHP	0	\N
-1322	575	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123604	PHP	0	\N
-1323	576	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123605	PHP	0	\N
-1324	577	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123605	PHP	0	\N
-1325	578	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440123606	PHP	0	\N
-1326	579	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:12:"peipei.cheng";i:1;s:11:"103.50.11.4";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440124034	LOGIN	7	users
-1327	580	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440124045	PHP	0	\N
-1328	581	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440124050	PHP	0	\N
-1329	582	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440124052	PHP	0	\N
-1331	584	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440124062	PHP	0	\N
-1332	585	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440124063	PHP	0	\N
-1333	586	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440124064	PHP	0	\N
-1334	587	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440124070	PHP	0	\N
-1335	588	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440124072	PHP	0	\N
-1336	589	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440124080	PHP	0	\N
-1337	590	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440124081	PHP	0	\N
-1338	591	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440124082	PHP	0	\N
-1339	592	32	GUI	string 'testsuite_not_found' is not localized for locale 'en_GB' 	1440125852	LOCALIZATION	0	\N
-1340	593	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:17:"audit_user_logout";s:6:"params";a:1:{i:0;s:9:"enpei.chu";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440125854	LOGOUT	4	users
-1341	594	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:8:"reviewer";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440126243	LOGIN	10	users
-1342	595	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:17:"audit_user_logout";s:6:"params";a:1:{i:0;s:8:"reviewer";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440126331	LOGOUT	10	users
-1343	596	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:9:"enpei.chu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440126334	LOGIN	4	users
-1344	597	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440126340	PHP	0	\N
-1345	598	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440126572	PHP	0	\N
-1346	599	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:18:"audit_role_created";s:6:"params";a:1:{i:0;s:8:"reviewer";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440126619	CREATE	11	roles
-1347	600	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440126680	PHP	0	\N
-1348	601	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:17:"audit_user_logout";s:6:"params";a:1:{i:0;s:9:"enpei.chu";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440126720	LOGOUT	4	users
-1349	602	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:8:"reviewer";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440126725	LOGIN	10	users
-1350	603	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:17:"audit_user_logout";s:6:"params";a:1:{i:0;s:8:"reviewer";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440126764	LOGOUT	10	users
-1351	604	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:9:"enpei.chu";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440126783	LOGIN	4	users
-1352	605	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:12:"peipei.cheng";i:1;s:11:"103.50.11.4";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440127915	LOGIN	7	users
-1353	606	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440127944	PHP	0	\N
-1354	607	2	GUI	E_NOTICE\nUndefined property: stdClass::$relationSet - in /usr/share/nginx/html/testlink-1.9.13/lib/functions/testcase.class.php - Line 930	1440128331	PHP	0	\N
+1103	469	16	GUI	O:18:"tlMetaStringHelper":4:{s:5:"label";s:21:"audit_login_succeeded";s:6:"params";a:2:{i:0;s:5:"admin";i:1;s:15:"220.128.218.209";}s:13:"bDontLocalize";b:0;s:14:"bDontFireEvent";b:0;}	1440159923	LOGIN	1	users
 \.
 
 
@@ -3209,7 +2969,7 @@ COPY h5tl_events (id, transaction_id, log_level, source, description, fired_at, 
 -- Name: h5tl_events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_events_id_seq', 1354, true);
+SELECT pg_catalog.setval('h5tl_events_id_seq', 1103, true);
 
 
 --
@@ -3240,6 +3000,9 @@ SELECT pg_catalog.setval('h5tl_execution_tcsteps_id_seq', 1, false);
 --
 
 COPY h5tl_executions (id, build_id, tester_id, execution_ts, status, testplan_id, tcversion_id, tcversion_number, platform_id, execution_type, execution_duration, notes) FROM stdin;
+1	4	4	2015-08-19 08:40:44	p	2083	1288	2	0	1	13.00	
+2	4	4	2015-08-19 08:40:56	f	2083	1304	2	0	1	2.00	
+3	4	4	2015-08-19 08:41:06	b	2083	1311	2	0	1	5.00	
 \.
 
 
@@ -3285,6 +3048,23 @@ SELECT pg_catalog.setval('h5tl_issuetrackers_id_seq', 1, false);
 --
 
 COPY h5tl_keywords (id, keyword, testproject_id, notes) FROM stdin;
+1	Smoke Test	2	For smoke test
+2	Acceptance Test	2	For acceptance Test
+3	Functional Test	2	For Functional Test
+4	Performance Test	2	For Performance Test
+5	Power Test	2	For Power Test
+6	Endurance Test	2	For Endurance Test
+7	Security Test	2	For Security Test
+8	Localization Test	2	For Localization Test
+9	Smoke Test	3	Test cases with this keyword are for smoke test.
+10	Acceptance Test	3	Test cases with this keyword are for acceptance test.
+11	Functional Test	3	Test cases with this keyword are extra functional test cases derived from user stories or not. e.g. BT HFP that is not defined in any user story but QA still need to test it.
+12	Performance Test	3	Non-functional test cases with this keyword are for performance test.
+13	Power Test	3	Non-functional test cases with this keyword are for power test.
+14	Security Test	3	Non-functional test cases with this keyword are for security test.
+15	Stress Test	3	Non-functional test cases with this keyword are for stress test.
+16	Localization Test	3	Non-functional test cases with this keyword are for localization test.
+17	RAT	3	For release acceptance test cases, differ from acceptance test cases for user stories. Those are basic checklist from broader user flow point of view
 \.
 
 
@@ -5508,6 +5288,24 @@ SELECT pg_catalog.setval('h5tl_nodes_hierarchy_id_seq', 2352, true);
 --
 
 COPY h5tl_object_keywords (id, fk_id, fk_table, keyword_id) FROM stdin;
+9	9	nodes_hierarchy	1
+10	9	nodes_hierarchy	2
+11	9	nodes_hierarchy	3
+12	9	nodes_hierarchy	4
+13	9	nodes_hierarchy	5
+14	9	nodes_hierarchy	6
+15	9	nodes_hierarchy	7
+16	84	nodes_hierarchy	10
+17	85	nodes_hierarchy	10
+18	86	nodes_hierarchy	10
+20	1318	nodes_hierarchy	16
+22	1319	nodes_hierarchy	16
+25	2084	nodes_hierarchy	10
+26	2084	nodes_hierarchy	11
+27	2186	nodes_hierarchy	10
+28	2186	nodes_hierarchy	11
+29	2218	nodes_hierarchy	10
+30	2218	nodes_hierarchy	11
 \.
 
 
@@ -5523,6 +5321,9 @@ SELECT pg_catalog.setval('h5tl_object_keywords_id_seq', 30, true);
 --
 
 COPY h5tl_platforms (id, name, testproject_id, notes) FROM stdin;
+1	Woodduck 2	2	<p>\r\n\tWoodduck v2</p>
+2	Nexus 6	2	<p>\r\n\tReference phone nexus 6</p>
+3	Flame	2	<p>\r\n\tFlame</p>
 \.
 
 
@@ -5777,8 +5578,7 @@ COPY h5tl_role_rights (role_id, right_id) FROM stdin;
 9	25
 9	26
 9	27
-11	6
-11	7
+10	6
 \.
 
 
@@ -5794,7 +5594,7 @@ COPY h5tl_roles (id, description, notes) FROM stdin;
 7	tester	\N
 8	admin	\N
 9	leader	\N
-11	reviewer	<p>\r\n\tFor test case reviewer</p>
+10	reviewer	
 \.
 
 
@@ -5802,7 +5602,7 @@ COPY h5tl_roles (id, description, notes) FROM stdin;
 -- Name: h5tl_roles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_roles_id_seq', 11, true);
+SELECT pg_catalog.setval('h5tl_roles_id_seq', 10, true);
 
 
 --
@@ -7195,6 +6995,365 @@ COPY h5tl_tcsteps (id, step_number, actions, expected_results, active, execution
 --
 
 COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, preconditions, importance, author_id, creation_ts, updater_id, modification_ts, active, is_open, execution_type, estimated_exec_duration) FROM stdin;
+45	5	1	1	1	<p>\r\n\tCall Session Control Function</p>\r\n	<p>\r\n\tLTE network</p>\r\n	2	4	2015-08-03 03:12:34	4	2015-08-03 03:12:51	1	1	1	5.00
+22	2	1	1	1	<p>\r\n\tMake sure user can zoom in and out a website on browser</p>\r\n	<p>\r\n\tEither WiFi or Data call is established</p>\r\n	3	4	2015-08-03 02:41:00	4	2015-08-03 03:14:35	1	1	1	5.00
+17	1	1	1	1	<p>\r\n\tMake sure user can dial out a call and answered by another side</p>\r\n	<p>\r\n\tPrepare another DUT</p>\r\n	3	4	2015-08-03 02:38:15	4	2015-08-03 02:39:12	1	1	1	5.00
+50	6	1	1	1	<p>\r\n\ttest</p>\r\n		2	4	2015-08-03 06:14:53	\N	\N	1	1	1	\N
+52	7	1	1	1		<p>\r\n\tWifi environment with EAP-SIM/EAP-TTLS/EAP-PEAP/EAP-TLS enabled. Follow the steps in http://mzl.la/1w6Krqn.</p>\r\n	2	4	2015-08-03 07:16:21	4	2015-08-03 07:16:39	0	1	1	10.00
+73	8	1	1	1			2	4	2015-08-11 09:53:01	\N	\N	1	1	1	\N
+75	9	1	1	1			2	4	2015-08-11 09:55:05	\N	\N	1	1	1	\N
+28	3	1	1	1		<p>\r\n\tWifi environment with EAP-SIM/EAP-TTLS/EAP-PEAP/EAP-TLS enabled. Follow the steps in http://mzl.la/1w6Krqn.</p>\r\n	2	4	2015-08-03 02:44:51	4	2015-08-03 02:45:51	1	1	1	10.00
+77	10	1	1	1			2	4	2015-08-11 09:55:51	\N	\N	1	1	1	\N
+79	11	1	1	1			2	4	2015-08-11 09:56:31	\N	\N	1	1	1	\N
+81	12	1	1	1			2	4	2015-08-11 09:57:31	\N	\N	1	1	1	\N
+83	13	1	1	1			2	4	2015-08-11 09:58:46	\N	\N	1	1	1	\N
+88	1	1	1	1	<p>\r\n\tThe case is for the first way to launch Dialer app which is inputting a digit from keypad.</p>\r\n	<p>\r\n\t1. The feature phone is ready with SIM card.</p>\r\n	3	8	2015-08-17 02:19:24	8	2015-08-17 02:23:02	1	1	1	5.00
+97	3	1	1	1	<p>\r\n\tThe case is testing for the way to exit Dialer app by clearing a digit.</p>\r\n	<p>\r\n\t1. The feature phone is ready with SIM card.</p>\r\n<p>\r\n\t2. Press a digit from keypad.</p>\r\n	3	8	2015-08-17 03:02:48	8	2015-08-17 03:04:14	1	1	1	5.00
+35	4	1	1	1	<p>\r\n\tThis case is in order to measure the power consumption of Firefox OS while the sleep mode on/off.</p>\r\n	<p>\r\n\tYou need a power meter to run this case.</p>\r\n	1	4	2015-08-03 02:48:01	4	2015-08-03 02:49:40	1	1	1	30.00
+100	4	1	1	1	<p>\r\n\tThe case is for testing the way to exit Dialer app - by clearing +#* and back to the homescreen.</p>\r\n	<p>\r\n\t1. The feature phone is ready with SIM card.</p>\r\n<p>\r\n\t2. Press + or # or * from the keypad.</p>\r\n	3	8	2015-08-17 03:06:07	8	2015-08-17 03:10:37	1	1	1	5.00
+92	2	1	1	1	<p>\r\n\tThe case is testing for the second way to launch Dialer app by inputting +, #, * from keypad.</p>\r\n	<p>\r\n\t1. The feature phone is ready with SIM card.</p>\r\n	3	8	2015-08-17 02:50:58	8	2015-08-17 04:13:22	1	1	1	5.00
+113	6	1	1	1	 <p class="description">\n        <ul>\n<li>Media Specs: https://drive.google.com/file/d/0B6fkEC1pmwTid1d4R0JfZ2ZpQW8/view?usp=sharing  </li>\n<li>General UX Specs: https://mozilla.app.box.com/s/bcm3s5i2v6js5uk0ws3tsywse8bgncgo</li>\n</ul>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+118	7	1	1	1	 <p class="description">\n        <ul>\n<li>Media Specs: https://drive.google.com/file/d/0B6fkEC1pmwTid1d4R0JfZ2ZpQW8/view?usp=sharing  </li>\n<li>General UX Specs: https://mozilla.app.box.com/s/bcm3s5i2v6js5uk0ws3tsywse8bgncgo</li>\n</ul>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+133	9	1	1	1	 <p class="description">\n        <p>This test verifies the feature where the user can tap an area on the viewfinder to change focus to the tapped region.  (when using the back facing camera only)</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+143	10	1	1	1	 <p class="description">\n        <p>Verify the phone can detect presence of single or multiple faces and focus correctly</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+155	11	1	1	1	 <p class="description">\n        <p>Video recording should stop immediately when the user returns to the homescreen.</p>\n\n<p>Please see this issue:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1051172</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+160	12	1	1	1	 <p class="description">\n        <p>Verify that the size and alignment of the viewfinder change accordingly with different aspect ratio.</p>\n\n<p>Please see this issue:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=974119</p>\n\n<p>Please see this attachment as well:</p>\n\n<p>https://bug974119.bugzilla.mozilla.org/attachment.cgi?id=8377823</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+166	13	1	1	1	 <p class="description">\n        <p>Ensure user is able to utilize Facial Recognition and the tap to focus features appropriately with the Camera App.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+174	14	1	1	1	 <p class="description">\n        <p>Verify that the user can return to the Home screen after recording a video file. </p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1050751</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+181	15	1	1	1	 <p class="description">\n        <p>The user can select the same camera resolution without issue. </p>\n\n<p>Prerequisite:\nCreate a custom build using these steps:</p>\n\n<ol>\n<li><p>Uncommenting out the commented-out sections of the following file will enable the picture-size and video-resolution menu options:\nhttps://github.com/mozilla-b2g/gaia/blob/master/apps/camera/js/config/config.js#L361</p></li>\n<li><p>Once you make the change locally, you'll need to re- |make install-gaia| to push the changes to your test device</p></li>\n</ol>\n\n<p>Please see this issue:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1043705</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+186	16	1	1	1	 <p class="description">\n        <p>The flash does not go off until the shutter button is pressed when the flash mode is set to Auto and the camera is detecting a face.</p>\n\n<p>Pre-requisite: The testing is done in a low light environment, so the flash goes off when the picture is taken with the flash Auto mode.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1046115</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+125	8	1	1	1	<ul>\r\n\t<li>\r\n\t\tMedia Specs: https://drive.google.com/file/d/0B6fkEC1pmwTid1d4R0JfZ2ZpQW8/view?usp=sharing</li>\r\n\t<li>\r\n\t\tGeneral UX Specs: https://mozilla.app.box.com/s/bcm3s5i2v6js5uk0ws3tsywse8bgncgo</li>\r\n</ul>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:29:50	7	2015-08-19 05:40:31	1	1	1	\N
+345	35	1	1	1	 <p class="description">\n        <p>If the user is recording a video and receives an incoming call, the video should stop recording instantly. The audio of the incoming call should not be heard when previewing the video. </p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=995540</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+2281	354	1	1	1	<p>\r\n\tThe case is for testing add multiple Companys.</p>\r\n		3	8	2015-08-20 09:54:26	8	2015-08-20 09:55:38	1	1	1	5.00
+192	17	1	1	1	 <p class="description">\n        <p>Camera viewfinder preview should be smooth when moving the phone around. </p>\n\n<p>Prerequisite: </p>\n\n<p>So in order to change the resolution to 480p, we need to build custom gaia.  The steps are following:</p>\n\n<p>clone the gaia repo, and change the following file:\ngo into gaia/master/apps/camera/js/config/config.js, open it with text editor</p>\n\n<p>Go to ‘exclude’ property where it lists ‘1080p'.  add ‘720p’ in the list, save.</p>\n\n<p>build gaia with make reset-gaia command while the device is connected.  the newly built gaia will be pushed to the device.  Upon reboot, the camera will be defaulted to 480p.</p>\n\n<p>Please see this issue:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=988704</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+199	18	1	1	1	 <p class="description">\n        <p>The user should always be returned to the camera viewfinder. If the user is in the camera app previewing a picture, goes home and then reopens the app, they should be taken to the viewfinder so they can quickly take a picture.</p>\n\n<p>Please see this issue:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=988670</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+206	19	1	1	1	 <p class="description">\n        <p>Camera viewfinder displays properly after editing a photo in the gallery.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=989113</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+212	20	1	1	1	 <p class="description">\n        <p>When the user pans around the screen after zooming in on a photo in the Gallery app or in the preview mode in the Camera app, the screen is not swiped to the next photo.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=989361</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+221	21	1	1	1	 <p class="description">\n        <p>Verify that there is no noticeable frame rate decrease if user zooms in/out while recording video.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1030007</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+228	22	1	1	1	 <p class="description">\n        <p>The Camera app UI is displayed properly after cancelling to share a photo via Email.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1021583</p>\n\n<p>Prerequisite: Email account is not set up on the device. </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+238	23	1	1	1	 <p class="description">\n        <p>Preview mode UI looks correct and functions properly in Camera. </p>\n\n<p>Please see this issue:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=992393</p>\n\n<p>Please see the following attachments:</p>\n\n<p>https://bugzilla.mozilla.org/attachment.cgi?id=8405554</p>\n\n<p>https://bug992393.bugzilla.mozilla.org/attachment.cgi?id=8405554</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+254	24	1	1	1	 <p class="description">\n        <p>When HWC is enabled ensure that a memory leak does not occur in the b2g process when using the camcorder.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1029856</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+259	25	1	1	1	 <p class="description">\n        <p>Verify that there is a smooth transition animation when the user swipes through the photos in the Gallery app or in the preview mode in the Camera app.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=987569</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:50	\N	\N	1	1	1	\N
+268	26	1	1	1	 <p class="description">\n        <p>Verify that all sub menus are shown correctly when navigating through the Camera settings menu.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=985006</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+275	27	1	1	1	 <p class="description">\n        <p>The thumbnails in the camera app and the previews in the gallery should always match the captured photo.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1043307</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+282	28	1	1	1	 <p class="description">\n        <p>Verify the user can access the snapshot button on the camera and take pictures while on a phone call. </p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=989087</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+291	29	1	1	1	 <p class="description">\n        <p>The user can retake a photo and attach it successfully to a MMS. </p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=972136</p>\n\n<p>*Keep in the mind that the functionality has changed</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+302	30	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (105 chars) > 100 => has been truncated<br />\nOriginal name<br />\nAfter a video is recorded, a preview icon appears and the video is available in the galley and video apps<br />\n---- *** ----<br />\n <p class="description">\n        <p>After a video is recorded, a preview icon appears and the video is available in the galley and video apps.</p>\n\n<p>Please see these issues:</p>\n\n<p>https://bugzilla.mozilla.org/showbug.cgi?id=1037383 </p>\n\n<p>https://bugzilla.mozilla.org/showbug.cgi?id=945562</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+314	31	1	1	1	 <p class="description">\n        <p>The user can send a large video through a MMS in a reasonable time frame. </p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=976897</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+324	32	1	1	1			2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+337	33	1	1	1	 <p class="description">\n        <p>All strings on the 'Camera' screen are translated correctly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+340	34	1	1	1	 <p class="description">\n        <p>All strings on the 'Camera Error Page' screen are translated correctly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+587	76	1	1	1	 <p class="description">\n        <p>As a user, I want to tap the record button so that I can quickly start recording a video</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+352	36	1	1	1	 <p class="description">\n        <p>All strings on the 'Camera Scanning' screen are translated correctly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+357	37	1	1	1	 <p class="description">\n        <p>All strings on the 'Camera App - no SD card' screen are translated correctly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+361	38	1	1	1	 <p class="description">\n        <p>All strings on the 'Camera - SD card is full' screen are translated correctly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n<p>Pre-requisites: a Full SD card</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+365	39	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (102 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[Camera] When camera is invoked from another app a confirmation prompt is displayed after taking photo<br />\n---- *** ----<br />\n <p class="description">\n        <p>Test case created for Bug 870726 https://bugzilla.mozilla.org/show_bug.cgi?id=870726</p>\n\n<p>Prerequisites: An email account is configured on the phone.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+384	40	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (111 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[Camera] Launching the camera app from the lockscreen, shows the Geolocation message even with passcode lock on<br />\n---- *** ----<br />\n <p class="description">\n        <p>As a user, I want like to be informed by a UI-wide indicator when the geolocation (explicit) API is currently or recently in use by an open app, so that I can monitor use of sensitive APIs.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Geolocation option needs to be enabled in Settings.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+391	41	1	1	1	 <p class="description">\n        <p>The filmstrip preview at the top of the Camera app screen does not overlap with the take Picture button or switch camera mode button.</p>\n\n<h1>Pre-Requisistes: Have enough internal storage or room on an SD card to take and save a picture</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+396	42	1	1	1	 <p class="description">\n        <p>Verify that when camera is launched from Browser activities, camera is displaying properly when in landscape mode.</p>\n\n<p>Precondition : Mobile phone should be connected to internet</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+405	43	1	1	1	 <p class="description">\n        <p>While viewing the preview of a photo recently taken with the Camera app the toolbar options at the top of the screen should be easily visible. </p>\n\n<h1>Pre-requisites: Have available internal memory or an SD card so that pictures can be saved.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+411	44	1	1	1	 <p class="description">\n        <p>*Prerequisite: \nSD card is inserted in device\nScreen timeout option should be set</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+417	45	1	1	1	 <p class="description">\n        <p>Verify that the Video Recording start sound is not distorted. </p>\n\n<p>(Test using headphones as well as device speakers) </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+421	46	1	1	1	 <p class="description">\n        <p>The user will be able to attach a photo directly from the camera app while in a MMS.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+427	47	1	1	1	 <p class="description">\n        <p>This case tests camera whether it can record more than one hour video.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+432	48	1	1	1	 <p class="description">\n        <p>As a user, I want to tap the camera button while viewing saved photos/videos so that I can quickly go to live camera ("take a photo") mode</p>\n\n<p>Prerequisites: Have some photos/videos saved on device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+437	49	1	1	1	 <p class="description">\n        <p>As a user, I want to spread/pinch my fingers so that I can see zoom in and out to see more and fewer details of my saved photo</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+447	50	1	1	1	 <p class="description">\n        <p>As a user, I want to double-tap to zoom on a photo so that I can see more photo detail</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+457	51	1	1	1	 <p class="description">\n        <p>As a user I want to swipe left while previewing a video so that I can quickly view the next video</p>\n\n<p>Prerequisites: Have a few saved videos</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+461	52	1	1	1	 <p class="description">\n        <p>As a user I want to tap the gallery icon so that I can see all my photos and videos quickly</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+465	53	1	1	1	 <p class="description">\n        <p>As a user, when playback of my video is paused, I want to Tap on the the Garbage Icon so that I can quickly Delete my Video</p>\n\n<p>(Note: this test case is now in python marionette suite with Bug 1100390)</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+471	54	1	1	1	 <p class="description">\n        <p>As a user I want to see a warning when I am running out of storage space on my memory card so that I do not lose data or the opportunity to record new videos/take new pictures</p>\n\n<p>Prerequisites: Make sure you there is not much storage space free on your device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+475	55	1	1	1	 <p class="description">\n        <p>Media 64\nAs a user, I like to see flash (on, off, auto) as a camera setting.</p>\n\n<p>Version 0.5 Camera Spec:\nhttps://app.box.com/files/0/f/1211601585/1/f<em>11402480095\nhttps://bugzilla.mozilla.org/show</em>bug.cgi?id=933898</p>\n\n<p>Note: This feature can only be tested on devices that support flash functionality, such as the Flame device.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+480	56	1	1	1	 <p class="description">\n        <p>Media 64\nAs a user, I like to see flash (on, off, auto) as a camera setting.</p>\n\n<p>Version 0.5 Camera Spec:\nhttps://app.box.com/files/0/f/1211601585/1/f<em>11402480095\nhttps://bugzilla.mozilla.org/show</em>bug.cgi?id=933898</p>\n\n<p>Note: This feature can only be tested on devices that support flash functionality, such as the Flame device.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+486	57	1	1	1	 <p class="description">\n        <p>As a user, I want to double-tap to zoom on a photo so that I can see more photo detail.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+493	58	1	1	1	 <p class="description">\n        <p>As a user I want to swipe right while previewing a video so that I can quickly view the previous video</p>\n\n<p>Prerequisites: Have a few videos saved on device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+499	59	1	1	1	 <p class="description">\n        <p>When playback of my video is paused, tap on the back arrow so that I can quickly go to the Camera</p>\n\n<p>Pre-Req: (Video must be taken recently prior to test)</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+504	60	1	1	1	 <p class="description">\n        <p>As a user, when playback of my video is paused, I want to Tap on the Camera Icon in Gallery so that I can quickly switch to Photo Mode</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+510	61	1	1	1	 <p class="description">\n        <p>As a user, I want to tap the camera button while viewing saved photos/videos so that I can quickly go to live camera ("take a photo") mode.</p>\n\n<p>Prerequisites: </p>\n\n<h1>a. Have some photos/videos saved on device.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+515	62	1	1	1	 <p class="description">\n        <p>Media 64\nAs a user, I like to see flash (on, off, auto) as a camera setting.</p>\n\n<p>Version 0.5 Camera Spec:\nhttps://app.box.com/files/0/f/1211601585/1/f<em>11402480095\nhttps://bugzilla.mozilla.org/show</em>bug.cgi?id=933898</p>\n\n<p>Note: This feature can only be tested on devices that support flash functionality, such as the Flame device.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+520	63	1	1	1	 <p class="description">\n        <p>As a user I want to rotate the device to move to Landscape Mode so that I can view wider saved photos/videos more easily </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+525	64	1	1	1	 <p class="description">\n        <p>As a user I want to rotate the device to move to Portrait Mode so that I can view taller saved photos/videos more easily</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+530	65	1	1	1	 <p class="description">\n        <p>As a user I want to rotate the device to move to Portrait Mode so that I can take taller photos/videos more easily</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+535	66	1	1	1	 <p class="description">\n        <p>As a user if I don't exit the camera app before connecting to USB mass storage,I want the camera app to restart when I disconnect form USB mass storage so that I can quickly start using my camera again</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+540	67	1	1	1	 <p class="description">\n        <p>As a user I want a clear message displayed if I try to use the camera app while the phone is in USB mass storage mode so that I can decide whether to exit USB mass storage mode so I can use my camera immediately or let it continue</p>\n\n<p>Prerequisites: Set device in USB mass storage mode</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+544	68	1	1	1	 <p class="description">\n        <p>As a user I want a clear message displayed if I run out of storage while I am recording a video so that I know what has happened and can take corrective action (e.g. go to the gallery and delete photos,etc)</p>\n\n<p>Prerequisites: Have one device that has &lt; 10Mb free storage space </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+548	69	1	1	1	 <p class="description">\n        <p>As a user I want a clear message displayed if I try to start the camera app with a full memory card and can't use it so that I know to exit the application and either delete Photos/Videos in gallery or get another memory card (either of which allow me to start using the camera again)</p>\n\n<p>Prerequisites: \n* Insert a full memory card in device\n*  Make sure your device is set to store photos and videos on memory card</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+553	70	1	1	1	 <p class="description">\n        <p>As a user I want a clear message displayed if I need an external storage device to use my camera and don't have it inserted so that I can insert it and start using my camera</p>\n\n<p>Prerequisites: Make sure there is no memory card inserted in device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+556	71	1	1	1	 <p class="description">\n        <p>As a user I want to be access my photos and recorded videos by enabling USB Mass Storage mode so that I can save/archive my videos/photos to my PC.</p>\n\n<p>Prerequisites: </p>\n\n<h1>a. Have a few photos and videos stored on phone.</h1>\n\n<h1>b. USB mass storage must be enabled in Settings.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+563	72	1	1	1	 <p class="description">\n        <p>As a user, when playback of my video is paused, I want to press and hold to control jog dial or slider so that I can quickly seek to another place in the video stream.</p>\n\n<p>Prerequisites: Have at least one recorded video.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+570	73	1	1	1	 <p class="description">\n        <p>As a user I want to tap on the Garbage icon so that I can quickly delete my video.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+575	74	1	1	1	 <p class="description">\n        <p>As a user, I want to tap a playing video so that I can quickly pause the video and bring up the controls.</p>\n\n<p>Prerequisites: Have at least one recorded video on the device.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+582	75	1	1	1	 <p class="description">\n        <p>As a user I want to tap on the Play icon on top of a video so that I can easily play and view my video on my device.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+591	77	1	1	1	 <p class="description">\n        <p>As a user, I want to tap the camera icon so that I can quickly go to camera mode</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+595	78	1	1	1	 <p class="description">\n        <p>As a user, I want to swipe to the left while viewing a photo so that I can quickly see my next photo</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+600	79	1	1	1	 <p class="description">\n        <p>As a user, I want to spread/pinch my fingers so that I can see zoom in and out to see more and fewer details of my saved photo</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+606	80	1	1	1	 <p class="description">\n        <p>As a user, I want to swipe to the right while viewing a photo so that I can quickly see my previous photo</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+611	81	1	1	1	 <p class="description">\n        <p>As a user, when playback of my video is paused, I want to Tap on the Camera Icon so that I can quickly switch to Photo Mode.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+616	82	1	1	1			2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+624	83	1	1	1	 <p class="description">\n        <p>As a user I want to rotate the device to move to Landscape Mode so that I can take wider photos/videos more easily </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+629	84	1	1	1	 <p class="description">\n        <p>It must be possible to create a video using the camera.  The video output should be H.264.  It should be possible to play back the recording from the gallery.\nVideos are saved as ".3gp".</p>\n\n<p>Prerequisites: \nHave a micro SD card in the device.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+635	85	1	1	1	 <p class="description">\n        <p>As an user, I can Tap garbage to delete current photo.</p>\n\n<p>Prereqs:  you are in full screen photo view</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+640	86	1	1	1	 <p class="description">\n        <p>After taking a picture with the camera app, the user will be able to look at the newly created photo while still in the Camera app.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+645	87	1	1	1	 <p class="description">\n        <p>As a user I want to tap the gallery icon so that I can see all my photos and videos quickly</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+651	88	1	1	1	 <p class="description">\n        <p>The user will be able to close the preview of the newly taken photo in the top right by taping on the screen again.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+656	89	1	1	1			2	7	2015-08-18 08:29:51	\N	\N	1	1	1	\N
+662	90	1	1	1	 <p class="description">\n        <p>As a user I want to tap the video icon so that I can quickly switch to video mode.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=984730</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
+668	91	1	1	1	 <p class="description">\n        <p>As a user I want to tap the camera button so that I can quickly and easily take a photo.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
+672	92	1	1	1			2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
+678	93	1	1	1	 <p class="description">\n        <p>As a user, I want to see elapsed time on the stop button label so that I can see how long I have been recording my video.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
+683	94	1	1	1	 <p class="description">\n        <p>Verify that all pictures are taken at a default resolution.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
+689	95	1	1	1	 <p class="description">\n        <p>As a user, I want to Tap the HUD Camera flip button so that I can quickly switch between the front/back camera (dependent on hardware)</p>\n\n<p>Note: this feature is hardware-dependent and this functionality is present on the Flame device.</p>\n\n<p>Prerequisites: Camera is invoked.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
+695	96	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW, I should be able to open the camera application by single-tapping the camera button in the toolbar. If I choose to return to the Gallery app from the Camera app (via the Gallery button), I should be returned to the grid view at the position I started - if a new picture(s) was taken during my interaction with the Camera app, I should be placed at a position in the grid where my new picture is in view.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Have at least 1 photo on the SD card.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
+700	97	1	1	1	 <p class="description">\n        <p>It should be possible to access the camera directly from lockscreen.</p>\n\n<p>Prerequisites: <br />\nHave a micro sd card inserted in the device with enough room for pictures.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
+707	98	1	1	1	 <p class="description">\n        <p>User should be able to zoom out by pinch gesture.</p>\n\n<p>Prerequisites: Camera App launched.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
+710	99	1	1	1	 <p class="description">\n        <p>User should be able to zoom in or out by pinch gesture.</p>\n\n<p>Prerequisites:  Camera app is launched</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
+713	100	1	1	1	 <p class="description">\n        <p>It should be possible to take a picture using the device camera. The first time you use the camera you should receive a geolocation prompt.</p>\n\n<p>Prerequisites: <br />\nPhone has micro SD card with space to save pictures.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:29:52	\N	\N	1	1	1	\N
+722	102	1	1	1	 <p class="description">\n        <ul>\n<li>Media Specs: https://drive.google.com/file/d/0B6fkEC1pmwTid1d4R0JfZ2ZpQW8/view?usp=sharing  </li>\n<li>General UX Specs: https://mozilla.app.box.com/s/bcm3s5i2v6js5uk0ws3tsywse8bgncgo</li>\n</ul>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+728	103	1	1	1	 <p class="description">\n        <p>As a user, if I try to open the Gallery app without an SD Card in my device, a prompt should inform me that the Gallery app is not available without an SD Card present</p>\n\n<p>Prerequisites: Make sure there is no SD card in the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+731	104	1	1	1	 <p class="description">\n        <ul>\n<li>Media Specs: https://drive.google.com/file/d/0B6fkEC1pmwTid1d4R0JfZ2ZpQW8/view?usp=sharing  </li>\n<li>General UX Specs: https://mozilla.app.box.com/s/bcm3s5i2v6js5uk0ws3tsywse8bgncgo</li>\n</ul>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+747	107	1	1	1	 <p class="description">\n        <p>When the user pans around the screen after zooming in on a photo in the Gallery app or in the preview mode in the Camera app, the screen is not swiped to the next photo.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=989361</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+756	108	1	1	1	 <p class="description">\n        <p>Pre-requisites: Refer to document https://etherpad.mozilla.org/YMt5ON7KNd for setup instructions and checklist.</p>\n\n<p>Verify Gallery data is Preserved after user OTA</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+760	109	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (103 chars) > 100 => has been truncated<br />\nOriginal name<br />\nGallery app should be killed if the user presses the home button while the app is scanning for pictures<br />\n---- *** ----<br />\n <p class="description">\n        <p>Gallery app should be killed if the user presses the home button while the app is scanning for pictures.</p>\n\n<p>Prerequisite: A large number of photos and videos are saved on the SD card.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1039943</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+766	110	1	1	1	 <p class="description">\n        <p>Pre-requisites: Have a few supported pictures available for viewing.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+773	111	1	1	1	 <p class="description">\n        <p>After saving a file from a MMS, the user can re-enter the MMS without issue.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=976454</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+779	112	1	1	1	 <p class="description">\n        <p>The thumbnails in the camera app and the previews in the gallery should always match the captured photo.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1043307</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+786	113	1	1	1	 <p class="description">\n        <p>Verify that there is a smooth transition animation when the user swipes through the photos in the Gallery app or in the preview mode in the Camera app.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=987569</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+795	114	1	1	1	 <p class="description">\n        <p>Gallery functions properly without issue when there is high memory usage on 1st launch.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=963917</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+802	115	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (101 chars) > 100 => has been truncated<br />\nOriginal name<br />\nVerify the user can send files to a paired device while receiving files from another bluetooth device<br />\n---- *** ----<br />\n <p class="description">\n        <p>Verify the user can send files to a paired device while receiving files from another bluetooth device. </p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=897782</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+811	116	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (105 chars) > 100 => has been truncated<br />\nOriginal name<br />\nWhen adding Contacts with pictures, the contact app functions as expected without a memory leak occurring<br />\n---- *** ----<br />\n <p class="description">\n        <p>When adding Contacts with pictures, the contact app functions as expected without a memory leak occurring.</p>\n\n<p>Prerequisite:  Able to monitor memory usage of applications, contact list is empty - |adb shell cat /sys/kernel/debug/ion/iommu|</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=983885</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+824	118	1	1	1	 <p class="description">\n        <p>Camera viewfinder displays properly after editing a photo in the gallery.</p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=989113</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+830	119	1	1	1	 <p class="description">\n        <p>All strings on the "Memory card in use" page are translated properly without truncation. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+2160	331	1	1	1	<p>\r\n\tThe case is for testing cancel - Edit contact in contact details.</p>\r\n	<p>\r\n\tA existing contact.</p>\r\n	3	8	2015-08-20 02:18:17	8	2015-08-20 02:19:26	1	1	1	5.00
+740	106	1	1	2	<p>\r\n\tThe user can share all supported image files no matter what their source using E-mail, Messages and Bluetooth.</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tAttached .jpg is imported to the device as well as all supported image files.</p>\r\n<p>\r\n\tHave a good mix of pictures taken from the camera, downloaded from the web and images that were moved over from the desktop onto the SD card. (jpeg, png, gif, bmp) and subtypes (progressive jpeg, animated gif, etc.) and a variety of sizes. A full set of EXIF orientations for jpeg images.</p>\r\n	3	7	2015-08-18 08:31:06	7	2015-08-19 06:02:47	1	1	1	\N
+2098	312	1	1	2	<p>\r\n\tWhen user navigates through items of Settings, there will be a focus on selected item for user to know.</p>\r\n		3	4	2015-08-19 09:42:23	4	2015-08-20 06:53:09	1	1	1	2.00
+2179	336	1	1	2	<p>\r\n\tUser can navigate on Settings via HW key on device.</p>\r\n		3	4	2015-08-20 06:04:37	4	2015-08-20 06:53:15	1	1	1	3.00
+2346	363	1	1	2	<p>\r\n\tIt should be possible to set a specific photo to a specific contact.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\ta previously created contact is available.</p>\r\n	2	7	2015-08-20 10:29:35	7	2015-08-20 10:38:15	1	1	1	\N
+836	120	1	1	1	 <p class="description">\n        <p>All strings on the "No photos or videos" page are translated properly without truncation. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+841	121	1	1	1	 <p class="description">\n        <p>The string "Can not edit photos. Memory card is full." is translated properly without truncation. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1288	1	2	1	1	 <p class="description">\n        <p>Operator name is shown correctly for USIM throughout settings. </p>\n\n<p>Please see this issue: </p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1046649</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	4	2015-08-19 08:37:58	1	1	1	10.00
+2094	311	1	1	1	<p>\r\n\tThis test case is for testing contact name display when no name, but existing a phone number.</p>\r\n		3	8	2015-08-19 09:39:00	8	2015-08-19 09:41:30	1	1	1	5.00
+847	122	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (113 chars) > 100 => has been truncated<br />\nOriginal name<br />\nAll strings on the  "Delete selected item?" and "Delete 3 items? pages are translated properly without truncation<br />\n---- *** ----<br />\n <p class="description">\n        <p>All strings on the  "Delete selected item?" and "Delete 3 items? pages are translated properly without truncation. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+856	123	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (108 chars) > 100 => has been truncated<br />\nOriginal name<br />\nAll strings on the "Single item" and "Multiple items" share pages are translated properly without truncation<br />\n---- *** ----<br />\n <p class="description">\n        <p>All strings on the "Single item" and "Multiple items" share pages are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+864	124	1	1	1	 <p class="description">\n        <p>The strings "Select" and "Number Selected" are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+870	125	1	1	1	 <p class="description">\n        <p>All strings on the "Edit" page are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+876	126	1	1	1	 <p class="description">\n        <p>All strings on the "Delete photo?" page are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+882	127	1	1	1	 <p class="description">\n        <p>Prerequisite: 1. Replace the Update URL to workable URL (optional) 2. Take 10 photos and 5 videos before this test.</p>\n\n<p>Reference: https://moztrap.mozilla.org/manage/case/8952/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+891	128	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (108 chars) > 100 => has been truncated<br />\nOriginal name<br />\nAll strings on the "More Information" pages for Photos and Videos are translated properly without truncation<br />\n---- *** ----<br />\n <p class="description">\n        <p>All strings on the "More Information" pages for Photos and Videos are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+905	130	1	1	1	 <p class="description">\n        <p>All dates for gallery content are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+910	131	1	1	1	 <p class="description">\n        <p>Implementation Bug: https://bugzilla.mozilla.org/show_bug.cgi?id=917445</p>\n\n<h1>Pre-Requisites:</h1>\n\n<h1>Gallery is launched and photo is in edit mode.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+917	132	1	1	1	<p>\r\n\tUser Story: As a user, I want the gallery app to automatically arrange content by the month. If the user has taken six or more pictures within a single month, the month will create its own section.</p>\r\n<p>\r\n\tAcceptance Criteria: - When the gallery app is opened the user can see that all the content (images, videos) are arranged by month.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:31:06	7	2015-08-19 07:45:52	1	1	1	\N
+2188	338	1	1	2		<p>\r\n\tPut over 20 pictures(taken on the same date) on device</p>\r\n	2	7	2015-08-20 07:24:58	7	2015-08-20 07:40:09	1	1	1	\N
+943	136	1	1	1	 <p class="description">\n        <p>Using the pick activity and confirming an image for the gallery - app should not get hung with no perceived performance. </p>\n\n<h1>Prerequistes: At least 1 image is in the gallery</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+950	137	1	1	1	 <p class="description">\n        <p>Prerequisite: \n1. Having more than 1 photos stored on device. </p>\n\n<p>As a user, I should be able to select photo(s) to share or to delete.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+957	138	1	1	1	 <p class="description">\n        <p>If the Gallery list is open while the user removes the SD card, the list should be reloaded and updated to show only files on the internal memory storage. </p>\n\n<h1>Pre-requisites: Have a SD card inserted. Have photos stored on both the SD card and on the phone's internal memory</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+961	139	1	1	1	 <p class="description">\n        <p>The user is able to set HD wallpaper from the gallery app in both landscape and portrait modes. The quality of the wallpaper is not compromised.</p>\n\n<p>Test case created for bug 883016 https://bugzilla.mozilla.org/show_bug.cgi?id=883016</p>\n\n<p>Prerequisites: Store two  high-resolution images (1920x1080) on the phone's SD Card. </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+971	140	1	1	1	 <p class="description">\n        <p>Test case created for Bug 865772 https://bugzilla.mozilla.org/show_bug.cgi?id=865772</p>\n\n<p>Prerequisites: There should be a blank or empty (zero bytes) image file on the SD Card of the phone. There should also be several other image files.</p>\n\n<p>Automated.  See bug 1110158</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+975	141	1	1	1			2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+981	142	1	1	1	 <p class="description">\n        <p>User Story:\nAs a user, I want the gallery app to automatically arrange content by the month </p>\n\n<p>The date order will be chronological with the most recent pictures appearing at the top of the page. </p>\n\n<p>Acceptance Criteria:\n- When the gallery app is opened the user can see that all the content (images, videos) are arranged by month</p>\n\n<p>Implementation bug: https://bugzilla.mozilla.org/show_bug.cgi?id=925179</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+987	143	1	1	1	 <p class="description">\n        <p>Using a device with internal storage, the Gallery App should load only images stored on the device when the SD card has been removed.</p>\n\n<h1>Pre-requisites: Make sure there is no sd card in the device. Have images saved on the internal phone storage</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+991	144	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (101 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[GALLERY] The last received file is not deleted if the user denies the incoming file transfer request<br />\n---- *** ----<br />\n <p class="description">\n        <p>The last received file is not deleted if the user denies the incoming file transfer request</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+998	145	1	1	1	 <p class="description">\n        <p>The gallery app can only view photos up to 5 megapixels.</p>\n\n<p>Prerequisite:\nHave .png photos up to and past 5 megapixel on the media storage</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1002	146	1	1	1	 <p class="description">\n        <p>The aim of this test case is to verify the correct behaviour of edit mode inside gallery app when rotating the device to landscape.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1008	147	1	1	1	 <p class="description">\n        <p>As a user, I will not be able to enter Edit mode without sufficient storage space on my phone. I will be alerted that i will not be able to edit my photos unless i free up more storage space.</p>\n\n<p>Prerequisites: Make sure there are a few photos on the device and that the available free space is smaller then 1-2 MB</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1012	148	1	1	1	 <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, I should be able to quickly switch to grid view by single-tapping an icon in the top left section of the screen.</p>\n\n<p>Prerequisites: Have a few photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1016	149	1	1	1	 <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, I should be able to double-tap the screen to return the image to the center of the screen at normal/100% zoom</p>\n\n<p>Prerequisites: Have a few photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1020	150	1	1	1	 <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, when zoomed in on the photo, I should be able to drag the photo to change the area of the photo show in the viewport</p>\n\n<p>Prerequisites: Have a few photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1025	151	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW, I should be able to play a video by single tapping on the thumbnail of a capture video</p>\n\n<p>Prerequisites: Have a few captured videos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1029	152	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW, I should be able to enter a "Select Mode" by single-tapping the "Select" button in the toolbar. In "Select Mode", single-tapping photos should toggle their selected state, as evidenced by a clear visual indicator</p>\n\n<p>Prerequisites: Have some photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1044	155	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (102 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[Gallery] Single Photo View - The photo and toolbars adjust to fit the screen when rotating the device<br />\n---- *** ----<br />\n <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, when I rotate the device to portrait or landscape, the photo and toolbars should adjust to fit the new constraints of the currently active orientation</p>\n\n<p>Prerequisites: Have a few photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1048	156	1	1	1	 <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, I should be able to single-tap the "Share" button in the toolbar and trigger an action that sets the current photo as my wallpaper background</p>\n\n<p>Prerequisites: Have a few photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1052	157	1	1	1	 <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, I should be able to open the camera application by single-tapping the camera button in the toolbar. If I choose to return to the Gallery app from the Camera app (via the Gallery button), I should be returned to the grid view at the position I started - if a new picture(s) was taken during my interaction with the Camera app, I should be placed at a position in the grid where my new picture is in view.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. There must be at least 1 photo in the Gallery.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1060	158	1	1	1	 <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, I should be able to open the camera application by single-tapping the camera button in the toolbar. If I choose to return to the Gallery app from the Camera app (via the Gallery button), I should be returned to the grid view at the position I started - if a new picture(s) was taken during my interaction with the Camera app, I should be placed at a position in the grid where my new picture is in view.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Have at least 1 photo in the Gallery.</h1>\n\n<p>Automated.  See bug 1111637</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1067	159	1	1	1	 <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, I should be able to edit the current photo in view by single-tapping the edit button in the toolbar.</p>\n\n<p>Prerequisites: </p>\n\n<h1>a. Have a few photos on the device</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1184	180	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to crop a photo by single-tapping the "Crop" tab in the toolbar. I should presented with common crop options in a secondary toolbar. Tapping a crop type will apply the crop option to the photo - if I select "Freedom Mode", drag UI handles shall be overlayed on the edge of the photo I can used to manually adjust the crop area.</p>\n\n<p>Prerequisite: Have some pictures located on the storage media.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1072	160	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (108 chars) > 100 => has been truncated<br />\nOriginal name<br />\nVerify the user cannot use and a prompt is displayed while in the gallery app when in USB mass storage mode.<br />\n---- *** ----<br />\n <p class="description">\n        <p>As a user, when my device is in "USB Mass Storage Mode", I should recieve a prompt when trying to open the gallery app that tells me that I cannot use the gallery app when this mode is engaged</p>\n\n<p>Prerequisites: Phone is in USB Mass Storage mode.(Plugged into a computer and has USB mass storage turned on.)</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1075	161	1	1	1	 <p class="description">\n        <p>As a user, after disengaging from "USB Mass Storage Mode", I expect the Gallery app to rescan my device for new content.  Same goes for recently removed content.</p>\n\n<p>Prerequisites:  Gallery app not open.  USB Mass Storage engaged.  While it is engaged, some pictures were removed.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1079	162	1	1	1	 <p class="description">\n        <p>As a user, after disengaging from "USB Mass Storage Mode", I expect the Gallery app to rescan my device for new content.</p>\n\n<p>Prerequisites:  Gallery app not open.  USB Mass Storage engaged.  While it is engaged, some pictures were added.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1083	163	1	1	1	 <p class="description">\n        <p>From the gallery, it should be possible to view the photos in the fullscreen mode.</p>\n\n<p>Prerequisites:  the gallery application is launched, in thumbnail view.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1090	164	1	1	1	 <p class="description">\n        <p>It should be possible, using the video functionality, to play back a video that's been shot with the onboard camera.  Both Video and Sound must work.</p>\n\n<p>Prerequisite:   A video has been recorded with sound, using the onboard camera.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1094	165	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to save a photo I have edited by single-tapping the OK button in the toolbar. I should then be returned to the BROWSE PHOTO grid view and placed at a location with the newly created, edited version of the photo in view.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Must have at least 1 photo on the SD card.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:06	\N	\N	1	1	1	\N
+1120	169	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to exit edit mode at any time by single-tapping the cancel button in the toolbar.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Must have at least 1 photo on the SD card.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1126	170	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW, I should be able to open the camera application by single-tapping the camera button in the toolbar. If I choose to return to the Gallery app from the Camera app (via the Gallery button), I should be returned to the grid view at the position I started - if a new picture(s) was taken during my interaction with the Camera app, I should be placed at a position in the grid where my new picture is in view.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Have at least 1 photo on the SD card.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1131	171	1	1	1	 <p class="description">\n        <p>As a user I can zoom-in and zoom-out on a picture when viewing it in detail by pinching it. When the picture is zoomed-in user can drag the picture to change the visible area.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Have at least 1 photo on the SD card.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1138	172	1	1	1	 <p class="description">\n        <p>As a user I want to be able to change the wallpaper of the Lock/Home apps from the Home grid, so that I am empowered to customize the wallpaper from the location within the system where I will encounter it the most.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1144	173	1	1	1	 <p class="description">\n        <p>User is able to adjust wallpaper. </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1151	174	1	1	1	 <p class="description">\n        <p>Able to select wallpaper from camera photos gallery.</p>\n\n<h1>Pre-Requisite:</h1>\n\n<h1>Have a photo taken by the device's camera in the photo Gallery</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1155	175	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to add common effects to a photo by single-tapping the "Effects" tab in the toolbar. I should presented with common effect options in a secondary toolbar. Tapping an effect type will apply the effect option to the photo</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1162	176	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to add common effects to a photo by single-tapping the "Effects" tab in the toolbar. I should presented with common effect options in a secondary toolbar. Tapping an effect type will apply the effect option to the photo</p>\n\n<p>Prerequisites: gallery is launched and photo is in edit mode.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1168	177	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to adjust the exposure of the photo by single-tapping the exposure tab in toolbar - the exposure edit view should present me with a slider that can be dragged to increase or decrease "Exposure" along a preset scale</p>\n\n<p>Prerequisites:  Photo editor is launched.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1173	178	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to crop a photo by single-tapping the "Crop" tab in the toolbar. I should presented with common crop options in a secondary toolbar. Tapping a crop type will apply the crop option to the photo - if I select "Freedom Mode", drag UI handles shall be overlayed on the edge of the photo I can used to manually adjust the crop area.</p>\n\n<h1>Pre-Requisites:</h1>\n\n<h1>Gallery is launched and photo is in edit mode.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1179	179	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to crop a photo by single-tapping the "Crop" tab in the toolbar. I should presented with common crop options in a secondary toolbar. Tapping a crop type will apply the crop option to the photo - if I select "Freedom Mode", drag UI handles shall be overlayed on the edge of the photo I can used to manually adjust the crop area.</p>\n\n<h1>Pre-Requisite:</h1>\n\n<h1>Gallery is launched and photo is in edit mode</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1920	284	1	1	1	 <p class="description">\n        <p>User should be able to enter the alarm setting page for the existing alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1191	181	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to crop a photo by single-tapping the "Crop" tab in the toolbar. I should presented with common crop options in a secondary toolbar. Tapping a crop type will apply the crop option to the photo - if I select "Freedom Mode", drag UI handles shall be overlayed on the edge of the photo I can used to manually adjust the crop area.</p>\n\n<p>Prerequisites: gallery is launched and photo is in edit mode.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1195	182	1	1	1	 <p class="description">\n        <p>As a user, in EDIT MODE, I should be able to add common effects to a photo by single-tapping the "Effects" tab in the toolbar. I should presented with common effect options in a secondary toolbar. Tapping an effect type will apply the effect option to the photo</p>\n\n<p>Prerequisites: gallery is launched and photo is in edit mode.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1204	184	1	1	1	 <p class="description">\n        <p>It should be possible to export photos from device to desktop machine.</p>\n\n<p>Prerequisite: Have mass storage turned on in the device settings and also have some photos on the storage device.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1207	185	1	1	1	 <p class="description">\n        <p>It should be possible to access the camera from the gallery, from a Single Photo View.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+2163	332	1	1	1	<p>\r\n\tThis case is for testing Options - remove as favorite /add as favorite in contact details.</p>\r\n		3	8	2015-08-20 02:21:16	8	2015-08-20 02:22:31	1	1	1	5.00
+1215	187	1	1	1	 <p class="description">\n        <p>As a user, in Gallery when viewing a photo in full screen view, I should be able to swipe across the current photo to view the next photo (left swipe) or last photo (right swipe) in the photo set.</p>\n\n<p>Prerequisites:</p>\n\n<h1>a. Must have several photos on your device.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1221	188	1	1	1	 <p class="description">\n        <p>As a user, in SINGLE PHOTO VIEW, I should be able to delete the photo currently displayed by single-tapping the delete icon in the toolbar</p>\n\n<p>Prerequisites: Have a few pictures in on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1232	190	1	1	1	 <p class="description">\n        <p>As a user, in LIST VIEW, I should be able view a larger view of a photo by single-tapping the photo's thumbnail</p>\n\n<p>Prerequisites: Have some photos on the device</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1247	192	1	1	1	 <p class="description">\n        <p>It should be possible to access the camera from the gallery preview mode.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1250	193	1	1	1	 <p class="description">\n        <p>It should be possible to take a picture using the device camera. The first time you use the camera you should receive a geolocation prompt.</p>\n\n<p>Prerequisites: <br />\nPhone has micro SD card with space to save pictures.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	7	2015-08-18 08:31:07	\N	\N	1	1	1	\N
+1258	1	1	1	1	 <p class="description">\n        <p>Operator name is shown correctly for USIM throughout settings. </p>\n\n<p>Please see this issue: </p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1046649</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:36	\N	\N	1	1	1	\N
+1267	2	1	1	1	 <p class="description">\n        <p>Network operator settings show correctly for both SIMs in a DSDS scenario.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1010394</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:36	\N	\N	1	1	1	\N
+1276	3	1	1	1	 <p class="description">\n        <p>Verify that all items are displayed properly on the 'Call Settings' screen after FDN is enabled.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1039957</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:36	\N	\N	1	1	1	\N
+1284	4	1	1	1	 <p class="description">\n        <p>If outgoing call SIM is set to "always ask", the last used SIM will make the call and the last contact that SIM called will be dialed when double clicking the bluetooth headset to dial</p>\n\n<p>Prerequisites: Have two SIM cards in device, and a bluetooth headset available. </p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1021478</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:36	\N	\N	1	1	1	\N
+1316	194	1	1	1	<p>\r\n\tThe test case is for testing one entry of search result when input 2 digits.</p>\r\n	<p>\r\n\t1. Feature phone with SIM card.</p>\r\n<p>\r\n\t2. Prepare a contact with name and phone number starting with 2 digits you input.(e.g user input 72, it stands for all the combination. 7 stands for pqrs, 2 stands for abc.)</p>\r\n<p>\r\n\t&nbsp;</p>\r\n	3	8	2015-08-18 09:56:18	8	2015-08-18 09:58:49	1	1	1	5.00
+106	5	1	1	2	<p>\r\n\tVerify that all strings are translated into the locale you are testing. If you find an untranslated string, look at the same string in a pseudolocale (preferably Accented English).</p>\r\n<p>\r\n\tIf the string appears in normal English, it is hard-coded and not localizable. File a bug for H5OS.</p>\r\n<p>\r\n\tIf the string appears in a pseudolocale, then the localizer hasn&#39;t got to it yet. Please don&#39;t file a bug.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:29:50	7	2015-08-19 05:39:08	1	1	1	\N
+737	105	1	1	2	<p>\r\n\tAs a user, when I open the gallery app when there is no content on my device to display, I should see a blank view with actions/text in the center that point me at various mechanism for adding new content.</p>\r\n	<p>\r\n\tMake sure there are no photos on the device</p>\r\n	2	7	2015-08-18 08:31:06	7	2015-08-19 06:57:48	1	1	1	\N
+900	129	1	1	2	<p>\r\n\tUser story: As a user, I want to see the file type, size, resolution and date of creation of the content displayed in the gallery app</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:31:06	7	2015-08-19 06:18:43	1	1	1	\N
+1332	195	1	1	2	<p>\r\n\tAs a user, I should be able to enter Camera to take a picture if Gallery is currently empty.</p>\r\n	<p>\r\n\tNo pictures in device.</p>\r\n	2	7	2015-08-19 07:02:09	7	2015-08-19 07:04:58	1	1	1	\N
+1304	3	2	1	1	 <p class="description">\n        <p>Verify that all items are displayed properly on the 'Call Settings' screen after FDN is enabled.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1039957</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	4	2015-08-19 08:37:46	1	1	1	3.00
+1311	4	2	1	1	 <p class="description">\n        <p>If outgoing call SIM is set to "always ask", the last used SIM will make the call and the last contact that SIM called will be dialed when double clicking the bluetooth headset to dial</p>\n\n<p>Prerequisites: Have two SIM cards in device, and a bluetooth headset available. </p>\n\n<p>Please see this issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1021478</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	4	2015-08-19 08:37:51	1	1	1	20.00
+1296	2	2	1	1	 <p class="description">\n        <p>Network operator settings show correctly for both SIMs in a DSDS scenario.</p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1010394</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	4	2015-08-18 08:35:59	4	2015-08-19 08:38:10	1	1	1	12.00
+1226	189	1	1	2	<p>\r\n\tUser should be able to delete multiple photos</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tPrepare over 20 pictures in device</p>\r\n	2	7	2015-08-18 08:31:07	7	2015-08-20 10:05:20	1	1	1	\N
+1236	191	1	1	2	<p>\r\n\tIt should be possible to set a specific photo as wallpaper.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\ta previously created contact is available.</p>\r\n	2	7	2015-08-18 08:31:07	7	2015-08-20 10:38:39	1	1	1	\N
+2167	333	1	1	1	<p>\r\n\tThe case is for testing add item for Phone in contact editor.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n		3	8	2015-08-20 03:10:23	8	2015-08-20 08:21:26	1	1	1	3.00
+719	101	1	1	2	<p>\r\n\tAs a user, I want to view my gallery content (photos and captured videos) in a scrollable grid, so I can access everything quickly.</p>\r\n<p>\r\n\tUpon entering Gallery, show all photos (total # of photos). The first photo will be highlighted, use D-Pad to navigate between photos. Photos are arranged from most recent (top left) toleast recent (bottom right).</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave some captured videos and photos on the device</p>\r\n	3	7	2015-08-18 08:31:06	7	2015-08-19 07:40:20	1	1	1	\N
+922	133	1	1	1	<p>\r\n\tUser Story: As a user, I want the gallery app to automatically arrange content by the month. If a user has not taken at least six pictures within a single month but within a range of months, the pictures will be lumped within a single section and the title will reflect the span of time.</p>\r\n<p>\r\n\tUpon entering Gallery, show all photos (total # of photos). The first photo will be highlighted, use D-Pad to navigate between photos. Photos are arranged from most recent (top left) toleast recent (bottom right).</p>\r\n<p>\r\n\tAcceptance Criteria: - When the gallery app is opened the user can see that all the content (images, videos) are arranged by month.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:31:06	7	2015-08-19 07:43:11	1	1	1	\N
+1212	186	1	1	1	<p>\r\n\tUser should be able to view any photos added to the devices SD card.</p>\r\n\r\n		2	7	2015-08-18 08:31:07	7	2015-08-19 07:47:38	1	1	1	\N
+1344	198	1	1	2	<p>\r\n\tUser can access items that have sub-page on main page of Settings.</p>\r\n		3	4	2015-08-19 08:05:21	4	2015-08-20 06:54:10	1	1	1	5.00
+1341	197	1	1	2	<p>\r\n\tMake sure all items on Settings main page with toggle switch works correctly.</p>\r\n		3	4	2015-08-19 07:52:45	4	2015-08-20 06:54:14	1	1	1	5.00
+2184	337	1	1	2	<p>\r\n\tMake sure that except functional keys(Direction keys, LSK, Enter, End), other keys should not be able to navigate Settings or make any selection.&nbsp;</p>\r\n		2	4	2015-08-20 06:20:37	4	2015-08-20 06:53:21	1	1	1	5.00
+1338	196	1	1	2	<p>\r\n\tMake sure all settings main pages can be seen.</p>\r\n	<p>\r\n\tRefer to latest UX spec:&nbsp;<a class="external-link" href="https://acadine.sharepoint.com/sites/ux-design/Shared%20Documents/H5OS%20UX/Feature%20Phone/Settings" rel="nofollow" style="color: rgb(59, 115, 175); text-decoration: none; cursor: pointer; font-family: Arial, sans-serif; font-size: 14px; line-height: 20px;">https://acadine.sharepoint.com/sites/ux-design/Shared%20Documents/H5OS%20UX/Feature%20Phone/Settings</a></p>\r\n<p>\r\n\t&nbsp;</p>\r\n	3	4	2015-08-19 07:42:35	4	2015-08-20 06:54:04	1	1	1	2.00
+2202	340	1	1	1	<p>\r\n\tThe case is for testing cancel to add item for Email.</p>\r\n		3	8	2015-08-20 07:31:30	8	2015-08-20 07:55:22	1	1	1	2.00
+2171	334	1	1	1	<p>\r\n\tThe case is for testing add item for email in contact editor.</p>\r\n		3	8	2015-08-20 03:18:59	8	2015-08-20 08:23:11	1	1	1	3.00
+1602	232	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Stopwatch paused" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1492	219	1	1	2	<p>\r\n\tUser can access settings and exit it.</p>\r\n		2	4	2015-08-19 08:26:09	4	2015-08-20 06:54:01	1	1	1	1.00
+1497	220	1	1	1	 <p class="description">\n        <p>Prerequisites:  Have your device set to an RTL locale, such as Arabic</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1501	221	1	1	1	 <p class="description">\n        <p>Prerequisites:  Have your device set to an RTL locale, such as Arabic</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1505	222	1	1	1	 <p class="description">\n        <p>Prerequisites:  Have your device set to an RTL locale, such as Arabic</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1514	223	1	1	1	 <p class="description">\n        <p>Prerequisites:  Have your device set to an RTL locale, such as Arabic</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1519	224	1	1	1	 <p class="description">\n        <p>Refer to</p>\n\n<p>https://moztrap.mozilla.org/manage/cases/?&amp;pagenumber=1&amp;pagesize=100&amp;sortfield=created_on&amp;sortdirection=desc&amp;filter-tag=3073</p>\n\n<p>Use clock app as replacement.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1544	225	1	1	1	 <p class="description">\n        <p>When time moves back or forward due to day light savings time, the time on the phone will automatically adjust to the correct time.</p>\n\n<p>Prerequisite:\nThe Date and Time should be set to "Set automatically" in settings. The user should be using an active SIM that is connected to a network. WiFi should be turned off.</p>\n\n<p>Please see this issue:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1089494</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1551	226	1	1	1	 <p class="description">\n        <p>Pre-requisites: Refer to document https://etherpad.mozilla.org/YMt5ON7KNd for setup instructions and checklist.</p>\n\n<p>Verify the Clock app data is preserved after user OTAs</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1554	227	1	1	1	 <p class="description">\n        <p>No cursor should exist in any drop down menu.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1566	228	1	1	1			2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1572	229	1	1	1	 <p class="description">\n        <p>bug 950212\nbug 918400</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1902	281	1	1	1	 <p class="description">\n        <p>User should be able to see the tick shows up on the time field when select it in snooze time selection page.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1587	230	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (106 chars) > 100 => has been truncated<br />\nOriginal name<br />\nCreate a new alarm page displays normally after locking and unlocking the screen with the keyboard present<br />\n---- *** ----<br />\n <p class="description">\n        <p>Create a new alarm page displays normally after locking and unlocking the screen with the keyboard present.</p>\n\n<p>Prerequisite: Lockscreen is enabled in settings. </p>\n\n<p>Please see issue: https://bugzilla.mozilla.org/show_bug.cgi?id=981255</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1596	231	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Edit alarm Sound" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1608	233	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Stopwatch running" screen are translated properly without truncation.</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1614	234	1	1	1	 <p class="description">\n        <p>All strings on the "Clock - Alarm Repeat" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1619	235	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Timer" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1623	236	1	1	1	 <p class="description">\n        <p>All strings on the "Clock - Alarm Snooze" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1628	237	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Timer Sound" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1633	238	1	1	1	 <p class="description">\n        <p>All strings on the "Clock - Alarm Sound" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1638	239	1	1	1	 <p class="description">\n        <p>All strings on the "Clock (digital)" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n<p>Pre-Requisites: an SD card with music on it, headphones/earphones</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1642	240	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Stopwatch" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1646	241	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Timer running" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1653	242	1	1	1	 <p class="description">\n        <p>All strings on the "Clock - New Alarm" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1657	243	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Edit alarm" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1663	244	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Edit alarm Snooze" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1908	282	1	1	1	 <p class="description">\n        <p>User should be able to see the tick shows up on the day field when select it in repeat status selection page.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1670	245	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Edit alarm Repeat" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1677	246	1	1	1	 <p class="description">\n        <p>All strings on the "Clock -Edit alarm Sound" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1684	247	1	1	1	 <p class="description">\n        <p>All strings on the "Clock (analog)" screen are translated properly without truncation</p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n<p>Pre-Requisites: an SD card with music on it, headphones/earphones</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1687	248	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (101 chars) > 100 => has been truncated<br />\nOriginal name<br />\nThe time when setting a new alarm appears in the correct format according to the phone"s set language<br />\n---- *** ----<br />\n <p class="description">\n        <p>The time when setting a new alarm appears in the correct format according to the phone's set language. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1693	249	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (102 chars) > 100 => has been truncated<br />\nOriginal name<br />\nThe Date and Time in the clock app appears in the correct format according to the phone"s set language<br />\n---- *** ----<br />\n <p class="description">\n        <p>The "Date and Time"(Digital) in the clock app appears in the correct format according to the phone's set language. </p>\n\n<p>*Make sure to check Transvision tool before writing any issues.</p>\n\n<p>http://transvision-beta.mozfr.org/?recherche=mobile&amp;repo=gaia13&amp;sourcelocale=en-US&amp;locale=bg&amp;search_type=strings</p>\n\n<p>Also refer to this document https://hg.mozilla.org/gaia-l10n/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1698	250	1	1	1	 <p class="description">\n        <p>Prerequisite: 1. Replace the Update URL to workable URL (optional)</p>\n\n<p>Reference: https://moztrap.mozilla.org/manage/case/8952/</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1705	251	1	1	1	 <p class="description">\n        <p>As a user I want to view the time of my next alarm while my phone is locked - this enables me to verify that it is set without needing to unlock my phone and navigate to the clock app.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1709	252	1	1	1	 <p class="description">\n        <p>Change to Spanish language and the date format in clock app should align Spanish common date format</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1717	253	1	1	1	 <p class="description">\n        <p>As a user I should be able to tap the HOME button when an alarm is triggering in the Clock app to put the alarm into a minimized state. I can then tap the minimized state for the alarm to put it back into full screen view.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1722	254	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (102 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[Clock][Alarm] Test that when the alarm triggers, the phone vibrates and an audible alarm is triggered<br />\n---- *** ----<br />\n <p class="description">\n        <p>As a user, I want to be able to set an alarm using a selected audible tone with vibration.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1725	255	1	1	1	 <p class="description">\n        <p>Verify that when the phone is plugged in and charging, the Alarm goes off correctly at the set time.</p>\n\n<h1>Prerequisites:</h1>\n\n<h1>-USB Mass Storage turned OFF</h1>\n\n<h1>-Remote Debugging turned OFF</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1731	256	1	1	1	 <p class="description">\n        <p>The device gives the user multiple selectable options for the sound/vibration settings of alarms. </p>\n\n<p>The Sound options are:</p>\n\n<p>No Sound\nClassic Buzz\nClassic Pulse Progressive\nClassic Pulse\nGem Echoes\nRinging Strings\nShimmering Waves\nInto the Void\nSmooth Strings</p>\n\n<p>The vibrate options are: \nOn\nOff</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1743	257	1	1	1	 <p class="description">\n        <p>As a user, I want to be able to set an alarm using a selected audible tone without vibration.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1755	258	1	1	1	 <p class="description">\n        <p>[Clock]  Verify the Alarm triggers properly while connected to a desktop or laptop via USB</p>\n\n<h1>Prerequisites:</h1>\n\n<h1>-Have Remote Debugging turned ON</h1>\n\n<h1>-Have USB Mass Storage turned ON</h1>\n\n<h1>-A Desktop or Laptop device to connect to via USB</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1761	259	1	1	1	 <p class="description">\n        <p>User should be able to see that alarm will mute video when it goes off</p>\n\n<h1>Prerequisites: Tap Clock App-Tap Alarm icon-Set alarm time-Set Done</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1765	260	1	1	1	 <p class="description">\n        <p>Verify that for each contact the user see photo</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1768	261	1	1	1	 <p class="description">\n        <p>User should be able to see that alarm will mute music when it goes off</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1775	262	1	1	1	 <p class="description">\n        <p>User should be able to see that alarm will mute radio when it goes off</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1914	283	1	1	1	 <p class="description">\n        <p>User should be able to see the tick shows up on the sound field when select it in sound selection page.  </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1782	263	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (106 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] Alarm will goes off without sound/vibration/page showing during the incoming call<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm goes off without sound/vibration/page showing during the incoming call</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1790	264	1	1	1	 <p class="description">\n        <p>User should be able to see that the alarm goes off with sound,vibration/page showing during the active call. </p>\n\n<p>Please see these issues:</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1026167</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1038691</p>\n\n<p>https://bugzilla.mozilla.org/show_bug.cgi?id=1038693</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1798	265	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (120 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon will disappear in the status bar when turning off an alarm (only one alarm case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon will disappear in the status bar when turning off an alarm  (when there is only one alarm)</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1804	266	1	1	1	 <p class="description">\n        <p>User should be able to see that the alarm icon shows in the status bar when turning on an alarm  (when there is only one alarm).</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1811	267	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (115 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon will show up in the status bar after snooze the alarm (only one alarm case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon will show up in the status bar after snooze the alarm (when there is only one alarm)</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1818	268	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (118 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon will not show in the status bar when all alarms are off (multiple alarms case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon will not show in the status bar when all alarms are off</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1825	269	1	1	1	 <p class="description">\n        <p>User should be able to see that the alarm icon shows on the status bar after add an alarm</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1830	270	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (125 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon shows in the status bar when there is at least one alarm is on (multiple alarms case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon shows in the status bar when there is at least one alarm is on</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1837	271	1	1	1	 <p class="description">\n        <p>User should be able to hear the sound and feel vibration when the alarm goes off.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1843	272	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (118 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon will disappear in the status bar when the alarm goes off (only one alarm case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon will disappear in the status bar when the alarm goes off (when there is only one alarm)</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+2206	341	1	1	2			2	7	2015-08-20 07:33:51	7	2015-08-20 07:36:15	1	1	1	\N
+1849	273	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (156 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] The alarm icon will not disappear in the status bar when the alarm goes off but there is another alarm is on (multiple alarms case)<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see that the alarm icon will not disappear in the status bar when the alarm goes off but there is another alarm is on</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1856	274	1	1	1	 <p class="description">\n        <p>User should be able to hear that when the alarm goes off, it will keep playing.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1863	275	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (111 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[Clock][Alarm] The alarm time on a currently triggering alarm does not change even after alarm time has passed.<br />\n---- *** ----<br />\n <p class="description">\n        <p>Test that the time displayed for the alarm that is actively triggering, shows the actual alarm time (won't update to the current time).</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1870	276	1	1	1	 <p class="description">\n        <p>As a user, I want to be able to preview and select the sound that plays with each alarm, so that I can confirm it's one that I like.</p>\n\n<h1>Prerequisites:</h1>\n\n<h1>a. Alarm audio must be turned up in the Sound Settings.</h1>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1876	277	1	1	1	 <p class="description">\n        <p>User should be able to cancel the changes when edit an existing alarm</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:23	\N	\N	1	1	1	\N
+1884	278	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (123 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[Clock][Alarm] See the countdown indicator shows "The alarm is set for hh HOURS and mm MINUTES from now" after add an alarm<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to see the countdown indicator shows "The alarm is set for hh HOURS and mm MINUTES from now" after add an alarm. </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1889	279	1	1	1	 <p class="description">\n        <p>User should be able to cancel the alarm setting page.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1894	280	1	1	1	 <p class="description">\n        <p>User should be able to see the alarm will be turned off when receiving a phone call</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1926	285	1	1	1	 <p class="description">\n        <p>User should be able to enter the clock setting page and see the alarm time, label, repeat status, sound, snooze time setting fields on the page when add a new alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1930	286	1	1	1	 <p class="description">\n        <p>User should be able to see the alarm time, label, Close and Snooze buttons on alarm page. </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1936	287	1	1	1	 <p class="description">\n        <p>User should be able to snooze the alarm when it rings</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1944	288	1	1	1	 <p class="description">\n        <p>User should be able to close the alarm when it rings</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1951	289	1	1	1	 <p class="description">\n        <p>User should be able to change the alarm sound of the existing alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1959	290	1	1	1	 <p class="description">\n        <p>User should be able to change the repeat state of the existing alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1966	291	1	1	1	 <p class="description">\n        <p>User should be able to change the snooze time of the existing alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1974	292	1	1	1	 <p class="description">\n        <p>User should be able to see that when the alarm goes off, the alarm page will show up</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1980	293	1	1	1	 <p class="description">\n        <p>User should be able to set an alarm sound when creating a new alarm. </p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1987	294	1	1	1	 <p class="description">\n        <p>As a user, I want to be able to select the "snooze" duration of an alarm, so that I can customize how long I want to snooze.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+1993	295	1	1	1	 <p class="description">\n        <p>User should be able to see the information of each alarm such as alarm time, repeat state, label, of/off state in the main page.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2000	296	1	1	1	 <p class="description">\n        <p>User should be able to turn on/off the alarm</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2006	297	1	1	1	 <p class="description">\n        <p>User should be able to see the default on/off state is on.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2012	298	1	1	1	 <p class="description">\n        <p>User should be able to see the default label is "Alarm" when he doesn't edit it.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2018	299	1	1	1	 <p class="description">\n        <p>User should be able to delete an alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2024	254	2	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (102 chars) > 100 => has been truncated<br />\nOriginal name<br />\n[Clock][Alarm] Test that when the alarm triggers, the phone vibrates and an audible alarm is triggered<br />\n---- *** ----<br />\n <p class="description">\n        <p>As a user, I want to be able to set an alarm using a selected audible tone with no vibration or a vibration with no audible tone so that I can configure how I want to be alerted in different scenarios.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2030	300	1	1	1	 <p class="description">\n        <p>As a user, I want to see a list of the alarms I have created, with their names, alarm times, and On/Off toggles, so that I can quickly review and arm them as needed.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2039	301	1	1	1	 <p class="description">\n        <p>User should be able to launch the clock app</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2042	302	1	1	1	 <p class="description">\n        <p>User should be able to set repeat state while creating a new alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2050	303	1	1	1	 <p class="description">\n        <p>User should be able to edit the label of the existing alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2057	304	1	1	1	 <p class="description">\n        <p>User should be able to set an alarm label when creating a new alarm</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2063	305	1	1	1	---- Warning ----<br />\nTestLink Warning<br />\ntest case name is too long (102 chars) > 100 => has been truncated<br />\nOriginal name<br />\nTest that [Clock][Alarm] Set alarm time(hour, minute, AM/PM) using time picker when create a new alarm<br />\n---- *** ----<br />\n <p class="description">\n        <p>User should be able to set the alarm time(hour, minute, AM/PM) when create a new alarm</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2069	306	1	1	1	 <p class="description">\n        <p>User should be able to see the time, day and date in the clock app</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2073	307	1	1	1	 <p class="description">\n        <p>User should be able to switch the clock type between analog/digital</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2077	308	1	1	1	 <p class="description">\n        <p>User should be able to edit the alarm time of the existing alarm.</p>\n\n    </p>\n  \n\n  <ol class="steps"> 		2	5	2015-08-19 08:36:24	\N	\N	1	1	1	\N
+2103	314	1	1	1	<p>\r\n\tThe case is for testing contact name = email address when no name, no phone numbers filled.</p>\r\n		3	8	2015-08-19 09:46:41	8	2015-08-19 09:50:36	1	1	1	5.00
+2086	309	1	1	1	<p>\r\n\tThis test case is for testing Contacts app launch.</p>\r\n		3	8	2015-08-19 09:26:37	8	2015-08-19 09:28:32	1	1	1	1.00
+2122	319	1	1	1	<p>\r\n\tThis case is for testing Options in contact details - send message.</p>\r\n		3	8	2015-08-20 01:22:46	8	2015-08-20 01:24:34	1	1	1	3.00
+2089	310	1	1	1	<p>\r\n\tThis test case is for testing contacts app exit.</p>\r\n		3	8	2015-08-19 09:30:02	8	2015-08-19 09:36:10	1	1	1	1.00
+2109	316	1	1	1	<p>\r\n\tThe case is for testing contact name = No Name when no name, no phone numbers, no email addresses.</p>\r\n		3	8	2015-08-19 09:52:06	8	2015-08-19 09:54:18	1	1	1	5.00
+2125	320	1	1	1	<p>\r\n\tThis case is for testing make a call in contact details.</p>\r\n		3	8	2015-08-20 01:25:49	8	2015-08-20 01:26:41	1	1	1	3.00
+2305	358	1	1	1	<p>\r\n\tThe case is for testing add multiple Comments.</p>\r\n		3	8	2015-08-20 09:58:54	8	2015-08-20 09:59:39	1	1	1	5.00
+2100	313	1	1	1	<p>\r\n\tThe case is for testing contant name = the first phone number when no name filled and multiple phone numbers.</p>\r\n		3	8	2015-08-19 09:43:55	8	2015-08-19 09:44:59	1	1	1	5.00
+2128	321	1	1	1	<p>\r\n\tThis case is for testing send a email in contact details.</p>\r\n		3	8	2015-08-20 01:27:27	8	2015-08-20 01:28:38	1	1	1	3.00
+2115	317	1	1	1	<p>\r\n\tThe case is for testing make a call in contact list when only 1 phone number.</p>\r\n	<p>\r\n\t1. one contact with 1 phone number ready.</p>\r\n	3	8	2015-08-19 09:57:35	8	2015-08-19 09:58:32	1	1	1	5.00
+2106	315	1	1	1	<p>\r\n\tThe case is for testing contact name = first email address with no name,no phone numbers filled, but multiple email addresses.</p>\r\n		3	8	2015-08-19 09:48:37	8	2015-08-19 09:50:12	1	1	1	5.00
+2119	318	1	1	1	<p>\r\n\tThis case is for testing make a call when press Call key in contact list. The contact has multiple phone numbers.</p>\r\n	<p>\r\n\tA contact has two phone numbers.</p>\r\n	3	8	2015-08-20 01:10:28	8	2015-08-20 01:11:39	1	1	1	5.00
+2131	322	1	1	1	<p>\r\n\tThe case is for testing press CSK for address will do nothing.</p>\r\n		2	8	2015-08-20 01:37:22	8	2015-08-20 01:38:24	1	1	1	1.00
+2134	323	1	1	1	<p>\r\n\tThis case is for testing press CSK for date in contact details, nothing happens.</p>\r\n		2	8	2015-08-20 01:39:38	8	2015-08-20 01:40:36	1	1	1	1.00
+2137	324	1	1	1	<p>\r\n\tThis case is for testing press CSK for comment in contact details, nothing happens.</p>\r\n		2	8	2015-08-20 01:41:31	8	2015-08-20 01:42:14	1	1	1	1.00
+2140	325	1	1	1	<p>\r\n\tThis case is for testing Options in contact list - add a new contact.</p>\r\n		3	8	2015-08-20 01:43:47	8	2015-08-20 01:46:45	1	1	1	5.00
+2147	327	1	1	1	<p>\r\n\tThis case is for testing Options - Edit contact in Contact List.</p>\r\n	<p>\r\n\tA existing contact.</p>\r\n	3	8	2015-08-20 02:02:48	8	2015-08-20 02:04:28	1	1	1	1.00
+2143	326	1	1	1	<p>\r\n\tThe case is for testing - cancel new contact in contact list.</p>\r\n		3	8	2015-08-20 01:47:59	8	2015-08-20 02:05:09	1	1	1	5.00
+2150	328	1	1	1	<p>\r\n\tThe case is for testing - cancel edit contact in contact list.</p>\r\n	<p>\r\n\tA existing contact.</p>\r\n	2	8	2015-08-20 02:06:47	8	2015-08-20 02:08:07	1	1	1	1.00
+2153	329	1	1	1	<p>\r\n\tThe case is for testing Options - remove as favorite/add as favorite in contact list.</p>\r\n<p>\r\n\tWhen the contact is favorite, it displayes remove as favorite.</p>\r\n<p>\r\n\tWhen the contact is not favorite, it displayes add as favorite.</p>\r\n	<p>\r\n\tNo favorite contact.</p>\r\n	3	8	2015-08-20 02:11:51	8	2015-08-20 02:13:10	1	1	1	3.00
+2157	330	1	1	1	<p>\r\n\tThe case is for testing Options - edit contact in Contact Details.</p>\r\n		3	8	2015-08-20 02:14:44	8	2015-08-20 02:16:23	1	1	1	1.00
+2175	335	1	1	1	<p>\r\n\tThe case is for testing add item for company in contact editor.</p>\r\n		3	8	2015-08-20 03:23:04	8	2015-08-20 07:56:16	1	1	1	3.00
+928	134	1	1	1	<p class="description">\r\n\t&nbsp;</p>\r\n<p>\r\n\tUser Story: As a user, I want the gallery app to automatically arrange content by the month</p>\r\n<p>\r\n\tIf the user has taken at least six pictures spanning more than one year, first and last month and relevant years will be displayed.</p>\r\n<p>\r\n\tAcceptance Criteria: - When the gallery app is opened the user can see that all the content (images, videos) are arranged by month</p>\r\n<p>\r\n\tImplementation bug: https://bugzilla.mozilla.org/show_bug.cgi?id=925179</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n		2	7	2015-08-18 08:31:06	7	2015-08-20 07:42:25	1	1	1	\N
+2286	355	1	1	2	<p>\r\n\tAs a user, in LIST VIEW &quot;Select Mode&quot;, I should be able to share one or more selected photos. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-20 09:55:00	7	2015-08-20 09:58:31	1	1	1	\N
+2246	347	1	1	1	<p>\r\n\tThe case is for testing - add item for Date.</p>\r\n		3	8	2015-08-20 08:57:12	8	2015-08-20 09:40:58	1	1	1	2.00
+2250	348	1	1	1	<p>\r\n\tThe case is for testing - cancel to add item for Date.</p>\r\n		3	8	2015-08-20 08:59:15	8	2015-08-20 09:41:45	1	1	1	2.00
+2211	342	1	1	2	<p>\r\n\tFavorites is a filtered view that shows only the photos that are marked as favorites.</p>\r\n		2	7	2015-08-20 07:45:05	7	2015-08-20 07:48:50	1	1	1	\N
+2192	339	1	1	1	<p>\r\n\tThis case is for testing cancel to add item for Phone.</p>\r\n		3	8	2015-08-20 07:27:19	8	2015-08-20 07:55:09	1	1	1	2.00
+2238	345	1	1	1	<p>\r\n\tThe case is for testing - add item for Address.</p>\r\n		3	8	2015-08-20 08:47:35	8	2015-08-20 09:42:15	1	1	1	2.00
+2223	343	1	1	1	<p>\r\n\tThis case is for testing cancel to add item - company.</p>\r\n		3	8	2015-08-20 08:01:12	8	2015-08-20 08:02:44	1	1	1	2.00
+2263	351	1	1	1	<p>\r\n\tThe case is for testing add multiple phone numbers.</p>\r\n		3	8	2015-08-20 09:48:54	8	2015-08-20 09:52:20	1	1	1	5.00
+2242	346	1	1	1	<p>\r\n\tThe case is for testing - cancel to add item for Address.</p>\r\n		3	8	2015-08-20 08:53:45	8	2015-08-20 09:43:16	1	1	1	2.00
+2276	353	1	1	1	<p>\r\n\tThe case is for testing add multiple Emails.</p>\r\n		3	8	2015-08-20 09:52:52	8	2015-08-20 09:53:43	1	1	1	5.00
+2254	349	1	1	1	<p>\r\n\tThe case is for testing - add item for Comment.</p>\r\n		3	8	2015-08-20 09:38:26	8	2015-08-20 09:44:39	1	1	1	2.00
+2228	344	1	1	2	<p>\r\n\tUser should be able to delete single photo on grid view</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tPrepare over 20 pictures in device</p>\r\n	2	7	2015-08-20 08:04:59	7	2015-08-20 10:06:01	1	1	1	\N
+2258	350	1	1	1	<p>\r\n\tThe case is for testing - cancel to add item for Comment.</p>\r\n		3	8	2015-08-20 09:45:09	8	2015-08-20 09:46:22	1	1	1	2.00
+1039	154	1	1	2	<p>\r\n\tAs a user, in LIST VIEW &quot;Select Mode&quot;, I should be able to share one or more selected photos. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-18 08:31:06	7	2015-08-20 09:54:31	1	1	1	\N
+2268	352	1	1	2	<p>\r\n\tAs a user, in LIST VIEW &quot;Select Mode&quot;, I should be able to share one or more selected photos. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-20 09:51:07	7	2015-08-20 09:54:49	1	1	1	\N
+2294	356	1	1	1	<p>\r\n\tThe case is for testing add multiple Addresses.</p>\r\n		3	8	2015-08-20 09:56:19	8	2015-08-20 09:57:14	1	1	1	5.00
+2300	357	1	1	1	<p>\r\n\tThe case is for testing add multiple Dates.</p>\r\n		3	8	2015-08-20 09:57:47	8	2015-08-20 09:58:23	1	1	1	5.00
+2309	359	1	1	2	<p>\r\n\tAs a user, in LIST VIEW &quot;Select Mode&quot;, I should be able to share one or more selected photos. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-20 09:59:47	7	2015-08-20 10:01:36	1	1	1	\N
+2323	361	1	1	2	<p>\r\n\tAs a user, in LIST VIEW &quot;Select Mode&quot;, I should be able to share one or more selected photos. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-20 10:03:30	7	2015-08-20 10:05:04	1	1	1	\N
+2316	360	1	1	2	<p>\r\n\tAs a user, in LIST VIEW &quot;Select Mode&quot;, I should be able to share one or more selected photos. Tapping the share button should present a pop-up menu with various share options. After selecting a share option, and completing its sharing flow, I should be returned to the place in the grid view I started from.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-20 10:01:55	7	2015-08-20 10:03:04	1	1	1	\N
+2334	362	1	1	2	<p>\r\n\t&ldquo;Select all&rdquo; will be available on top as user enters select mode, the first photo will be highlighted, press up key to highlight &ldquo;select all&rdquo;.<br />\r\n\t&ldquo;Select all&rdquo; scrolls away as user navigates away from top.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-20 10:17:05	7	2015-08-20 10:19:17	1	1	1	\N
+1199	183	1	1	2	<p>\r\n\t&ldquo;Select all&rdquo; will be available on top as user enters select mode, the first photo will be highlighted, press up key to highlight &ldquo;select all&rdquo;.<br />\r\n\t&ldquo;Select all&rdquo; scrolls away as user navigates away from top.</p>\r\n<p>\r\n\t&nbsp;</p>\r\n<ol class="steps">\r\n</ol>\r\n	<p>\r\n\tHave multiple photos on the device</p>\r\n	2	7	2015-08-18 08:31:07	7	2015-08-20 10:17:48	1	1	1	\N
 \.
 
 
@@ -7203,6 +7362,160 @@ COPY h5tl_tcversions (id, tc_external_id, version, layout, status, summary, prec
 --
 
 COPY h5tl_testcase_keywords (testcase_id, keyword_id) FROM stdin;
+16	1
+27	3
+34	5
+44	2
+21	1
+49	3
+72	1
+72	2
+72	3
+72	4
+72	5
+72	6
+72	7
+87	10
+91	10
+96	10
+99	10
+1315	10
+105	16
+132	10
+132	11
+718	10
+718	11
+736	10
+736	11
+739	10
+739	11
+899	11
+1331	11
+921	10
+921	11
+1337	10
+1337	11
+916	10
+916	11
+1340	10
+1340	11
+1343	10
+1343	11
+1491	11
+2085	10
+2085	11
+2088	10
+2088	11
+2093	10
+2093	11
+2097	10
+2097	11
+2099	10
+2099	11
+2102	10
+2102	11
+2105	10
+2105	11
+2108	10
+2108	11
+2114	10
+2114	11
+2118	10
+2118	11
+2121	10
+2121	11
+2124	10
+2124	11
+2127	10
+2127	11
+2130	10
+2130	11
+2133	10
+2133	11
+2136	10
+2136	11
+2139	10
+2139	11
+2142	10
+2142	11
+2146	10
+2146	11
+2149	10
+2149	11
+2152	10
+2152	11
+2156	10
+2156	11
+2159	10
+2159	11
+2162	10
+2162	11
+2166	10
+2166	11
+2170	10
+2170	11
+2174	10
+2174	11
+2178	10
+2178	11
+2183	11
+2187	10
+2187	11
+2191	10
+2191	11
+2201	10
+2201	11
+2205	11
+2210	10
+2210	11
+1225	10
+1225	11
+2222	10
+2222	11
+2227	10
+2227	11
+2237	10
+2237	11
+2241	10
+2241	11
+2245	10
+2245	11
+2249	10
+2249	11
+1038	10
+1038	11
+2257	10
+2257	11
+2262	10
+2262	11
+2267	10
+2267	11
+2275	10
+2275	11
+2280	10
+2280	11
+2285	10
+2285	11
+2293	10
+2293	11
+2299	10
+2299	11
+2304	10
+2304	11
+2308	10
+2308	11
+2315	10
+2315	11
+2322	10
+2322	11
+1198	10
+1198	11
+2333	10
+2333	11
+1235	10
+1235	11
+2345	10
+2345	11
 \.
 
 
@@ -7226,6 +7539,9 @@ SELECT pg_catalog.setval('h5tl_testcase_relations_id_seq', 1, false);
 --
 
 COPY h5tl_testplan_platforms (id, testplan_id, platform_id) FROM stdin;
+1	42	1
+2	43	2
+3	43	3
 \.
 
 
@@ -7241,6 +7557,11 @@ SELECT pg_catalog.setval('h5tl_testplan_platforms_id_seq', 3, true);
 --
 
 COPY h5tl_testplan_tcversions (id, testplan_id, tcversion_id, platform_id, node_order, urgency, author_id, creation_ts) FROM stdin;
+1	42	17	1	10000	2	4	2015-08-03 03:14:07
+2	42	22	1	10000	2	4	2015-08-03 03:15:21
+3	2083	1288	0	10	2	4	2015-08-19 08:39:15
+4	2083	1304	0	30	2	4	2015-08-19 08:39:15
+5	2083	1311	0	40	2	4	2015-08-19 08:39:15
 \.
 
 
@@ -7370,8 +7691,6 @@ SELECT pg_catalog.setval('h5tl_text_templates_id_seq', 1, false);
 --
 
 COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_id) FROM stdin;
-1	/login.php	1440087556	1440087556	1	7g6q17am6j4ord5kpvn1u3m8j0
-2	/lib/general/mainPage.php	1440087557	1440087557	1	7g6q17am6j4ord5kpvn1u3m8j0
 29	/testlink/login.php	1438513408	1438513408	0	\N
 30	/testlink/login.php	1438513417	1438513417	0	\N
 31	/testlink/login.php	1438513425	1438513425	1	m2rtvakl01srlo3qi7pscre9d2
@@ -7435,8 +7754,6 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 85	/testlink/lib/plan/planAddTC.php	1438573287	1438573288	4	m2rtvakl01srlo3qi7pscre9d2
 86	/testlink/lib/plan/buildEdit.php	1438573328	1438573328	4	m2rtvakl01srlo3qi7pscre9d2
 87	/testlink/lib/plan/planAddTC.php	1438573367	1438573367	4	m2rtvakl01srlo3qi7pscre9d2
-594	/login.php	1440126243	1440126243	10	1cm2u99dfenhuod173pmcbhgj6
-596	/login.php	1440126334	1440126334	4	1cm2u99dfenhuod173pmcbhgj6
 88	/testlink/lib/plan/planAddTC.php	1438573394	1438573394	4	m2rtvakl01srlo3qi7pscre9d2
 89	/testlink/login.php	1438579607	1438579607	4	m2rtvakl01srlo3qi7pscre9d2
 90	/testlink/lib/plan/planAddTC.php	1438581206	1438581206	4	m2rtvakl01srlo3qi7pscre9d2
@@ -7806,7 +8123,6 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 454	/login.php	1440065712	1440065712	4	1tmh3ieoqk0o3sm7c367he56g5
 455	/lib/testcases/tcEdit.php	1440065825	1440065825	7	ktppmk1ri0dquodmcqcb1phmc3
 456	/lib/usermanagement/rolesEdit.php	1440066110	1440066110	4	1tmh3ieoqk0o3sm7c367he56g5
-595	/logout.php	1440126331	1440126331	10	1cm2u99dfenhuod173pmcbhgj6
 457	/lib/usermanagement/usersEdit.php	1440066175	1440066175	4	1tmh3ieoqk0o3sm7c367he56g5
 458	/lib/testcases/tcEdit.php	1440066220	1440066220	7	ktppmk1ri0dquodmcqcb1phmc3
 459	/logout.php	1440066274	1440066274	4	1tmh3ieoqk0o3sm7c367he56g5
@@ -7819,142 +8135,7 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 466	/login.php	1440066873	1440066873	7	9rcctb4gqkglrimgnj39hk08s3
 467	/linkto.php	1440068088	1440068088	4	1cm2u99dfenhuod173pmcbhgj6
 468	/login.php	1440068253	1440068253	7	84skitp7ibikh0jgqgnfe4oqd4
-469	/logout.php	1440088873	1440088873	1	7g6q17am6j4ord5kpvn1u3m8j0
-470	/login.php	1440089876	1440089876	2	7g6q17am6j4ord5kpvn1u3m8j0
-471	/lib/general/mainPage.php	1440089876	1440089876	2	7g6q17am6j4ord5kpvn1u3m8j0
-472	/lib/usermanagement/usersView.php	1440089900	1440089900	2	7g6q17am6j4ord5kpvn1u3m8j0
-473	/login.php	1440090599	1440090599	2	7g6q17am6j4ord5kpvn1u3m8j0
-474	/logout.php	1440090622	1440090622	2	7g6q17am6j4ord5kpvn1u3m8j0
-475	/login.php	1440090627	1440090627	1	7g6q17am6j4ord5kpvn1u3m8j0
-476	/lib/usermanagement/userInfo.php	1440090645	1440090645	1	7g6q17am6j4ord5kpvn1u3m8j0
-477	/login.php	1440091618	1440091618	1	7g6q17am6j4ord5kpvn1u3m8j0
-478	/login.php	1440113111	1440113111	2	7g6q17am6j4ord5kpvn1u3m8j0
-479	/linkto.php	1440113111	1440113111	2	7g6q17am6j4ord5kpvn1u3m8j0
-480	/lib/testcases/archiveData.php	1440113112	1440113112	2	7g6q17am6j4ord5kpvn1u3m8j0
-481	/lib/testcases/listTestCases.php	1440113112	1440113112	2	7g6q17am6j4ord5kpvn1u3m8j0
-482	/login.php	1440113128	1440113128	2	7g6q17am6j4ord5kpvn1u3m8j0
-483	/linkto.php	1440113128	1440113128	2	7g6q17am6j4ord5kpvn1u3m8j0
-484	/lib/testcases/archiveData.php	1440113128	1440113128	2	7g6q17am6j4ord5kpvn1u3m8j0
-485	/lib/testcases/listTestCases.php	1440113128	1440113128	2	7g6q17am6j4ord5kpvn1u3m8j0
-486	/lib/testcases/archiveData.php	1440113254	1440113254	2	7g6q17am6j4ord5kpvn1u3m8j0
-487	/lib/testcases/archiveData.php	1440113257	1440113257	2	7g6q17am6j4ord5kpvn1u3m8j0
-488	/lib/general/mainPage.php	1440113279	1440113279	2	7g6q17am6j4ord5kpvn1u3m8j0
-489	/lib/testcases/tcSearch.php	1440113287	1440113287	2	7g6q17am6j4ord5kpvn1u3m8j0
-490	/lib/cfields/cfieldsView.php	1440113295	1440113295	2	7g6q17am6j4ord5kpvn1u3m8j0
-491	/lib/testcases/archiveData.php	1440113309	1440113309	2	7g6q17am6j4ord5kpvn1u3m8j0
-492	/lib/testcases/archiveData.php	1440113311	1440113311	2	7g6q17am6j4ord5kpvn1u3m8j0
-493	/lib/testcases/archiveData.php	1440113313	1440113313	2	7g6q17am6j4ord5kpvn1u3m8j0
-494	/lib/testcases/archiveData.php	1440113314	1440113314	2	7g6q17am6j4ord5kpvn1u3m8j0
-495	/lib/testcases/archiveData.php	1440113314	1440113314	2	7g6q17am6j4ord5kpvn1u3m8j0
-496	/lib/issuetrackers/issueTrackerView.php	1440113351	1440113351	2	7g6q17am6j4ord5kpvn1u3m8j0
-497	/lib/project/projectView.php	1440113355	1440113355	2	7g6q17am6j4ord5kpvn1u3m8j0
-498	/lib/project/projectEdit.php	1440113371	1440113371	2	7g6q17am6j4ord5kpvn1u3m8j0
-499	/lib/usermanagement/usersAssign.php	1440113381	1440113381	2	7g6q17am6j4ord5kpvn1u3m8j0
-500	/lib/cfields/cfieldsTprojectAssign.php	1440113388	1440113388	2	7g6q17am6j4ord5kpvn1u3m8j0
-501	/lib/plan/planView.php	1440113439	1440113439	2	7g6q17am6j4ord5kpvn1u3m8j0
-502	/lib/testcases/archiveData.php	1440113466	1440113466	2	7g6q17am6j4ord5kpvn1u3m8j0
-503	/lib/testcases/archiveData.php	1440113468	1440113468	2	7g6q17am6j4ord5kpvn1u3m8j0
-504	/lib/testcases/archiveData.php	1440113469	1440113469	2	7g6q17am6j4ord5kpvn1u3m8j0
-505	/lib/testcases/archiveData.php	1440113470	1440113470	2	7g6q17am6j4ord5kpvn1u3m8j0
-506	/lib/testcases/archiveData.php	1440113475	1440113475	2	7g6q17am6j4ord5kpvn1u3m8j0
-507	/lib/testcases/archiveData.php	1440113484	1440113484	2	7g6q17am6j4ord5kpvn1u3m8j0
-508	/lib/usermanagement/usersView.php	1440113609	1440113609	2	7g6q17am6j4ord5kpvn1u3m8j0
-509	/lib/usermanagement/userInfo.php	1440113611	1440113611	2	7g6q17am6j4ord5kpvn1u3m8j0
-510	/lib/usermanagement/userInfo.php	1440113621	1440113622	2	7g6q17am6j4ord5kpvn1u3m8j0
-511	/lib/usermanagement/userInfo.php	1440114009	1440114009	2	7g6q17am6j4ord5kpvn1u3m8j0
-512	/lib/usermanagement/userInfo.php	1440114100	1440114100	2	7g6q17am6j4ord5kpvn1u3m8j0
-513	/lib/usermanagement/userInfo.php	1440114125	1440114125	2	7g6q17am6j4ord5kpvn1u3m8j0
-514	/lib/usermanagement/userInfo.php	1440114162	1440114162	2	7g6q17am6j4ord5kpvn1u3m8j0
-515	/lib/results/printDocOptions.php	1440114311	1440114311	2	7g6q17am6j4ord5kpvn1u3m8j0
-516	/login.php	1440118922	1440118922	8	bnoioaerqtts97geqhhi1uugo6
-517	/linkto.php	1440118928	1440118928	8	bnoioaerqtts97geqhhi1uugo6
-518	/lib/testcases/archiveData.php	1440118970	1440118970	8	bnoioaerqtts97geqhhi1uugo6
-519	/lib/testcases/archiveData.php	1440118975	1440118975	8	bnoioaerqtts97geqhhi1uugo6
-520	/lib/testcases/archiveData.php	1440118976	1440118976	8	bnoioaerqtts97geqhhi1uugo6
-521	/lib/testcases/archiveData.php	1440118980	1440118980	8	bnoioaerqtts97geqhhi1uugo6
-522	/lib/testcases/archiveData.php	1440118991	1440118991	8	bnoioaerqtts97geqhhi1uugo6
-523	/lib/testcases/archiveData.php	1440119023	1440119023	8	bnoioaerqtts97geqhhi1uugo6
-524	/lib/testcases/archiveData.php	1440119039	1440119039	8	bnoioaerqtts97geqhhi1uugo6
-525	/lib/testcases/archiveData.php	1440119040	1440119040	8	bnoioaerqtts97geqhhi1uugo6
-526	/lib/testcases/archiveData.php	1440119042	1440119042	8	bnoioaerqtts97geqhhi1uugo6
-527	/lib/testcases/archiveData.php	1440119102	1440119102	8	bnoioaerqtts97geqhhi1uugo6
-528	/lib/testcases/archiveData.php	1440119104	1440119104	8	bnoioaerqtts97geqhhi1uugo6
-529	/lib/testcases/archiveData.php	1440119104	1440119104	8	bnoioaerqtts97geqhhi1uugo6
-530	/lib/testcases/archiveData.php	1440119263	1440119263	8	bnoioaerqtts97geqhhi1uugo6
-531	/lib/testcases/archiveData.php	1440119264	1440119264	8	bnoioaerqtts97geqhhi1uugo6
-532	/lib/testcases/archiveData.php	1440119268	1440119268	8	bnoioaerqtts97geqhhi1uugo6
-533	/lib/testcases/archiveData.php	1440119277	1440119277	8	bnoioaerqtts97geqhhi1uugo6
-534	/lib/testcases/archiveData.php	1440119278	1440119278	8	bnoioaerqtts97geqhhi1uugo6
-535	/lib/testcases/archiveData.php	1440119280	1440119280	8	bnoioaerqtts97geqhhi1uugo6
-536	/lib/testcases/archiveData.php	1440119281	1440119281	8	bnoioaerqtts97geqhhi1uugo6
-537	/lib/testcases/archiveData.php	1440119282	1440119282	8	bnoioaerqtts97geqhhi1uugo6
-538	/lib/testcases/archiveData.php	1440119283	1440119283	8	bnoioaerqtts97geqhhi1uugo6
-539	/lib/testcases/archiveData.php	1440119284	1440119284	8	bnoioaerqtts97geqhhi1uugo6
-540	/lib/testcases/archiveData.php	1440119286	1440119286	8	bnoioaerqtts97geqhhi1uugo6
-541	/lib/testcases/archiveData.php	1440119286	1440119286	8	bnoioaerqtts97geqhhi1uugo6
-542	/lib/testcases/archiveData.php	1440119286	1440119286	8	bnoioaerqtts97geqhhi1uugo6
-543	/lib/testcases/archiveData.php	1440119437	1440119437	8	bnoioaerqtts97geqhhi1uugo6
-544	/lib/testcases/archiveData.php	1440119437	1440119438	8	bnoioaerqtts97geqhhi1uugo6
-545	/lib/testcases/archiveData.php	1440119439	1440119439	8	bnoioaerqtts97geqhhi1uugo6
-546	/lib/testcases/archiveData.php	1440119439	1440119439	8	bnoioaerqtts97geqhhi1uugo6
-547	/lib/testcases/archiveData.php	1440119439	1440119439	8	bnoioaerqtts97geqhhi1uugo6
-548	/lib/testcases/archiveData.php	1440121738	1440121738	8	bnoioaerqtts97geqhhi1uugo6
-549	/lib/testcases/archiveData.php	1440121740	1440121740	8	bnoioaerqtts97geqhhi1uugo6
-550	/lib/testcases/archiveData.php	1440121743	1440121743	8	bnoioaerqtts97geqhhi1uugo6
-551	/lib/testcases/archiveData.php	1440121755	1440121755	8	bnoioaerqtts97geqhhi1uugo6
-552	/lib/testcases/archiveData.php	1440121757	1440121757	8	bnoioaerqtts97geqhhi1uugo6
-553	/login.php	1440121930	1440121930	2	ts0q7el2dls9s3bv959hrg7584
-554	/lib/general/mainPage.php	1440121930	1440121930	2	ts0q7el2dls9s3bv959hrg7584
-555	/login.php	1440121939	1440121939	2	ts0q7el2dls9s3bv959hrg7584
-556	/login.php	1440122162	1440122162	4	1cm2u99dfenhuod173pmcbhgj6
-557	/lib/testcases/archiveData.php	1440122166	1440122166	4	1cm2u99dfenhuod173pmcbhgj6
-558	/lib/testcases/archiveData.php	1440122169	1440122169	4	1cm2u99dfenhuod173pmcbhgj6
-559	/lib/testcases/archiveData.php	1440122170	1440122170	4	1cm2u99dfenhuod173pmcbhgj6
-560	/lib/testcases/archiveData.php	1440122177	1440122177	4	1cm2u99dfenhuod173pmcbhgj6
-561	/lib/testcases/archiveData.php	1440123001	1440123001	4	1cm2u99dfenhuod173pmcbhgj6
-562	/lib/testcases/archiveData.php	1440123002	1440123002	4	1cm2u99dfenhuod173pmcbhgj6
-563	/lib/testcases/archiveData.php	1440123045	1440123045	4	1cm2u99dfenhuod173pmcbhgj6
-564	/lib/testcases/archiveData.php	1440123045	1440123045	4	1cm2u99dfenhuod173pmcbhgj6
-565	/lib/testcases/archiveData.php	1440123047	1440123047	4	1cm2u99dfenhuod173pmcbhgj6
-566	/lib/testcases/archiveData.php	1440123480	1440123480	4	1cm2u99dfenhuod173pmcbhgj6
-567	/lib/testcases/archiveData.php	1440123481	1440123481	4	1cm2u99dfenhuod173pmcbhgj6
-568	/lib/testcases/archiveData.php	1440123487	1440123487	4	1cm2u99dfenhuod173pmcbhgj6
-569	/lib/testcases/archiveData.php	1440123502	1440123502	4	1cm2u99dfenhuod173pmcbhgj6
-570	/lib/testcases/archiveData.php	1440123505	1440123505	4	1cm2u99dfenhuod173pmcbhgj6
-571	/lib/testcases/tcExport.php	1440123521	1440123521	4	1cm2u99dfenhuod173pmcbhgj6
-572	/lib/testcases/archiveData.php	1440123535	1440123535	4	1cm2u99dfenhuod173pmcbhgj6
-573	/lib/testcases/archiveData.php	1440123540	1440123540	4	1cm2u99dfenhuod173pmcbhgj6
-574	/lib/testcases/archiveData.php	1440123602	1440123602	4	1cm2u99dfenhuod173pmcbhgj6
-575	/lib/testcases/archiveData.php	1440123604	1440123604	4	1cm2u99dfenhuod173pmcbhgj6
-576	/lib/testcases/archiveData.php	1440123605	1440123605	4	1cm2u99dfenhuod173pmcbhgj6
-577	/lib/testcases/archiveData.php	1440123605	1440123605	4	1cm2u99dfenhuod173pmcbhgj6
-578	/lib/testcases/archiveData.php	1440123606	1440123606	4	1cm2u99dfenhuod173pmcbhgj6
-579	/login.php	1440124034	1440124034	7	ktppmk1ri0dquodmcqcb1phmc3
-580	/lib/testcases/archiveData.php	1440124045	1440124045	7	ktppmk1ri0dquodmcqcb1phmc3
-581	/lib/testcases/archiveData.php	1440124050	1440124050	7	ktppmk1ri0dquodmcqcb1phmc3
-582	/lib/testcases/archiveData.php	1440124052	1440124052	7	ktppmk1ri0dquodmcqcb1phmc3
-583	/lib/testcases/archiveData.php	1440124056	1440124056	7	ktppmk1ri0dquodmcqcb1phmc3
-584	/lib/testcases/archiveData.php	1440124062	1440124062	7	ktppmk1ri0dquodmcqcb1phmc3
-585	/lib/testcases/archiveData.php	1440124063	1440124063	7	ktppmk1ri0dquodmcqcb1phmc3
-586	/lib/testcases/archiveData.php	1440124064	1440124064	7	ktppmk1ri0dquodmcqcb1phmc3
-587	/lib/testcases/archiveData.php	1440124070	1440124070	7	ktppmk1ri0dquodmcqcb1phmc3
-588	/lib/testcases/archiveData.php	1440124072	1440124072	7	ktppmk1ri0dquodmcqcb1phmc3
-589	/lib/testcases/archiveData.php	1440124080	1440124080	7	ktppmk1ri0dquodmcqcb1phmc3
-590	/lib/testcases/archiveData.php	1440124081	1440124081	7	ktppmk1ri0dquodmcqcb1phmc3
-591	/lib/testcases/archiveData.php	1440124082	1440124082	7	ktppmk1ri0dquodmcqcb1phmc3
-592	/linkto.php	1440125852	1440125852	4	1cm2u99dfenhuod173pmcbhgj6
-593	/logout.php	1440125854	1440125854	4	1cm2u99dfenhuod173pmcbhgj6
-597	/lib/testcases/archiveData.php	1440126340	1440126340	4	1cm2u99dfenhuod173pmcbhgj6
-598	/lib/testcases/archiveData.php	1440126572	1440126572	8	bnoioaerqtts97geqhhi1uugo6
-599	/lib/usermanagement/rolesEdit.php	1440126619	1440126619	4	1cm2u99dfenhuod173pmcbhgj6
-600	/lib/testcases/archiveData.php	1440126680	1440126680	8	bnoioaerqtts97geqhhi1uugo6
-601	/logout.php	1440126720	1440126720	4	1cm2u99dfenhuod173pmcbhgj6
-602	/login.php	1440126725	1440126725	10	1cm2u99dfenhuod173pmcbhgj6
-603	/logout.php	1440126764	1440126764	10	1cm2u99dfenhuod173pmcbhgj6
-604	/login.php	1440126783	1440126783	4	1cm2u99dfenhuod173pmcbhgj6
-605	/login.php	1440127915	1440127915	7	84skitp7ibikh0jgqgnfe4oqd4
-606	/lib/testcases/archiveData.php	1440127944	1440127944	7	84skitp7ibikh0jgqgnfe4oqd4
-607	/lib/testcases/archiveData.php	1440128331	1440128331	4	1cm2u99dfenhuod173pmcbhgj6
+469	/login.php	1440159923	1440159923	1	jk30arpe5lj97h9f1m3u1qm0h5
 \.
 
 
@@ -7962,7 +8143,7 @@ COPY h5tl_transactions (id, entry_point, start_time, end_time, user_id, session_
 -- Name: h5tl_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: tladmin
 --
 
-SELECT pg_catalog.setval('h5tl_transactions_id_seq', 607, true);
+SELECT pg_catalog.setval('h5tl_transactions_id_seq', 469, true);
 
 
 --
@@ -7970,6 +8151,9 @@ SELECT pg_catalog.setval('h5tl_transactions_id_seq', 607, true);
 --
 
 COPY h5tl_user_assignments (id, type, feature_id, user_id, build_id, deadline_ts, assigner_id, creation_ts, status) FROM stdin;
+1	1	1	4	3	2015-08-13 03:44:27.39735	4	2015-08-03 03:44:27	1
+2	1	2	7	3	2015-08-13 03:44:27.399672	4	2015-08-03 03:44:27	1
+3	1	1	5	3	2015-08-13 09:31:47.534934	4	2015-08-03 09:31:47	1
 \.
 
 
@@ -8024,16 +8208,16 @@ COPY h5tl_user_testproject_roles (user_id, testproject_id, role_id) FROM stdin;
 --
 
 COPY h5tl_users (id, login, password, role_id, email, first, last, locale, default_testproject_id, active, script_key, cookie_string, auth_method) FROM stdin;
+1	admin	819a07afa4abc8660ec9042038a8c597	8	tladmin@acadine.com	Testlink	Administrator	en_GB	\N	1	6ffca592bfd48b0f46e1594b3498121a	b94536fe7ccb81780ff60ea65c1f6c546b34ab467c506a127d6eb1e0f6a62a94	
 3	brian.huang	819a07afa4abc8660ec9042038a8c597	8	brian.huang@acadine.com	brian	huang	en_GB	\N	1	\N	0f13bca76f6cbb7e7c30a4f5c35b8706664bb328b1bfb5cd70bbb9a2c03b875b	
 7	peipei.cheng	34317be00312038ff242a10887eed9d1	8	peipei.cheng@acadine.com	peipei	cheng	en_GB	\N	1	\N	0d6c5343fa3dc9f91ba3f6839ac6c995fa02e175c44ccda0972291d9524b2fdc	
 6	eric.chang	819a07afa4abc8660ec9042038a8c597	8	eric.chang@acadine.com	eric	chang	en_US	\N	1	\N	3ea31295359b6c97f8f30ea981c3968bcb8b2a0205ae0cb4c8eb5de309f45f52	
 4	enpei.chu	6292677c8a2acac465c5c28b1da7ff75	8	enpei.chu@acadine.com	enpei	chu	en_GB	\N	1	\N	cbb3c0bc9e1a12ea461a72c3c4be69b713da0a504bcd788e1d7c69c93436fff2	
+2	owen.ouyang	819a07afa4abc8660ec9042038a8c597	8	owen.ouyang@acadine.com	oo	oo	zh_CN	\N	1	10fb2560683dc141258dbce4c21a37cf	b3e17ae30c84f8be0dccaccb6fa4593f0a14c13d3818f050a554f9bc77a4b904	DB
 8	xueqin.shen	19a339dff19c7da0a8c088e3b7ca420b	6	xueqin.shen@acadine.com	xueqin	shen	en_GB	\N	1	\N	604166c0487dff94de557488336a314a0aacf8951a44b4d3e46c0dba622354d8	
 5	hubert.lu	819a07afa4abc8660ec9042038a8c597	6	hubert.lu@acadine.com	hubert	lu	en_GB	\N	1	\N	6812fbcd7e15e0a28e99c56b3590e0af67986091484b23b81456349e8980efab	
 9	hermes.cheng	c18123554c59020989e49309165493c5	6	hermes.cheng@acadine.com	hermes	cheng	en_GB	\N	1	\N	0f72a35b25babe3536942da6c3fbbff6abc6db19dd12ca237208c78f4336299f	
 10	reviewer	7ba917e4e5158c8a9ed6eda08a6ec572	10	enpei.chu@acadine.com	acadine	reviewer	en_GB	\N	1	\N	8dcfcb0833befc357a276f000fbe725228531a35c810d167d46c9205cda07d51	
-1	admin	819a07afa4abc8660ec9042038a8c597	8		Testlink	Administrator	en_GB	\N	1	fae8af74a2edb9411f4c6c115492c5cf	a5e68bb69f361d3eabb927b8fd9d4eb80eca7c9c915dc282b48826f1b8880ab8	
-2	owen.ouyang	819a07afa4abc8660ec9042038a8c597	8	owen.ouyang@acadine.com	oo6	oo1	zh_CN	\N	1	10fb2560683dc141258dbce4c21a37cf	b3e17ae30c84f8be0dccaccb6fa4593f0a14c13d3818f050a554f9bc77a4b904	DB
 \.
 
 
@@ -9410,13 +9594,21 @@ ALTER TABLE ONLY h5tl_user_testproject_roles
 
 
 --
--- Name: public; Type: ACL; Schema: -; Owner: tladmin
+-- Name: h5tl_users_role_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: tladmin
+--
+
+ALTER TABLE ONLY h5tl_users
+    ADD CONSTRAINT h5tl_users_role_id_fkey FOREIGN KEY (role_id) REFERENCES h5tl_roles(id);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
 --
 
 REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM tladmin;
-GRANT ALL ON SCHEMA public TO tladmin;
+REVOKE ALL ON SCHEMA public FROM postgres;
 GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO tladmin;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
